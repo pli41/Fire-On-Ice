@@ -124,7 +124,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
       propertyPath: m_LocalScale.x
@@ -1926,7 +1926,7 @@ Transform:
   m_GameObject: {fileID: 794657420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .423000008, y: 2.50699997, z: 1.92900002}
-  m_LocalScale: {x: .707343042, y: 1.46278346, z: .372530997}
+  m_LocalScale: {x: 3.67265105, y: 2.60803938, z: 1.40393627}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -3482,7 +3482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shrinkSize: 5
-  timeBetShrink: 5
+  timeBetShrink: 100
 --- !u!1 &1731217903
 GameObject:
   m_ObjectHideFlags: 0
@@ -3590,6 +3590,14 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a4fdd12b25a62ab43bfcb105514fad57, type: 2}
+    - target: {fileID: 100006, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
   m_IsPrefabParent: 0
@@ -3610,7 +3618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   timeBetDodge: 1
-  dodgeDist: 10
+  dodgeDist: 3
   dodgeSpeed: 25
 --- !u!82 &1779814463
 AudioSource:
@@ -3731,6 +3739,18 @@ MonoBehaviour:
   deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .100000001}
+--- !u!114 &1779814469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779814461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187795da4c80f4b8a8bcdd84c54ac560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMagic: {fileID: 178398, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
 --- !u!1 &1847986397
 GameObject:
   m_ObjectHideFlags: 0
