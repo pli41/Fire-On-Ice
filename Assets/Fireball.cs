@@ -5,7 +5,7 @@ public class Fireball : MonoBehaviour {
 
 	public float damage = 20f;
 	public float knockDist = 3f;
-	public float coolDown = 2f;
+	public float coolDown = 0.5f;
 	public float speed = 5f;
 
 
@@ -43,7 +43,24 @@ public class Fireball : MonoBehaviour {
 	}
 
 	void OnParticleCollision(GameObject other){
-		Debug.Log ("Hit");
+
+
+		if(other.tag == "Player"){
+
+			PlayerHealth healthP = other.GetComponent<PlayerHealth>();
+
+			healthP.TakeDamage((int)damage);
+			Debug.Log ("Hit");
+		}
+		else if (other.tag == "Obstacle"){
+			EnemyHealth healthO = other.GetComponent<EnemyHealth>();
+			
+			healthO.TakeDamage((int)damage);
+			Debug.Log ("Hit");
+		}
+		Rigidbody rigidP = other.GetComponent<Rigidbody>();
+		rigidP.AddExplosionForce (300f, transform.position, 50f);
 		disabled = true;
+
 	}
 }

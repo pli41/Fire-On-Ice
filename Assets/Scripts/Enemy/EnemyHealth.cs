@@ -37,6 +37,16 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+	public void TakeDamage (int amount)
+	{
+		
+		currentHealth -= amount;
+		
+		if(currentHealth <= 0 && !isDead)
+		{
+			Death ();
+		}
+	}
 
 	public void TakeDamage (int amount, Vector3 hitPoint, Transform source)
     {
@@ -64,12 +74,11 @@ public class EnemyHealth : MonoBehaviour
     {
         isDead = true;
 
-        //boxCollider.isTrigger = true;
+        boxCollider.isTrigger = true;
 
-        //anim.SetTrigger ("Dead");
 
         enemyAudio.clip = deathClip;
-        enemyAudio.Play ();
+        //enemyAudio.Play ();
     }
 
 
