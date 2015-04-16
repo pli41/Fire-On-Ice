@@ -14,19 +14,20 @@ public class PlayerMovement : MonoBehaviour
 	private Rigidbody playerRigidbody;
 	private int floorMask;
 	private float camRayLength = 100f;
-
+	private bool dodgeInit;
 
 	void Awake(){
 		floorMask = LayerMask.GetMask("Floor");
 		anim = GetComponent<Animator> ();
 		playerRigidbody = GetComponent<Rigidbody> ();
+		dodgeInit = false;
 	}
 
 	void FixedUpdate(){
 		dodgeTimer += Time.deltaTime;
 
-		float h = Input.GetAxisRaw ("Horizontal");
-		float v = Input.GetAxisRaw ("Vertical");
+		float h = Input.GetAxisRaw ("PS4_Horizontal");
+		float v = Input.GetAxisRaw ("PS4_Vertical");
 
 		if(anim.GetBool("IsDodging")){
 			Dodge();
@@ -36,8 +37,10 @@ public class PlayerMovement : MonoBehaviour
 			Turning ();
 			Animating (h, v);
 			
-			if(dodgeTimer >= timeBetDodge && Input.GetKey(KeyCode.Space)){
+			if(dodgeTimer >= timeBetDodge && Input.GetButtonDown("PS4_R3")){
+				Debug.Log("dodge start");
 				Dodge();
+				dodgeInit = true;
 			}
 		}
 
@@ -52,7 +55,22 @@ public class PlayerMovement : MonoBehaviour
 	}
 
 	void Turning(){
-		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+
+
+		float hori = Input.GetAxis("PS4_RightAnalogHorizontal");
+		float vert = Input.GetAxis("PS4_RightAnalogVertical");
+
+		if(hori != 0 && vert != 0){
+			Vector3 direction = new Vector3 (hori, 0f, vert);
+			
+			Quaternion newRotation = Quaternion.LookRotation(direction);
+			playerRigidbody.MoveRotation(newRotation);
+			Debug.Log ("hori = " + hori);
+			Debug.Log ("vert = " + vert);
+		}
+
+
+		/*Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 
 		RaycastHit floorHit;
 
@@ -63,19 +81,21 @@ public class PlayerMovement : MonoBehaviour
 			Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
 			playerRigidbody.MoveRotation(newRotation);
 
-		}
+		}*/
 	}
 
 	void Dodge(){
 		dodgeTimer = 0f;
 		anim.SetBool ("IsDodging", true);
 
-		if(dodgePos == transform.position){
+		if(dodgeInit){
+			Debug.Log("Initalize dodge");
 			Vector3 dodgeMov = transform.forward * dodgeDist;
 			dodgePos = transform.position + dodgeMov;
+			dodgeInit = false;
 		}
 
-		if(Vector3.Distance(transform.position, dodgePos) < 2f){
+		if(Vector3.Distance(transform.position, dodgePos) < 0.5f){
 			Debug.Log("dodge complete");
 			anim.SetBool("IsDodging", false);
 			dodgePos = transform.position;

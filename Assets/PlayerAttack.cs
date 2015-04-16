@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
 	{
 		timer += Time.deltaTime;
 		
-		if(Input.GetButtonDown ("Fire1") && timer >= coolDown)
+		if(Input.GetAxisRaw ("PS4_R2") >0 && timer >= coolDown)
 		{
 			Shoot ();
 		}

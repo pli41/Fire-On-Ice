@@ -80,6 +80,7 @@ GameObject:
   - 199: {fileID: 19988488}
   - 135: {fileID: 13578030}
   - 114: {fileID: 11422708}
+  - 54: {fileID: 5424404}
   m_Layer: 9
   m_Name: Fireball
   m_TagString: Fireball
@@ -163,8 +164,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178398}
-  m_LocalRotation: {x: 0, y: .059540987, z: 0, w: .998225868}
-  m_LocalPosition: {x: -.3806822, y: 1.96999991, z: -5.26663923}
+  m_LocalRotation: {x: 0, y: .210435778, z: 0, w: .977607727}
+  m_LocalPosition: {x: -.0946888924, y: 1.97000003, z: -3.137815}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 435182}
@@ -211,6 +212,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 442868}
   m_RootOrder: 3
+--- !u!54 &5424404
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178398}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &11422708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -225,6 +241,7 @@ MonoBehaviour:
   damage: 20
   knockDist: 3
   coolDown: 2
+  speed: 8
 --- !u!135 &13578030
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -235,7 +252,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .100000001
+  m_Radius: .300000012
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &19821290
 ParticleSystem:
@@ -1243,7 +1260,7 @@ ParticleSystem:
   looping: 0
   prewarm: 0
   playOnAwake: 1
-  moveWithTransform: 1
+  moveWithTransform: 0
   InitialModule:
     enabled: 1
     startLifetime:
@@ -1477,8 +1494,8 @@ ParticleSystem:
     maxNumParticles: 1000
   ShapeModule:
     serializedVersion: 2
-    enabled: 0
-    type: 4
+    enabled: 1
+    type: 6
     radius: .00999999978
     angle: 0
     length: 5
@@ -2214,7 +2231,7 @@ ParticleSystem:
       m_Bits: 512
     quality: 0
     voxelSize: .5
-    collisionMessages: 0
+    collisionMessages: 1
   SubModule:
     enabled: 1
     subEmitterBirth: {fileID: 19849568}
@@ -2229,7 +2246,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180496}
-  lengthInSec: 3
+  lengthInSec: 2
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -4150,7 +4167,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116426}
-  lengthInSec: 5
+  lengthInSec: 2
   startDelay: 0
   speed: 1
   randomSeed: 0
