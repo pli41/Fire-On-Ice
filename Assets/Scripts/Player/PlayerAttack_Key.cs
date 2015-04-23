@@ -42,7 +42,7 @@ public class PlayerAttack_Key : MonoBehaviour
 	{
 		timer = 0f;
 		
-		currentMagic.transform.position = transform.position + transform.forward + new Vector3(0, 1f, 0);
+		currentMagic.transform.position = transform.position + transform.forward * 1.5f + new Vector3(0, 1f, 0);
 		currentMagic.transform.rotation = transform.rotation;
 		Instantiate (currentMagic);
 	}

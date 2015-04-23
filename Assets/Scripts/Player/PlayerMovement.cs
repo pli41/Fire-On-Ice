@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 	public float dodgeDist = 3f;
 	public float dodgeSpeed = 15f;
 
+	Vector3 dodgeDir;
+	private Rigidbody rigid;
 	private Vector3 dodgePos;
 	private float dodgeTimer;
 	private Vector3 movement;
@@ -17,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 	private bool dodgeInit;
 
 	void Awake(){
+		rigid = GetComponent<Rigidbody> ();
 		floorMask = LayerMask.GetMask("Floor");
 		anim = GetComponent<Animator> ();
 		playerRigidbody = GetComponent<Rigidbody> ();
@@ -30,16 +33,16 @@ public class PlayerMovement : MonoBehaviour
 		float v = Input.GetAxisRaw ("PS4_Vertical");
 
 		if(anim.GetBool("IsDodging")){
-			Dodge();
+			Dodge(h, v);
 		}
 		else{
 			Move (h, v);
 			Turning ();
 			Animating (h, v);
 			
-			if(dodgeTimer >= timeBetDodge && Input.GetButtonDown("PS4_R3")){
+			if(dodgeTimer >= timeBetDodge && Input.GetAxisRaw("PS4_L2") > 0){
 				Debug.Log("dodge start");
-				Dodge();
+				Dodge(h, v);
 				dodgeInit = true;
 			}
 		}
@@ -84,13 +87,16 @@ public class PlayerMovement : MonoBehaviour
 		}*/
 	}
 
-	void Dodge(){
+	void Dodge(float h, float v){
 		dodgeTimer = 0f;
 		anim.SetBool ("IsDodging", true);
 
+		dodgeDir.Set (h, 0f, v);
+		dodgeDir = dodgeDir.normalized;
+
 		if(dodgeInit){
 			Debug.Log("Initalize dodge");
-			Vector3 dodgeMov = transform.forward * dodgeDist;
+			Vector3 dodgeMov = dodgeDir * dodgeDist;
 			dodgePos = transform.position + dodgeMov;
 			dodgeInit = false;
 		}
@@ -101,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
 			dodgePos = transform.position;
 		}
 		else{
-			Vector3 dodge = transform.forward * dodgeSpeed * Time.deltaTime;
+			Vector3 dodge = dodgeDir * dodgeSpeed * Time.deltaTime;
 			playerRigidbody.MovePosition (transform.position + dodge);
 		}
 

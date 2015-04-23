@@ -164,9 +164,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178398}
-  m_LocalRotation: {x: 0, y: .999686658, z: 0, w: -.0250309147}
-  m_LocalPosition: {x: -2.29993081, y: 1.57000029, z: 3.65252447}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: -1.16415322e-09, y: .635692, z: 9.31322575e-10, w: .771942794}
+  m_LocalPosition: {x: -2.17050934, y: 2.53000522, z: -.192131668}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 435182}
   - {fileID: 448608}
@@ -7341,7 +7341,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_RenderMode: 0
-  m_MaxParticleSize: .5
+  m_MaxParticleSize: 1
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2

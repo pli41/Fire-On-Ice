@@ -371,7 +371,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 4
+    axis: 5
     joyNum: 0
   - serializedVersion: 3
     m_Name: PS4_R3
@@ -419,7 +419,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 3
+    axis: 4
     joyNum: 0
   - serializedVersion: 3
     m_Name: PS4_L3
@@ -447,7 +447,7 @@ InputManager:
     altPositiveButton: 
     gravity: 3
     dead: .00999999978
-    sensitivity: .100000001
+    sensitivity: .0500000007
     snap: 0
     invert: 0
     type: 2
@@ -463,11 +463,11 @@ InputManager:
     altPositiveButton: 
     gravity: 3
     dead: .00999999978
-    sensitivity: .100000001
+    sensitivity: .0500000007
     snap: 0
     invert: 1
     type: 2
-    axis: 5
+    axis: 3
     joyNum: 0
   - serializedVersion: 3
     m_Name: PS4_Touch

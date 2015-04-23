@@ -8,14 +8,15 @@ public class Fireball : MonoBehaviour {
 	public float coolDown = 0.5f;
 	public float speed = 5f;
 
-
-
+		
 	Rigidbody rigid;
 	bool disabled;
 	bool destroyed;
 
 	// Use this for initialization
 	void Start () {
+
+
 		destroyed = false;
 		disabled = false;
 		rigid = GetComponent<Rigidbody> ();
@@ -27,11 +28,12 @@ public class Fireball : MonoBehaviour {
 			//Move ();
 		}
 		else if(!destroyed && disabled){
-			Invoke("DestroyFire", 2f);
+			Invoke("DestroyFire", 0.5f);
 			destroyed = true;
 		}
 
 	}
+	
 
 	void DestroyFire(){
 		Destroy (gameObject);
@@ -45,22 +47,28 @@ public class Fireball : MonoBehaviour {
 	void OnParticleCollision(GameObject other){
 
 
-		if(other.tag == "Player"){
+		if (other.tag == "Player") {
 
-			PlayerHealth healthP = other.GetComponent<PlayerHealth>();
+			PlayerHealth healthP = other.GetComponent<PlayerHealth> ();
 
-			healthP.TakeDamage((int)damage);
+			healthP.TakeDamage ((int)damage);
 			Debug.Log ("Hit");
-		}
-		else if (other.tag == "Obstacle"){
-			EnemyHealth healthO = other.GetComponent<EnemyHealth>();
+			Rigidbody rigidP = other.GetComponent<Rigidbody> ();
+			rigidP.AddExplosionForce (300f, transform.position, 50f);
+			disabled = true;
+		} else if (other.tag == "Obstacle") {
+			EnemyHealth healthO = other.GetComponent<EnemyHealth> ();
 			
-			healthO.TakeDamage((int)damage);
+			healthO.TakeDamage ((int)damage);
 			Debug.Log ("Hit");
+			Rigidbody rigidP = other.GetComponent<Rigidbody> ();
+			rigidP.AddExplosionForce (300f, transform.position, 50f);
+			disabled = true;
+		} else {
+			Debug.Log("out of world");
+			Destroy(gameObject);
 		}
-		Rigidbody rigidP = other.GetComponent<Rigidbody>();
-		rigidP.AddExplosionForce (300f, transform.position, 50f);
-		disabled = true;
+
 
 	}
 }

@@ -40,8 +40,9 @@ public class EnemyHealth : MonoBehaviour
 	public void TakeDamage (int amount)
 	{
 		
-		currentHealth -= amount;
-		
+		//currentHealth -= amount;
+		transform.localScale.Set (transform.localScale.x -1f, transform.localScale.y -1f, transform.localScale.z -1f);
+		rigid.mass *= 0.7f;
 		if(currentHealth <= 0 && !isDead)
 		{
 			Death ();
@@ -53,16 +54,18 @@ public class EnemyHealth : MonoBehaviour
         if(isDead)
             return;
 
-        enemyAudio.Play ();
-
-        currentHealth -= amount;
-         
+        //enemyAudio.Play ();
+        //currentHealth -= amount;
+        
         hitParticles.transform.position = hitPoint;
         hitParticles.Play();
 
+		transform.localScale.Set (transform.localScale.x -1f, transform.localScale.y -1f, transform.localScale.z -1f);
+		rigid.mass *= 0.7f;
+
 		Vector3 force = (transform.position - source.position);
 
-		rigid.AddForce (force.normalized * 2);
+		//rigid.AddForce (force.normalized * 2);
         if(currentHealth <= 0)
         {
             Death ();

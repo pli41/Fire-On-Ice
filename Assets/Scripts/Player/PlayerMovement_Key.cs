@@ -6,7 +6,8 @@ public class PlayerMovement_Key : MonoBehaviour
 	public float timeBetDodge = 1f;
 	public float dodgeDist = 3f;
 	public float dodgeSpeed = 15f;
-	
+	public float accFactor;
+
 	private Vector3 dodgePos;
 	private float dodgeTimer;
 	private Vector3 movement;
@@ -50,8 +51,24 @@ public class PlayerMovement_Key : MonoBehaviour
 	
 	void Move(float h, float v){
 		movement.Set (h, 0f, v);
-		movement = movement.normalized * speed * Time.deltaTime;
-		playerRigidbody.MovePosition (transform.position + movement);
+		movement = movement.normalized * speed * accFactor;
+		//playerRigidbody.MovePosition (transform.position + movement);
+		//Debug.Log ("Magnitude = " + playerRigidbody.velocity.magnitude);
+
+		if(h != 0 || v != 0){
+			Debug.Log("Input received");
+			if(playerRigidbody.velocity.magnitude < speed){
+				Debug.Log("Accelerating");
+				playerRigidbody.velocity += movement;
+				//Debug.Log(playerRigidbody.velocity);
+			}
+			else{
+				Debug.Log("MAX speed");
+			}
+
+		}
+
+
 	}
 	
 	void Turning(){
