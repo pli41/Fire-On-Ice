@@ -94,7 +94,6 @@ public class PlayerMovement_Key : MonoBehaviour
 		if(Physics.Raycast(camRay, out floorHit, camRayLength, floorMask)){
 			Vector3 playerToMouse = floorHit.point - transform.position;
 			playerToMouse.y = 0f;
-
 			Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
 			playerRigidbody.MoveRotation(newRotation);
 

@@ -88,8 +88,8 @@ public class PlayerMovement : MonoBehaviour
 			
 			Quaternion newRotation = Quaternion.LookRotation(direction);
 			playerRigidbody.MoveRotation(newRotation);
-			Debug.Log ("hori = " + hori);
-			Debug.Log ("vert = " + vert);
+			//Debug.Log ("hori = " + hori);
+			//Debug.Log ("vert = " + vert);
 		}
 
 

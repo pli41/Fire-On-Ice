@@ -24,9 +24,20 @@ public class MeltingIsland : MonoBehaviour {
 	void OnTriggerStay(Collider col){
 		if(col.gameObject.tag == "Player"){
 			//Debug.Log("Player detected");
+			PlayerAttack PA = col.gameObject.GetComponent<PlayerAttack>();
+
+			if(PA.onFire){
+				meltTime = 0.6f;
+				Debug.Log("Fast melting");
+			}
+			else{
+				meltTime = 2f;
+				Debug.Log("Melting");
+			}
+
 			if(timer > meltTime){
 				timer = 0;
-				Melt();
+				Melt(PA.onFire);
 			}
 			else{
 				timer += Time.deltaTime;
@@ -35,17 +46,18 @@ public class MeltingIsland : MonoBehaviour {
 		}
 	}
 
-	void Melt(){
+	void Melt(bool onFire){
 		//change color
-		Debug.Log ("Melting");
+
 		Color color = mat.color;
-		color.g += colorChange;
-		color.r += colorChange;
+		color.g -= colorChange;
+		color.r -= colorChange;
 		mat.color = color;
 
 		//change thickness
 		Vector3 scale = transform.localScale;
 		scale.y -= scaleChange;
+
 		if(scale.y < 0){
 			Destroy(gameObject);
 		}
