@@ -6,7 +6,7 @@ public class PlayerMovement_Key : MonoBehaviour
 	public float timeBetDodge = 1f;
 	public float dodgeDist = 3f;
 	public float dodgeSpeed = 15f;
-	public float accFactor;
+	public float accFactor = 0.1f;
 
 	private Vector3 dodgePos;
 	private float dodgeTimer;
@@ -56,14 +56,14 @@ public class PlayerMovement_Key : MonoBehaviour
 		//Debug.Log ("Magnitude = " + playerRigidbody.velocity.magnitude);
 
 		if(h != 0 || v != 0){
-			Debug.Log("Input received");
+			//Debug.Log("Input received");
 			if(playerRigidbody.velocity.magnitude < speed){
-				Debug.Log("Accelerating");
+				//Debug.Log("Accelerating");
 				playerRigidbody.velocity += movement;
 				//Debug.Log(playerRigidbody.velocity);
 			}
 			else{
-				Debug.Log("MAX speed");
+				//Debug.Log("MAX speed");
 			}
 
 		}

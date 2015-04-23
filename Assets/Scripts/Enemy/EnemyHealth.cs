@@ -41,8 +41,12 @@ public class EnemyHealth : MonoBehaviour
 	{
 		
 		//currentHealth -= amount;
-		transform.localScale.Set (transform.localScale.x -1f, transform.localScale.y -1f, transform.localScale.z -1f);
-		rigid.mass *= 0.7f;
+		Vector3 scale = transform.localScale;
+		scale.Set (transform.localScale.x - 0.2f, transform.localScale.y - 0.2f, transform.localScale.z -0.2f);
+		transform.localScale = scale;
+
+
+		rigid.mass *= 0.9f;
 		if(currentHealth <= 0 && !isDead)
 		{
 			Death ();
