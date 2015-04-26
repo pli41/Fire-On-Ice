@@ -18,7 +18,6 @@ public class PlayerAttack_Key : MonoBehaviour
 		if(currentMagic.tag == "Fireball"){
 			fireball = currentMagic.GetComponent<Fireball>();
 			damage = fireball.damage;
-			knockDist = fireball.knockDist;
 			coolDown = fireball.coolDown;
 		}
 	}

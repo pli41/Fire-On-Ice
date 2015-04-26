@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth_1 : MonoBehaviour
 {
     public int startingHealth = 100;
     public int currentHealth;
@@ -12,10 +12,10 @@ public class PlayerHealth : MonoBehaviour
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
-
+	GameObject[] allgrounds;
     Animator anim;
     AudioSource playerAudio;
-    PlayerMovement playerMovement;
+    PlayerMovement_1 playerMovement;
     //PlayerShooting playerShooting;
     bool isDead;
     bool damaged;
@@ -23,9 +23,10 @@ public class PlayerHealth : MonoBehaviour
 
     void Awake ()
     {
+		allgrounds = GameObject.FindGameObjectsWithTag("Island");
         anim = GetComponent <Animator> ();
         playerAudio = GetComponent <AudioSource> ();
-        playerMovement = GetComponent <PlayerMovement> ();
+        playerMovement = GetComponent <PlayerMovement_1> ();
         //playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
     }
@@ -55,11 +56,46 @@ public class PlayerHealth : MonoBehaviour
 
         playerAudio.Play ();
 
+		burnGround (amount);
+
         if(currentHealth <= 0 && !isDead)
         {
             Death ();
         }
+
+
+
+
     }
+
+	public void burnGround(int amount){
+
+		foreach(GameObject go in allgrounds){
+
+
+			MeltingIsland island = go.GetComponent<MeltingIsland>();
+
+
+			if(island.active){
+				float range;
+				
+				if(amount < 30f){
+					range = 1f;
+				}
+				else if(amount >= 30f && amount < 60f){
+					range = 3f;
+				}
+				else{
+					range = 5f;
+				}
+				if(Vector3.Distance(transform.position, go.transform.position) < range){
+					island.meltByExplode(amount);
+				}
+			}
+
+
+		}
+	}
 
 
     void Death ()

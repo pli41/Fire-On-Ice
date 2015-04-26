@@ -144,7 +144,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1805867
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -245,7 +247,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &17454367
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -346,7 +350,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &29636435
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -497,7 +503,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &47381351
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -598,7 +606,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &59885314
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -667,10 +677,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1681783467}
   - {fileID: 1928384901}
   - {fileID: 1432424040}
   m_Father: {fileID: 1217456752}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -237.479996, y: 0}
@@ -733,7 +744,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &61659337
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -862,7 +875,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &73807767
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -963,7 +978,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &77907406
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1023,10 +1040,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 93508713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1877ac4f3dbae6541b5cf736ef46f8d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 306f4db6141214aceaf1453873f85e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentMagic: {fileID: 178398, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+  onFire: 0
+  ps: {fileID: 1134181765}
+  ceaseFireTime: 5
+  enchantEffect: {fileID: 1548554576}
+  coolDown: 2
 --- !u!114 &93508716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,16 +1057,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 93508713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
+  m_Script: {fileID: 11500000, guid: beb73acb6a8c94e5281c6dea7dac29f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 1432424041}
-  damageImage: {fileID: 101631040}
-  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: .100000001}
+  speed: 3
+  timeBetDodge: 1
+  dodgeDist: 3
+  dodgeSpeed: 15
+  accFactor: .100000001
 --- !u!114 &93508717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,14 +1073,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 93508713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb7014a343168a4bbc55e31c757722e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f4afec9164ef46e7b0e9db8d0164cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  timeBetDodge: 1
-  dodgeDist: 4
-  dodgeSpeed: 25
-  accFactor: .100000001
+  startingHealth: 100
+  currentHealth: 0
+  healthSlider: {fileID: 1432424041}
+  damageImage: {fileID: 1681783468}
+  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
+  flashSpeed: 5
+  flashColour: {r: 1, g: 0, b: 0, a: .100000001}
 --- !u!136 &93508718
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1215,7 +1237,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &100576802
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1286,12 +1310,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1217456752}
-  m_RootOrder: 1
+  m_Father: {fileID: 2104568387}
+  m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 338, y: 163.5}
+  m_SizeDelta: {x: 676, y: 327}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &101631040
 MonoBehaviour:
@@ -1377,7 +1401,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &103949684
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1509,7 +1535,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &107449802
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1579,7 +1607,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &109886586
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1680,7 +1710,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &112845140
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1781,7 +1813,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &127263745
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1913,7 +1947,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &149725744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1953,7 +1989,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 155065857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.0999999, y: 0, z: 15.3000002}
+  m_LocalPosition: {x: 4.0999999, y: 0, z: 18.7000008}
   m_LocalScale: {x: 73.8274841, y: 22.9287891, z: 1.40393627}
   m_Children: []
   m_Father: {fileID: 1001520773}
@@ -2089,7 +2125,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &162583480
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2190,7 +2228,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &162743839
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2291,7 +2331,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &172009983
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2392,7 +2434,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &173218622
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2574,7 +2618,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &175765232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2644,7 +2690,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &188339565
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3995,7 +4043,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &198097082
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4118,12 +4168,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 207497757}
-  m_LocalRotation: {x: .394923866, y: 0, z: 0, w: .918713927}
-  m_LocalPosition: {x: -3.4000001, y: 33.0999985, z: -32.8100014}
+  m_LocalRotation: {x: .354415298, y: 0, z: 0, w: .935088158}
+  m_LocalPosition: {x: -3.4000001, y: 59.9000015, z: -68.5999985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
 --- !u!114 &207497763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4198,7 +4248,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &210646319
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4299,7 +4351,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &212496644
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4431,7 +4485,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &217350021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4501,7 +4557,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &237224543
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4602,7 +4660,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &247718406
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4703,7 +4763,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &248677754
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4804,7 +4866,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &250052342
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4905,7 +4969,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &258448098
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4949,6 +5015,76 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 258448094}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &264737143
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1779814466}
+    m_Modifications:
+    - target: {fileID: 400006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -.707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[0].value
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: VelocityModule.y.maxCurve.m_Curve.Array.data[0].value
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: VelocityModule.x.scalar
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: VelocityModule.x.minCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: VelocityModule.y.scalar
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+      propertyPath: VelocityModule.y.minCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &267891001
 GameObject:
   m_ObjectHideFlags: 0
@@ -5006,7 +5142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &267891005
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5107,7 +5245,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &272496274
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5151,48 +5291,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 272496270}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &273728651
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -11.0702744
-      objectReference: {fileID: 0}
-    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.95568013
-      objectReference: {fileID: 0}
-    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -15.0531912
-      objectReference: {fileID: 0}
-    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: .778966546
-      objectReference: {fileID: 0}
-    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .627065599
-      objectReference: {fileID: 0}
-    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &276733351
 GameObject:
   m_ObjectHideFlags: 0
@@ -5250,7 +5348,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &276733355
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5316,7 +5416,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 288290285}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4fff99673a41e24439d527ad0bd6b569, type: 3}
@@ -5390,7 +5490,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
 --- !u!1 &289100835
 GameObject:
   m_ObjectHideFlags: 0
@@ -5448,7 +5548,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &289100839
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5549,7 +5651,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &290557070
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5650,7 +5754,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &306428658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5751,7 +5857,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &312347914
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5852,7 +5960,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &323191532
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5905,7 +6015,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 328687552}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5925,7 +6035,7 @@ Transform:
   - {fileID: 1592501224}
   - {fileID: 794657425}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 8
 --- !u!1 &337796221
 GameObject:
   m_ObjectHideFlags: 0
@@ -5983,7 +6093,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &337796225
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6084,7 +6196,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &338217883
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6185,7 +6299,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &357296195
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6317,7 +6433,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &358911059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6448,7 +6566,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &367513978
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6549,7 +6669,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &377071717
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6650,7 +6772,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &378316624
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6782,7 +6906,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &381094907
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6852,7 +6978,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &383493265
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6984,7 +7112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &390470102
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7115,7 +7245,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &399346745
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7216,7 +7348,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &403362660
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7317,7 +7451,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &409608498
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7418,7 +7554,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &413133311
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7519,7 +7657,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &418110771
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7620,7 +7760,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &420378359
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7721,7 +7863,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &435091492
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7823,7 +7967,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &436263629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7837,7 +7983,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &436263630
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7938,7 +8086,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &442773683
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8039,7 +8189,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &446551895
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8140,7 +8292,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &450449859
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8241,7 +8395,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &463334730
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8342,7 +8498,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &470222869
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8443,7 +8601,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &473125729
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8605,7 +8765,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &495272086
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8706,7 +8868,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &512651283
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8807,7 +8971,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &514071635
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8908,7 +9074,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &533030833
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9009,7 +9177,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &533348447
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9110,7 +9280,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &541700280
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9211,7 +9383,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &544742810
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9312,7 +9486,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &545589722
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9413,7 +9589,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &548151546
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9514,7 +9692,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &566374503
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9615,7 +9795,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &566755483
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9716,7 +9898,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &569041079
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9817,7 +10001,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &574049767
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9949,7 +10135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &581655427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10019,7 +10207,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &583973066
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10120,7 +10310,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &585006799
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10282,7 +10474,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &614586092
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10383,7 +10577,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &617041802
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10484,7 +10680,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &623336736
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10585,7 +10783,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &626558595
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10686,7 +10886,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &636499581
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10787,7 +10989,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &652253718
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10920,7 +11124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &654372290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10934,7 +11140,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &654372291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11004,7 +11212,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &674582206
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11105,7 +11315,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &675158151
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11207,7 +11419,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &680419790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11221,7 +11435,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &680419791
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11353,7 +11569,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &681694092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11423,7 +11641,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &689741130
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11525,7 +11745,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &690314143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11539,7 +11761,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &690314144
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11640,7 +11864,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &690971312
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11741,7 +11967,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &696313934
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11856,7 +12084,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 7
 --- !u!1 &714372948
 GameObject:
   m_ObjectHideFlags: 0
@@ -11915,7 +12143,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &714372952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11929,7 +12159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &714372953
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12030,7 +12262,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &745967260
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12131,7 +12365,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &753625383
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12232,7 +12468,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &756661571
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12333,7 +12571,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &766694165
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12434,7 +12674,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &771108417
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12535,7 +12777,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &777155814
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12636,7 +12880,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &784663571
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12738,7 +12984,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &785239809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12752,7 +13000,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &785239810
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12854,7 +13104,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &792456855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12868,7 +13120,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &792456856
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12940,7 +13194,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 794657420}
   serializedVersion: 2
-  m_Mass: 2
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -13145,7 +13399,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &797365679
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13246,7 +13502,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &811948715
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13347,7 +13605,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &815833382
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13448,7 +13708,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &816325182
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13549,7 +13811,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &822214759
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13650,7 +13914,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &827042049
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13751,7 +14017,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &844637379
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13852,7 +14120,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &849714145
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13984,7 +14254,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &852200291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14054,7 +14326,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &852334770
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14186,7 +14460,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &861589770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14199,6 +14475,10 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.71000004, z: 1}
   m_Center: {x: 0, y: .340000004, z: 0}
+--- !u!1 &874385954
+GameObject:
+  m_PrefabParentObject: {fileID: 100006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+  m_PrefabInternal: {fileID: 264737143}
 --- !u!1 &874707051
 GameObject:
   m_ObjectHideFlags: 0
@@ -14256,7 +14536,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &874707055
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14327,7 +14609,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 885050170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.0999999, y: 0, z: -10.8000002}
+  m_LocalPosition: {x: 4.0999999, y: 0, z: -16.2000008}
   m_LocalScale: {x: 73.8274841, y: 22.9287891, z: 1.40393627}
   m_Children: []
   m_Father: {fileID: 1001520773}
@@ -14463,7 +14745,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &886474827
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14564,7 +14848,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &888600598
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14665,7 +14951,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &894040672
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14766,7 +15054,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &895426781
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14867,7 +15157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &901460901
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14968,7 +15260,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &915261632
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15069,7 +15363,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &923694555
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15170,7 +15466,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &929976316
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15271,7 +15569,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &955999497
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15372,7 +15672,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &964556258
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15504,7 +15806,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &966234593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15574,7 +15878,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &967402779
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15663,7 +15969,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &969302547
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15776,7 +16084,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &994323100
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15877,7 +16187,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &994470958
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15951,7 +16263,7 @@ Transform:
   - {fileID: 1283006476}
   - {fileID: 1728538289}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 9
 --- !u!1 &1002491892
 GameObject:
   m_ObjectHideFlags: 0
@@ -16009,7 +16321,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1002491896
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16110,7 +16424,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1016099917
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16211,7 +16527,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1017836160
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16312,7 +16630,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1045237025
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16469,7 +16789,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1062979072}
   serializedVersion: 2
-  m_Mass: 2
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -16589,7 +16909,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1063398340
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16690,7 +17012,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1071575191
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16791,7 +17115,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1086417201
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16892,7 +17218,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1088804908
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16993,7 +17321,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1093256738
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17094,7 +17424,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1093995759
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17228,7 +17560,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1109168095
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17329,7 +17663,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1114317649
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17430,7 +17766,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1122486576
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17531,7 +17869,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1125177943
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17632,7 +17972,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1125870857
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17676,6 +18018,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1125870853}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1134181765
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 7a188c22e10b64955add56de8af5d9c4, type: 2}
+  m_PrefabInternal: {fileID: 175241963}
 --- !u!1 &1142010204
 GameObject:
   m_ObjectHideFlags: 0
@@ -17733,7 +18079,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1142010208
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17834,7 +18182,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1155575112
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17935,7 +18285,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1156860347
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18020,7 +18372,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100078, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
       propertyPath: m_Controller
@@ -18036,7 +18388,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100078, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
       propertyPath: m_Name
-      value: Player 1
+      value: Player_PS4_2
       objectReference: {fileID: 0}
     - target: {fileID: 100078, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
       propertyPath: m_Layer
@@ -18056,7 +18408,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100078, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400078, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
@@ -18118,7 +18482,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1167198721
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18219,7 +18585,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1168413100
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18320,7 +18688,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1174116418
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18401,7 +18771,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
       propertyPath: m_IsActive
@@ -18517,10 +18887,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2104568387}
-  - {fileID: 101631039}
   - {fileID: 61041363}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -18583,7 +18952,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1223015145
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18684,7 +19055,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1226641483
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18785,7 +19158,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1228706275
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18917,7 +19292,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &1233061555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18987,7 +19364,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1234144032
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19088,7 +19467,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1236039750
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19189,7 +19570,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1243306380
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19291,7 +19674,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &1245006317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19305,7 +19690,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1245006318
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19406,7 +19793,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1250048737
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19507,7 +19896,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1257485013
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19608,7 +19999,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1257818129
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19652,6 +20045,120 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1257818125}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1267541342
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.75999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.22000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.24000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: .254535407
+      objectReference: {fileID: 0}
+    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .967063487
+      objectReference: {fileID: 0}
+    - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849568, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 19828964, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19866898, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: InitialModule.startSize.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19866898, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: InitialModule.startSize.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
+      value: .382716388
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
+      value: .382716388
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].inSlope
+      value: .386685729
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].outSlope
+      value: .386685729
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: .668084204
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: .331915796
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: .331915796
+      objectReference: {fileID: 0}
+    - target: {fileID: 19888342, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].tangentMode
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1283006467
 GameObject:
   m_ObjectHideFlags: 0
@@ -19815,7 +20322,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1316006836
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19916,7 +20425,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1335168456
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20017,7 +20528,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1347974522
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20119,7 +20632,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &1377111826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20133,7 +20648,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1377111827
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20234,7 +20751,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1380575372
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20335,7 +20854,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1386709156
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20436,7 +20957,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1406472965
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20537,7 +21060,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1408351504
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20639,7 +21164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &1422972348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20653,7 +21180,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1422972349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20726,7 +21255,7 @@ RectTransform:
   - {fileID: 477519619}
   - {fileID: 2076295251}
   m_Father: {fileID: 61041363}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 100, y: 0}
@@ -20837,7 +21366,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1433793486
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20938,7 +21469,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1434632922
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21039,7 +21572,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1434819382
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21140,7 +21675,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1448624777
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21241,7 +21778,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1451765396
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21322,7 +21861,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7a188c22e10b64955add56de8af5d9c4, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7a188c22e10b64955add56de8af5d9c4, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a188c22e10b64955add56de8af5d9c4, type: 2}
@@ -21384,7 +21927,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1466695747
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21485,7 +22030,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1467486670
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21586,7 +22133,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1471264938
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21687,7 +22236,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1479325307
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21788,7 +22339,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1501254757
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21889,7 +22442,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1502302016
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21990,7 +22545,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1509322574
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22091,7 +22648,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1511911339
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22192,7 +22751,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1512353070
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22293,7 +22854,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1514382551
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22394,7 +22957,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1521782912
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22467,7 +23032,7 @@ RectTransform:
   - {fileID: 390700739}
   - {fileID: 1099149913}
   m_Father: {fileID: 2104568387}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 100, y: 0}
@@ -22579,7 +23144,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &1523240787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22593,7 +23160,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1523240788
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22694,7 +23263,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1524504135
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23020,7 +23591,7 @@ Transform:
   - {fileID: 173218619}
   - {fileID: 73807764}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 10
 --- !u!1 &1531532870
 GameObject:
   m_ObjectHideFlags: 0
@@ -23078,7 +23649,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1531532874
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23179,7 +23752,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1532700012
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23280,7 +23855,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1534249060
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23381,7 +23958,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1534839668
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23482,7 +24061,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1545937385
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23526,6 +24107,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1545937381}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1548554576
+GameObject:
+  m_PrefabParentObject: {fileID: 100006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
+  m_PrefabInternal: {fileID: 1195010328}
 --- !u!1 &1572337166
 GameObject:
   m_ObjectHideFlags: 0
@@ -23583,7 +24168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1572337170
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23684,7 +24271,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1585545316
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23841,7 +24430,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1592501215}
   serializedVersion: 2
-  m_Mass: 2
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -23961,7 +24550,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1593619032
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24062,7 +24653,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1614338018
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24106,93 +24699,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1614338014}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1616336677
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1616336681}
-  - 33: {fileID: 1616336680}
-  - 23: {fileID: 1616336678}
-  - 64: {fileID: 1616336679}
-  - 114: {fileID: 1616336682}
-  m_Layer: 8
-  m_Name: Island
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!23 &1616336678
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1616336677}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 007cd3dce0e6539409edcc484011c877, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &1616336679
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1616336677}
-  m_Material: {fileID: 13400000, guid: 96f3bded4a338413b818535861f25b47, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &1616336680
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1616336677}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1616336681
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1616336677}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0999999, y: .159999996, z: -3.20000005}
-  m_LocalScale: {x: 26.7939663, y: 1, z: 20.1884193}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
---- !u!114 &1616336682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1616336677}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7852b2d5bd743afab29f03241ec6ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shrinkSize: 3
-  timeBetShrink: 25
 --- !u!1 &1617146399
 GameObject:
   m_ObjectHideFlags: 0
@@ -24250,7 +24756,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1617146403
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24351,7 +24859,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1621191575
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24452,7 +24962,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1621195510
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24553,7 +25065,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1644014777
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24654,7 +25168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1661493704
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24755,7 +25271,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1664262330
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24799,6 +25317,67 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1664262326}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1681783466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1681783467}
+  - 222: {fileID: 1681783469}
+  - 114: {fileID: 1681783468}
+  m_Layer: 5
+  m_Name: DamageImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1681783467
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1681783466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 61041363}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -175.52002, y: 163.5}
+  m_SizeDelta: {x: 676, y: 327}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1681783468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1681783466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1681783469
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1681783466}
 --- !u!1 &1697736907
 GameObject:
   m_ObjectHideFlags: 0
@@ -24856,7 +25435,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1697736911
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24957,7 +25538,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1710988494
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25058,7 +25641,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1720436307
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25267,7 +25852,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
 --- !u!1 &1748637214
 GameObject:
   m_ObjectHideFlags: 0
@@ -25356,7 +25941,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &1748637220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25426,7 +26013,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1749916345
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25527,7 +26116,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1755027494
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25628,7 +26219,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1762295677
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25729,7 +26322,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1765142031
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25814,7 +26409,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100078, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
       propertyPath: m_Controller
@@ -25852,6 +26447,18 @@ Prefab:
       propertyPath: m_Name
       value: Player_PS4_1
       objectReference: {fileID: 0}
+    - target: {fileID: 400078, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
   m_IsPrefabParent: 0
@@ -25867,14 +26474,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1779814461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec45203ae7a1a54c9d02c355f983833, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ebe430ca54194b02a88befe4eb09a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  timeBetDodge: 1
-  dodgeDist: 4
-  dodgeSpeed: 25
-  accFactor: .200000003
+  currentMagic: {fileID: 178398, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
+  onFire: 0
+  ps: {fileID: 208746456}
+  ceaseFireTime: 5
+  enchantEffect: {fileID: 874385954}
+  coolDown: 2
 --- !u!82 &1779814463
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25976,7 +26584,7 @@ Rigidbody:
 Transform:
   m_PrefabParentObject: {fileID: 400080, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
   m_PrefabInternal: {fileID: 1779814460}
---- !u!114 &1779814468
+--- !u!114 &1779814467
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -25984,7 +26592,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1779814461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f0d59cb6de6b42c2b7a738b1c25b921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
@@ -25994,7 +26602,7 @@ MonoBehaviour:
   deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .100000001}
---- !u!114 &1779814469
+--- !u!114 &1779814468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -26002,13 +26610,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1779814461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 187795da4c80f4b8a8bcdd84c54ac560, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d89d7a4255d8455b99822f2a1ec950c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMagic: {fileID: 178398, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
-  onFire: 0
-  ps: {fileID: 208746456}
-  ceaseFireTime: 5
+  speed: 3
+  timeBetDodge: 1
+  dodgeDist: 3
+  dodgeSpeed: 15
+  accFactor: .100000001
 --- !u!1 &1785024044
 GameObject:
   m_ObjectHideFlags: 0
@@ -26066,7 +26675,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1785024048
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26167,7 +26778,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1792887091
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26268,7 +26881,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1796731743
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26369,7 +26984,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1821641834
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26471,7 +27088,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &1830971393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26485,7 +27104,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1830971394
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26529,33 +27150,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1830971389}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1833665283
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1833665284}
-  m_Layer: 0
-  m_Name: GameObject 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1833665284
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1833665283}
-  m_LocalRotation: {x: 0, y: .337156385, z: 0, w: .941448689}
-  m_LocalPosition: {x: -36.4000015, y: -34.7000008, z: 29.2999992}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
 --- !u!1 &1835101712
 GameObject:
   m_ObjectHideFlags: 0
@@ -26613,7 +27207,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1835101716
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26714,7 +27310,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1843954954
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26815,7 +27413,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1846276449
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26887,7 +27487,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2104568387}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -26977,7 +27577,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1851634021
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27079,7 +27681,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &1852768321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27093,7 +27697,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1852768322
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27194,7 +27800,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1855582506
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27295,7 +27903,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1862300526
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27427,7 +28037,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!65 &1867438332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27497,7 +28109,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1869386972
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27598,7 +28212,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1869605688
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27699,7 +28315,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1873688202
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27800,7 +28418,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1875319699
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27902,7 +28522,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &1884373383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27916,7 +28538,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1884373384
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28017,7 +28641,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1910103188
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28118,7 +28744,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1919820547
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28190,7 +28818,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 61041363}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -28280,7 +28908,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1931387588
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28381,7 +29011,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1934381835
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28482,7 +29114,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1945561591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28583,7 +29217,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1946444306
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28684,7 +29320,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1962763301
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28785,7 +29423,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1979761005
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28886,7 +29526,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &1994242251
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30237,7 +30879,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2019622233
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30338,7 +30982,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2034298725
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30439,7 +31085,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2040156625
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30540,7 +31188,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2040641035
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30641,7 +31291,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2043875459
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30743,7 +31395,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &2049585943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30757,7 +31411,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2049585944
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30858,7 +31514,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2049876138
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30960,7 +31618,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 1
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!114 &2059307358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30974,7 +31634,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2059307359
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31075,7 +31737,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2063138699
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31176,7 +31840,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2070575208
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31277,7 +31943,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2074198831
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31344,14 +32012,14 @@ RectTransform:
   m_GameObject: {fileID: 2076295250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.06251061, y: 1, z: 1}
   m_Children:
   - {fileID: 600137648}
   m_Father: {fileID: 1432424040}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .25}
   m_AnchorMax: {x: 1, y: .75}
-  m_AnchoredPosition: {x: -5, y: 0}
+  m_AnchoredPosition: {x: -.400000006, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &2086773289
@@ -31411,7 +32079,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2086773293
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31480,6 +32150,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 101631039}
   - {fileID: 1847986398}
   - {fileID: 1521884318}
   m_Father: {fileID: 1217456752}
@@ -31546,7 +32217,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2110677061
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31647,7 +32320,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2112302286
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31748,7 +32423,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2121582801
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31849,7 +32526,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2133726413
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31950,7 +32629,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorChange: .100000001
   scaleChange: .100000001
-  meltTime: 2
+  meltTime1: 2
+  meltTime2: 2
+  active: 0
 --- !u!23 &2145598404
 MeshRenderer:
   m_ObjectHideFlags: 0

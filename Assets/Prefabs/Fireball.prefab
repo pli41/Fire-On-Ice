@@ -164,8 +164,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178398}
-  m_LocalRotation: {x: 0, y: .778966546, z: 0, w: .627065599}
-  m_LocalPosition: {x: -5.16727686, y: 2.09000492, z: -11.6323748}
+  m_LocalRotation: {x: 0, y: -.783000946, z: 0, w: .622020543}
+  m_LocalPosition: {x: 5.62233257, y: 2.04000473, z: 1.86023068}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 435182}
@@ -238,10 +238,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de3b78686c284bf0bba87605ec5f394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ps1: {fileID: 19828964}
+  ps2G: {fileID: 180496}
+  ps2: {fileID: 0}
+  ps3G: {fileID: 116426}
+  ps3: {fileID: 0}
   damage: 20
-  knockDist: 3
   coolDown: 2
   speed: 8
+  size: 1.60000026
+  force: 300
+  forceR: 50
 --- !u!135 &13578030
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -2402,7 +2409,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .5
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2412,13 +2419,13 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
+          value: .5
           inSlope: 0
           outSlope: 0
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-      minMaxState: 3
+      minMaxState: 0
     startRotation:
       scalar: 3.1415925
       maxCurve:
