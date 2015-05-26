@@ -23,7 +23,9 @@ public class MeltingIsland : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(!active){
+			mr.enabled = false;
+		}
 	}
 
 	void OnTriggerStay(Collider col){
@@ -54,7 +56,7 @@ public class MeltingIsland : MonoBehaviour {
 				PlayerAttack_2 PA = col.gameObject.GetComponent<PlayerAttack_2>();
 				
 				if(PA.onFire){
-					meltTime2 = 0.6f;
+					meltTime2 = 0.3f;
 					//Debug.Log("Fast melting");
 				}
 				else{
@@ -65,14 +67,11 @@ public class MeltingIsland : MonoBehaviour {
 				if(timer2 > meltTime2){
 					timer2 = 0;
 					Melt(PA.onFire);
-				}
+				} 
 				else{
 					timer2 += Time.deltaTime;
 				}
 			}
-		}
-		else{
-			mr.enabled = false;
 		}
 
 	}

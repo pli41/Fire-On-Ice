@@ -164,8 +164,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178398}
-  m_LocalRotation: {x: 0, y: -.783000946, z: 0, w: .622020543}
-  m_LocalPosition: {x: 5.62233257, y: 2.04000473, z: 1.86023068}
+  m_LocalRotation: {x: 0, y: .999568522, z: 0, w: .0293737184}
+  m_LocalPosition: {x: -.318390787, y: 1.99000525, z: -3.10975266}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 435182}
@@ -246,7 +246,7 @@ MonoBehaviour:
   damage: 20
   coolDown: 2
   speed: 8
-  size: 1.60000026
+  size: .266666651
   force: 300
   forceR: 50
 --- !u!135 &13578030
