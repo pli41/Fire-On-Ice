@@ -88,8 +88,8 @@ public class MeltingIsland : MonoBehaviour {
 		Vector3 scale = transform.localScale;
 		scale.y -= scaleChange;
 
-		if(scale.y < 0){
-			scale.y = 0;
+		if(scale.y < 0.1f){
+			Destroy(gameObject);
 			active = false;
 		}
 		transform.localScale = scale;
@@ -106,8 +106,8 @@ public class MeltingIsland : MonoBehaviour {
 		Vector3 scale = transform.localScale;
 		scale.y -= scaleChange * (float)amount / 10f;
 		
-		if(scale.y < 0){
-			scale.y = 0;
+		if(scale.y < 0.1f){
+			Destroy(gameObject);
 			active = false;
 		}
 		transform.localScale = scale;

@@ -1,14 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MeltingIsland.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../梦幻/Assets/TCalculator.cs">
     <Files>
-      <File FileName="../../../Desktop/LMC4725_Autonomy/Assets/Scripts/PlayerController.cs" Line="187" Column="4" />
-      <File FileName="../../../Desktop/LMC4725_Autonomy/Assets/Scripts/GameController.cs" Line="1" Column="1" />
-      <File FileName="../../../Desktop/LMC4725_Autonomy/Assets/Scripts/Ball.cs" Line="1" Column="1" />
-      <File FileName="../../../Desktop/LMC4725_Autonomy/Assets/Scripts/Statistics.cs" Line="1" Column="1" />
-      <File FileName="../../../Desktop/LMC4725_Autonomy/Assets/Scripts/Achievement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player/PlayerHealth_2.cs" Line="90" Column="5" />
-      <File FileName="Assets/MeltingIsland.cs" Line="75" Column="4" />
+      <File FileName="../梦幻/Assets/TCalculator.cs" Line="29" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
