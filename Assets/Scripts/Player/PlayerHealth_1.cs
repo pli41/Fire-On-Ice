@@ -72,26 +72,29 @@ public class PlayerHealth_1 : MonoBehaviour
 
 		foreach(GameObject go in allgrounds){
 
-
-			MeltingIsland island = go.GetComponent<MeltingIsland>();
-
-
-			if(island.active){
-				float range;
+			if(go){
+				MeltingIsland island = go.GetComponent<MeltingIsland>();
 				
-				if(amount < 30f){
-					range = 1f;
+				
+				if(island.active){
+					float range;
+					
+					if(amount < 30f){
+						range = 1f;
+					}
+					else if(amount >= 30f && amount < 60f){
+						range = 3f;
+					}
+					else{
+						range = 5f;
+					}
+					if(Vector3.Distance(transform.position, go.transform.position) < range){
+						island.meltByExplode(amount);
+					}
 				}
-				else if(amount >= 30f && amount < 60f){
-					range = 3f;
-				}
-				else{
-					range = 5f;
-				}
-				if(Vector3.Distance(transform.position, go.transform.position) < range){
-					island.meltByExplode(amount);
-				}
+
 			}
+
 
 
 		}

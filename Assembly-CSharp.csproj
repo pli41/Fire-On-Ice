@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{62D0389C-8A8A-FAC5-601F-B47BA4A536EB}</ProjectGuid>
+	<ProjectGuid>{425F4316-4247-685B-F408-F1E9C15B3050}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,14 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DieWater.cs" />
-     <Compile Include="Assets\Elementals\Scripts\OrbitCamera.cs" />
-     <Compile Include="Assets\Elementals\Scripts\TestParticles.cs" />
-     <Compile Include="Assets\Fireball.cs" />
-     <Compile Include="Assets\Island.cs" />
-     <Compile Include="Assets\MeltingIsland.cs" />
-     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\DieWater.cs" />
+     <Compile Include="Assets\Scripts\Fireball.cs" />
+     <Compile Include="Assets\Scripts\Island.cs" />
+     <Compile Include="Assets\Scripts\MeltingIsland.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack_1.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack_2.cs" />
@@ -64,22 +60,12 @@
      <Compile Include="Assets\Scripts\Player\PlayerMovement_2.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement_Key.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
-     <Compile Include="Assets\_CompletedAssets\Scripts\Camera\CameraFollow.cs" />
-     <Compile Include="Assets\_CompletedAssets\Scripts\Enemy\EnemyAttack.cs" />
-     <Compile Include="Assets\_CompletedAssets\Scripts\Enemy\EnemyHealth.cs" />
-     <Compile Include="Assets\_CompletedAssets\Scripts\Enemy\EnemyMovement.cs" />
-     <Compile Include="Assets\_CompletedAssets\Scripts\Managers\EnemyManager.cs" />
-     <Compile Include="Assets\_CompletedAssets\Scripts\Managers\GameOverManager.cs" />
-     <Compile Include="Assets\_CompletedAssets\Scripts\Managers\ScoreManager.cs" />
-     <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerHealth.cs" />
-     <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerMovement.cs" />
-     <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerShooting.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Shaders\Rim Lit Bumped Specular.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Fonts\LuckiestGuy\LICENSE.txt" />
-     <None Include="Assets\Elementals\!Readme.txt" />
+     <None Include="Assets\Standard Assets\Elementals\!Readme.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
@@ -98,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{60AA9409-BEEA-2F9E-BA58-73195103BCCE}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{284A7D6B-207C-0D3F-27EE-5DC6E9C3F9B5}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

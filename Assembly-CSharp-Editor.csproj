@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{2F6083EE-091C-CF88-1099-31FA5E2CAECA}</ProjectGuid>
+	<ProjectGuid>{BCBEC54F-E282-2C26-81FE-DFA9512BB35F}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -71,12 +71,6 @@
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
- <Reference Include="AssetStoreTools">
- <HintPath>/Users/lipeilin/Documents/unityprojects/LMC2813_Final/Assets/AssetStoreTools/Editor/AssetStoreTools.dll</HintPath>
- </Reference>
- <Reference Include="AssetStoreToolsExtra">
- <HintPath>/Users/lipeilin/Documents/unityprojects/LMC2813_Final/Assets/AssetStoreTools/Editor/AssetStoreToolsExtra.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -113,9 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{60AA9409-BEEA-2F9E-BA58-73195103BCCE}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{284A7D6B-207C-0D3F-27EE-5DC6E9C3F9B5}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{62D0389C-8A8A-FAC5-601F-B47BA4A536EB}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{425F4316-4247-685B-F408-F1E9C15B3050}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

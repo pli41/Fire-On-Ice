@@ -37,7 +37,7 @@ public class PlayerAttack_1 : MonoBehaviour
 		timer += Time.deltaTime;
 		
 		
-		if(Input.GetAxisRaw ("PS4_R2_1") >0 && timer >= coolDown && !inCharge)
+		if(Input.GetAxisRaw ("PS4_R2_1") > 0 && timer >= coolDown && !inCharge)
 		{
 			inCharge = true;
 		}
