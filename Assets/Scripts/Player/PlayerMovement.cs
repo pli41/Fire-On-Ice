@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
-public class PlayerMovement_1 : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
+	public string playerString;
 	public float speed = 6f;
 	public float timeBetDodge = 1f;
 	public float dodgeDist = 3f;
@@ -9,20 +10,15 @@ public class PlayerMovement_1 : MonoBehaviour
 	public float accFactor = 0.1f;
 	
 	Vector3 dodgeDir;
-	private Rigidbody rigid;
 	private Vector3 dodgePos;
 	private float dodgeInTimer;
 	private float dodgeTimer;
 	private Vector3 movement;
 	private Animator anim;
 	private Rigidbody playerRigidbody;
-	private int floorMask;
-	private float camRayLength = 100f;
 	private bool dodgeInit;
 	
 	void Awake(){
-		rigid = GetComponent<Rigidbody> ();
-		floorMask = LayerMask.GetMask("Floor");
 		anim = GetComponent<Animator> ();
 		playerRigidbody = GetComponent<Rigidbody> ();
 		dodgeInit = true;
@@ -31,14 +27,14 @@ public class PlayerMovement_1 : MonoBehaviour
 	void FixedUpdate(){
 		dodgeTimer += Time.deltaTime;
 		
-		float h = Input.GetAxisRaw ("PS4_Horizontal_1");
-		float v = Input.GetAxisRaw ("PS4_Vertical_1");
+		float h = Input.GetAxisRaw ("PS4_Horizontal_" + playerString);
+		float v = Input.GetAxisRaw ("PS4_Vertical_" + playerString);
 
 		Move (h, v);
 		Turning ();
 		Animating (h, v);
 			
-		if((dodgeTimer >= timeBetDodge && Input.GetAxisRaw("PS4_L2_1") > 0 && dodgeInit == true) || dodgeInit == false){
+		if((dodgeTimer >= timeBetDodge && Input.GetAxisRaw("PS4_L2_" + playerString) > 0 && dodgeInit == true) || dodgeInit == false){
 			Debug.Log("dodge start");
 			Dodge(h, v);
 		}
@@ -73,10 +69,8 @@ public class PlayerMovement_1 : MonoBehaviour
 	}
 	
 	void Turning(){
-		
-		
-		float hori = Input.GetAxis("PS4_RightAnalogHorizontal_1");
-		float vert = Input.GetAxis("PS4_RightAnalogVertical_1");
+		float hori = Input.GetAxis("PS4_RightAnalogHorizontal_" + playerString);
+		float vert = Input.GetAxis("PS4_RightAnalogVertical_" + playerString);
 		
 		if(hori != 0 && vert != 0){
 			Vector3 direction = new Vector3 (hori, 0f, vert);
@@ -111,8 +105,6 @@ public class PlayerMovement_1 : MonoBehaviour
 		
 		if(dodgeInit){
 			Debug.Log("Initalize dodge");
-			Vector3 dodgeMov = dodgeDir * dodgeDist;
-			dodgePos = transform.position + dodgeMov;
 			dodgeInit = false;
 		}
 		else{
@@ -122,7 +114,6 @@ public class PlayerMovement_1 : MonoBehaviour
 		if(dodgeInTimer > 0.2f){
 			Debug.Log("dodge complete");
 			//anim.SetBool("IsDodging", false);
-			dodgePos = transform.position;
 			dodgeInTimer = 0;
 			dodgeInit = true;
 		}

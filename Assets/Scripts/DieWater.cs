@@ -19,7 +19,7 @@ public class DieWater : MonoBehaviour {
 	void OnTriggerStay(Collider col){
 		if(col.gameObject.tag == "Player1"){
 			Debug.Log("GG");
-			PlayerHealth_1 PH = col.gameObject.GetComponent<PlayerHealth_1>();
+			PlayerHealth PH = col.gameObject.GetComponent<PlayerHealth>();
 			if(timer > dmgTime){
 				timer = 0;
 				PH.TakeDamage(10);
@@ -31,7 +31,7 @@ public class DieWater : MonoBehaviour {
 		}
 		else if(col.gameObject.tag == "Player2"){
 			Debug.Log("GG");
-			PlayerHealth_2 PH = col.gameObject.GetComponent<PlayerHealth_2>();
+			PlayerHealth PH = col.gameObject.GetComponent<PlayerHealth>();
 			if(timer > dmgTime){
 				timer = 0;
 				PH.TakeDamage(10);

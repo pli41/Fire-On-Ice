@@ -35,7 +35,7 @@ public class MeltingIsland : MonoBehaviour {
 		if(active){
 			if(col.gameObject.tag == "Player1"){
 				//Debug.Log("Player detected");
-				PlayerAttack_1 PA = col.gameObject.GetComponent<PlayerAttack_1>();
+				PlayerAttack PA = col.gameObject.GetComponent<PlayerAttack>();
 				
 				if(PA.onFire){
 					meltTime1 = 0.6f;
@@ -55,7 +55,7 @@ public class MeltingIsland : MonoBehaviour {
 				}
 			}
 			else if (col.gameObject.tag == "Player2"){
-				PlayerAttack_2 PA = col.gameObject.GetComponent<PlayerAttack_2>();
+				PlayerAttack PA = col.gameObject.GetComponent<PlayerAttack>();
 				
 				if(PA.onFire){
 					meltTime2 = 0.3f;

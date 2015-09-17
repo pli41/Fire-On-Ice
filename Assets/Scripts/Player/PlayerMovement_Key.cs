@@ -2,18 +2,18 @@
 
 public class PlayerMovement_Key : MonoBehaviour
 {
-	public float speed = 6f;
+	public float speed;
 	public float timeBetDodge = 1f;
 	public float dodgeDist = 3f;
 	public float dodgeSpeed = 15f;
 	public float accFactor = 0.1f;
-
-	private Vector3 dodgePos;
+	
+	Vector3 dodgeDir;
+	private float dodgeInTimer;
 	private float dodgeTimer;
 	private Vector3 movement;
 	private Animator anim;
 	private Rigidbody playerRigidbody;
-	private float camRayLength = 100f;
 	private bool dodgeInit;
 	
 	void Awake(){
@@ -28,18 +28,13 @@ public class PlayerMovement_Key : MonoBehaviour
 		float h = Input.GetAxisRaw ("Horizontal_Keyboard");
 		float v = Input.GetAxisRaw ("Vertical_Keyboard");
 		
-		if(anim.GetBool("IsDodging")){
-			Dodge();
-		}
-		else{
-			Move (h, v);
-			Turning ();
-			Animating (h, v);
-			
-			if(dodgeTimer >= timeBetDodge && Input.GetMouseButton(1)){
-				Dodge();
-				dodgeInit = true;
-			}
+		Move (h, v);
+		Turning ();
+		Animating (h, v);
+		
+		if((dodgeTimer >= timeBetDodge && Input.GetMouseButtonDown(1) && dodgeInit == true) || dodgeInit == false){
+			Debug.Log("dodge start");
+			Dodge(h, v);
 		}
 		
 		
@@ -69,11 +64,12 @@ public class PlayerMovement_Key : MonoBehaviour
 	}
 	
 	void Turning(){
+
 		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 
 		RaycastHit floorHit;
 
-		if(Physics.Raycast(camRay, out floorHit, camRayLength)){
+		if(Physics.Raycast(camRay, out floorHit, 100f)){
 			Vector3 playerToMouse = floorHit.point - transform.position;
 			playerToMouse.y = 0f;
 			Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
@@ -81,22 +77,29 @@ public class PlayerMovement_Key : MonoBehaviour
 		}
 	}
 	
-	void Dodge(){
+	void Dodge(float h, float v){
 		dodgeTimer = 0f;
-		anim.SetBool ("IsDodging", true);
+		anim.SetTrigger ("dodge");
+		
+		dodgeDir.Set (h, 0f, v);
+		dodgeDir = dodgeDir.normalized;
 		
 		if(dodgeInit){
-			Vector3 dodgeMov = transform.forward * dodgeDist;
-			dodgePos = transform.position + dodgeMov;
+			Debug.Log("Initalize dodge");;
 			dodgeInit = false;
 		}
+		else{
+			dodgeInTimer += Time.deltaTime;
+		}
 		
-		if(Vector3.Distance(transform.position, dodgePos) < 0.5f){
-			anim.SetBool("IsDodging", false);
-			dodgePos = transform.position;
+		if(dodgeInTimer > 0.2f){
+			Debug.Log("dodge complete");
+			//anim.SetBool("IsDodging", false);
+			dodgeInTimer = 0;
+			dodgeInit = true;
 		}
 		else{
-			Vector3 dodge = transform.forward * dodgeSpeed * Time.deltaTime;
+			Vector3 dodge = dodgeDir * dodgeSpeed * Time.deltaTime;
 			playerRigidbody.MovePosition (transform.position + dodge);
 		}
 		

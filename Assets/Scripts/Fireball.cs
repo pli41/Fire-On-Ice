@@ -26,11 +26,9 @@ public class Fireball : MonoBehaviour {
 		damage = size * 30f;
 
 		ps1.startSize = 0.01f;
-		ps2.startSize = size * 4f + 3f;
-		ps3.startSize = size * 4f + 3f;
+		ps2.startSize = size * 2.5f + 2f;
+		ps3.startSize = size * 2.5f + 2f;
 
-
-		Debug.Log ("Size = " + ps1.startSize);
 		destroyed = false;
 		disabled = false;
 		rigid = GetComponent<Rigidbody> ();
@@ -66,24 +64,21 @@ public class Fireball : MonoBehaviour {
 	void OnParticleCollision(GameObject other){
 	
 		if (other.tag == "Player1") {
-			PlayerHealth_1 healthP = other.GetComponent<PlayerHealth_1> ();
+			PlayerHealth healthP = other.GetComponent<PlayerHealth> ();
 			healthP.TakeDamage ((int)damage);
-			Debug.Log ("Hit");
 			Rigidbody rigidP = other.GetComponent<Rigidbody> ();
 			rigidP.AddExplosionForce (force, transform.position, forceR);
 			disabled = true;
 		}
 		else if(other.tag == "Player2"){
-			PlayerHealth_2 healthP = other.GetComponent<PlayerHealth_2> ();
+			PlayerHealth healthP = other.GetComponent<PlayerHealth> ();
 			healthP.TakeDamage ((int)damage);
-			Debug.Log ("Hit");
 			Rigidbody rigidP = other.GetComponent<Rigidbody> ();
 			rigidP.AddExplosionForce (force, transform.position, forceR);
 			disabled = true;
 		}
 		else {
-			Debug.Log("out of world");
-			Destroy(gameObject);
+			Invoke("DestroyFire", 2.0f);
 		}
 	}
 }

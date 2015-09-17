@@ -60,15 +60,10 @@
      <Compile Include="Assets\Scripts\Island.cs" />
      <Compile Include="Assets\Scripts\MeltingIsland.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerAttack_1.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerAttack_2.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack_Key.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerHealth_1.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerHealth_2.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerMovement_1.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerMovement_2.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement_Key.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Shaders\Rim Lit Bumped Specular.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />

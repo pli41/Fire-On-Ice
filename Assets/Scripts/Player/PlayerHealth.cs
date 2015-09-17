@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class PlayerHealth_1 : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     public int startingHealth = 100;
     public int currentHealth;
@@ -15,7 +15,7 @@ public class PlayerHealth_1 : MonoBehaviour
 	GameObject[] allgrounds;
     Animator anim;
     AudioSource playerAudio;
-    PlayerMovement_1 playerMovement;
+    PlayerMovement playerMovement;
     //PlayerShooting playerShooting;
     bool isDead;
     bool damaged;
@@ -26,7 +26,7 @@ public class PlayerHealth_1 : MonoBehaviour
 		allgrounds = GameObject.FindGameObjectsWithTag("Island");
         anim = GetComponent <Animator> ();
         playerAudio = GetComponent <AudioSource> ();
-        playerMovement = GetComponent <PlayerMovement_1> ();
+        playerMovement = GetComponent <PlayerMovement> ();
         //playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
     }
