@@ -4,10 +4,9 @@ using System.Collections;
 public class Fireball : MonoBehaviour {
 
 	public ParticleSystem ps1;
-	public GameObject ps2G;
 	public ParticleSystem ps2;
-	public GameObject ps3G;
 	public ParticleSystem ps3;
+
 	public float damage = 20f;
 	public float coolDown = 0.5f;
 	public float speed = 5f;
@@ -21,10 +20,17 @@ public class Fireball : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		ps1 = GetComponent<ParticleSystem> ();
-		ps2 = ps2G.GetComponent<ParticleSystem> ();
-		ps3 = ps3G.GetComponent<ParticleSystem> ();
-		ps1.startSize = 2f;
+
+
+		force = size * 100f + 200f;
+		damage = size * 30f;
+
+		ps1.startSize = 0.01f;
+		ps2.startSize = size * 4f + 3f;
+		ps3.startSize = size * 4f + 3f;
+
+
+		Debug.Log ("Size = " + ps1.startSize);
 		destroyed = false;
 		disabled = false;
 		rigid = GetComponent<Rigidbody> ();
@@ -32,20 +38,18 @@ public class Fireball : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
 		if(!disabled && !destroyed){
 			//Move ();
 		}
 		else if(!destroyed && disabled){
-			Invoke("DestroyFire", 0.5f);
+			Invoke("DestroyFire", 1.5f);
 			destroyed = true;
 		}
 
 		//change parameters based on size
-		force = size * 50f + 200f;
-		damage = size * 8f;
+
 		//ps1.startSize = size / 2f;
-		ps2.startSize = size;
-		ps3.startSize = size;
 
 	}
 	

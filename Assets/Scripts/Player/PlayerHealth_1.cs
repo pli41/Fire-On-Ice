@@ -113,6 +113,8 @@ public class PlayerHealth_1 : MonoBehaviour
         playerAudio.Play ();
 
         playerMovement.enabled = false;
+
+		gameObject.SetActive (false);
         //playerShooting.enabled = false;
     }
 }

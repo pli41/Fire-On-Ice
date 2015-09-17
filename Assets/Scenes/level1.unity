@@ -1111,7 +1111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &93508714
 Transform:
   m_ObjectHideFlags: 0
@@ -1119,7 +1119,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 93508713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 1.82000005, z: -2.5}
+  m_LocalPosition: {x: -1.85699999, y: 3.88630009, z: -2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1548554577}
@@ -2633,7 +2633,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 7a188c22e10b64955add56de8af5d9c4, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a188c22e10b64955add56de8af5d9c4, type: 2}
@@ -3924,7 +3924,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 4b8e36a33df86428aa3bec11134bc0e7, type: 2}
       propertyPath: m_IsActive
@@ -14731,7 +14731,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1779814466}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!137 &957132691
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -15184,6 +15184,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1529378812}
   m_RootOrder: 157
+--- !u!1 &986423659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 986423660}
+  m_Layer: 0
+  m_Name: FireballPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &986423660
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 986423659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .239999995, y: .389999986, z: 1.51999998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1779814466}
+  m_RootOrder: 0
 --- !u!1 &994323096
 GameObject:
   m_ObjectHideFlags: 0
@@ -19151,15 +19178,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 34.4000015
+      value: -3.17000008
       objectReference: {fileID: 0}
     - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.22000003
+      value: 1.94000006
       objectReference: {fileID: 0}
     - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.24000001
+      value: -1.97000003
       objectReference: {fileID: 0}
     - target: {fileID: 442868, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
       propertyPath: m_LocalRotation.x
@@ -19184,6 +19211,10 @@ Prefab:
     - target: {fileID: 178398, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startColor.maxColor.rgba
+      value: 4278190335
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
@@ -19990,7 +20021,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1387844421
 Transform:
   m_ObjectHideFlags: 0
@@ -21143,7 +21174,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7a188c22e10b64955add56de8af5d9c4, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 7a188c22e10b64955add56de8af5d9c4, type: 2}
       propertyPath: m_IsActive
@@ -25844,6 +25875,7 @@ MonoBehaviour:
   ceaseFireTime: 5
   enchantEffect: {fileID: 874385954}
   coolDown: 2
+  fireballPoint: {fileID: 986423660}
 --- !u!82 &1779814463
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25951,6 +25983,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 3.20000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 986423660}
   - {fileID: 874385957}
   - {fileID: 1887021782}
   - {fileID: 957132690}
@@ -28023,7 +28056,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1779814466}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!137 &1887021783
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

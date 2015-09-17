@@ -9,11 +9,10 @@ public class PlayerAttack_1 : MonoBehaviour
 	public float ceaseFireTime = 5f;
 	public GameObject enchantEffect;
 	public float coolDown = 2f;
+	public Transform fireballPoint;
 	
-	private Fireball fireball;
-	private float damage;
 	private float knockDist;
-	
+	private Fireball fireball;
 	private float chargeTime;
 	private float fireTimer;
 	private float timer;
@@ -26,7 +25,6 @@ public class PlayerAttack_1 : MonoBehaviour
 		onFire = false;
 		if(currentMagic.tag == "Fireball"){
 			fireball = currentMagic.GetComponent<Fireball>();
-			damage = fireball.damage;
 			coolDown = fireball.coolDown;
 		}
 	}
@@ -91,21 +89,26 @@ public class PlayerAttack_1 : MonoBehaviour
 		if(Input.GetAxisRaw ("PS4_R2_1") <= 0){
 			Shoot(chargeTime);
 			chargeTime = 0;
+			timer = 0f;
 		}
 		
 	}
 	
 	void Shoot (float chargeTime)
 	{
-		float size = chargeTime / 3f * 10f;
+		float size = chargeTime;
 		Debug.Log ("Shoot");
-		timer = 0f;
 		inCharge = false;
 		onFire = true;
 		fireball.size = size;
-		currentMagic.transform.position = transform.position + transform.forward * 1.5f + new Vector3(0, 1f, 0);
+
+
+		currentMagic.transform.position = fireballPoint.position;
+		//currentMagic.transform.position = transform.position + transform.forward * 1.5f + new Vector3(0, 1f, 0);
 		currentMagic.transform.rotation = transform.rotation;
 		Instantiate (currentMagic);
 		coolDown = 0.3f * size;
+
+		Debug.Break ();
 	}
 }
