@@ -39,11 +39,9 @@ public class MeltingIsland : MonoBehaviour {
 				
 				if(PA.onFire){
 					meltTime1 = 0.6f;
-					Debug.Log("Fast melting");
 				}
 				else{
 					meltTime1 = 2f;
-					Debug.Log("Melting");
 				}
 				
 				if(timer1 > meltTime1){

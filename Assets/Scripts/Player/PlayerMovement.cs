@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 		playerRigidbody = GetComponent<Rigidbody> ();
 		dodgeInit = true;
 	}
-	
+
 	void FixedUpdate(){
 		dodgeTimer += Time.deltaTime;
 		

@@ -1,86 +1,109 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fireball : Ability, Chargable {
+public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 
-	public ParticleSystem ps1;
-	public ParticleSystem ps2;
-	public ParticleSystem ps3;
-
-	public float damage = 20f;
-	public float coolDown = 0.5f;
-	public float speed = 5f;
-	public float size;
-	public float force = 300f;
-	public float forceR = 50f;
+	public GameObject enchantEffect;
+	public GameObject onFireEffect;
+	public float maxChargeT;
+	public readonly float onFireTime_max = 3f;
 
 
-	private float timer;
-	private Rigidbody rigid;
-	private bool disabled;
+	private Fireball_Object fireball_object;
 
-	// Use this for initialization
-	void Start () {
-		force = size * 100f + 200f;
-		damage = size * 30f;
+	private float chargedTime;
+	private float chargeTimer;
+	private float cdTimer;
+	private float cooldown_new;
+	private float onFireTimer;
 
-		ps1.startSize = 0.01f;
-		ps2.startSize = size * 2.5f + 2f;
-		ps3.startSize = size * 2.5f + 2f;
 
-		disabled = false;
-		rigid = GetComponent<Rigidbody> ();
+
+	void Start (){
+		enchantEffect = owner.transform.Find ("enchantEffect").gameObject;
+		onFireEffect = owner.transform.Find ("onFireEffect").gameObject;
+		abilityReady = false;
+		fireball_object = ability_object.GetComponent<Fireball_Object> ();
+		maxChargeT = 3f;
+		cooldown_new = cooldown;
 	}
 
+	void Update (){
+		if(cdTimer < cooldown_new){
+			cdTimer += Time.deltaTime;
+		}
+		else{
+			abilityReady = true;
+		}
+		Debug.Log ("AbilityReady_Update: " + abilityReady);
 
-	public override void cast(){
 
 	}
 
-	public override void endCast(){
-		
+	public override void Cast(){
+		Debug.Log ("Casting");
+		if(abilityReady){
+			Charge ();
+		}
+		else{
+			Debug.Log("AbilityReady_cast: " + abilityReady);
+			Debug.Log("Ability not ready.");
+		}
 	}
 
-	void Chargable.charge(){
-		timer += Time.deltaTime;
+	public override void EndCast(){
+		Debug.Log ("Endcast");
+		if(abilityReady){
+			chargedTime = EndCharge ();
+			Shoot ();
+			abilityReady = false;
+			cdTimer = 0f;
+		}
 	}
 
-	float Chargable.endCharge(){
-		float result = timer;
-		timer = 0f;
+	public void Shoot(){
+		Debug.Log ("Shoot");
+		SetupObj ();
+		Instantiate (ability_object);
+		cooldown_new = cooldown * chargedTime / 3 + 0.5f; 
+		CauseEffect ();
+	}
+
+	public override void SetupObj(){
+		Debug.Log (ability_point);
+		fireball_object = ability_object.GetComponent<Fireball_Object> ();
+		fireball_object.size = chargedTime;
+		fireball_object.ability = this;
+		ability_object.transform.position = ability_point.position;
+		ability_object.transform.rotation = owner.transform.rotation;
+	}
+
+	public void Charge(){
+		enchantEffect.SetActive (true);
+		if(chargeTimer < maxChargeT){
+			chargeTimer += Time.deltaTime;
+		}
+	}
+
+	public float EndCharge(){
+		float result = chargeTimer;
+		chargeTimer = 0f;
+		enchantEffect.SetActive (false);
 		return result;
 	}
 
-	// Update is called once per frame
-	void FixedUpdate () {
-		if(disabled){
-			Invoke("DestroyFire", 1.5f);
-		}
-	}
-	
-
-	void DestroyFire(){
-		Destroy (gameObject);
+	public void CauseEffect(){
+		Debug.Log ("Onfire");
+		CancelInvoke ();
+		onFireEffect.SetActive (true);
+		owner.GetComponent<PlayerAttack> ().onFire = true;
+		Invoke ("EndEffect", onFireTime_max);
 	}
 
-
-	void OnParticleCollision(GameObject other){
-		if (other.tag == "Player1") {
-			PlayerHealth healthP = other.GetComponent<PlayerHealth> ();
-			healthP.TakeDamage ((int)damage);
-			Rigidbody rigidP = other.GetComponent<Rigidbody> ();
-			rigidP.AddExplosionForce (force, transform.position, forceR);
-			disabled = true;
-		}
-		else if(other.tag == "Player2"){
-			PlayerHealth healthP = other.GetComponent<PlayerHealth> ();
-			healthP.TakeDamage ((int)damage);
-			Rigidbody rigidP = other.GetComponent<Rigidbody> ();
-			rigidP.AddExplosionForce (force, transform.position, forceR);
-			disabled = true;
-		}
-		else {
-			Invoke("DestroyFire", 2.0f);
-		}
+	public void EndEffect(){
+		Debug.Log ("Ceasefire");
+		onFireEffect.SetActive (false);
+		owner.GetComponent<PlayerAttack> ().onFire = false;
 	}
+
 }
