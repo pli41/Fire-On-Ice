@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fireball : MonoBehaviour {
+public class Fireball : Ability, Chargable {
 
 	public ParticleSystem ps1;
 	public ParticleSystem ps2;
@@ -13,15 +13,14 @@ public class Fireball : MonoBehaviour {
 	public float size;
 	public float force = 300f;
 	public float forceR = 50f;
-		
-	Rigidbody rigid;
-	bool disabled;
-	bool destroyed;
+
+
+	private float timer;
+	private Rigidbody rigid;
+	private bool disabled;
 
 	// Use this for initialization
 	void Start () {
-
-
 		force = size * 100f + 200f;
 		damage = size * 30f;
 
@@ -29,26 +28,34 @@ public class Fireball : MonoBehaviour {
 		ps2.startSize = size * 2.5f + 2f;
 		ps3.startSize = size * 2.5f + 2f;
 
-		destroyed = false;
 		disabled = false;
 		rigid = GetComponent<Rigidbody> ();
 	}
-	
+
+
+	public override void cast(){
+
+	}
+
+	public override void endCast(){
+		
+	}
+
+	void Chargable.charge(){
+		timer += Time.deltaTime;
+	}
+
+	float Chargable.endCharge(){
+		float result = timer;
+		timer = 0f;
+		return result;
+	}
+
 	// Update is called once per frame
 	void FixedUpdate () {
-
-		if(!disabled && !destroyed){
-			//Move ();
-		}
-		else if(!destroyed && disabled){
+		if(disabled){
 			Invoke("DestroyFire", 1.5f);
-			destroyed = true;
 		}
-
-		//change parameters based on size
-
-		//ps1.startSize = size / 2f;
-
 	}
 	
 
@@ -56,13 +63,8 @@ public class Fireball : MonoBehaviour {
 		Destroy (gameObject);
 	}
 
-	void Move(){
-		Vector3 movement = transform.forward.normalized * speed *Time.deltaTime;
-		rigid.MovePosition (transform.position + movement);
-	}
 
 	void OnParticleCollision(GameObject other){
-	
 		if (other.tag == "Player1") {
 			PlayerHealth healthP = other.GetComponent<PlayerHealth> ();
 			healthP.TakeDamage ((int)damage);

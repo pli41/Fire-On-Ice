@@ -1148,6 +1148,10 @@ MonoBehaviour:
   enchantEffect: {fileID: 1548554576}
   coolDown: 2
   fireballPoint: {fileID: 1800483984}
+  abilities:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &93508716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3023,6 +3027,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
+  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -25910,6 +25915,10 @@ MonoBehaviour:
   enchantEffect: {fileID: 874385954}
   coolDown: 2
   fireballPoint: {fileID: 986423660}
+  abilities:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!82 &1779814463
 AudioSource:
   m_ObjectHideFlags: 0

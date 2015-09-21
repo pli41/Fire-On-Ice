@@ -17,7 +17,16 @@ public class PlayerAttack : MonoBehaviour
 	private float fireTimer;
 	private float timer;
 	private bool inCharge;
-	
+
+
+
+	public Ability[] abilities = new Ability[3];
+
+
+
+
+
+
 	void Awake ()
 	{
 		inCharge = false;
@@ -33,12 +42,15 @@ public class PlayerAttack : MonoBehaviour
 	
 	void FixedUpdate ()
 	{
+
+
+
 		timer += Time.deltaTime;
-		
-		
 		if(Input.GetAxisRaw ("PS4_R2_" + playerString) > 0 && timer >= coolDown && !inCharge)
 		{
 			inCharge = true;
+
+			abilities[0].cast();
 		}
 		
 		if(inCharge){
