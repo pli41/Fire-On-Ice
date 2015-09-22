@@ -1111,7 +1111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &93508714
 Transform:
   m_ObjectHideFlags: 0
@@ -10100,7 +10100,6 @@ GameObject:
   - 33: {fileID: 654372287}
   - 65: {fileID: 654372286}
   - 23: {fileID: 654372285}
-  - 114: {fileID: 654372289}
   - 114: {fileID: 654372290}
   - 65: {fileID: 654372291}
   m_Layer: 0
@@ -10165,23 +10164,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1529378812}
   m_RootOrder: 0
---- !u!114 &654372289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 654372284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dc35c2edbda81241aa9bd80cdc4a8ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorChange: .100000001
-  scaleChange: .100000001
-  meltTime1: 2
-  meltTime2: 2
-  meltTimeKey: 2
-  active: 0
 --- !u!114 &654372290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12298,7 +12280,7 @@ GameObject:
   - 23: {fileID: 794657422}
   - 54: {fileID: 794657421}
   - 82: {fileID: 794657426}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Obstacle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -15908,7 +15890,7 @@ GameObject:
   - 23: {fileID: 1062979078}
   - 54: {fileID: 1062979077}
   - 82: {fileID: 1062979073}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Obstacle 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -23676,7 +23658,7 @@ GameObject:
   - 23: {fileID: 1592501221}
   - 54: {fileID: 1592501220}
   - 82: {fileID: 1592501216}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Obstacle 1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -25866,7 +25848,7 @@ MonoBehaviour:
   magicPoint: {fileID: 986423660}
   abilities:
   - {fileID: 11451950, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
-  - {fileID: 0}
+  - {fileID: 11407586, guid: 7f2c5e5bf94344c3c8eae5ad43b759eb, type: 2}
   - {fileID: 0}
 --- !u!82 &1779814463
 AudioSource:
@@ -25972,7 +25954,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1779814461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.20000005, z: 0}
+  m_LocalPosition: {x: -8.46000004, y: 3.20000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 986423660}
@@ -28059,7 +28041,7 @@ GameObject:
   - 4: {fileID: 1887021782}
   - 137: {fileID: 1887021783}
   m_Layer: 9
-  m_Name: Player
+  m_Name: PlayerModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

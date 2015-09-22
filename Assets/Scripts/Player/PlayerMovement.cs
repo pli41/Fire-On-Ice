@@ -34,10 +34,10 @@ public class PlayerMovement : MonoBehaviour
 		Turning ();
 		Animating (h, v);
 			
-		if((dodgeTimer >= timeBetDodge && Input.GetAxisRaw("PS4_L2_" + playerString) > 0 && dodgeInit == true) || dodgeInit == false){
-			Debug.Log("dodge start");
-			Dodge(h, v);
-		}
+//		if((dodgeTimer >= timeBetDodge && Input.GetAxisRaw("PS4_L2_" + playerString) > 0 && dodgeInit == true) || dodgeInit == false){
+//			Debug.Log("dodge start");
+//			Dodge(h, v);
+//		}
 		
 		
 		

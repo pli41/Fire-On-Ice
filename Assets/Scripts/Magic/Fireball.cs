@@ -7,14 +7,12 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	public GameObject onFireEffect;
 	public float maxChargeT;
 	public readonly float onFireTime_max = 3f;
-
+	public float cooldown;
 
 	private Fireball_Object fireball_object;
 
 	private float chargedTime;
 	private float chargeTimer;
-	private float cdTimer;
-	private float cooldown_new;
 	private float onFireTimer;
 
 
@@ -24,20 +22,30 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 		onFireEffect = owner.transform.Find ("onFireEffect").gameObject;
 		abilityReady = false;
 		fireball_object = ability_object.GetComponent<Fireball_Object> ();
-		maxChargeT = 3f;
+		SetupCooldown ();
+	}
+
+	public void SetupCooldown(){
 		cooldown_new = cooldown;
+		cdTimer = 0f;
+	}
+
+	public void ResetCooldown(){
+		cdTimer = 0f;
+		abilityReady = false;
 	}
 
 	void Update (){
+		CooldownUpdate ();
+	}
+
+	public void CooldownUpdate(){
 		if(cdTimer < cooldown_new){
 			cdTimer += Time.deltaTime;
 		}
 		else{
 			abilityReady = true;
 		}
-		Debug.Log ("AbilityReady_Update: " + abilityReady);
-
-
 	}
 
 	public override void Cast(){
@@ -56,8 +64,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 		if(abilityReady){
 			chargedTime = EndCharge ();
 			Shoot ();
-			abilityReady = false;
-			cdTimer = 0f;
+			ResetCooldown();
 		}
 	}
 

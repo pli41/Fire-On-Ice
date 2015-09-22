@@ -20,13 +20,14 @@ public class PlayerAttack : MonoBehaviour
 
 
 	public Ability[] abilities = new Ability[3];
-	private bool casting;
+	private bool casting1;
+	private bool casting2;
 
 	void Start ()
 	{
 		SetupAbilities ();
 		onFire = false;
-		casting = false;
+		casting1 = false;
 	}
 
 	void SetupAbilities(){
@@ -45,18 +46,28 @@ public class PlayerAttack : MonoBehaviour
 	{
 		if(Input.GetAxisRaw ("PS4_R2_" + playerString) > 0)
 		{
-			casting = true;	
+			casting1 = true;	
 			abilities[0].Cast();
 		}
 		else{
-			if(casting){
-				casting = false;
+			if(casting1){
+				casting1 = false;
 				abilities[0].EndCast();
-
 			}
 		}
 
 
+		if(Input.GetAxisRaw ("PS4_L2_" + playerString) > 0)
+		{
+			casting2 = true;	
+			abilities[1].Cast();
+		}
+		else{
+			if(casting2){
+				casting2 = false;
+				abilities[1].EndCast();
+			}
+		}
 
 
 
