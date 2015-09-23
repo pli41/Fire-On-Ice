@@ -4,22 +4,9 @@ public class PlayerAttack : MonoBehaviour
 {
 	public string playerString;
 	public bool onFire;
-	public GameObject ps;
-	public float ceaseFireTime = 5f;
-	public GameObject enchantEffect;
-	public float coolDown = 2f;
 	public Transform magicPoint;
-
-
-	private float knockDist;
-	private Fireball fireball;
-	private float chargeTime;
-	private float fireTimer;
-	private float timer;
-
-
-
 	public Ability[] abilities = new Ability[3];
+
 	private bool casting1;
 	private bool casting2;
 
@@ -41,13 +28,23 @@ public class PlayerAttack : MonoBehaviour
 
 		}
 	}
-	
+
+	void EndAbility(){
+		abilities[1].EndCast();
+	}
+
 	void Update ()
 	{
+		//This part can be structrually changed too. Will do it after having a lot of abilities.
 		if(Input.GetAxisRaw ("PS4_R2_" + playerString) > 0)
 		{
 			casting1 = true;	
 			abilities[0].Cast();
+			
+			if(abilities[0].triggerOnce){
+				casting1 = false;
+				Invoke("EndAbility", 0.2f);
+			}
 		}
 		else{
 			if(casting1){
@@ -59,8 +56,13 @@ public class PlayerAttack : MonoBehaviour
 
 		if(Input.GetAxisRaw ("PS4_L2_" + playerString) > 0)
 		{
-			casting2 = true;	
+			casting2 = true;
 			abilities[1].Cast();
+
+			if(abilities[1].triggerOnce){
+				casting2 = false;
+				Invoke("EndAbility", 0.2f);
+			}
 		}
 		else{
 			if(casting2){

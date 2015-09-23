@@ -13,6 +13,7 @@ public class Blink : Ability, MovementEffect, Cooldown {
 
 	// Use this for initialization
 	void Start () {
+		triggerOnce = true;
 		playerModel = owner.transform.Find ("PlayerModel").gameObject;
 		ignoreLayer = LayerMask.NameToLayer ("Obstacles");
 		characterSize = 0.5f;
@@ -45,12 +46,12 @@ public class Blink : Ability, MovementEffect, Cooldown {
 
 
 	public override void Cast(){
-
 		if(abilityReady){
 			Debug.Log ("Casting blink");
 			targetPos_final = Move();
 			if(targetPos_final.magnitude > 0){
-				owner.transform.position = targetPos_final;
+				owner.GetComponent<Rigidbody>().position = targetPos_final;
+				owner.GetComponent<Rigidbody>().useGravity = false;
 				playerModel.SetActive(false);
 				owner.GetComponent<Collider>().enabled = false;
 			}
@@ -68,6 +69,7 @@ public class Blink : Ability, MovementEffect, Cooldown {
 		if(abilityReady){
 			playerModel.SetActive(true);
 			owner.GetComponent<Collider>().enabled = true;
+			owner.GetComponent<Rigidbody>().useGravity = true;
 			ResetCooldown ();
 		}
 

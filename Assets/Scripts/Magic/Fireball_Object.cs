@@ -8,7 +8,7 @@ public class Fireball_Object : MonoBehaviour {
 	public ParticleSystem ps2;
 	public ParticleSystem ps3;
 
-	public float damage = 20f;
+	public float damage;
 	public float speed = 5f;
 	public float size;
 	public float force = 300f;
@@ -20,7 +20,7 @@ public class Fireball_Object : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		force = size * 100f + 200f;
-		damage = size * 30f;
+		damage = size * 20f;
 		
 		ps1.startSize = 0.01f;
 		ps2.startSize = size * 2.5f + 2f;
@@ -41,14 +41,7 @@ public class Fireball_Object : MonoBehaviour {
 	}
 
 	void OnParticleCollision(GameObject other){
-		if (other.tag == "Player1") {
-			PlayerHealth healthP = other.GetComponent<PlayerHealth> ();
-			healthP.TakeDamage ((int)damage);
-			Rigidbody rigidP = other.GetComponent<Rigidbody> ();
-			rigidP.AddExplosionForce (force, transform.position, forceR);
-			disabled = true;
-		}
-		else if(other.tag == "Player2"){
+		if (other.tag == "Player") {
 			PlayerHealth healthP = other.GetComponent<PlayerHealth> ();
 			healthP.TakeDamage ((int)damage);
 			Rigidbody rigidP = other.GetComponent<Rigidbody> ();

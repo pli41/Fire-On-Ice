@@ -18,11 +18,16 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 
 
 	void Start (){
+
 		enchantEffect = owner.transform.Find ("enchantEffect").gameObject;
 		onFireEffect = owner.transform.Find ("onFireEffect").gameObject;
 		abilityReady = false;
 		fireball_object = ability_object.GetComponent<Fireball_Object> ();
 		SetupCooldown ();
+	}
+	
+	public override void SetupAbility(){
+		triggerOnce = true;
 	}
 
 	public void SetupCooldown(){
@@ -86,6 +91,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	}
 
 	public void Charge(){
+		triggerOnce = false;
 		enchantEffect.SetActive (true);
 		if(chargeTimer < maxChargeT){
 			chargeTimer += Time.deltaTime;

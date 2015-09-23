@@ -33,44 +33,45 @@ public class MeltingIsland : MonoBehaviour {
 	void OnTriggerStay(Collider col){
 
 		if(active){
-			if(col.gameObject.tag == "Player1"){
+			if(col.gameObject.tag == "Player"){
 				//Debug.Log("Player detected");
 				PlayerAttack PA = col.gameObject.GetComponent<PlayerAttack>();
-				
-				if(PA.onFire){
-					meltTime1 = 0.6f;
+
+				if(col.gameObject.name == "Player_PS4_1"){
+					if(PA.onFire){
+						meltTime1 = 0.6f;
+					}
+					else{
+						meltTime1 = 2f;
+					}
+					
+					if(timer1 > meltTime1){
+						timer1 = 0;
+						Melt(PA.onFire);
+					}
+					else{
+						timer1 += Time.deltaTime;
+					}
 				}
-				else{
-					meltTime1 = 2f;
+				else if(col.gameObject.name == "Player_PS4_2"){
+					if(PA.onFire){
+						meltTime2 = 0.3f;
+						//Debug.Log("Fast melting");
+					}
+					else{
+						meltTime2 = 2f;
+						//Debug.Log("Melting");
+					}
+					
+					if(timer2 > meltTime2){
+						timer2 = 0;
+						Melt(PA.onFire);
+					} 
+					else{
+						timer2 += Time.deltaTime;
+					}
 				}
-				
-				if(timer1 > meltTime1){
-					timer1 = 0;
-					Melt(PA.onFire);
-				}
-				else{
-					timer1 += Time.deltaTime;
-				}
-			}
-			else if (col.gameObject.tag == "Player2"){
-				PlayerAttack PA = col.gameObject.GetComponent<PlayerAttack>();
-				
-				if(PA.onFire){
-					meltTime2 = 0.3f;
-					//Debug.Log("Fast melting");
-				}
-				else{
-					meltTime2 = 2f;
-					//Debug.Log("Melting");
-				}
-				
-				if(timer2 > meltTime2){
-					timer2 = 0;
-					Melt(PA.onFire);
-				} 
-				else{
-					timer2 += Time.deltaTime;
-				}
+
 			}
 			else if (col.gameObject.tag == "Player_Key"){
 
