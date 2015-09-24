@@ -6,7 +6,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	public GameObject enchantEffect;
 	public GameObject onFireEffect;
 	public float maxChargeT;
-	public readonly float onFireTime_max = 3f;
+	public float onFireTime_max;
 	public float cooldown;
 
 	private Fireball_Object fireball_object;
@@ -15,14 +15,11 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	private float chargeTimer;
 	private float onFireTimer;
 
-
-
 	void Start (){
 
 		enchantEffect = owner.transform.Find ("enchantEffect").gameObject;
 		onFireEffect = owner.transform.Find ("onFireEffect").gameObject;
 		abilityReady = false;
-		fireball_object = ability_object.GetComponent<Fireball_Object> ();
 		SetupCooldown ();
 	}
 	
@@ -90,6 +87,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 		ability_object.transform.rotation = owner.transform.rotation;
 	}
 
+	//Abilities with charging need to set triggerOnce to be false
 	public void Charge(){
 		triggerOnce = false;
 		enchantEffect.SetActive (true);

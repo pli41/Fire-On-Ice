@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraMove.cs" />
      <Compile Include="Assets\Cyclone_Object.cs" />
      <Compile Include="Assets\Scripts\DieWater.cs" />
      <Compile Include="Assets\Scripts\Island.cs" />
@@ -56,6 +57,8 @@
      <Compile Include="Assets\Scripts\Magic\Cooldown.cs" />
      <Compile Include="Assets\Scripts\Magic\Fireball.cs" />
      <Compile Include="Assets\Scripts\Magic\Fireball_Object.cs" />
+     <Compile Include="Assets\Scripts\Magic\Flame.cs" />
+     <Compile Include="Assets\Scripts\Magic\Flame_Object.cs" />
      <Compile Include="Assets\Scripts\Magic\MovementEffect.cs" />
      <Compile Include="Assets\Scripts\Magic\Shootable.cs" />
      <Compile Include="Assets\Scripts\MeltingIsland.cs" />

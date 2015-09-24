@@ -39,7 +39,7 @@ public class MeltingIsland : MonoBehaviour {
 
 				if(col.gameObject.name == "Player_PS4_1"){
 					if(PA.onFire){
-						meltTime1 = 0.6f;
+						meltTime1 = 0.3f;
 					}
 					else{
 						meltTime1 = 2f;

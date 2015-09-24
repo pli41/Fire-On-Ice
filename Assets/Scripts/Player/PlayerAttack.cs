@@ -9,6 +9,7 @@ public class PlayerAttack : MonoBehaviour
 
 	private bool casting1;
 	private bool casting2;
+	private bool casting3;
 
 	void Start ()
 	{
@@ -21,6 +22,7 @@ public class PlayerAttack : MonoBehaviour
 		for(int i = 0; i < abilities.Length; i++){
 			if(abilities[i]){
 				Ability ability_new = Instantiate(abilities[i]);
+				ability_new.transform.parent = gameObject.transform;
 				ability_new.owner = gameObject;
 				ability_new.ability_point = magicPoint;
 				abilities[i] = ability_new;
@@ -38,40 +40,60 @@ public class PlayerAttack : MonoBehaviour
 		//This part can be structrually changed too. Will do it after having a lot of abilities.
 		if(Input.GetAxisRaw ("PS4_R2_" + playerString) > 0)
 		{
-			casting1 = true;	
-			abilities[0].Cast();
-			
-			if(abilities[0].triggerOnce){
-				casting1 = false;
-				Invoke("EndAbility", 0.2f);
+			if(abilities[0].abilityReady){
+				casting1 = true;
+				abilities[0].Cast();
+				
+				if(abilities[0].triggerOnce){
+					casting1 = false;
+					Invoke("EndAbility", 0.2f);
+				}
 			}
 		}
-		else{
-			if(casting1){
-				casting1 = false;
-				abilities[0].EndCast();
-			}
+		else if(casting1){
+			casting1 = false;
+			abilities[0].EndCast();
 		}
 
 
 		if(Input.GetAxisRaw ("PS4_L2_" + playerString) > 0)
 		{
-			casting2 = true;
-			abilities[1].Cast();
+			if(abilities[1].abilityReady){
+				casting2 = true;
+				abilities[1].Cast();
 
-			if(abilities[1].triggerOnce){
-				casting2 = false;
-				Invoke("EndAbility", 0.2f);
+				if(abilities[1].triggerOnce){
+					casting2 = false;
+					Invoke("EndAbility", 0.2f);
+				}
+			}
+
+
+		}
+		else if(casting2){
+			casting2 = false;
+			abilities[1].EndCast();
+		}
+
+		//Debug.Log (Input.GetAxisRaw ("PS4_R1_" + playerString));
+
+		if(Input.GetAxisRaw ("PS4_R1_" + playerString) > 0)
+		{
+			if(abilities[2].abilityReady){
+				casting3 = true;
+				abilities[2].Cast();
+				
+				if(abilities[2].triggerOnce){
+					casting3 = false;
+					Invoke("EndAbility", 0.2f);
+				}
 			}
 		}
-		else{
-			if(casting2){
-				casting2 = false;
-				abilities[1].EndCast();
-			}
+		else if(casting3){
+			//Debug.Log("End Cast 3rd ability");
+			casting3 = false;
+			abilities[2].EndCast();
 		}
-
-
 
 
 //		timer += Time.deltaTime;
