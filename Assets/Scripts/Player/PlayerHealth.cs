@@ -71,16 +71,13 @@ public class PlayerHealth : MonoBehaviour
 	public void burnGround(int amount){
 
 		foreach(GameObject go in allgrounds){
-
 			if(go){
 				MeltingIsland island = go.GetComponent<MeltingIsland>();
-				
-				
 				if(island.active){
 					float range;
 					
 					if(amount < 30f){
-						range = 1f;
+						range = 2f;
 					}
 					else if(amount >= 30f && amount < 60f){
 						range = 3f;
@@ -92,11 +89,7 @@ public class PlayerHealth : MonoBehaviour
 						island.meltByExplode(amount);
 					}
 				}
-
 			}
-
-
-
 		}
 	}
 

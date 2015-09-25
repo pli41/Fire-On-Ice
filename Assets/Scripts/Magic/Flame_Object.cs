@@ -24,7 +24,6 @@ public class Flame_Object : MonoBehaviour {
 			Rigidbody rigidP = other.GetComponent<Rigidbody> ();
 			Vector3 forceDir = rigidP.transform.position - ability.owner.transform.position;
 			rigidP.AddForce(forceDir*forceMagnitude);
-			Debug.Log("Fire");
 		}
 	}
 }

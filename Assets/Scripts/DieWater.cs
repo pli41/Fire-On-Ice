@@ -16,30 +16,9 @@ public class DieWater : MonoBehaviour {
 	
 	}
 
-	void OnTriggerStay(Collider col){
-		if(col.gameObject.tag == "Player1"){
-			Debug.Log("GG");
-			PlayerHealth PH = col.gameObject.GetComponent<PlayerHealth>();
-			if(timer > dmgTime){
-				timer = 0;
-				PH.TakeDamage(10);
-			}
-			else{
-				timer += Time.deltaTime;
-			}
-
-		}
-		else if(col.gameObject.tag == "Player2"){
-			Debug.Log("GG");
-			PlayerHealth PH = col.gameObject.GetComponent<PlayerHealth>();
-			if(timer > dmgTime){
-				timer = 0;
-				PH.TakeDamage(10);
-			}
-			else{
-				timer += Time.deltaTime;
-			}
-
+	void OnTriggerEnter(Collider col){
+		if(col.tag == "Player"){
+			col.gameObject.SetActive(false);
 		}
 	}
 }

@@ -46,6 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BossAttack.cs" />
+     <Compile Include="Assets\BossHealth.cs" />
+     <Compile Include="Assets\BossMovement.cs" />
      <Compile Include="Assets\CameraMove.cs" />
      <Compile Include="Assets\Cyclone_Object.cs" />
      <Compile Include="Assets\Scripts\DieWater.cs" />
