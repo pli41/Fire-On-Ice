@@ -29,12 +29,6 @@ public class Fireball_Object : MonoBehaviour {
 		disabled = false;
 	}
 
-	void FixedUpdate () {
-		if(disabled){
-			Invoke("DestroyFire", 1.5f);
-		}
-	}
-	
 	
 	void DestroyFire(){
 		Destroy (gameObject);
@@ -46,10 +40,11 @@ public class Fireball_Object : MonoBehaviour {
 			healthP.TakeDamage ((int)damage);
 			Rigidbody rigidP = other.GetComponent<Rigidbody> ();
 			rigidP.AddExplosionForce (force, transform.position, forceR);
-			disabled = true;
 		}
-		else {
-			Invoke("DestroyFire", 1.5f);
+		else if(other.tag == "Boss"){
+			BossHealth health = other.GetComponent<BossHealth> ();
+			health.TakeDamage ((int)damage);
 		}
+		Invoke("DestroyFire", 1.5f);
 	}
 }

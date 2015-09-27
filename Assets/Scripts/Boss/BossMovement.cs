@@ -15,7 +15,7 @@ public class BossMovement : MonoBehaviour {
 	private Animator anim;
 	private Rigidbody rigid;
 	private Vector3 movement;
-	private GameObject currentTarget;
+	public GameObject currentTarget;
 	private float chasingTimer;
 	private bool locatePlayer;
 	private bool chasing;
@@ -62,13 +62,18 @@ public class BossMovement : MonoBehaviour {
 		else{
 			chasingTimer = 0f;
 			currentTarget = null;
-			Debug.Log("Change target");
+			//Debug.Log("Change target");
 		}
 	}
 
 
 	void Move() {
-		if(Vector3.Distance(transform.position, currentTarget.transform.position) < meleeRange){
+		Vector3 bossPos = transform.position;
+		Vector3 targetPos = currentTarget.transform.position;
+		bossPos.Set (bossPos.x, 0, bossPos.z);
+		targetPos.Set (targetPos.x, 0, targetPos.z);
+
+		if(Vector3.Distance(bossPos, targetPos) < meleeRange){
 			rigid.velocity = Vector3.zero;
 		}
 		else{
@@ -104,9 +109,9 @@ public class BossMovement : MonoBehaviour {
 		if(players.Count > 0){
 			Random.seed = (int)(Random.value * 50f);
 			float random = (float)Random.value;
-			Debug.Log ("Random = " + random);
+			//Debug.Log ("Random = " + random);
 			int playerSelectedNum = (int)(random / (1f / (float)players.Count));
-			Debug.Log ("Selected player " + playerSelectedNum);
+			//Debug.Log ("Selected player " + playerSelectedNum);
 			if(!players[playerSelectedNum].activeInHierarchy){
 				return FindTarget();
 			}
@@ -116,7 +121,7 @@ public class BossMovement : MonoBehaviour {
 			}
 		}
 		else{
-			Debug.Log ("Players all died");
+			//Debug.Log ("Players all died");
 			rigid.velocity = Vector3.zero;
 			return null;
 		}
@@ -124,7 +129,7 @@ public class BossMovement : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col){
 		if(col.gameObject.tag == "Obstacle"){
-			Debug.Log("Force");
+			//Debug.Log("Force");
 			Vector3 direction = col.gameObject.transform.position - transform.position;
 			direction.Set(direction.x, 0f, direction.z);
 			col.rigidbody.AddForce(direction.normalized * obstacleForce);

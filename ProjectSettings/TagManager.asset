@@ -9,6 +9,7 @@ TagManager:
   - Island
   - Player
   - Player_Key
+  - Boss
   layers:
   - Default
   - TransparentFX

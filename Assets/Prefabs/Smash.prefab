@@ -1,70 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &166918
+--- !u!1 &132818
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 482702}
-  - 114: {fileID: 11447328}
+  - 4: {fileID: 466600}
+  - 114: {fileID: 11416852}
   m_Layer: 0
-  m_Name: Flame
+  m_Name: Smash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &482702
+--- !u!4 &466600
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 166918}
+  m_GameObject: {fileID: 132818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.96000004, y: 8.47999954, z: -2.41000009}
+  m_LocalPosition: {x: -3.17387486, y: 1.73000002, z: 1.70000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11447328
+--- !u!114 &11416852
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 166918}
+  m_GameObject: {fileID: 132818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b04f642b0dc245628b83d569f899ab9, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b189f777289b4f19b5329247b19aed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  ability_object: {fileID: 179638, guid: a25a3d30ad6144ba39e43dd30f14badf, type: 2}
+  ability_object: {fileID: 197742, guid: 2549f0dd6ad3c4bdc98620c8a3f8aa7e, type: 2}
   ability_point: {fileID: 0}
   triggerOnce: 0
   cooldown_new: 0
   abilityReady: 0
   cdTimer: 0
-  cooldown: 0
-  new_speed: 1
-  onFireEffect: {fileID: 0}
+  cooldown: 2
+  smash_Object: {fileID: 0}
+  endCastHandled: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: new_speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: ability_object
-      value: 
-      objectReference: {fileID: 179638, guid: a25a3d30ad6144ba39e43dd30f14badf, type: 2}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 166918}
+  m_RootGameObject: {fileID: 132818}
   m_IsPrefabParent: 1

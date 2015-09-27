@@ -20,8 +20,8 @@ public class CameraMove : MonoBehaviour {
 		if(startMovement){
 			timer+= Time.deltaTime;
 			gameObject.transform.position = Vector3.Lerp (startPoint.position, endPoint.position, timer*speed/distance);
-			Debug.Log(gameObject.transform.position);
-			Debug.Log("Moving");
+			//Debug.Log(gameObject.transform.position);
+			//Debug.Log("Moving");
 		}
 
 		if(Input.GetKeyDown(KeyCode.Space)){

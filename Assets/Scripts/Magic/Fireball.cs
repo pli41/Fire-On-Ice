@@ -51,7 +51,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	}
 
 	public override void Cast(){
-		Debug.Log ("Casting");
+		//Debug.Log ("Casting");
 		if(abilityReady){
 			Charge ();
 		}
@@ -62,7 +62,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	}
 
 	public override void EndCast(){
-		Debug.Log ("Endcast");
+		//Debug.Log ("Endcast");
 		if(abilityReady){
 			chargedTime = EndCharge ();
 			Shoot ();
@@ -104,7 +104,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	}
 
 	public void CauseEffect(){
-		Debug.Log ("Onfire");
+		//Debug.Log ("Onfire");
 		CancelInvoke ();
 		onFireEffect.SetActive (true);
 		owner.GetComponent<PlayerAttack> ().onFire = true;
@@ -112,7 +112,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	}
 
 	public void EndEffect(){
-		Debug.Log ("Ceasefire");
+		//Debug.Log ("Ceasefire");
 		onFireEffect.SetActive (false);
 		owner.GetComponent<PlayerAttack> ().onFire = false;
 	}

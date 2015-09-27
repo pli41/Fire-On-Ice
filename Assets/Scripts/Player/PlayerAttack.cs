@@ -27,7 +27,6 @@ public class PlayerAttack : MonoBehaviour
 				ability_new.ability_point = magicPoint;
 				abilities[i] = ability_new;
 			}
-
 		}
 	}
 
@@ -79,13 +78,13 @@ public class PlayerAttack : MonoBehaviour
 
 		if(Input.GetAxisRaw ("PS4_R1_" + playerString) > 0)
 		{
-			if(abilities[2].abilityReady){
+			if(abilities[2].abilityReady && !casting1){
+				Debug.Log(playerString + " is casting");
 				casting3 = true;
 				abilities[2].Cast();
-				
 				if(abilities[2].triggerOnce){
 					casting3 = false;
-					Invoke("EndAbility", 0.2f);
+					//Invoke("EndAbility", 0.2f);
 				}
 			}
 		}

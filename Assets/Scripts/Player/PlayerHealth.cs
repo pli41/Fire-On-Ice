@@ -62,10 +62,6 @@ public class PlayerHealth : MonoBehaviour
         {
             Death ();
         }
-
-
-
-
     }
 
 	public void burnGround(int amount){
