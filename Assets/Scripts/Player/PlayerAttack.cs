@@ -38,7 +38,8 @@ public class PlayerAttack : MonoBehaviour
 	{
 		//This part can be structrually changed too. Will do it after having a lot of abilities.
 		if(Input.GetAxisRaw ("PS4_R2_" + playerString) > 0)
-		{
+		{	
+			Debug.Log("Get PS4_R2_" + playerString);
 			if(abilities[0].abilityReady){
 				casting1 = true;
 				abilities[0].Cast();
@@ -55,8 +56,10 @@ public class PlayerAttack : MonoBehaviour
 		}
 
 
+
 		if(Input.GetAxisRaw ("PS4_L2_" + playerString) > 0)
 		{
+			Debug.Log("Get PS4_L2_" + playerString);
 			if(abilities[1].abilityReady){
 				casting2 = true;
 				abilities[1].Cast();

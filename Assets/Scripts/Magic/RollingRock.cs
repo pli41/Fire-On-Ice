@@ -87,6 +87,7 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 		if(delayBool){
 			if(!delaying){
 				Debug.Log("Endcast will be called");
+				enchantEffect.SetActive(true);
 				Invoke("EndCast", castTime);
 				delaying = true;
 			}
@@ -98,6 +99,7 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 
 	public void CastDelayEnd(){
 		ResetCooldown();
+		enchantEffect.SetActive(false);
 		owner.GetComponent<PlayerMovement>().disabled = false;
 		delaying = false;
 	}
