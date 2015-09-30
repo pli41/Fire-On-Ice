@@ -12,7 +12,6 @@ public class CameraMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		distance = (endPoint.position - startPoint.position).magnitude;
-		Debug.Log (distance);
 	}
 	
 	// Update is called once per frame

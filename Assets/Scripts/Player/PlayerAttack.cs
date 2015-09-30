@@ -91,7 +91,9 @@ public class PlayerAttack : MonoBehaviour
 		else if(casting3){
 			//Debug.Log("End Cast 3rd ability");
 			casting3 = false;
-			abilities[2].EndCast();
+			if(!abilities[2].handledEndCast){
+				abilities[2].EndCast();
+			}
 		}
 
 

@@ -62,7 +62,7 @@ public class BossMovement : MonoBehaviour {
 		else{
 			chasingTimer = 0f;
 			currentTarget = null;
-			//Debug.Log("Change target");
+			Debug.Log("Change target");
 		}
 	}
 

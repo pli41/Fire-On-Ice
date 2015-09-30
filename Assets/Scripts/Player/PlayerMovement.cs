@@ -8,8 +8,11 @@ public class PlayerMovement : MonoBehaviour
 	public float dodgeDist = 3f;
 	public float dodgeSpeed = 15f;
 	public float accFactor = 0.1f;
-	
+
+	public bool disabled;
+
 	Vector3 dodgeDir;
+
 	private Vector3 dodgePos;
 	private float dodgeInTimer;
 	private float dodgeTimer;
@@ -30,10 +33,12 @@ public class PlayerMovement : MonoBehaviour
 		float h = Input.GetAxisRaw ("PS4_Horizontal_" + playerString);
 		float v = Input.GetAxisRaw ("PS4_Vertical_" + playerString);
 
-		Move (h, v);
-		Turning ();
-		Animating (h, v);
-			
+		if(!disabled){
+			Move (h, v);
+			Turning ();
+			Animating (h, v);
+		}
+
 //		if((dodgeTimer >= timeBetDodge && Input.GetAxisRaw("PS4_L2_" + playerString) > 0 && dodgeInit == true) || dodgeInit == false){
 //			Debug.Log("dodge start");
 //			Dodge(h, v);

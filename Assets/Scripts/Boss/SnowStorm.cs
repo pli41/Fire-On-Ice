@@ -1,35 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Smash : Ability, Cooldown{
+public class SnowStorm : Ability, Cooldown, CasterEffect{
 
-	public float cooldown;
-
-	public Smash_Object smash_Object;
-
+	public SnowStorm_Object snowstorm_Object;
 	public bool endCastHandled;
 
-	private float particleEffectTime;
+	public float cooldown;
+	public float duration;
+
+
+
 	// Use this for initialization
 	void Start () {
 		endCastHandled = true;
 		SetupAbility ();
-		particleEffectTime = ability_object.GetComponent<ParticleSystem> ().duration;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		CooldownUpdate ();
 	}
-
+	
 	public override void Cast(){
 		if(abilityReady){
-			ability_object.transform.position = ability_point.position;
-			ability_object.transform.rotation = owner.transform.rotation;
 			ability_object.SetActive (true);
 			//ability_object.GetComponent<ParticleSystem> ().Play();
-			Invoke("EndCast", particleEffectTime-2f);
 			abilityReady = false;
+			Invoke("EndCast", duration);
 		}
 	}
 	
@@ -44,11 +42,11 @@ public class Smash : Ability, Cooldown{
 	public override void SetupAbility(){
 		ability_object = Instantiate(ability_object);
 		ability_object.transform.parent = transform;
-		smash_Object = ability_object.GetComponent<Smash_Object> ();
-		smash_Object.ability = this;
+		snowstorm_Object = ability_object.GetComponent<SnowStorm_Object> ();
+		snowstorm_Object.ability = this;
 		ability_object.SetActive (false);
 	}
-
+	
 	public void CooldownUpdate(){
 		if(cdTimer < cooldown_new){
 			cdTimer += Time.deltaTime;
@@ -68,5 +66,11 @@ public class Smash : Ability, Cooldown{
 		abilityReady = false;
 	}
 
+	public void CauseEffect (){
 
+	}
+
+	public void EndEffect (){
+
+	}
 }

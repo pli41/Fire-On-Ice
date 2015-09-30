@@ -6,7 +6,7 @@ public class Ability : MonoBehaviour {
 	public GameObject owner;
 	public GameObject ability_object;
 	public readonly float damage;
-
+	public bool handledEndCast;
 	public readonly float manaCost;
 	public Transform ability_point;
 	public bool triggerOnce;

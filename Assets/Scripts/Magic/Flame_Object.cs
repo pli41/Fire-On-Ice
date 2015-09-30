@@ -10,7 +10,7 @@ public class Flame_Object : MonoBehaviour {
 	void OnParticleCollision(GameObject other){
 		if (other.tag == "Player") {
 			PlayerHealth healthP = other.GetComponent<PlayerHealth> ();
-			healthP.TakeDamage ((int)damage);
+			healthP.TakeDamage ((int)damage, true);
 			Rigidbody rigidP = other.GetComponent<Rigidbody> ();
 			Vector3 forceDir = rigidP.transform.position - ability.owner.transform.position;
 			rigidP.AddForce(forceDir*forceMagnitude);

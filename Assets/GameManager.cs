@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void DisableAll(){
-		Debug.Log ("Disabled all");
+		//Debug.Log ("Disabled all");
 		for(int i = 0; i < playerList.Count; i++ ){
 			playerList[i].SetActive(false);
 		}
@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		if(Input.GetKeyDown(KeyCode.Q)){
 			for(int i = 0; i < playerList.Count; i++ ){
 				playerList[i].SetActive(true);

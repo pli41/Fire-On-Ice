@@ -9,9 +9,8 @@ public class BossAttack : MonoBehaviour {
 
 	private Ability currentAbility;
 	private BossMovement bossMove;
-	private bool casting1;
-	private bool casting2;
-	private bool casting3;
+
+	public bool casting;
 
 	// Use this for initialization
 	void Start () {
@@ -33,18 +32,31 @@ public class BossAttack : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(CheckMelee()){
-			Debug.Log ("In melee range");
-			currentAbility.Cast ();
-		}
+		if(bossMove.currentTarget){
+			if(!casting){
+				
+				if(Input.GetKeyDown(KeyCode.T)){
+					currentAbility = ChangeAbility(1);
+				}
 
-		Debug.Log ("Boss attack Activated");
-		if (currentAbility) {
-			Debug.Log("Current ability is not empty");
-		}
-		else{
-			Debug.Log("Current ability is empty");
-			ChangeAbility();
+				if(CheckMelee()){
+					//Debug.Log ("In melee range");
+					currentAbility = ChangeAbility();
+					currentAbility.Cast ();
+				}
+
+				//Debug.Log ("Boss attack Activated");
+
+				if (currentAbility) {
+					currentAbility.Cast();
+					casting = true;
+					//Debug.Log("Current ability is not empty");
+				}
+				else{
+					//Debug.Log("Current ability is empty");
+					ChangeAbility();
+				}
+			}
 		}
 	}
 
@@ -53,11 +65,12 @@ public class BossAttack : MonoBehaviour {
 		Vector3 targetPos = bossMove.currentTarget.transform.position;
 		bossPos.Set (bossPos.x, 0, bossPos.z);
 		targetPos.Set (targetPos.x, 0, targetPos.z);
-
+		
 		if (Vector3.Distance (bossPos, targetPos) < bossMove.meleeRange) {
 			currentAbility = ChangeAbility (0);
 			return true;
-		} else {
+		} 
+		else {
 			return false;
 		}
 	}

@@ -46,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    public void TakeDamage (int amount)
+    public void TakeDamage (int amount, bool burn)
     {
         damaged = true;
 
@@ -56,7 +56,9 @@ public class PlayerHealth : MonoBehaviour
 
         playerAudio.Play ();
 
-		burnGround (amount);
+		if(burn){
+			burnGround (amount);
+		}
 
         if(currentHealth <= 0 && !isDead)
         {

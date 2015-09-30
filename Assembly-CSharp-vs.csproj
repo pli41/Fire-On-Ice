@@ -52,12 +52,15 @@
      <Compile Include="Assets\Scripts\Boss\BossMovement.cs" />
      <Compile Include="Assets\Scripts\Boss\Smash.cs" />
      <Compile Include="Assets\Scripts\Boss\Smash_Object.cs" />
+     <Compile Include="Assets\Scripts\Boss\SnowStorm.cs" />
+     <Compile Include="Assets\Scripts\Boss\SnowStorm_Object.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Scripts\Cyclone_Object.cs" />
      <Compile Include="Assets\Scripts\DieWater.cs" />
      <Compile Include="Assets\Scripts\Island.cs" />
      <Compile Include="Assets\Scripts\Magic\Ability.cs" />
      <Compile Include="Assets\Scripts\Magic\Blink.cs" />
+     <Compile Include="Assets\Scripts\Magic\CastDelay.cs" />
      <Compile Include="Assets\Scripts\Magic\CasterEffect.cs" />
      <Compile Include="Assets\Scripts\Magic\Chargable.cs" />
      <Compile Include="Assets\Scripts\Magic\Cooldown.cs" />
@@ -66,6 +69,8 @@
      <Compile Include="Assets\Scripts\Magic\Flame.cs" />
      <Compile Include="Assets\Scripts\Magic\Flame_Object.cs" />
      <Compile Include="Assets\Scripts\Magic\MovementEffect.cs" />
+     <Compile Include="Assets\Scripts\Magic\RollingRock.cs" />
+     <Compile Include="Assets\Scripts\Magic\RollingRock_Object.cs" />
      <Compile Include="Assets\Scripts\Magic\Shootable.cs" />
      <Compile Include="Assets\Scripts\MeltingIsland.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
