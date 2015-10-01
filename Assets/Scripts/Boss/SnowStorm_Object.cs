@@ -42,7 +42,7 @@ public class SnowStorm_Object : MonoBehaviour {
 	void Update(){
 		CheckAllPlayers ();
 		for(int i = 0; i < playerList.Count; i++ ){
-			if(!playerList[i].GetComponent<PlayerAttack>().onFire){
+			if(!playerList[i].GetComponent<PlayerHealth>().onFire){
 				if(timers[i] < damageIntervalT){
 					timers[i] += Time.deltaTime;
 				}

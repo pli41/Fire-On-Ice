@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Boss\BossAttack.cs" />
      <Compile Include="Assets\Scripts\Boss\BossHealth.cs" />
      <Compile Include="Assets\Scripts\Boss\BossMovement.cs" />
+     <Compile Include="Assets\Scripts\Boss\Rage.cs" />
      <Compile Include="Assets\Scripts\Boss\Smash.cs" />
      <Compile Include="Assets\Scripts\Boss\Smash_Object.cs" />
      <Compile Include="Assets\Scripts\Boss\SnowStorm.cs" />

@@ -3,7 +3,6 @@
 public class PlayerAttack : MonoBehaviour
 {
 	public string playerString;
-	public bool onFire;
 	public Transform magicPoint;
 	public Ability[] abilities = new Ability[3];
 
@@ -14,7 +13,6 @@ public class PlayerAttack : MonoBehaviour
 	void Start ()
 	{
 		SetupAbilities ();
-		onFire = false;
 		casting1 = false;
 	}
 
@@ -138,10 +136,8 @@ public class PlayerAttack : MonoBehaviour
 //		}	
 		
 	}
-	
-//	void ceaseFire(){
-//		onFire = false;
-//	}
+
+
 //	
 //	void Charge(){
 //		Debug.Log ("Charging");

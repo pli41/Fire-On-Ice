@@ -35,10 +35,10 @@ public class MeltingIsland : MonoBehaviour {
 		if(active){
 			if(col.gameObject.tag == "Player"){
 				//Debug.Log("Player detected");
-				PlayerAttack PA = col.gameObject.GetComponent<PlayerAttack>();
+				PlayerHealth PH = col.gameObject.GetComponent<PlayerHealth>();
 
 				if(col.gameObject.name == "Player_PS4_1"){
-					if(PA.onFire){
+					if(PH.onFire){
 						meltTime1 = 0.3f;
 					}
 					else{
@@ -47,25 +47,25 @@ public class MeltingIsland : MonoBehaviour {
 					
 					if(timer1 > meltTime1){
 						timer1 = 0;
-						Melt(PA.onFire);
+						Melt(PH.onFire);
 					}
 					else{
 						timer1 += Time.deltaTime;
 					}
 				}
 				else if(col.gameObject.name == "Player_PS4_2"){
-					if(PA.onFire){
+					if(PH.onFire){
 						meltTime2 = 0.3f;
-						//Debug.Log("Fast melting");
+						Debug.Log("Fast melting");
 					}
 					else{
 						meltTime2 = 2f;
-						//Debug.Log("Melting");
+						Debug.Log("Melting");
 					}
 					
 					if(timer2 > meltTime2){
 						timer2 = 0;
-						Melt(PA.onFire);
+						Melt(PH.onFire);
 					} 
 					else{
 						timer2 += Time.deltaTime;

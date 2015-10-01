@@ -107,14 +107,14 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 		//Debug.Log ("Onfire");
 		CancelInvoke ();
 		onFireEffect.SetActive (true);
-		owner.GetComponent<PlayerAttack> ().onFire = true;
+		owner.GetComponent<PlayerHealth> ().onFire = true;
 		Invoke ("EndEffect", onFireTime_max);
 	}
 
 	public void EndEffect(){
 		//Debug.Log ("Ceasefire");
 		onFireEffect.SetActive (false);
-		owner.GetComponent<PlayerAttack> ().onFire = false;
+		owner.GetComponent<PlayerHealth> ().onFire = false;
 	}
 
 }

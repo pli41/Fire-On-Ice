@@ -12,6 +12,10 @@ public class PlayerHealth : MonoBehaviour
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
+	public bool onFire;
+	public float onFireTime;
+	public GameObject onFireEffect;
+
 	GameObject[] allgrounds;
     Animator anim;
     AudioSource playerAudio;
@@ -43,7 +47,24 @@ public class PlayerHealth : MonoBehaviour
             damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
         damaged = false;
+
+		if(onFire && !onFireEffect.activeInHierarchy){
+			CauseOnFire();
+		}
     }
+
+	public void CauseOnFire(){
+		Debug.Log ("On Fire");
+		onFireEffect.SetActive (true);
+		Invoke ("CeaseFire", onFireTime);
+	}
+	
+	public void CeaseFire(){
+		Debug.Log ("CeaseFire");
+		CancelInvoke ();
+		onFireEffect.SetActive (false);
+		onFire = false;
+	}
 
 
     public void TakeDamage (int amount, bool burn)
@@ -58,6 +79,7 @@ public class PlayerHealth : MonoBehaviour
 
 		if(burn){
 			burnGround (amount);
+			onFire = true;
 		}
 
         if(currentHealth <= 0 && !isDead)
@@ -65,6 +87,8 @@ public class PlayerHealth : MonoBehaviour
             Death ();
         }
     }
+
+
 
 	public void burnGround(int amount){
 

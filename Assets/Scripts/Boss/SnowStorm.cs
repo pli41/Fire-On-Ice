@@ -41,7 +41,7 @@ public class SnowStorm : Ability, Cooldown, CasterEffect{
 	
 	public override void SetupAbility(){
 		ability_object = Instantiate(ability_object);
-		ability_object.transform.parent = transform;
+		//ability_object.transform.parent = transform;
 		snowstorm_Object = ability_object.GetComponent<SnowStorm_Object> ();
 		snowstorm_Object.ability = this;
 		ability_object.SetActive (false);

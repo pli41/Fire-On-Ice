@@ -64,15 +64,13 @@ public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 
 	public void CauseEffect (){
 		//Debug.Log ("Onfire");
-		onFireEffect.SetActive (true);
-		owner.GetComponent<PlayerAttack> ().onFire = true;
+		owner.GetComponent<PlayerHealth> ().onFire = true;
 		owner.GetComponent<PlayerMovement> ().speed = new_speed;
 	}
 
 	public void EndEffect (){
 		//Debug.Log ("Ceasefire");
-		onFireEffect.SetActive (false);
-		owner.GetComponent<PlayerAttack> ().onFire = false;
+		owner.GetComponent<PlayerHealth> ().onFire = false;
 		owner.GetComponent<PlayerMovement> ().speed = owner_old_speed;
 	}
 
