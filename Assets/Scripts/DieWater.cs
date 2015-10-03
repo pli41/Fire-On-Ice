@@ -4,11 +4,9 @@ using System.Collections;
 public class DieWater : MonoBehaviour {
 
 	public float dmgTime = 2f;
-
-	float timer;
+	
 	// Use this for initialization
 	void Start () {
-		timer = 0;
 	}
 	
 	// Update is called once per frame
@@ -18,7 +16,11 @@ public class DieWater : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if(col.tag == "Player"){
+			col.gameObject.GetComponent<PlayerHealth>().currentHealth = 0;
 			col.gameObject.SetActive(false);
+		}
+		else{
+			Destroy(col.gameObject);
 		}
 	}
 }

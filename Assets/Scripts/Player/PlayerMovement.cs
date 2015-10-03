@@ -3,11 +3,11 @@
 public class PlayerMovement : MonoBehaviour
 {
 	public string playerString;
-	public float speed = 6f;
-	public float timeBetDodge = 1f;
-	public float dodgeDist = 3f;
-	public float dodgeSpeed = 15f;
-	public float accFactor = 0.1f;
+	public float speed;
+	public float accFactor;
+
+	public bool canMove;
+	public bool canTurn;
 
 	public bool disabled;
 
@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
 		anim = GetComponent<Animator> ();
 		playerRigidbody = GetComponent<Rigidbody> ();
 		dodgeInit = true;
+		canMove = true;
+		canTurn = true;
 	}
 
 	void FixedUpdate(){
@@ -34,9 +36,15 @@ public class PlayerMovement : MonoBehaviour
 		float v = Input.GetAxisRaw ("PS4_Vertical_" + playerString);
 
 		if(!disabled){
-			Move (h, v);
-			Turning ();
-			Animating (h, v);
+			if(canMove || canTurn){
+				if(canMove){
+					Move (h, v);
+				}
+				if(canTurn){
+					Turning ();
+				}
+				Animating (h, v);
+			}
 		}
 
 //		if((dodgeTimer >= timeBetDodge && Input.GetAxisRaw("PS4_L2_" + playerString) > 0 && dodgeInit == true) || dodgeInit == false){
@@ -99,33 +107,6 @@ public class PlayerMovement : MonoBehaviour
 			playerRigidbody.MoveRotation(newRotation);
 
 		}*/
-	}
-	
-	void Dodge(float h, float v){
-		dodgeTimer = 0f;
-		anim.SetTrigger ("dodge");
-		
-		dodgeDir.Set (h, 0f, v);
-		dodgeDir = dodgeDir.normalized;
-		
-		if(dodgeInit){
-			Debug.Log("Initalize dodge");
-			dodgeInit = false;
-		}
-		else{
-			dodgeInTimer += Time.deltaTime;
-		}
-		
-		if(dodgeInTimer > 0.2f){
-			Debug.Log("dodge complete");
-			//anim.SetBool("IsDodging", false);
-			dodgeInTimer = 0;
-			dodgeInit = true;
-		}
-		else{
-			Vector3 dodge = dodgeDir * dodgeSpeed * Time.deltaTime;
-			playerRigidbody.MovePosition (transform.position + dodge);
-		}
 	}
 	
 	void Animating(float h, float v){

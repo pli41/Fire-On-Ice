@@ -8,15 +8,18 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	public float maxChargeT;
 	public float onFireTime_max;
 	public float cooldown;
+	public float chargedSpeed;
 
 	private Fireball_Object fireball_object;
 
+
+	private float oldSpeed;
 	private float chargedTime;
 	private float chargeTimer;
 	private float onFireTimer;
 
 	void Start (){
-
+		oldSpeed = owner.GetComponent<PlayerMovement> ().speed;
 		enchantEffect = owner.transform.Find ("enchantEffect").gameObject;
 		onFireEffect = owner.transform.Find ("onFireEffect").gameObject;
 		abilityReady = false;
@@ -75,7 +78,6 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 		SetupObj ();
 		Instantiate (ability_object);
 		cooldown_new = cooldown * chargedTime / 3 + 0.5f; 
-		CauseEffect ();
 	}
 
 	public override void SetupObj(){
@@ -91,6 +93,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	public void Charge(){
 		triggerOnce = false;
 		enchantEffect.SetActive (true);
+		CauseEffect ();
 		if(chargeTimer < maxChargeT){
 			chargeTimer += Time.deltaTime;
 		}
@@ -99,22 +102,19 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	public float EndCharge(){
 		float result = chargeTimer;
 		chargeTimer = 0f;
+		EndEffect ();
 		enchantEffect.SetActive (false);
 		return result;
 	}
 
 	public void CauseEffect(){
 		//Debug.Log ("Onfire");
-		CancelInvoke ();
-		onFireEffect.SetActive (true);
-		owner.GetComponent<PlayerHealth> ().onFire = true;
-		Invoke ("EndEffect", onFireTime_max);
+		owner.GetComponent<PlayerMovement> ().speed = chargedSpeed;
 	}
 
 	public void EndEffect(){
-		//Debug.Log ("Ceasefire");
-		onFireEffect.SetActive (false);
-		owner.GetComponent<PlayerHealth> ().onFire = false;
+		Debug.Log ("Ceasefire");
+		owner.GetComponent<PlayerMovement> ().speed = oldSpeed;
 	}
 
 }

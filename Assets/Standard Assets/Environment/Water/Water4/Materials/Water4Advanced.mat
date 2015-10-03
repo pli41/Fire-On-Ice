@@ -332,15 +332,15 @@ Material:
       data:
         first:
           name: _BaseColor
-        second: {r: .153709054, g: .268130153, b: .298507452, a: .819999993}
+        second: {r: .159493938, g: .364920259, b: .433823526, a: .819999993}
       data:
         first:
           name: _ReflectionColor
-        second: {r: .579416394, g: .684923828, b: .76119405, a: .431372553}
+        second: {r: .111916095, g: .537754238, b: .845588207, a: .431372553}
       data:
         first:
           name: _SpecularColor
-        second: {r: .917910457, g: .917910457, b: .917910457, a: 1}
+        second: {r: .720804453, g: .960252285, b: .970588207, a: 1}
       data:
         first:
           name: _WorldLightDir

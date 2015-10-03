@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -27,10 +28,15 @@ public class PlayerAttack : MonoBehaviour
 			}
 		}
 	}
+	
 
-	void EndAbility(){
-		abilities[1].EndCast();
+	IEnumerator EndAbility(int abilityNum, float delayTime)
+	{
+		yield return new WaitForSeconds(delayTime);
+
+		abilities[abilityNum].EndCast();
 	}
+
 
 	void Update ()
 	{
@@ -44,7 +50,7 @@ public class PlayerAttack : MonoBehaviour
 				
 				if(abilities[0].triggerOnce){
 					casting1 = false;
-					Invoke("EndAbility", 0.2f);
+					StartCoroutine(EndAbility(0, 0.2f));
 				}
 			}
 		}
@@ -64,7 +70,7 @@ public class PlayerAttack : MonoBehaviour
 
 				if(abilities[1].triggerOnce){
 					casting2 = false;
-					Invoke("EndAbility", 0.2f);
+					StartCoroutine(EndAbility(1, 0.2f));
 				}
 			}
 
@@ -85,7 +91,7 @@ public class PlayerAttack : MonoBehaviour
 				abilities[2].Cast();
 				if(abilities[2].triggerOnce){
 					casting3 = false;
-					//Invoke("EndAbility", 0.2f);
+					StartCoroutine(EndAbility(2, 0.2f));
 				}
 			}
 		}
@@ -96,65 +102,5 @@ public class PlayerAttack : MonoBehaviour
 				abilities[2].EndCast();
 			}
 		}
-
-
-//		timer += Time.deltaTime;
-//		if(Input.GetAxisRaw ("PS4_R2_" + playerString) > 0 && timer >= coolDown && !inCharge)
-//		{
-//			inCharge = true;
-//
-//			abilities[0].Cast();
-//		}
-//		
-//		if(inCharge){
-//			Charge();
-//		}
-//		
-//		//on fire effect
-//		if(fireTimer > ceaseFireTime){
-//			ceaseFire();
-//			fireTimer = 0;
-//		}
-//		else{
-//			if(onFire){
-//				fireTimer += Time.deltaTime;
-//			}
-//		}
-//		
-//		if(onFire){
-//			ps.SetActive(true);
-//		}
-//		else{
-//			ps.SetActive(false);
-//		}
-//		
-//		if(inCharge){
-//			enchantEffect.SetActive (true);
-//		}
-//		else{
-//			enchantEffect.SetActive (false);
-//		}	
-		
 	}
-
-
-//	
-//	void Charge(){
-//		Debug.Log ("Charging");
-//		
-//		
-//		if(chargeTime <= 3f){
-//			chargeTime += Time.deltaTime;
-//		}
-//		else{
-//			Debug.Log("Fully charged");
-//		}
-//		
-//		if(Input.GetAxisRaw ("PS4_R2_" + playerString) <= 0){
-//			Shoot(chargeTime);
-//			chargeTime = 0;
-//			timer = 0f;
-//		}
-//	}
-
 }

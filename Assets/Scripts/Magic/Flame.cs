@@ -4,11 +4,9 @@ using System.Collections;
 public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 	
 	public float cooldown;
-	public float new_speed;
 
 	public GameObject onFireEffect;
 	private Flame_Object flame_object;
-	private float owner_old_speed;
 
 
 	// Use this for initialization
@@ -53,7 +51,6 @@ public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 	public override void SetupObj(){}
 	
 	public override void SetupAbility(){
-		owner_old_speed = owner.GetComponent<PlayerMovement> ().speed;
 		ability_object = Instantiate(ability_object);
 		ability_object.transform.parent = transform;
 		flame_object = ability_object.GetComponent<Flame_Object> ();
@@ -65,13 +62,15 @@ public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 	public void CauseEffect (){
 		//Debug.Log ("Onfire");
 		owner.GetComponent<PlayerHealth> ().onFire = true;
-		owner.GetComponent<PlayerMovement> ().speed = new_speed;
+		owner.GetComponent<PlayerMovement> ().canMove = false;
+		owner.GetComponent<PlayerMovement> ().canTurn = false;
 	}
 
 	public void EndEffect (){
 		//Debug.Log ("Ceasefire");
 		owner.GetComponent<PlayerHealth> ().onFire = false;
-		owner.GetComponent<PlayerMovement> ().speed = owner_old_speed;
+		owner.GetComponent<PlayerMovement> ().canMove = true;
+		owner.GetComponent<PlayerMovement> ().canTurn = true;
 	}
 
 	public void Charge (){
