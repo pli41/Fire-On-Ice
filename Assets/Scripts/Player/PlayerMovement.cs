@@ -126,7 +126,6 @@ public class PlayerMovement : MonoBehaviour
 			Vector3 dodge = dodgeDir * dodgeSpeed * Time.deltaTime;
 			playerRigidbody.MovePosition (transform.position + dodge);
 		}
-		
 	}
 	
 	void Animating(float h, float v){

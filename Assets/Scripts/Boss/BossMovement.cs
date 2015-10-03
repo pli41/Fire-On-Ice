@@ -6,11 +6,13 @@ public class BossMovement : MonoBehaviour {
 
 	public float speed;
 	public float accFactor;
-	public GameObject[] playersList;
+	public GameObject[] players;
 	public float chargeTargetTime;
 	public float rotateSpeed;
 	public float meleeRange;
 	public float obstacleForce;
+	public bool disabled;
+
 
 	private Animator anim;
 	private Rigidbody rigid;
@@ -19,50 +21,59 @@ public class BossMovement : MonoBehaviour {
 	private float chasingTimer;
 	private bool locatePlayer;
 	private bool chasing;
-	private List<GameObject> players;
+	private List<GameObject> playersList;
 
 	// Use this for initialization
 	void Start () {
-		players = new List<GameObject> ();
-		playersList = GameObject.FindGameObjectsWithTag ("Player");
+		playersList = new List<GameObject> ();
+		players = GameObject.FindGameObjectsWithTag ("Player");
 		rigid = GetComponent<Rigidbody> ();
-		currentTarget = FindTarget ();
-		SetupArraylist ();
+		SetupList ();
+		//currentTarget = FindTarget ();
 	}
 
-	void SetupArraylist(){
-		foreach(GameObject g in playersList){
-			players.Add(g);
+	void SetupList(){
+		foreach(GameObject g in players){
+			playersList.Add(g);
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
 		CheckAllPlayers ();
-		if(currentTarget != null){
-			if(chasing){
-				Debug.Log("Chasing");
-				Move ();
-				Turn ();
+		if(!disabled){
+			if(currentTarget != null && currentTarget.activeInHierarchy){
+				Debug.Log("Current target is not null and it is active");
+				if(chasing){
+					Debug.Log("Chasing");
+					Move ();
+					Turn ();
+				}
+				else{
+					Debug.Log("Turning");
+					Turn ();
+				}
 			}
 			else{
-				Debug.Log("Turning");
-				Turn ();
+				Debug.Log("Find target because current is not available.");
+				Debug.Break();
+				chasing = false;
+				currentTarget = FindTarget();
+			}
+			
+			
+			if(chasingTimer < chargeTargetTime){
+				chasingTimer += Time.deltaTime;
+			}
+			else{
+				chasingTimer = 0f;
+				chasing = false;
+				Debug.Log("Time to change target");
+				currentTarget = FindTarget();
 			}
 		}
 		else{
-			currentTarget = FindTarget();
-			chasing = false;
-		}
-
-
-		if(chasingTimer < chargeTargetTime){
-			chasingTimer += Time.deltaTime;
-		}
-		else{
-			chasingTimer = 0f;
-			currentTarget = null;
-			Debug.Log("Change target");
+			rigid.velocity = Vector3.zero;
 		}
 	}
 
@@ -98,33 +109,37 @@ public class BossMovement : MonoBehaviour {
 	}
 
 	void CheckAllPlayers(){
-		for(int i = 0; i < players.Count; i++){
-			if(!players[i].activeInHierarchy){
-				players.RemoveAt(i);
+		for(int i = 0; i < playersList.Count; i++){
+			if(!playersList[i].activeInHierarchy){
+
+				if(playersList[i].Equals(currentTarget)){
+					Debug.Log("Set current Target to be null");
+					currentTarget = null;
+					//Debug.Break();
+				}
+				playersList.RemoveAt(i);
 			}
 		}
 	}
 
 	GameObject FindTarget(){
-		if(players.Count > 0){
-			Random.seed = (int)(Random.value * 50f);
-			float random = (float)Random.value;
-			//Debug.Log ("Random = " + random);
-			int playerSelectedNum = (int)(random / (1f / (float)players.Count));
-			//Debug.Log ("Selected player " + playerSelectedNum);
-			if(!players[playerSelectedNum].activeInHierarchy){
-				return FindTarget();
-			}
-			else{
+		GameObject result = null;
+		while(result == null && playersList.Count > 0){
+			Random.seed = (int)(Random.value * 100f);
+			int random = Random.Range (0, playersList.Count-1);
+			if(playersList[random].activeInHierarchy){
 				rigid.velocity = Vector3.zero;
-				return players[playerSelectedNum];
+				chasing = true;
+				chasingTimer = 0f;
+				result = playersList[random];
 			}
 		}
-		else{
-			//Debug.Log ("Players all died");
-			rigid.velocity = Vector3.zero;
-			return null;
+
+		if(playersList.Count <= 0){
+			Debug.Log ("Players all died");
+			disabled = true;
 		}
+		return result;
 	}
 
 	void OnCollisionEnter(Collision col){

@@ -32,33 +32,51 @@ public class BossAttack : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(bossMove.currentTarget){
+		if(bossMove.currentTarget != null){
 			if(!casting){
-				
+				if(CheckMelee()){
+					//Debug.Log ("In melee range");
+					currentAbility = ChangeAbility();
+				}
+				else{
+					//Debug.Log("not in melee");
+				}
+
 				if(Input.GetKeyDown(KeyCode.T)){
 					currentAbility = ChangeAbility(1);
 				}
 
-				if(CheckMelee()){
-					//Debug.Log ("In melee range");
-					currentAbility = ChangeAbility();
-					currentAbility.Cast ();
+				if(Input.GetKeyDown(KeyCode.Y)){
+					currentAbility = ChangeAbility(2);
 				}
+
 
 				//Debug.Log ("Boss attack Activated");
 
 				if (currentAbility) {
-					currentAbility.Cast();
-					casting = true;
+					if(currentAbility.abilityReady){
+						//Debug.Log("Current ability is ready");
+						currentAbility.Cast();
+						casting = true;
+					}
+					else{
+
+						//Debug.Log("Current ability is not ready");
+					}
+
 					//Debug.Log("Current ability is not empty");
 				}
-				else{
-					//Debug.Log("Current ability is empty");
-					ChangeAbility();
-				}
+			}
+			else{
+				//Debug.Log("Already casting");
 			}
 		}
+		else{
+			//Debug.Log("No target found");
+			//Debug.Log(bossMove.currentTarget);
+		}
 	}
+
 
 	bool CheckMelee(){
 		Vector3 bossPos = transform.position;

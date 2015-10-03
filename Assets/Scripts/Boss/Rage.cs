@@ -1,17 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Rage : Ability, CastDelay {
 
 	public float cooldown;
 	public float castTime;
 
+	public int numberGenerated;
+	public float generateRange;
+	public Transform newObsPoint;
+	public GameObject obstacleModel;
+
 	private Camera main;
 	private bool delaying;
-	private bool delayBool;
+	private bool delayBool = true;
+	private List<GameObject> obstacles;
 	// Use this for initialization
 	void Start () {
-	
+		newObsPoint = owner.transform.Find ("NewObsZone");
+		obstacles = new List<GameObject> ();
 	}
 	
 	public void ResetCooldown(){
@@ -26,6 +34,7 @@ public class Rage : Ability, CastDelay {
 	public override void Cast(){
 		//Debug.Log ("Casting");
 		if(abilityReady){
+			Debug.Log("Cast rage");
 			CastDelayStart();
 		}
 		else{
@@ -38,8 +47,9 @@ public class Rage : Ability, CastDelay {
 		Debug.Log ("Endcast");
 		if(abilityReady){
 			CancelInvoke();
-
 			CastDelayEnd();
+			ResetCooldown();
+			owner.GetComponent<BossAttack> ().casting = false;
 		}
 	}
 	
@@ -54,7 +64,15 @@ public class Rage : Ability, CastDelay {
 	}
 
 	public void CreateObstacles(){
-
+		for(int i = 0; i < numberGenerated; i++){
+			GameObject newObs = Instantiate(obstacleModel);
+			Transform newObsTran = newObs.transform;
+			Random.seed = Random.Range(0, 100);
+			newObsTran.position.Set(newObsTran.position.x + Random.Range(-generateRange, generateRange), 
+			                        newObsTran.position.y,  
+			                        newObsTran.position.z + Random.Range(-generateRange, generateRange));
+			Debug.Log("Position: " + newObsTran.position);
+		}
 	}
 
 	public void ObstaclesFall(){
@@ -69,14 +87,14 @@ public class Rage : Ability, CastDelay {
 				delaying = true;
 			}
 			else{
-				owner.GetComponent<PlayerMovement>().disabled = true;
+				owner.GetComponent<BossMovement>().disabled = true;
 			}
 		}
 	}
 	
 	public void CastDelayEnd(){
-		ResetCooldown();
-		owner.GetComponent<PlayerMovement>().disabled = false;
+		CreateObstacles();
+		owner.GetComponent<BossMovement>().disabled = false;
 		delaying = false;
 	}
 

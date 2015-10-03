@@ -56,11 +56,11 @@ public class MeltingIsland : MonoBehaviour {
 				else if(col.gameObject.name == "Player_PS4_2"){
 					if(PH.onFire){
 						meltTime2 = 0.3f;
-						Debug.Log("Fast melting");
+						//Debug.Log("Fast melting");
 					}
 					else{
 						meltTime2 = 2f;
-						Debug.Log("Melting");
+						//Debug.Log("Melting");
 					}
 					
 					if(timer2 > meltTime2){

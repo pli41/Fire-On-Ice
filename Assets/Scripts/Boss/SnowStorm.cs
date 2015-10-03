@@ -27,13 +27,17 @@ public class SnowStorm : Ability, Cooldown, CasterEffect{
 			ability_object.SetActive (true);
 			//ability_object.GetComponent<ParticleSystem> ().Play();
 			abilityReady = false;
+			CauseEffect();
 			Invoke("EndCast", duration);
 		}
 	}
 	
 	public override void EndCast(){
+		Debug.Log ("Snowstorm endcast called");
 		CancelInvoke ();
+		EndEffect ();
 		ability_object.SetActive (false);
+		ResetCooldown ();
 		owner.GetComponent<BossAttack> ().casting = false;
 	}
 	
@@ -48,7 +52,7 @@ public class SnowStorm : Ability, Cooldown, CasterEffect{
 	}
 	
 	public void CooldownUpdate(){
-		if(cdTimer < cooldown_new){
+		if(cdTimer < cooldown){
 			cdTimer += Time.deltaTime;
 		}
 		else{
@@ -67,10 +71,12 @@ public class SnowStorm : Ability, Cooldown, CasterEffect{
 	}
 
 	public void CauseEffect (){
-
+		Debug.Log ("Cause effect starts");
+		owner.GetComponent<BossMovement> ().disabled = true;
 	}
 
 	public void EndEffect (){
-
+		Debug.Log ("Cause effect ends");
+		owner.GetComponent<BossMovement> ().disabled = false;
 	}
 }

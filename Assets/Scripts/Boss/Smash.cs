@@ -43,7 +43,6 @@ public class Smash : Ability, Cooldown{
 	
 	public override void SetupAbility(){
 		ability_object = Instantiate(ability_object);
-		ability_object.transform.parent = transform;
 		smash_Object = ability_object.GetComponent<Smash_Object> ();
 		smash_Object.ability = this;
 		ability_object.SetActive (false);
