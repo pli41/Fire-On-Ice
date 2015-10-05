@@ -65,6 +65,8 @@
      <Compile Include="Assets\Scripts\Magic\CasterEffect.cs" />
      <Compile Include="Assets\Scripts\Magic\Chargable.cs" />
      <Compile Include="Assets\Scripts\Magic\Cooldown.cs" />
+     <Compile Include="Assets\Scripts\Magic\FireBomb.cs" />
+     <Compile Include="Assets\Scripts\Magic\FireBomb_Object.cs" />
      <Compile Include="Assets\Scripts\Magic\Fireball.cs" />
      <Compile Include="Assets\Scripts\Magic\Fireball_Object.cs" />
      <Compile Include="Assets\Scripts\Magic\Flame.cs" />
