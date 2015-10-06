@@ -3,8 +3,7 @@ using System.Collections;
 
 public class DieWater : MonoBehaviour {
 
-	public float dmgTime = 2f;
-	
+
 	// Use this for initialization
 	void Start () {
 	}

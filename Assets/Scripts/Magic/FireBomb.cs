@@ -63,6 +63,7 @@ public class FireBomb : Ability, Cooldown, Shootable {
 	public override void SetupObj(){
 		Debug.Log (ability_point);
 		fireBomb_object = ability_object.GetComponent<FireBomb_Object> ();
+
 		Vector3 objVelocity = new Vector3 ();
 		objVelocity = transform.forward * bombSpeed;
 

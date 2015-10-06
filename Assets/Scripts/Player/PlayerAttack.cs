@@ -3,7 +3,8 @@ using System.Collections;
 
 public class PlayerAttack : MonoBehaviour
 {
-	public string playerString;
+	//start from 1
+	public int joystickNum;
 	public Transform magicPoint;
 	public Ability[] abilities = new Ability[3];
 
@@ -41,9 +42,9 @@ public class PlayerAttack : MonoBehaviour
 	void Update ()
 	{
 		//This part can be structrually changed too. Will do it after having a lot of abilities.
-		if(Input.GetAxisRaw ("PS4_R2_" + playerString) > 0)
+		if(ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.RightTrigger, joystickNum) > 0)
 		{	
-			Debug.Log("Get PS4_R2_" + playerString);
+			Debug.Log("Get PS4_R2_" + joystickNum);
 			if(abilities[0].abilityReady){
 				casting1 = true;
 				abilities[0].Cast();
@@ -61,9 +62,9 @@ public class PlayerAttack : MonoBehaviour
 
 
 
-		if(Input.GetAxisRaw ("PS4_L2_" + playerString) > 0)
+		if(ControllerInputWrapper.GetTriggerRaw (ControllerInputWrapper.Triggers.LeftTrigger, joystickNum) > 0)
 		{
-			Debug.Log("Get PS4_L2_" + playerString);
+			Debug.Log("Get PS4_L2_" + joystickNum);
 			if(abilities[1].abilityReady){
 				casting2 = true;
 				abilities[1].Cast();
@@ -83,10 +84,10 @@ public class PlayerAttack : MonoBehaviour
 
 		//Debug.Log (Input.GetAxisRaw ("PS4_R1_" + playerString));
 
-		if(Input.GetAxisRaw ("PS4_R1_" + playerString) > 0)
+		if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.RightBumper, joystickNum))
 		{
 			if(abilities[2].abilityReady && !casting1){
-				Debug.Log(playerString + " is casting");
+				Debug.Log(joystickNum + " is casting");
 				casting3 = true;
 				abilities[2].Cast();
 				if(abilities[2].triggerOnce){

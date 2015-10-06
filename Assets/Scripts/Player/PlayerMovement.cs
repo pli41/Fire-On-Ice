@@ -2,7 +2,8 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-	public string playerString;
+	//start from 1
+	public int joystickNum;
 	public float speed;
 	public float accFactor;
 
@@ -32,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
 	void FixedUpdate(){
 		dodgeTimer += Time.deltaTime;
 		
-		float h = Input.GetAxisRaw ("PS4_Horizontal_" + playerString);
-		float v = Input.GetAxisRaw ("PS4_Vertical_" + playerString);
+		float h = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickX, joystickNum);
+		float v = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickY, joystickNum);
 
 		if(!disabled){
 			if(canMove || canTurn){
@@ -82,8 +83,8 @@ public class PlayerMovement : MonoBehaviour
 	}
 	
 	void Turning(){
-		float hori = Input.GetAxis("PS4_RightAnalogHorizontal_" + playerString);
-		float vert = Input.GetAxis("PS4_RightAnalogVertical_" + playerString);
+		float hori = ControllerInputWrapper.GetAxisRaw(ControllerInputWrapper.Axis.RightStickX, joystickNum);
+		float vert = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.RightStickY, joystickNum);
 		
 		if(hori != 0 && vert != 0){
 			Vector3 direction = new Vector3 (hori, 0f, vert);

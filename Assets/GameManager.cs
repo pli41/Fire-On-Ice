@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+		ControllerInputWrapper.setPlatform ();
+		ControllerInputWrapper.setControlTypes ();
+
 		players = GameObject.FindGameObjectsWithTag ("Player");
 		boss = GameObject.FindGameObjectWithTag ("Boss");
 		SetupPlayerList ();
