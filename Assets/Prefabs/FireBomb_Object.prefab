@@ -228,8 +228,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110902}
-  m_LocalRotation: {x: 0, y: -.353077203, z: 0, w: .935594201}
-  m_LocalPosition: {x: .741377592, y: 2.60900497, z: -14.622695}
+  m_LocalRotation: {x: 0, y: .837995827, z: 0, w: .545676708}
+  m_LocalPosition: {x: -6.69085217, y: 2.60500479, z: -12.9826231}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 441242}
@@ -327,7 +327,7 @@ MonoBehaviour:
   upForce: 2
   explosionTime: 4
   explosionRadius: 5
-  explosionDamage: 50
+  explosionDamage: 40
   explosionForce: 500
 --- !u!198 &19814984
 ParticleSystem:
@@ -9676,7 +9676,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: explosionDamage
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: explosionForce

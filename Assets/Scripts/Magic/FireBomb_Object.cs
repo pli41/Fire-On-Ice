@@ -58,7 +58,13 @@ public class FireBomb_Object : MonoBehaviour {
 		foreach(Collider col in hitColliders){
 			float distance = Vector3.Distance(col.transform.position, transform.position);
 			if(col.tag == "Player"){
-				col.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(explosionDamage * (explosionRadius - distance) / explosionRadius), true);
+				if(pickedByPlayer){
+					col.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(explosionDamage), true);
+				}
+				else{
+					col.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(explosionDamage * (explosionRadius - distance) / explosionRadius), true);
+				}
+				
 				col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius);
 			}
 			else if(col.tag == "Island" && !pickedByPlayer){
@@ -94,8 +100,8 @@ public class FireBomb_Object : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 		GetComponent<Rigidbody>().isKinematic = true;
 		DisableColliders ();
-		GetComponent<Rigidbody> ().detectCollisions = false;
-		GetComponent<Rigidbody> ().useGravity = false;
+		//GetComponent<Rigidbody> ().detectCollisions = false;
+		//GetComponent<Rigidbody> ().useGravity = false;
 		GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		transform.parent = col.transform;
 		if(col.tag == "Player"){
