@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\Scripts\Boss\BossAttack.cs" />
      <Compile Include="Assets\Scripts\Boss\BossHealth.cs" />
      <Compile Include="Assets\Scripts\Boss\BossMovement.cs" />
@@ -56,9 +55,12 @@
      <Compile Include="Assets\Scripts\Boss\SnowStorm.cs" />
      <Compile Include="Assets\Scripts\Boss\SnowStorm_Object.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
+     <Compile Include="Assets\Scripts\Chest.cs" />
+     <Compile Include="Assets\Scripts\ChestController.cs" />
      <Compile Include="Assets\Scripts\ControllerInputWrapper.cs" />
      <Compile Include="Assets\Scripts\Cyclone_Object.cs" />
      <Compile Include="Assets\Scripts\DieWater.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Island.cs" />
      <Compile Include="Assets\Scripts\Magic\Ability.cs" />
      <Compile Include="Assets\Scripts\Magic\Blink.cs" />
@@ -80,6 +82,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack_Key.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerItem.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement_Key.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />

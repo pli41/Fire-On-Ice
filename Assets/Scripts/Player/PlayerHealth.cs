@@ -69,13 +69,20 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage (int amount, bool burn)
     {
-        damaged = true;
-
+        
         currentHealth -= amount;
 
         healthSlider.value = currentHealth;
 
-        playerAudio.Play ();
+		//Audio
+		if(amount > 0){
+			damaged = true;
+			playerAudio.Play ();
+		}
+		else{
+
+		}
+        
 
 		if(burn){
 			burnGround (amount);

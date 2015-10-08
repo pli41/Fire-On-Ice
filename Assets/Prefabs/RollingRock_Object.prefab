@@ -319,8 +319,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167916}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.08500004, y: 2.55500507, z: -9.69000053}
+  m_LocalRotation: {x: 0, y: .293372899, z: 0, w: .955998063}
+  m_LocalPosition: {x: 2.73896217, y: 2.55500507, z: -18.4496536}
   m_LocalScale: {x: 2.17897463, y: 2.17897391, z: 2.17897391}
   m_Children:
   - {fileID: 426054}
@@ -436,7 +436,7 @@ MonoBehaviour:
   damage: 30
   forceMagnitude: 800
   explosionRadius: 5
-  rollingDamage: 2
+  rollingDamage: 5
   rollingMeltFactor: 3
   maxSpeed: 15
   rollingTime: 2.5
@@ -11738,7 +11738,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: rollingDamage
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Constraints
