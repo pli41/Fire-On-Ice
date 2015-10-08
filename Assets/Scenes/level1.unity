@@ -19436,7 +19436,7 @@ Prefab:
     - target: {fileID: 11466376, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: abilities.Array.data[2]
       value: 
-      objectReference: {fileID: 11461332, guid: 8299e958997364a1fb4205d252e9d885,
+      objectReference: {fileID: 11435908, guid: 80dc8a6e49a9d4a59bc73e4c82878916,
         type: 2}
     - target: {fileID: 466426, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: m_LocalScale.x

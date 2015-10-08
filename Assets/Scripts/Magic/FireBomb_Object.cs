@@ -59,15 +59,15 @@ public class FireBomb_Object : MonoBehaviour {
 			float distance = Vector3.Distance(col.transform.position, transform.position);
 			if(col.tag == "Player"){
 				if(pickedByPlayer){
-					col.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(explosionDamage), true);
+					col.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(explosionDamage), false);
 				}
 				else{
-					col.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(explosionDamage * (explosionRadius - distance) / explosionRadius), true);
+					col.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(explosionDamage * (explosionRadius - distance) / explosionRadius), false);
 				}
 				
 				col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius);
 			}
-			else if(col.tag == "Island" && !pickedByPlayer){
+			else if(col.tag == "Island"){
 				if(distance < explosionRadius){
 					col.gameObject.GetComponent<MeltingIsland>().meltByExplode((int)(explosionDamage * (explosionRadius - distance) / explosionRadius));
 				}

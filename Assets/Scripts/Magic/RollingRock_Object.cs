@@ -8,6 +8,8 @@ public class RollingRock_Object : MonoBehaviour {
 	public int damage;
 	public float forceMagnitude;
 	public float explosionRadius;
+	public int rollingDamage;
+	public int rollingMeltFactor;
 
 	public float maxSpeed; 
 	public float rollingTime;
@@ -65,11 +67,21 @@ public class RollingRock_Object : MonoBehaviour {
 		Debug.Log ("EXPLODE");
 		rigid.velocity = Vector3.zero;
 		rend.enabled = false;
+		rigid.useGravity = false;
 		explosion.gameObject.SetActive (true);
 		fire.gameObject.SetActive (false);
 		CheckPlayers ();
 		Invoke ("DestroyRock", 4f);
 	}
+
+	void OnCollisionEnter(Collision col){
+		if(col.gameObject.tag == "Player"){
+			col.gameObject.GetComponent<PlayerHealth>().TakeDamage(rollingDamage, false);
+		}
+		else if(col.gameObject.tag == "Island"){
+			col.gameObject.GetComponent<MeltingIsland>().meltByExplode(rollingDamage*rollingMeltFactor);
+		}
+    }
 
 	void CheckPlayers(){
 		foreach(GameObject p in players){
