@@ -12462,6 +12462,59 @@ SkinnedMeshRenderer:
     m_Center: {x: -.217404515, y: -4.28408384e-08, z: .106329583}
     m_Extent: {x: .709815741, y: .044386521, z: .323496759}
   m_DirtyAABB: 0
+--- !u!1 &522702863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 522702865}
+  - 114: {fileID: 522702864}
+  m_Layer: 0
+  m_Name: FIreMeteor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &522702864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 522702863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6e6053b95493445a107b70399bf93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  ability_object: {fileID: 0}
+  handledEndCast: 0
+  ability_point: {fileID: 0}
+  triggerOnce: 0
+  cooldown_new: 0
+  abilityReady: 0
+  cdTimer: 0
+  enchantEffect: {fileID: 0}
+  onFireEffect: {fileID: 0}
+  onFireTime_max: 0
+  cooldown: 0
+  delayBool: 1
+  castTime: 0
+--- !u!4 &522702865
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 522702863}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.63592434, y: 2.13335586, z: -6.19312716}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
 --- !u!1 &533096666
 GameObject:
   m_ObjectHideFlags: 0
@@ -40783,7 +40836,7 @@ Prefab:
     - target: {fileID: 11466376, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: abilities.Array.data[2]
       value: 
-      objectReference: {fileID: 11461332, guid: 8299e958997364a1fb4205d252e9d885,
+      objectReference: {fileID: 11435908, guid: 80dc8a6e49a9d4a59bc73e4c82878916,
         type: 2}
     m_RemovedComponents:
     - {fileID: 11459034, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}

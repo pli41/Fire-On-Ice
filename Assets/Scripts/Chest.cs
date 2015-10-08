@@ -22,7 +22,7 @@ public class Chest : MonoBehaviour {
 		} 
 	}
 
-	void OnTriggerExit(Collider other){
+	void OnTriggerExihestt(Collider other){
 		if(other.tag == "Player"){
 			GameObject playerChest = other.GetComponent<PlayerItem>().chestAround;
 			if(gameObject.Equals(playerChest)){

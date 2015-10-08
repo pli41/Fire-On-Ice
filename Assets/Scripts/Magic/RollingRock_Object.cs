@@ -70,7 +70,24 @@ public class RollingRock_Object : MonoBehaviour {
 		rigid.useGravity = false;
 		explosion.gameObject.SetActive (true);
 		fire.gameObject.SetActive (false);
-		CheckPlayers ();
+
+		Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
+		foreach(Collider col in hitColliders){
+			float distance = Vector3.Distance(col.transform.position, transform.position);
+			if(col.tag == "Player"){
+				col.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(damage * (explosionRadius - distance) / explosionRadius), false);
+				col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(forceMagnitude, transform.position, explosionRadius);
+			}
+			else if(col.tag == "Island"){
+				if(distance < explosionRadius){
+					col.gameObject.GetComponent<MeltingIsland>().meltByExplode((int)(damage * (explosionRadius - distance) / explosionRadius));
+				}
+			}
+			else if(col.tag == "Obstacle"){
+				col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(forceMagnitude, transform.position, explosionRadius);
+			}
+		}
+
 		Invoke ("DestroyRock", 4f);
 	}
 

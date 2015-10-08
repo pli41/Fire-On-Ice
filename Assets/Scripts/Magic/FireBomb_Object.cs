@@ -75,14 +75,6 @@ public class FireBomb_Object : MonoBehaviour {
 			else if(col.tag == "Obstacle"){
 				col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius);
 			}
-
-		}
-
-		foreach(GameObject p in players){
-			float distance = Vector3.Distance(p.transform.position, transform.position);
-			if(distance < explosionRadius){
-
-			}
 		}
 	}
 
