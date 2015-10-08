@@ -120,13 +120,13 @@ public class MeltingIsland : MonoBehaviour {
 	public void meltByExplode(int amount){
 		//change color
 		Color color = mat.color;
-		color.g -= colorChange * (float)amount / 10f;
-		color.r -= colorChange * (float)amount / 10f;
+		color.g -= colorChange * (float)amount / 5f;
+		color.r -= colorChange * (float)amount / 5f;
 		mat.color = color;
 		
 		//change thickness
 		Vector3 scale = transform.localScale;
-		scale.y -= scaleChange * (float)amount / 10f;
+		scale.y -= scaleChange * (float)amount / 5f;
 		
 		if(scale.y < 0.1f){
 			Destroy(gameObject);

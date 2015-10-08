@@ -239,9 +239,9 @@ public static class ControllerInputWrapper
         inputName = inputName + retrieveCorrectAxis(axis, joyStickNumber - 1);
         int scale = getAxisScale(axis, joyStickNumber - 1);
         if (isRaw)
-            return Input.GetAxisRaw(inputName);
+			return Input.GetAxisRaw(inputName) * scale;
         else
-            return Input.GetAxis(inputName);
+			return Input.GetAxis(inputName) * scale;
     }
 
     static int getAxisScale(Axis axis, int joystickNumber)

@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 	public int joystickNum;
 	public float speed;
 	public float accFactor;
+	public float minSpeed;
 
 	public bool canMove;
 	public bool canTurn;
@@ -21,8 +22,9 @@ public class PlayerMovement : MonoBehaviour
 	private Animator anim;
 	private Rigidbody playerRigidbody;
 	private bool dodgeInit;
-	
+	private float maxSpeed;
 	void Awake(){
+		maxSpeed = speed;
 		anim = GetComponent<Animator> ();
 		playerRigidbody = GetComponent<Rigidbody> ();
 		dodgeInit = true;
@@ -33,9 +35,10 @@ public class PlayerMovement : MonoBehaviour
 	void FixedUpdate(){
 		dodgeTimer += Time.deltaTime;
 		
-		float h = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickX, joystickNum);
-		float v = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickY, joystickNum);
+		float h = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickX, joystickNum, false);
+		float v = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickY, joystickNum, false);
 
+		//Debug.Log ("h = " + h + " v = " + v);
 		if(!disabled){
 			if(canMove || canTurn){
 				if(canMove){
@@ -61,10 +64,18 @@ public class PlayerMovement : MonoBehaviour
 		//movement.Set (h, 0f, v);
 		//movement = movement.normalized * speed * Time.deltaTime;
 		//playerRigidbody.MovePosition (transform.position + movement);
-		
+
 		
 		movement.Set (h, 0f, v);
-		movement = movement.normalized * speed * accFactor;
+		float acc = Mathf.Sqrt (h * h + v * v);
+
+		speed = acc * maxSpeed / 0.09f;
+
+		if(speed < minSpeed){
+			speed = minSpeed;
+		}
+
+		movement = movement.normalized * speed * acc * accFactor;
 		//playerRigidbody.MovePosition (transform.position + movement);
 		//Debug.Log ("Magnitude = " + playerRigidbody.velocity.magnitude);
 		

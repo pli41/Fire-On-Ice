@@ -64,18 +64,8 @@ public class FireBomb : Ability, Cooldown, Shootable {
 		Debug.Log (ability_point);
 		fireBomb_object = ability_object.GetComponent<FireBomb_Object> ();
 
-		Vector3 objVelocity = new Vector3 ();
-		objVelocity = transform.forward * bombSpeed;
-
-
-		//objVelocity.Set ();
-		Debug.Log (objVelocity + " : Velocity");
-		Debug.DrawRay (owner.transform.position, objVelocity);
-
-
 		ability_object.transform.position = ability_point.position;
 		ability_object.transform.rotation = owner.transform.rotation;
-		ability_object.GetComponent<Rigidbody>().velocity = objVelocity;
 	}
 
 
