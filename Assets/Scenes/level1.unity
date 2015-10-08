@@ -40686,7 +40686,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 494388, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .330000013
+      value: .736000001
       objectReference: {fileID: 0}
     - target: {fileID: 11466376, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: joystickNum

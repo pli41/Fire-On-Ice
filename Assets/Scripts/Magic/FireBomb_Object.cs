@@ -92,13 +92,15 @@ public class FireBomb_Object : MonoBehaviour {
 	                 
 
 	void OnTriggerEnter(Collider col){
-		//GetComponent<Rigidbody>().isKinematic = true;
+		GetComponent<Rigidbody>().isKinematic = true;
 		DisableColliders ();
+		GetComponent<Rigidbody> ().detectCollisions = false;
 		GetComponent<Rigidbody> ().useGravity = false;
 		GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		transform.parent = col.transform;
 		if(col.tag == "Player"){
 			pickedByPlayer = true;
+			Debug.Break ();
 		}
 
 	}
