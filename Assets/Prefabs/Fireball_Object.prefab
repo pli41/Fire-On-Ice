@@ -163,8 +163,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116374}
-  m_LocalRotation: {x: 0, y: -.271020979, z: 0, w: .962573469}
-  m_LocalPosition: {x: 3.17396998, y: 2.56851912, z: -8.12916565}
+  m_LocalRotation: {x: 0, y: .719133377, z: 0, w: .694872081}
+  m_LocalPosition: {x: 3.26243114, y: 2.32568812, z: .302593589}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 498970}
@@ -243,7 +243,7 @@ MonoBehaviour:
   ps3: {fileID: 19896400}
   damage: 20
   speed: 5
-  size: .110310018
+  size: .263557017
   force: 300
   forceR: 50
 --- !u!198 &19817342

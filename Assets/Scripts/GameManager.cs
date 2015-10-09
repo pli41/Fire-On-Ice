@@ -44,10 +44,12 @@ public class GameManager : MonoBehaviour {
 			for(int i = 0; i < playerList.Count; i++ ){
 				playerList[i].SetActive(true);
 			}
+			enablePlayers = true;
 		}
 
 		if(Input.GetKeyDown(KeyCode.W)){
-			boss.SetActive(true);	
+			boss.SetActive(true);
+			enableBoss = true;
 		}
 	}
 }
