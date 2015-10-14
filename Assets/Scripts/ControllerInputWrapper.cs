@@ -207,6 +207,8 @@ public static class ControllerInputWrapper
             {
                 case Buttons.RightBumper:
                     return "11";
+				case Buttons.A:
+					return "14";
             }
         }
 

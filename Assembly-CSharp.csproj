@@ -76,6 +76,8 @@
      <Compile Include="Assets\Scripts\Magic\Fireball_Object.cs" />
      <Compile Include="Assets\Scripts\Magic\Flame.cs" />
      <Compile Include="Assets\Scripts\Magic\Flame_Object.cs" />
+     <Compile Include="Assets\Scripts\Magic\Hook.cs" />
+     <Compile Include="Assets\Scripts\Magic\HookScript.cs" />
      <Compile Include="Assets\Scripts\Magic\MovementEffect.cs" />
      <Compile Include="Assets\Scripts\Magic\RollingRock.cs" />
      <Compile Include="Assets\Scripts\Magic\RollingRock_Object.cs" />

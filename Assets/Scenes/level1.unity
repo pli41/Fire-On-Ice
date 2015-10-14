@@ -8015,7 +8015,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &293023338
 GameObject:
   m_ObjectHideFlags: 0
@@ -9520,7 +9520,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 467814, guid: 2549f0dd6ad3c4bdc98620c8a3f8aa7e, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 142908, guid: 2549f0dd6ad3c4bdc98620c8a3f8aa7e, type: 2}
       propertyPath: m_IsActive
@@ -10839,7 +10839,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
       propertyPath: m_LocalScale.z
@@ -12883,7 +12883,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: b544816461f324e56a39767fdeb5b114, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: b544816461f324e56a39767fdeb5b114, type: 2}
       propertyPath: m_IsActive
@@ -14147,7 +14147,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aace3903179a74aecb0c4d0fb7607ef5, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: aace3903179a74aecb0c4d0fb7607ef5, type: 2}
       propertyPath: m_IsActive
@@ -19167,7 +19167,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 466426, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 11460362, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: healthSlider
@@ -19192,7 +19192,7 @@ Prefab:
     - target: {fileID: 11466376, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: abilities.Array.data[2]
       value: 
-      objectReference: {fileID: 11435908, guid: 80dc8a6e49a9d4a59bc73e4c82878916,
+      objectReference: {fileID: 11447328, guid: 941deae2654ef41f394fdcc2318350e4,
         type: 2}
     - target: {fileID: 466426, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: m_LocalScale.x
@@ -19230,6 +19230,16 @@ Prefab:
       propertyPath: m_Name
       value: Player_1
       objectReference: {fileID: 0}
+    - target: {fileID: 11466376, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
+      propertyPath: abilities.Array.data[0]
+      value: 
+      objectReference: {fileID: 11461332, guid: 8299e958997364a1fb4205d252e9d885,
+        type: 2}
+    - target: {fileID: 11466376, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
+      propertyPath: abilities.Array.data[1]
+      value: 
+      objectReference: {fileID: 11481928, guid: 059cf1ffdb23c3a4e9a334e681854c9f,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
   m_IsPrefabParent: 0
@@ -21360,7 +21370,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &965002806
 GameObject:
   m_ObjectHideFlags: 0
@@ -21499,7 +21509,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 331835122e53b42f9abe58caac5fd0ec, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19800004, guid: 331835122e53b42f9abe58caac5fd0ec, type: 2}
       propertyPath: VelocityModule.x.minCurve.m_Curve.Array.data[0].value
@@ -22332,7 +22342,7 @@ Transform:
   - {fileID: 1283006476}
   - {fileID: 1728538289}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
 --- !u!1 &1006594313
 GameObject:
   m_ObjectHideFlags: 0
@@ -30221,7 +30231,7 @@ Transform:
   - {fileID: 520696976}
   - {fileID: 952624501}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!114 &1387844422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33289,7 +33299,7 @@ Transform:
   - {fileID: 1211485564}
   - {fileID: 1270925856}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 24
 --- !u!1 &1551889051
 GameObject:
   m_ObjectHideFlags: 0
@@ -40590,7 +40600,12 @@ Prefab:
     - target: {fileID: 11466376, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: abilities.Array.data[2]
       value: 
-      objectReference: {fileID: 11435908, guid: 80dc8a6e49a9d4a59bc73e4c82878916,
+      objectReference: {fileID: 11461332, guid: 8299e958997364a1fb4205d252e9d885,
+        type: 2}
+    - target: {fileID: 11466376, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
+      propertyPath: abilities.Array.data[1]
+      value: 
+      objectReference: {fileID: 11481928, guid: 059cf1ffdb23c3a4e9a334e681854c9f,
         type: 2}
     m_RemovedComponents:
     - {fileID: 11459034, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
@@ -45467,7 +45482,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 466426, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11460362, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: healthSlider
@@ -45595,7 +45610,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 851a222434a3c468f8fbe2400898caf8, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: 851a222434a3c468f8fbe2400898caf8, type: 2}
       propertyPath: InitialModule.startColor.maxColor.rgba
@@ -45728,7 +45743,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 466426, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11460362, guid: a32de7c3f6f974468a8ef8f22f4a415b, type: 2}
       propertyPath: healthSlider

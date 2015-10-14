@@ -98,7 +98,7 @@ public class FireBomb_Object : MonoBehaviour {
 		transform.parent = col.transform;
 		if(col.tag == "Player"){
 			pickedByPlayer = true;
-			Debug.Break ();
+			//Debug.Break ();
 		}
 
 	}
