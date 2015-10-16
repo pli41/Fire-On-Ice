@@ -51,6 +51,8 @@ public class PlayerHealth : MonoBehaviour
 		if(onFire && !onFireEffect.activeInHierarchy){
 			CauseOnFire();
 		}
+
+
     }
 
 	public void CauseOnFire(){

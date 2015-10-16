@@ -8,12 +8,16 @@ public class PlayerAttack : MonoBehaviour
 	public Transform magicPoint;
 	public Ability[] abilities = new Ability[3];
 
+	public bool enchanting;
+	public GameObject enchantEffect;
+
 	private bool casting1;
 	private bool casting2;
 	private bool casting3;
 
 	void Start ()
 	{
+		enchantEffect = transform.Find ("enchantEffect").gameObject;
 		SetupAbilities ();
 		casting1 = false;
 	}
@@ -41,10 +45,18 @@ public class PlayerAttack : MonoBehaviour
 
 	void Update ()
 	{
+		//Handle enchant Effect
+		if(enchanting){
+			enchantEffect.SetActive(true);
+		}
+		else{
+			enchantEffect.SetActive(false);
+		}
+
 		//This part can be structrually changed too. Will do it after having a lot of abilities.
 		if(ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.RightTrigger, joystickNum) > 0)
 		{	
-			Debug.Log("Get PS4_R2_" + joystickNum);
+			//Debug.Log("Get PS4_R2_" + joystickNum);
 			if(abilities[0].abilityReady){
 				casting1 = true;
 				abilities[0].Cast();
@@ -57,14 +69,16 @@ public class PlayerAttack : MonoBehaviour
 		}
 		else if(casting1){
 			casting1 = false;
-			abilities[0].EndCast();
+			if(!abilities[0].handledEndCast){
+				abilities[0].EndCast();
+			}
 		}
 
 
 
 		if(ControllerInputWrapper.GetTriggerRaw (ControllerInputWrapper.Triggers.LeftTrigger, joystickNum) > 0)
 		{
-			Debug.Log("Get PS4_L2_" + joystickNum);
+			//Debug.Log("Get PS4_L2_" + joystickNum);
 			if(abilities[1].abilityReady){
 				casting2 = true;
 				abilities[1].Cast();
@@ -79,7 +93,9 @@ public class PlayerAttack : MonoBehaviour
 		}
 		else if(casting2){
 			casting2 = false;
-			abilities[1].EndCast();
+			if(!abilities[1].handledEndCast){
+				abilities[1].EndCast();
+			}
 		}
 
 		//Debug.Log (Input.GetAxisRaw ("PS4_R1_" + playerString));
@@ -87,7 +103,7 @@ public class PlayerAttack : MonoBehaviour
 		if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.RightBumper, joystickNum))
 		{
 			if(abilities[2].abilityReady && !casting1){
-				Debug.Log(joystickNum + " is casting");
+				//Debug.Log(joystickNum + " is casting");
 				casting3 = true;
 				abilities[2].Cast();
 				if(abilities[2].triggerOnce){
