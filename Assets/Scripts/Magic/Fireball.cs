@@ -20,7 +20,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 
 	void Start (){
 		oldSpeed = owner.GetComponent<PlayerMovement> ().speed;
-		enchantEffect = owner.transform.Find ("enchantEffect").gameObject;
+		//enchantEffect = owner.transform.Find ("enchantEffect").gameObject;
 		onFireEffect = owner.transform.Find ("onFireEffect").gameObject;
 		abilityReady = false;
 		SetupCooldown ();
@@ -92,7 +92,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	//Abilities with charging need to set triggerOnce to be false
 	public void Charge(){
 		triggerOnce = false;
-		enchantEffect.SetActive (true);
+		owner.GetComponent<PlayerAttack>().enchanting = true;
 		CauseEffect ();
 		if(chargeTimer < maxChargeT){
 			chargeTimer += Time.deltaTime;
@@ -103,7 +103,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 		float result = chargeTimer;
 		chargeTimer = 0f;
 		EndEffect ();
-		enchantEffect.SetActive (false);
+		owner.GetComponent<PlayerAttack>().enchanting = false;
 		return result;
 	}
 
