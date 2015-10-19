@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &178906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 490066}
+  - 114: {fileID: 11413252}
+  m_Layer: 0
+  m_Name: Cyclone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &490066
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.2399998, y: 1.46000004, z: 2.50069475}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11413252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf07832b4cdf4cee9e32da70559cba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  ability_object: {fileID: 106828, guid: 593c39312dee344c2a6eb4a590d1c20d, type: 2}
+  handledEndCast: 0
+  ability_point: {fileID: 0}
+  triggerOnce: 0
+  cooldown_new: 0
+  abilityReady: 0
+  cdTimer: 0
+  castTime: 3
+  cooldown: 0
+  delayBool: 1
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: ability_object
+      value: 
+      objectReference: {fileID: 106828, guid: 593c39312dee344c2a6eb4a590d1c20d, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 178906}
+  m_IsPrefabParent: 1

@@ -92,7 +92,7 @@ public class MeltingIsland : MonoBehaviour {
 		transform.localScale = scale;
 	}
 
-	public void meltByExplode(int amount){
+	public void meltByExplode(float amount){
 		//change color
 		Color color = mat.color;
 		color.g -= colorChange * (float)amount / 5f;

@@ -58,7 +58,6 @@
      <Compile Include="Assets\Scripts\Chest.cs" />
      <Compile Include="Assets\Scripts\ChestController.cs" />
      <Compile Include="Assets\Scripts\ControllerInputWrapper.cs" />
-     <Compile Include="Assets\Scripts\Cyclone_Object.cs" />
      <Compile Include="Assets\Scripts\DieWater.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Island.cs" />
@@ -68,6 +67,8 @@
      <Compile Include="Assets\Scripts\Magic\CasterEffect.cs" />
      <Compile Include="Assets\Scripts\Magic\Chargable.cs" />
      <Compile Include="Assets\Scripts\Magic\Cooldown.cs" />
+     <Compile Include="Assets\Scripts\Magic\Cyclone.cs" />
+     <Compile Include="Assets\Scripts\Magic\Cyclone_Object.cs" />
      <Compile Include="Assets\Scripts\Magic\FireBomb.cs" />
      <Compile Include="Assets\Scripts\Magic\FireBomb_Object.cs" />
      <Compile Include="Assets\Scripts\Magic\FireMeteor.cs" />

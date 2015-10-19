@@ -4,8 +4,8 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth = 100;
-    public int currentHealth;
+    public float startingHealth = 100;
+    public float currentHealth;
     public Slider healthSlider;
     public Image damageImage;
     public AudioClip deathClip;
@@ -69,7 +69,7 @@ public class PlayerHealth : MonoBehaviour
 	}
 
 
-    public void TakeDamage (int amount, bool burn)
+    public void TakeDamage (float amount, bool burn)
     {
         
         currentHealth -= amount;
@@ -77,7 +77,7 @@ public class PlayerHealth : MonoBehaviour
         healthSlider.value = currentHealth;
 
 		//Audio
-		if(amount > 0){
+		if(amount > 0f){
 			damaged = true;
 			playerAudio.Play ();
 		}
@@ -99,7 +99,7 @@ public class PlayerHealth : MonoBehaviour
 
 
 
-	public void burnGround(int amount){
+	public void burnGround(float amount){
 
 		foreach(GameObject go in allgrounds){
 			if(go){

@@ -1,24 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
-
-	public GameObject enchantEffect;
-
-	public float castTime;
-
-	public float cooldown;
+public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 	
-	private RollingRock_Object rollingRock_object;
-
+	public float castTime;
+	public float cooldown;
+	private Cyclone_Object cyclone_object;
+	
 	//For CastDelay
 	private float delayTimer;
 	public bool delayBool = true;
 	private bool delaying;
-
+	
 	void Start (){
-		handledEndCast = true;
-		enchantEffect = owner.transform.Find ("enchantEffect").gameObject;
+		handledEndCast = true;;
 		abilityReady = true;
 		SetupCooldown ();
 	}
@@ -72,17 +67,18 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 	
 	public void Shoot(){
 		SetupObj ();
-		Instantiate (ability_object); 
 	}
 	
 	public override void SetupObj(){
 		Debug.Log (ability_point);
-		rollingRock_object = ability_object.GetComponent<RollingRock_Object> ();
-		rollingRock_object.ability = this;
+
+		cyclone_object = ability_object.GetComponent<Cyclone_Object> ();
+		//cyclone_object.ability = this;
 		ability_object.transform.position = ability_point.position;
 		ability_object.transform.rotation = owner.transform.rotation;
+		Instantiate (ability_object); 
 	}
-
+	
 	public void CastDelayStart(){
 		if(delayBool){
 			if(!delaying){
@@ -96,7 +92,7 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 			}
 		}
 	}
-
+	
 	public void CastDelayEnd(){
 		ResetCooldown();
 		owner.GetComponent<PlayerAttack>().enchanting = false;
