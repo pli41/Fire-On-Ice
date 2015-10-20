@@ -11,6 +11,7 @@ public class Chest : MonoBehaviour {
 	
 	public void Open(){
 		anim.SetBool("Open",true);
+		GetComponent<AudioSource> ().Play ();
 		Destroy(gameObject, 3f);
 	}
 

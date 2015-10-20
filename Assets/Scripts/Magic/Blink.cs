@@ -10,9 +10,11 @@ public class Blink : Ability, MovementEffect, Cooldown {
 	private Vector3 targetPos_final;
 	private float characterSize;
 	private int ignoreLayer;
+	private AudioSource audio;
 
 	// Use this for initialization
 	void Start () {
+		audio = GetComponent<AudioSource> ();
 		triggerOnce = true;
 		playerModel = owner.transform.Find ("PlayerModel").gameObject;
 		ignoreLayer = LayerMask.NameToLayer ("Obstacles");
@@ -54,6 +56,10 @@ public class Blink : Ability, MovementEffect, Cooldown {
 				owner.GetComponent<Rigidbody>().useGravity = false;
 				playerModel.SetActive(false);
 				owner.GetComponent<Collider>().enabled = false;
+				if(!audio.isPlaying){
+					audio.Play();
+				}
+
 			}
 			else{
 				Debug.Log("No target position found");

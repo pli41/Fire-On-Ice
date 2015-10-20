@@ -14,11 +14,15 @@ public class Fireball_Object : MonoBehaviour {
 	public float force = 300f;
 	public float forceR = 50f;
 
+	public AudioClip explosion;
+
 	private bool disabled;
 	private Chargable chargeTimer;
-	
+	private AudioSource audioS;
+
 	// Use this for initialization
 	void Start () {
+		audioS = GetComponent<AudioSource> ();
 		force = size * 100f + 200f;
 		damage = size * 20f;
 		
@@ -45,6 +49,12 @@ public class Fireball_Object : MonoBehaviour {
 			BossHealth health = other.GetComponent<BossHealth> ();
 			health.TakeDamage ((int)damage);
 		}
-		Invoke("DestroyFire", 1.5f);
+		PlayExplosion ();
+		Invoke("DestroyFire", 2f);
+	}
+
+	void PlayExplosion(){
+		audioS.clip = explosion;
+		audioS.Play ();
 	}
 }
