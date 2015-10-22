@@ -9,6 +9,9 @@ public class FireBomb_Object : MonoBehaviour {
 	public float explosionRadius;
 	public float explosionDamage;
 	public float explosionForce;
+	public float explosionFactor;
+
+	public SetExplosion boomAudio;
 
 	private ParticleSystem fire;
 	private GameObject explosionEffect;
@@ -27,6 +30,7 @@ public class FireBomb_Object : MonoBehaviour {
 		fire = GetComponent<ParticleSystem>();
 		explosionEffect = transform.Find ("Boom").gameObject;
 		explosionEffect.SetActive (false);
+		boomAudio.damage = explosionDamage;
 		//Initialize ();
 	}
 
@@ -48,8 +52,8 @@ public class FireBomb_Object : MonoBehaviour {
 	}
 
 	void Explode(){
-		Debug.Log ("Explode");
 		//Debug.Break();
+		transform.parent = null;
 		fire.Stop ();
 		explosionEffect.SetActive (true);
 		Invoke ("DestroyObj", explosionEffect.GetComponent<ParticleSystem>().duration);
@@ -69,7 +73,7 @@ public class FireBomb_Object : MonoBehaviour {
 			}
 			else if(col.tag == "Island"){
 				if(distance < explosionRadius){
-					col.gameObject.GetComponent<MeltingIsland>().meltByExplode((int)(explosionDamage * (explosionRadius - distance) / explosionRadius));
+					col.gameObject.GetComponent<MeltingIsland>().meltByExplode((int)(explosionDamage * (explosionRadius - distance) / explosionRadius * explosionFactor));
 				}
 			}
 			else if(col.tag == "Obstacle"){
@@ -79,6 +83,7 @@ public class FireBomb_Object : MonoBehaviour {
 	}
 
 	void DestroyObj(){
+		Debug.Log ("obj destroyed");
 		Destroy (gameObject);
 	}
 

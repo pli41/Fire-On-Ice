@@ -26,11 +26,12 @@ public class Fireball_Object : MonoBehaviour {
 		force = size * 100f + 200f;
 		damage = size * 20f;
 		
-		ps1.startSize = 0.01f;
+		ps1.startSize = size;
 		ps2.startSize = size * 2.5f + 2f;
 		ps3.startSize = size * 2.5f + 2f;
 		
 		disabled = false;
+		Invoke("DestroyFire", 5f);
 	}
 
 	
@@ -54,7 +55,14 @@ public class Fireball_Object : MonoBehaviour {
 	}
 
 	void PlayExplosion(){
+		float calculatedPitch = 2f - damage / 50f * 2f;
+		if(calculatedPitch < 0.5f){
+			calculatedPitch = 0.5f;
+		}
+
+		audioS.pitch = calculatedPitch;
 		audioS.clip = explosion;
+		//Debug.Break ();
 		audioS.Play ();
 	}
 }

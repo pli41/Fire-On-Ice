@@ -17,6 +17,8 @@ public class RollingRock_Object : MonoBehaviour {
 
 	public float explosionForceMag;
 
+	public SetExplosion boomAudio;
+
 	private Rigidbody rigid;
 	private float timer;
 	private MeshRenderer rend;
@@ -35,6 +37,7 @@ public class RollingRock_Object : MonoBehaviour {
 		explosion = transform.Find ("Explosion");
 		rend = GetComponent<MeshRenderer> ();
 		rigid = GetComponent<Rigidbody> ();
+		boomAudio.damage = damage;
 	}
 
 	void SetupPlayerList(){
@@ -68,6 +71,7 @@ public class RollingRock_Object : MonoBehaviour {
 		rigid.velocity = Vector3.zero;
 		rend.enabled = false;
 		rigid.useGravity = false;
+		explosion.parent = null;
 		explosion.gameObject.SetActive (true);
 		fire.gameObject.SetActive (false);
 
@@ -111,6 +115,7 @@ public class RollingRock_Object : MonoBehaviour {
 	}
 
 	void DestroyRock(){
+		Destroy (explosion.gameObject);
 		Destroy (gameObject);
 	}
 }

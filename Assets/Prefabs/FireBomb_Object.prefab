@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 416912}
   - 198: {fileID: 19848990}
   - 199: {fileID: 19963800}
+  - 82: {fileID: 8266676}
+  - 114: {fileID: 11405784}
   m_Layer: 0
   m_Name: Boom
   m_TagString: Untagged
@@ -228,8 +230,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110902}
-  m_LocalRotation: {x: 2.32830644e-10, y: -.244612575, z: 0, w: .969620883}
-  m_LocalPosition: {x: -.910146236, y: 2.5365057, z: 6.41957569}
+  m_LocalRotation: {x: 0, y: .725046873, z: 9.31322353e-10, w: .688699543}
+  m_LocalPosition: {x: -10.2414398, y: 2.60540271, z: 3.44092584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 441242}
@@ -312,6 +314,88 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .100000001, y: .100000001, z: .100000001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &8266676
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109720}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f05a59777830d4122aa49bef18094c01, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: .5
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!114 &11405784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9648721abbc4c43d48c0244dd8d6cfbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!114 &11445302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -323,12 +407,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3daa1d08c915040638f1cc44c6126b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardForce: 6
+  forwardForce: 7
   upForce: 2
   explosionTime: 4
-  explosionRadius: 5
+  explosionRadius: 6
   explosionDamage: 40
   explosionForce: 500
+  explosionFactor: 2
+  boomAudio: {fileID: 11405784}
 --- !u!198 &19814984
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -9664,7 +9750,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: forwardForce
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Mass
@@ -9672,7 +9758,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: explosionRadius
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: explosionDamage
@@ -9681,6 +9767,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: explosionForce
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f05a59777830d4122aa49bef18094c01, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Pitch
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: boomAudio
+      value: 
+      objectReference: {fileID: 11405784}
+    - target: {fileID: 0}
+      propertyPath: explosionFactor
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
