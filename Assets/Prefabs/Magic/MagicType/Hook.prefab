@@ -45,6 +45,9 @@ MonoBehaviour:
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
+  icon: {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
+  name: Hook
+  description: Hook
   cooldown_new: 0
   abilityReady: 0
   cdTimer: 0
@@ -124,6 +127,19 @@ Prefab:
       propertyPath: ability_object
       value: 
       objectReference: {fileID: 125042, guid: c008979a68884ec48b063d8f48e14f0c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: name
+      value: Hook
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: description
+      value: Hook
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 180480}

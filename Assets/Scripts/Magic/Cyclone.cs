@@ -23,7 +23,6 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 	}
 	
 	public void SetupCooldown(){
-		cooldown_new = cooldown;
 		cdTimer = 0f;
 	}
 	

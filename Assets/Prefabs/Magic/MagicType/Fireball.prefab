@@ -44,6 +44,9 @@ MonoBehaviour:
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
+  icon: {fileID: 21300000, guid: adfb16cdb2353684bbf44eb7e5b7128b, type: 3}
+  name: Fireball
+  description: Fireball
   cooldown_new: 0
   abilityReady: 0
   cdTimer: 0
@@ -83,6 +86,19 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: chargedSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: adfb16cdb2353684bbf44eb7e5b7128b,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: name
+      value: Fireball
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: description
+      value: Fireball
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

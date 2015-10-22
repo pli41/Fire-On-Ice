@@ -44,6 +44,9 @@ MonoBehaviour:
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
+  icon: {fileID: 21300000, guid: a19cebe0599724c469f757f6e0b2d9a4, type: 3}
+  name: Flame
+  description: Flame
   cooldown_new: 0
   abilityReady: 0
   cdTimer: 0
@@ -64,6 +67,19 @@ Prefab:
       propertyPath: ability_object
       value: 
       objectReference: {fileID: 179410, guid: a25a3d30ad6144ba39e43dd30f14badf, type: 2}
+    - target: {fileID: 0}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: a19cebe0599724c469f757f6e0b2d9a4,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: name
+      value: Flame
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: description
+      value: Flame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 166918}

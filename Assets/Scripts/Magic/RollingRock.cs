@@ -28,7 +28,6 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 	}
 	
 	public void SetupCooldown(){
-		cooldown_new = cooldown;
 		cdTimer = 0f;
 	}
 	

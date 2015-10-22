@@ -44,6 +44,9 @@ MonoBehaviour:
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
+  icon: {fileID: 21300000, guid: 9c2654c6e93b84e4391bd17cb4054e60, type: 3}
+  name: FireShield
+  description: FireShield
   cooldown_new: 0
   abilityReady: 0
   cdTimer: 0
@@ -78,6 +81,19 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: cooldown
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 9c2654c6e93b84e4391bd17cb4054e60,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: name
+      value: FireShield
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: description
+      value: FireShield
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

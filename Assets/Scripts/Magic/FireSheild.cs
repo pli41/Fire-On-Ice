@@ -41,11 +41,10 @@ public class FireSheild : Ability,Cooldown, CasterEffect {
 	}
 	
 	public  void SetupCooldown(){
-		cooldown_new = cooldown;
-		cdTimer = cooldown_new;
+		cdTimer = 0;
 	}
 	public  void CooldownUpdate(){
-		if(cdTimer < cooldown_new){
+		if(cdTimer < cooldown){
 			cdTimer += Time.deltaTime;
 		}
 		else{

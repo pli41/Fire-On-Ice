@@ -61,7 +61,6 @@ public class SnowStorm : Ability, Cooldown, CasterEffect{
 	}
 	
 	public void SetupCooldown(){
-		cooldown_new = cooldown;
 		cdTimer = 0f;
 	}
 	

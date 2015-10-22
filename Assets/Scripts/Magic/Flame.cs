@@ -20,7 +20,7 @@ public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 	}
 	
 	public void CooldownUpdate(){
-		if(cdTimer < cooldown_new){
+		if(cdTimer < cooldown){
 			cdTimer += Time.deltaTime;
 		}
 		else{
@@ -29,7 +29,6 @@ public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 	}
 
 	public void SetupCooldown(){
-		cooldown_new = cooldown;
 		cdTimer = 0f;
 	}
 	

@@ -44,6 +44,9 @@ MonoBehaviour:
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
+  icon: {fileID: 21300000, guid: f485560d82f6f004a871dd2809e75063, type: 3}
+  name: FireBomb
+  description: FireBomb
   cooldown_new: 0
   abilityReady: 1
   cdTimer: 0
@@ -71,6 +74,19 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: abilityReady
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: f485560d82f6f004a871dd2809e75063,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: name
+      value: FireBomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: description
+      value: FireBomb
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

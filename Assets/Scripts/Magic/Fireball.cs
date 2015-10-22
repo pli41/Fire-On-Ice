@@ -31,7 +31,6 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	}
 
 	public void SetupCooldown(){
-		cooldown_new = cooldown;
 		cdTimer = 0f;
 	}
 
@@ -45,7 +44,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	}
 
 	public void CooldownUpdate(){
-		if(cdTimer < cooldown_new){
+		if(cdTimer < cooldown){
 			cdTimer += Time.deltaTime;
 		}
 		else{
@@ -77,7 +76,6 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 		Debug.Log ("Shoot");
 		SetupObj ();
 		Instantiate (ability_object);
-		cooldown_new = cooldown * chargedTime / 3 + 0.5f; 
 	}
 
 	public override void SetupObj(){

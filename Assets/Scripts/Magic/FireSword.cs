@@ -50,7 +50,6 @@ public class FireSword : Ability, Cooldown, CastDelay {
 	}
 	
 	public void SetupCooldown(){
-		cooldown_new = cooldown;
 		cdTimer = 0f;
 	}
 	
