@@ -22,9 +22,8 @@ public class PlayerMovement : MonoBehaviour
 	private Animator anim;
 	private Rigidbody playerRigidbody;
 	private bool dodgeInit;
-	private float maxSpeed;
+	public float maxSpeed;
 	void Awake(){
-		maxSpeed = speed;
 		anim = GetComponent<Animator> ();
 		playerRigidbody = GetComponent<Rigidbody> ();
 		dodgeInit = true;
@@ -43,14 +42,15 @@ public class PlayerMovement : MonoBehaviour
 			if(canMove || canTurn){
 				if(canMove){
 					Move (h, v);
+
 				}
 				if(canTurn){
 					Turning ();
 				}
-				Animating (h, v);
+
 			}
 		}
-
+		Animating (h, v);
 //		if((dodgeTimer >= timeBetDodge && Input.GetAxisRaw("PS4_L2_" + playerString) > 0 && dodgeInit == true) || dodgeInit == false){
 //			Debug.Log("dodge start");
 //			Dodge(h, v);
@@ -74,6 +74,9 @@ public class PlayerMovement : MonoBehaviour
 		if(speed < minSpeed){
 			speed = minSpeed;
 		}
+		if(speed > maxSpeed){
+			speed = maxSpeed;
+		}
 
 		movement = movement.normalized * speed * acc * accFactor;
 		//playerRigidbody.MovePosition (transform.position + movement);
@@ -81,13 +84,14 @@ public class PlayerMovement : MonoBehaviour
 		
 		if(h != 0 || v != 0){
 			//Debug.Log("Input received");
-			if(playerRigidbody.velocity.magnitude < speed){
+			if(playerRigidbody.velocity.magnitude < maxSpeed){
 				//Debug.Log("Accelerating");
 				playerRigidbody.velocity += movement;
 				//Debug.Log(playerRigidbody.velocity);
 			}
 			else{
-				//Debug.Log("MAX speed");
+				playerRigidbody.velocity = playerRigidbody.velocity.normalized * maxSpeed;
+
 			}
 			
 		}
@@ -122,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
 	}
 	
 	void Animating(float h, float v){
-		bool walking = h != 0f || v != 0f;
+		bool walking = (h != 0f || v != 0f) && canMove;
 		anim.SetBool ("IsWalking", walking);
 	}
 	

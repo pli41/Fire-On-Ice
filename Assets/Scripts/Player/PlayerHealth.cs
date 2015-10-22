@@ -12,6 +12,9 @@ public class PlayerHealth : MonoBehaviour
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
+	//1 means zero reduction, 0.5 means half reduction, 0 means invincible
+	public float damageReduction;
+
 	public bool onFire;
 	public float onFireTime;
 	public GameObject onFireEffect;
@@ -27,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Awake ()
     {
+		damageReduction = 1;
 		allgrounds = GameObject.FindGameObjectsWithTag("Island");
         anim = GetComponent <Animator> ();
         playerAudio = GetComponent <AudioSource> ();
@@ -72,7 +76,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage (float amount, bool burn)
     {
         
-        currentHealth -= amount;
+        currentHealth -= amount * damageReduction;
 
         healthSlider.value = currentHealth;
 

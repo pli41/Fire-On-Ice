@@ -44,7 +44,7 @@ public static class ControllerInputWrapper
     public static void setPlatform()
     {
         string OSstring = SystemInfo.operatingSystem.ToString();
-        Debug.Log(OSstring);
+        //Debug.Log(OSstring);
         if (OSstring.Contains("Windows"))
         {
             currentSystem = OperatingSystem.Win;
@@ -63,7 +63,7 @@ public static class ControllerInputWrapper
         int i = 0;
         foreach (string name in names)
         {
-            Debug.Log(name);
+            //Debug.Log(name);
             if (name.Contains("Xbox"))
             {
                 controllerNames[i] = ControlType.Xbox;

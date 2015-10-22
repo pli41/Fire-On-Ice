@@ -1,0 +1,74 @@
+﻿
+using UnityEngine;
+using System.Collections;
+
+public class FireSheild : Ability,Cooldown, CasterEffect {
+	public float cooldown;
+	public float newMass;
+	public float newSpeed;
+	public float damageReduction;
+	public float duration;
+
+	private float oldSpeed;
+	private float oldMass;
+	private GameObject shield;
+	void Start () {
+		abilityReady = false;
+		oldMass = owner.GetComponent<Rigidbody> ().mass;
+		oldSpeed = gameObject.transform.parent.GetComponent<PlayerMovement> ().maxSpeed;
+		SetupCooldown ();
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		CooldownUpdate ();
+	}
+	
+	public override void Cast()
+	{
+		if (abilityReady) {
+			SetupObj();
+			shield = Instantiate(ability_object) as GameObject;
+			shield.transform.parent = ability_point.parent;
+			CauseEffect();
+			ResetCooldown();
+		}
+	}
+	public override void SetupObj(){
+		//Debug.Log (ability_point);
+		ability_object.transform.position = ability_point.position;
+		ability_object.transform.rotation = owner.transform.rotation;
+	}
+	
+	public  void SetupCooldown(){
+		cooldown_new = cooldown;
+		cdTimer = cooldown_new;
+	}
+	public  void CooldownUpdate(){
+		if(cdTimer < cooldown_new){
+			cdTimer += Time.deltaTime;
+		}
+		else{
+			abilityReady = true;
+		}
+	}
+	public  void ResetCooldown(){
+		cdTimer = 0f;
+		abilityReady = false;
+	}
+
+	public void CauseEffect (){
+		owner.GetComponent<Rigidbody> ().mass = newMass;
+		owner.GetComponent<PlayerMovement> ().maxSpeed = newSpeed;
+		owner.GetComponent<PlayerHealth> ().damageReduction = damageReduction;
+		Invoke ("EndEffect", duration);
+	}
+
+	public void EndEffect (){
+
+		owner.GetComponent<Rigidbody> ().mass = oldMass;
+		owner.GetComponent<PlayerMovement> ().maxSpeed = oldSpeed;
+		owner.GetComponent<PlayerHealth> ().damageReduction = 1;
+		Destroy (shield);
+	}
+}

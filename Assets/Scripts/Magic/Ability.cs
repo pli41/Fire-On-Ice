@@ -10,8 +10,10 @@ public class Ability : MonoBehaviour {
 	public readonly float manaCost;
 	public Transform ability_point;
 	public bool triggerOnce;
+
 	//For changable cooldowns like fireballs, will be used in cooldown counter
 	public float cooldown_new;
+
 	public bool abilityReady;
 	public float cdTimer;
 

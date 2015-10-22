@@ -79,7 +79,7 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 		Debug.Log (ability_point);
 		rollingRock_object = ability_object.GetComponent<RollingRock_Object> ();
 		rollingRock_object.ability = this;
-		ability_object.transform.position = ability_point.position;
+		ability_object.transform.position = ability_point.position + transform.forward * 1f;
 		ability_object.transform.rotation = owner.transform.rotation;
 	}
 
