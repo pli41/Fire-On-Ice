@@ -11,6 +11,8 @@ public class Ability : MonoBehaviour {
 	public Transform ability_point;
 	public bool triggerOnce;
 
+	public int timeUntilReset;
+
 	public Sprite icon;
 	public string name;
 	public string description;

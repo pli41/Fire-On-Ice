@@ -118,8 +118,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: df5153fca31c9bf47b2d36359b5dd373, type: 3}
   name: Blink
   description: Blink
-  cooldown_new: 0
-  abilityReady: 0
+  abilityReady: 1
   cdTimer: 0
   flashDistance: 1.5
   cooldown: 3
@@ -166,6 +165,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: description
       value: Blink
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: abilityReady
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -40,6 +40,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	}
 
 	void Update (){
+		timeUntilReset = (int)(cooldown - cdTimer + 1f);
 		CooldownUpdate ();
 	}
 

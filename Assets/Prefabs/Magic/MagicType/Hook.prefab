@@ -48,8 +48,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
   name: Hook
   description: Hook
-  cooldown_new: 0
-  abilityReady: 0
+  abilityReady: 1
   cdTimer: 0
   hookShootSpeed: 20
   hookRetractSpeed: 4
@@ -139,6 +138,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: description
       value: Hook
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: abilityReady
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -42,6 +42,7 @@ public class Blink : Ability, MovementEffect, Cooldown {
 
 	// Update is called once per frame
 	void Update () {
+		timeUntilReset = (int)(cooldown - cdTimer + 1f);
 		CooldownUpdate ();
 	}
 

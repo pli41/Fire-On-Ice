@@ -47,8 +47,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: a19cebe0599724c469f757f6e0b2d9a4, type: 3}
   name: Flame
   description: Flame
-  cooldown_new: 0
-  abilityReady: 0
+  abilityReady: 1
   cdTimer: 0
   cooldown: 0
   onFireEffect: {fileID: 0}
@@ -79,6 +78,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: description
       value: Flame
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: abilityReady
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

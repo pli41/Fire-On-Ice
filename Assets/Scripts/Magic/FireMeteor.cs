@@ -92,6 +92,7 @@ public class FireMeteor : Ability, CastDelay, CasterEffect, Cooldown
 
     void Update()
     {
+		timeUntilReset = (int)(cooldown - cdTimer + 1f);
         CooldownUpdate();
     }
 

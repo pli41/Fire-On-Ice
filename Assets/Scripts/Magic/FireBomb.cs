@@ -16,6 +16,7 @@ public class FireBomb : Ability, Cooldown, Shootable {
 	
 	// Update is called once per frame
 	void Update () {
+		timeUntilReset = (int)(cooldown - cdTimer + 1f);
 		CooldownUpdate ();
 	}
 

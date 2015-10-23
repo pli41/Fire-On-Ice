@@ -37,6 +37,7 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 	}
 	
 	void Update (){
+		timeUntilReset = (int)(cooldown - cdTimer + 1f);
 		CooldownUpdate ();
 	}
 	

@@ -7,9 +7,11 @@ public class GameManager : MonoBehaviour {
 	public GameObject[] players;
 	public GameObject boss;
 
-	private List<GameObject> playerList = new List<GameObject>();
+	public List<GameObject> playerList = new List<GameObject>();
 	public bool enablePlayers;
 	public bool enableBoss;
+
+
 
 	// Use this for initialization
 	void Awake () {

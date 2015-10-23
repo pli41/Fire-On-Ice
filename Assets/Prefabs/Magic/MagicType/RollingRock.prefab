@@ -47,8 +47,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 4867db53aa592a64a851c36645423699, type: 3}
   name: RollingRock
   description: RollingRock
-  cooldown_new: 0
-  abilityReady: 0
+  abilityReady: 1
   cdTimer: 0
   enchantEffect: {fileID: 0}
   castTime: 2
@@ -85,6 +84,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: description
       value: RollingRock
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: abilityReady
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

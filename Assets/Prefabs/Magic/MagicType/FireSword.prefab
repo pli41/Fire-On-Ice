@@ -47,8 +47,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 53085f18b2c38eb4e8539c23811c3347, type: 3}
   name: FireSword
   description: FireSword
-  cooldown_new: 0
-  abilityReady: 0
+  abilityReady: 1
   cdTimer: 0
   castTime: 2
   cooldown: 0
@@ -92,6 +91,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: description
       value: FireSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: abilityReady
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

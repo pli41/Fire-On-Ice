@@ -7,6 +7,7 @@ public class Hook : Ability {
     public float hookAimSpeed;
     public float maxHookLength;
 
+	public float cooldown;
 
     private float hookAimLength;
     private float hookLength;
@@ -16,6 +17,7 @@ public class Hook : Ability {
     
     void Update()
     {
+		timeUntilReset = (int)(cooldown - cdTimer + 1f);
         udpateHookAimLength();
         lineRender.SetPosition(0, owner.transform.position + Vector3.up * 1);
         lineRender.SetPosition(1, owner.transform.position + owner.transform.forward.normalized * hookAimLength + Vector3.up * 1);

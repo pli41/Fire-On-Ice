@@ -13,7 +13,6 @@ public class FireSheild : Ability,Cooldown, CasterEffect {
 	private float oldMass;
 	private GameObject shield;
 	void Start () {
-		abilityReady = false;
 		oldMass = owner.GetComponent<Rigidbody> ().mass;
 		oldSpeed = gameObject.transform.parent.GetComponent<PlayerMovement> ().maxSpeed;
 		SetupCooldown ();
@@ -21,6 +20,7 @@ public class FireSheild : Ability,Cooldown, CasterEffect {
 	
 	// Update is called once per frame
 	void Update () {
+		timeUntilReset = (int)(cooldown - cdTimer + 1f);
 		CooldownUpdate ();
 	}
 	

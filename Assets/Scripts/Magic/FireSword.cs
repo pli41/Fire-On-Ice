@@ -37,6 +37,7 @@ public class FireSword : Ability, Cooldown, CastDelay {
 	}
 	
 	void Update (){
+		timeUntilReset = (int)(cooldown - cdTimer + 1f);
 		CooldownUpdate ();
 	}
 	
