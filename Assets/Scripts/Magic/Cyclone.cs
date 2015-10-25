@@ -4,7 +4,6 @@ using System.Collections;
 public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 	
 	public float castTime;
-	public float cooldown;
 	private Cyclone_Object cyclone_object;
 	
 	//For CastDelay

@@ -4,7 +4,6 @@ using System.Collections;
 public class Blink : Ability, MovementEffect, Cooldown {
 
 	public float flashDistance;
-	public float cooldown;
 
 	private GameObject playerModel;
 	private Vector3 targetPos_final;

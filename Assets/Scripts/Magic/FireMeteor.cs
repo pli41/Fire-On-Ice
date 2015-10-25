@@ -7,7 +7,6 @@ public class FireMeteor : Ability, CastDelay, CasterEffect, Cooldown
     public GameObject enchantEffect;
     public GameObject onFireEffect;
     public float onFireTime_max;
-    public float cooldown;
     private float delayTimer;
     public bool delayBool = true;
     private bool delaying;

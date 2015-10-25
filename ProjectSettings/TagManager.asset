@@ -11,6 +11,7 @@ TagManager:
   - Player_Key
   - Boss
   - Cooldown
+  - GameManager
   layers:
   - Default
   - TransparentFX

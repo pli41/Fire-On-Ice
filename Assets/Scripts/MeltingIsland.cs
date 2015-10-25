@@ -22,12 +22,10 @@ public class MeltingIsland : MonoBehaviour {
 		mat = GetComponent<MeshRenderer> ().material;
 		active = true;
 		mr = GetComponent<MeshRenderer> ();
+		Initialize ();
 	}
-
-
-
+	
 	void Initialize(){
-		Debug.Log ("Initialize");
 		players = GameObject.FindGameObjectsWithTag ("Player");
 		timers = new float[players.Length];
 		meltTimes = new float[players.Length];
@@ -52,7 +50,7 @@ public class MeltingIsland : MonoBehaviour {
 				//Debug.Log("Player detected");
 
 				PlayerHealth PH = col.gameObject.GetComponent<PlayerHealth>();
-				int playerNum = col.gameObject.GetComponent<PlayerMovement>().joystickNum - 1;
+				int playerNum = col.gameObject.GetComponent<PlayerAttack>().joystickNum - 1;
 
 				if(PH.onFire){
 					meltTimes[playerNum] = 0.3f;
@@ -61,7 +59,6 @@ public class MeltingIsland : MonoBehaviour {
 					meltTimes[playerNum] = 2f;
 				}
 
-				Debug.Log("Detected playerNum : " + playerNum);
 				if(timers[playerNum] > meltTimes[playerNum]){
 					timers[playerNum] = 0f;
 					Melt(PH.onFire);

@@ -6,8 +6,7 @@ public class Hook : Ability {
     public float hookRetractSpeed;
     public float hookAimSpeed;
     public float maxHookLength;
-
-	public float cooldown;
+	
 
     private float hookAimLength;
     private float hookLength;

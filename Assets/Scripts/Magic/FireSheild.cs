@@ -3,7 +3,6 @@ using UnityEngine;
 using System.Collections;
 
 public class FireSheild : Ability,Cooldown, CasterEffect {
-	public float cooldown;
 	public float newMass;
 	public float newSpeed;
 	public float damageReduction;

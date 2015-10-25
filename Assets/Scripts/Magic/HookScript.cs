@@ -113,7 +113,7 @@ public class HookScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider collider)
     {
-        if ((collider.tag == "Player" && owner.GetComponent<PlayerMovement>().joystickNum != collider.GetComponent<PlayerMovement>().joystickNum))
+        if ((collider.tag == "Player" && owner.GetComponent<PlayerAttack>().joystickNum != collider.GetComponent<PlayerAttack>().joystickNum))
         {
             hookedPlayer = collider.transform;
             isHooked = true;

@@ -11,6 +11,7 @@ public class Ability : MonoBehaviour {
 	public Transform ability_point;
 	public bool triggerOnce;
 
+	public float cooldown;
 	public int timeUntilReset;
 
 	public Sprite icon;

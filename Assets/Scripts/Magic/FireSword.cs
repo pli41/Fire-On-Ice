@@ -12,7 +12,6 @@ public class FireSword : Ability, Cooldown, CastDelay {
 	};
 
 	public float castTime;
-	public float cooldown;
 	public float duration;
 	public STATE state;
 

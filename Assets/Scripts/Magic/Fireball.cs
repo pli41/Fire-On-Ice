@@ -7,7 +7,6 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	public GameObject onFireEffect;
 	public float maxChargeT;
 	public float onFireTime_max;
-	public float cooldown;
 	public float chargedSpeed;
 
 	private Fireball_Object fireball_object;

@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
 
 public class Chest : MonoBehaviour {
 	Animator anim;	// Use this for initialization
 	public int healthRG;
+
+	public 
 
 	void Awake () {
 		anim = transform.Find("Chest_cover").gameObject.GetComponent<Animator> ();

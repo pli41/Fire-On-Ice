@@ -3,7 +3,7 @@
 public class PlayerMovement : MonoBehaviour
 {
 	//start from 1
-	public int joystickNum;
+	private int joystickNum;
 	public float speed;
 	public float accFactor;
 	public float minSpeed;
@@ -21,12 +21,11 @@ public class PlayerMovement : MonoBehaviour
 	private Vector3 movement;
 	private Animator anim;
 	private Rigidbody playerRigidbody;
-	private bool dodgeInit;
 	public float maxSpeed;
-	void Awake(){
+	void Start(){
+		joystickNum = GetComponent<PlayerAttack>().joystickNum;
 		anim = GetComponent<Animator> ();
 		playerRigidbody = GetComponent<Rigidbody> ();
-		dodgeInit = true;
 		canMove = true;
 		canTurn = true;
 	}

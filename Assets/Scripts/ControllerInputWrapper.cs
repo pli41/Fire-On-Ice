@@ -56,6 +56,16 @@ public static class ControllerInputWrapper
         // Debug.Log("Hello");
     }
 
+    public static bool GetButtonAll(Buttons button, bool buttonDown = false)
+    {
+        bool buttonPressed = false;
+        for (int i = 0; i < controllerNames.Length; i++)
+        {
+            buttonPressed = buttonPressed || GetButton(button, i + 1, buttonDown);
+        }
+        return buttonPressed;
+    }
+
     public static void setControlTypes()
     {
         string[] names = Input.GetJoystickNames();
@@ -171,8 +181,9 @@ public static class ControllerInputWrapper
 
     static string retrieveCorrectButton(Buttons button, int joystickNumber)
     {
-        Debug.Log("Joystick number: " + joystickNumber);
+        
         ControlType cType = controllerNames[joystickNumber - 1];
+        //Debug.Log("Joystick number: " + cType.ToString());
         if (cType.CompareTo(ControlType.Xbox) == 0)
         {
             switch (button)
@@ -187,6 +198,34 @@ public static class ControllerInputWrapper
                             return "14";
                     }
                     break;
+                case Buttons.A:
+                    switch(currentSystem)
+                    {
+                        case OperatingSystem.Win:
+                            return "0";
+                    }
+                    break;
+                case Buttons.X:
+                    switch(currentSystem)
+                    {
+                        case OperatingSystem.Win:
+                            return "2";
+                    }
+                    break;
+                case Buttons.B:
+                    switch(currentSystem)
+                    {
+                        case OperatingSystem.Win:
+                            return "1";
+                    }
+                    break;
+                case Buttons.Start:
+                    switch (currentSystem)
+                    {
+                        case OperatingSystem.Win:
+                            return "7";
+                    }
+                    break;
 
             }
         }
@@ -198,6 +237,12 @@ public static class ControllerInputWrapper
                     return "5";
                 case Buttons.A:
                     return "1";
+                case Buttons.X:
+                    return "0";
+                case Buttons.B:
+                    return "2";
+                case Buttons.Start:
+                    return "12";
 
             }
         }
@@ -209,6 +254,12 @@ public static class ControllerInputWrapper
                     return "11";
 				case Buttons.A:
 					return "14";
+                case Buttons.X:
+                    return "15";
+                case Buttons.B:
+                    return "13";
+                case Buttons.Start:
+                    return "3";
             }
         }
 

@@ -26,10 +26,12 @@ public class PlayerHealth : MonoBehaviour
     //PlayerShooting playerShooting;
     bool isDead;
     bool damaged;
-
+	GameObject gameManager;
+	int joystickNum;
 
     void Awake ()
     {
+		joystickNum = GetComponent<PlayerAttack> ().joystickNum;
 		damageReduction = 1;
 		allgrounds = GameObject.FindGameObjectsWithTag("Island");
         anim = GetComponent <Animator> ();
@@ -37,19 +39,28 @@ public class PlayerHealth : MonoBehaviour
         playerMovement = GetComponent <PlayerMovement> ();
         //playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
+		SetupHealthUI ();
     }
+
+	void SetupHealthUI(){
+		gameManager = GameObject.FindGameObjectWithTag ("GameManager");
+		healthSlider = gameManager.GetComponent<UI_Manager> ().playerUIs [joystickNum-1]
+			.GetComponent<RectTransform> ().Find ("HealthUI_P" + joystickNum + "/HealthSlider").GetComponent<Slider>();
+	}
 
 
     void Update ()
     {
-        if(damaged)
-        {
-            damageImage.color = flashColour;
-        }
-        else
-        {
-            damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
-        }
+
+//        if(damaged)
+//        {
+//            damageImage.color = flashColour;
+//        }
+//        else
+//        {
+//            damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+//        }
+
         damaged = false;
 
 		if(onFire && !onFireEffect.activeInHierarchy){
@@ -60,13 +71,13 @@ public class PlayerHealth : MonoBehaviour
     }
 
 	public void CauseOnFire(){
-		Debug.Log ("On Fire");
+		//Debug.Log ("On Fire");
 		onFireEffect.SetActive (true);
 		Invoke ("CeaseFire", onFireTime);
 	}
 	
 	public void CeaseFire(){
-		Debug.Log ("CeaseFire");
+		//Debug.Log ("CeaseFire");
 		CancelInvoke ();
 		onFireEffect.SetActive (false);
 		onFire = false;

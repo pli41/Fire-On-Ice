@@ -6,6 +6,7 @@ public class PlayerAttack : MonoBehaviour
 	//start from 1
 	public int joystickNum;
 	public Transform magicPoint;
+
 	public Ability[] abilities = new Ability[3];
 
 	public bool enchanting;

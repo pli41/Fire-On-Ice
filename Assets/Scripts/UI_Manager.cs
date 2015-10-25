@@ -9,19 +9,30 @@ public class UI_Manager : MonoBehaviour {
 
 	private List<GameObject> playerList;
 
+	public List<GameObject> playerUIs = new List<GameObject>();
+
 	public List<GameObject> abilityUIs = new List<GameObject>();
 
 	private GameObject[] cooldownUIs;
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 		playerList = gm.playerList;
 		cooldownUIs = GameObject.FindGameObjectsWithTag ("Cooldown");
+		SetupAbilityPanels ();
 		SetupAbilityIcons ();
 	}
 
+	void SetupAbilityPanels(){
+		//set ability UIs
+		for(int j = 0; j < playerList.Count; j++){
+			playerUIs[j].SetActive(true);
+		}
+
+	}
+
 	void SetupAbilityIcons(){
-		Debug.Log ("SetupAbilityIcons");
+		//Debug.Log ("SetupAbilityIcons");
 		for (int i = 0; i < playerList.Count; i++){
 			//Get sprites from playerAttack
 
@@ -30,20 +41,19 @@ public class UI_Manager : MonoBehaviour {
 				sprites.Add(playerList[i].GetComponent<PlayerAttack>().abilities[j].icon);
 			}
 			Debug.Log(sprites.Count);
-
 			//Assign sprites
-
-			int playerNum = playerList[i].GetComponent<PlayerAttack>().joystickNum-1;
+			//int playerNum = playerList[i].GetComponent<PlayerAttack>().joystickNum-1;
 
 			for (int k = 0; k < 3; k++){
 
-				Image image = abilityUIs[playerNum].GetComponent<RectTransform>().Find("Ability_" + (k+1)).GetComponent<Image>();
+				Image image = abilityUIs[i].GetComponent<RectTransform>().Find("Ability_" + (k+1))
+					.GetComponent<Image>();
 				image.sprite = sprites[k];
-
 			}
 
 		}
 	}
+
 
 	void OnGUI(){
 		//update cooldown UI
@@ -66,13 +76,5 @@ public class UI_Manager : MonoBehaviour {
 
 
 	}
-
-
-
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 
 }

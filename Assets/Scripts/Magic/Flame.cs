@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class Flame : Ability, Cooldown, CasterEffect, Chargable {
-	
-	public float cooldown;
+
 
 	public GameObject onFireEffect;
 	private Flame_Object flame_object;

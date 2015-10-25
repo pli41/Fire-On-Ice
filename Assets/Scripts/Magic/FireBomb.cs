@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class FireBomb : Ability, Cooldown, Shootable {
-
-	public float cooldown;
+	
 	public float bombSpeed;
 
 	private FireBomb_Object fireBomb_object;

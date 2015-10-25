@@ -6,9 +6,8 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 	public GameObject enchantEffect;
 
 	public float castTime;
-
-	public float cooldown;
 	
+
 	private RollingRock_Object rollingRock_object;
 
 	//For CastDelay
