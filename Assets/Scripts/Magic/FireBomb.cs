@@ -63,7 +63,7 @@ public class FireBomb : Ability, Cooldown, Shootable {
 	public override void SetupObj(){
 		Debug.Log (ability_point);
 		fireBomb_object = ability_object.GetComponent<FireBomb_Object> ();
-
+		fireBomb_object.ability = this;
 		ability_object.transform.position = ability_point.position;
 		ability_object.transform.rotation = owner.transform.rotation;
 	}

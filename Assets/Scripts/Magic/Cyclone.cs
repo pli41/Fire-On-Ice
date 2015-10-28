@@ -50,13 +50,13 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 			CastDelayStart();
 		}
 		else{
-			Debug.Log("AbilityReady_cast: " + abilityReady);
-			Debug.Log("Ability not ready.");
+			//Debug.Log("AbilityReady_cast: " + abilityReady);
+			//Debug.Log("Ability not ready.");
 		}
 	}
 	
 	public override void EndCast(){
-		Debug.Log ("Endcast");
+		//Debug.Log ("Endcast");
 		if(abilityReady){
 			CancelInvoke();
 			Shoot ();
@@ -72,7 +72,8 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 		Debug.Log (ability_point);
 
 		cyclone_object = ability_object.GetComponent<Cyclone_Object> ();
-		//cyclone_object.ability = this;
+		cyclone_object.ability = this;
+
 		ability_object.transform.position = ability_point.position;
 		ability_object.transform.rotation = owner.transform.rotation;
 		Instantiate (ability_object); 
@@ -81,7 +82,7 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 	public void CastDelayStart(){
 		if(delayBool){
 			if(!delaying){
-				Debug.Log("Endcast will be called");
+				//Debug.Log("Endcast will be called");
 				owner.GetComponent<PlayerAttack>().enchanting = true;
 				Invoke("EndCast", castTime);
 				delaying = true;

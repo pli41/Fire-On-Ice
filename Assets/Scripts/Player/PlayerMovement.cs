@@ -22,7 +22,11 @@ public class PlayerMovement : MonoBehaviour
 	private Animator anim;
 	private Rigidbody playerRigidbody;
 	public float maxSpeed;
+
+	private GameManager gm;
+
 	void Start(){
+		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		joystickNum = GetComponent<PlayerAttack>().joystickNum;
 		anim = GetComponent<Animator> ();
 		playerRigidbody = GetComponent<Rigidbody> ();
@@ -31,32 +35,33 @@ public class PlayerMovement : MonoBehaviour
 	}
 
 	void FixedUpdate(){
-		dodgeTimer += Time.deltaTime;
-		
-		float h = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickX, joystickNum, false);
-		float v = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickY, joystickNum, false);
 
-		//Debug.Log ("h = " + h + " v = " + v);
-		if(!disabled){
-			if(canMove || canTurn){
-				if(canMove){
-					Move (h, v);
-
+		if(gm.GameInProgress){
+			dodgeTimer += Time.deltaTime;
+			
+			float h = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickX, joystickNum, false);
+			float v = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickY, joystickNum, false);
+			
+			//Debug.Log ("h = " + h + " v = " + v);
+			if(!disabled){
+				if(canMove || canTurn){
+					if(canMove){
+						Move (h, v);
+						
+					}
+					if(canTurn){
+						Turning ();
+					}
+					
 				}
-				if(canTurn){
-					Turning ();
-				}
-
 			}
+			Animating (h, v);
+			//		if((dodgeTimer >= timeBetDodge && Input.GetAxisRaw("PS4_L2_" + playerString) > 0 && dodgeInit == true) || dodgeInit == false){
+			//			Debug.Log("dodge start");
+			//			Dodge(h, v);
+			//		}
 		}
-		Animating (h, v);
-//		if((dodgeTimer >= timeBetDodge && Input.GetAxisRaw("PS4_L2_" + playerString) > 0 && dodgeInit == true) || dodgeInit == false){
-//			Debug.Log("dodge start");
-//			Dodge(h, v);
-//		}
-		
-		
-		
+
 	}
 	
 	void Move(float h, float v){
@@ -86,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
 			if(playerRigidbody.velocity.magnitude < maxSpeed){
 				//Debug.Log("Accelerating");
 				playerRigidbody.velocity += movement;
+				//+ new Vector3(0, playerRigidbody.velocity.y, 0);
 				//Debug.Log(playerRigidbody.velocity);
 			}
 			else{

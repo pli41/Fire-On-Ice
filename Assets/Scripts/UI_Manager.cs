@@ -13,8 +13,10 @@ public class UI_Manager : MonoBehaviour {
 
 	public List<GameObject> abilityUIs = new List<GameObject>();
 
-	private GameObject[] cooldownUIs;
+	public GameObject WinUI;
 
+	private GameObject[] cooldownUIs;
+	
 	// Use this for initialization
 	public void Start () {
 		playerList = gm.playerList;
@@ -58,23 +60,45 @@ public class UI_Manager : MonoBehaviour {
 	void OnGUI(){
 		//update cooldown UI
 		//i is player number; j is ability number.
-		for (int i = 0; i < playerList.Count; i++) {
-			for (int j = 0; j < 3; j++){
-				int playerNum = playerList[i].GetComponent<PlayerAttack>().joystickNum;
-
-				bool abilityReady = playerList[i].GetComponent<PlayerAttack>().abilities[j].abilityReady;
-
-				GameObject cooldownUI = abilityUIs[playerNum-1].GetComponent<RectTransform>().Find("Ability_" + (j+1) 
-					                                                                         + "/Cooldown").gameObject;
-				cooldownUI.SetActive(!abilityReady);
-				if(!abilityReady){
-					Text text = cooldownUI.GetComponent<RectTransform>().Find("Text").GetComponent<Text>();
-					text.text = playerList[i].GetComponent<PlayerAttack>().abilities[j].timeUntilReset.ToString();
+		if(gm.GameInProgress){
+			for (int i = 0; i < playerList.Count; i++) {
+				for (int j = 0; j < 3; j++){
+					int playerNum = playerList[i].GetComponent<PlayerAttack>().joystickNum;
+					
+					bool abilityReady = playerList[i].GetComponent<PlayerAttack>().abilities[j].abilityReady;
+					
+					GameObject cooldownUI = abilityUIs[playerNum-1].GetComponent<RectTransform>().Find("Ability_" + (j+1) 
+					                                                                                   + "/Cooldown").gameObject;
+					cooldownUI.SetActive(!abilityReady);
+					if(!abilityReady){
+						Text text = cooldownUI.GetComponent<RectTransform>().Find("Text").GetComponent<Text>();
+						text.text = playerList[i].GetComponent<PlayerAttack>().abilities[j].timeUntilReset.ToString();
+					}
 				}
 			}
 		}
+	}
 
+	public void ShowWinScreen(int winPlayerNum, int mostDamagePlayerNum){
+		Text resultText = WinUI.transform.Find ("GameResult").GetComponent<Text> ();
 
+		resultText.text = "Player " + winPlayerNum + " Wins!\n\n";
+		if(mostDamagePlayerNum == 0){
+			resultText.text += "WTH! You all did 0 damage!";
+		}
+		else{
+			resultText.text += "Player "+  mostDamagePlayerNum + " Dealt the most damage!";
+		}
+		WinUI.SetActive (true);
+
+	}
+
+	public void Rematch(){
+		Application.LoadLevel ("SelectionScreen");
+	}
+
+	public void BackToMainMenu(){
+		Application.LoadLevel ("Main_Menu");
 	}
 
 }

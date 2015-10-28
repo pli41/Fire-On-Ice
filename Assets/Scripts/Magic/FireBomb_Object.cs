@@ -3,6 +3,8 @@ using System.Collections;
 
 public class FireBomb_Object : MonoBehaviour {
 
+	public Ability ability;
+
 	public float forwardForce;
 	public float upForce;
 	public float explosionTime;
@@ -63,10 +65,13 @@ public class FireBomb_Object : MonoBehaviour {
 			float distance = Vector3.Distance(col.transform.position, transform.position);
 			if(col.tag == "Player"){
 				if(pickedByPlayer){
-					col.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(explosionDamage), false);
+					col.gameObject.GetComponent<PlayerHealth>().TakeDamage(
+						(int)(explosionDamage), false, ability.owner.GetComponent<PlayerAttack>().playerNum);
 				}
 				else{
-					col.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(explosionDamage * (explosionRadius - distance) / explosionRadius), false);
+					col.gameObject.GetComponent<PlayerHealth>().TakeDamage(
+						(int)(explosionDamage * (explosionRadius - distance) / explosionRadius)
+						, false, ability.owner.GetComponent<PlayerAttack>().playerNum);
 				}
 				
 				col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius);

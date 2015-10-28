@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class PlayerHealth : MonoBehaviour
 	public float onFireTime;
 	public GameObject onFireEffect;
 
+	public float damageSFXTime;
+	private float damageSFXTimer;
+	private bool damageSFXReady;
+
 	GameObject[] allgrounds;
     Animator anim;
     AudioSource playerAudio;
@@ -29,8 +34,11 @@ public class PlayerHealth : MonoBehaviour
 	GameObject gameManager;
 	int joystickNum;
 
+	private GameManager gm;
+
     void Awake ()
     {
+		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		joystickNum = GetComponent<PlayerAttack> ().joystickNum;
 		damageReduction = 1;
 		allgrounds = GameObject.FindGameObjectsWithTag("Island");
@@ -67,8 +75,20 @@ public class PlayerHealth : MonoBehaviour
 			CauseOnFire();
 		}
 
+		HandleHurtSFX ();
+
 
     }
+
+	public void HandleHurtSFX(){
+		if(damageSFXTimer < damageSFXTime && damageSFXReady == false){
+			damageSFXTimer += Time.deltaTime;
+		}
+		else{
+			damageSFXReady = true;
+			damageSFXTimer = 0f;
+		}
+	}
 
 	public void CauseOnFire(){
 		//Debug.Log ("On Fire");
@@ -84,33 +104,40 @@ public class PlayerHealth : MonoBehaviour
 	}
 
 
-    public void TakeDamage (float amount, bool burn)
+    public void TakeDamage (float amount, bool burn, int sourcePlayerNum)
     {
-        
-        currentHealth -= amount * damageReduction;
 
-        healthSlider.value = currentHealth;
 
-		//Audio
-		if(amount > 0f){
-			damaged = true;
-			playerAudio.Play ();
+
+        if (gm.GameInProgress) {
+			float finalDamage = amount * damageReduction;
+
+			currentHealth -= finalDamage;
+			
+			healthSlider.value = currentHealth;
+
+			//handle damage record
+			gm.playerList[sourcePlayerNum-1].GetComponent<PlayerAttack>().damageDealt += finalDamage;
+
+			//Audio
+			if (amount > 0f && damageSFXReady) {
+				damaged = true;
+				playerAudio.Play ();
+				damageSFXReady = false;
+			}
+			
+			
+			if (burn) {
+				burnGround (amount);
+				onFire = true;
+			}
+			
+			if (currentHealth <= 0 && !isDead) {
+				Death ();
+			}
 		}
-		else{
-
-		}
-        
-
-		if(burn){
-			burnGround (amount);
-			onFire = true;
-		}
-
-        if(currentHealth <= 0 && !isDead)
-        {
-            Death ();
-        }
     }
+
 
 
 

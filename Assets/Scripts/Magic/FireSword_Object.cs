@@ -36,7 +36,7 @@ public class FireSword_Object : MonoBehaviour {
 		if(!slashed){
 			if (col.gameObject.tag == "Player") {
 				PlayerHealth healthP = col.GetComponent<PlayerHealth> ();
-				healthP.TakeDamage (damage, true);
+				healthP.TakeDamage (damage, true, ability.owner.GetComponent<PlayerAttack>().playerNum);
 				Rigidbody rigid = col.attachedRigidbody;
 				Vector3 direction = col.transform.position - ability.owner.transform.position;
 				rigid.AddForce(direction.normalized * forceMagnitude, ForceMode.Impulse);

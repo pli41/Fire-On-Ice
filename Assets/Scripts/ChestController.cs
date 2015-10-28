@@ -9,15 +9,23 @@ public class ChestController : MonoBehaviour {
 	public float timer;
 	public float generateTime = 5;
 
+	private GameManager gm;
+
+	void Start(){
+		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
+	}
+
 	// Update is called once per frame
 	void Update () {
-		timer += Time.deltaTime;
-		if (timer > generateTime) {
-			spawnChest ();
-			timer=0;
+		if(gm.GameInProgress){
+			timer += Time.deltaTime;
+			if (timer > generateTime) {
+				spawnChest ();
+				timer=0;
+			}
 		}
-	
 	}
+
 	void spawnChest(){
 		int spawned=0;
 		while(spawned<chestNum){

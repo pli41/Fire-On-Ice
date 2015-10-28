@@ -85,7 +85,9 @@ public class FireMeteor_Object : MonoBehaviour {
             {
                 Debug.Log("Explosion in range");
                 p.GetComponent<Rigidbody>().AddExplosionForce(forceMagnitude, transform.position, explosionRadius);
-                p.GetComponent<PlayerHealth>().TakeDamage((int)(damage / Vector3.Distance(p.transform.position, transform.position)), true);
+                p.GetComponent<PlayerHealth>().TakeDamage(
+					(int)(damage / Vector3.Distance(p.transform.position
+				                                , transform.position)), true, ability.owner.GetComponent<PlayerAttack>().playerNum);
             }
         }
     }

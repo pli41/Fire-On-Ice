@@ -47,7 +47,7 @@ public class SnowStorm_Object : MonoBehaviour {
 					timers[i] += Time.deltaTime;
 				}
 				else{
-					playerList[i].GetComponent<PlayerHealth>().TakeDamage(damage, false);
+					//playerList[i].GetComponent<PlayerHealth>().TakeDamage(damage, false);
 					timers[i] = 0;
 				}
 			}

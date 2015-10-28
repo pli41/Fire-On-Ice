@@ -31,18 +31,13 @@ public class Fireball_Object : MonoBehaviour {
 		ps3.startSize = size * 2.5f + 2f;
 		
 		disabled = false;
-		Invoke("DestroyFire", 5f);
-	}
-
-	
-	void DestroyFire(){
-		Destroy (gameObject);
+		Destroy (gameObject, 5f);
 	}
 
 	void OnParticleCollision(GameObject other){
 		if (other.tag == "Player") {
 			PlayerHealth healthP = other.GetComponent<PlayerHealth> ();
-			healthP.TakeDamage ((int)damage, true);
+			healthP.TakeDamage ((int)damage, true, ability.owner.GetComponent<PlayerAttack>().playerNum);
 			Rigidbody rigidP = other.GetComponent<Rigidbody> ();
 			rigidP.AddExplosionForce (force, transform.position, forceR);
 		}
@@ -51,7 +46,6 @@ public class Fireball_Object : MonoBehaviour {
 			health.TakeDamage ((int)damage);
 		}
 		PlayExplosion ();
-		Invoke("DestroyFire", 2f);
 	}
 
 	void PlayExplosion(){

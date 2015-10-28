@@ -4,6 +4,7 @@ using System.Collections;
 public class Cyclone_Object : MonoBehaviour {
 
 	public Ability ability;
+
 	public float speed;
 	public float acceleration;
 	public float maxSpeed;
@@ -24,6 +25,7 @@ public class Cyclone_Object : MonoBehaviour {
 
 		col = GetComponent<CapsuleCollider> ();
 		col.radius = affectRadius;
+	
 	}
 
 
@@ -38,13 +40,13 @@ public class Cyclone_Object : MonoBehaviour {
 		} 
 
 		Vector3 deltaSpeed = transform.forward * acceleration * Time.deltaTime;
-		Debug.Log (deltaSpeed);
+		//Debug.Log (deltaSpeed);
 		if(rigid.velocity.magnitude < maxSpeed){
-			Debug.Log("Speeding up");
+			//Debug.Log("Speeding up");
 			rigid.velocity += deltaSpeed;
 		}
 		else{
-			Debug.Log("full speed");
+			//Debug.Log("full speed");
 		}
 
 	}
@@ -65,7 +67,8 @@ public class Cyclone_Object : MonoBehaviour {
 				
 				float horizontalDistance = Vector3.Distance(cyclonePos_hori, playerPos_hori);
 				col.attachedRigidbody.AddForce(direction * (affectRadius - horizontalDistance) * forceFactor);
-				col.GetComponent<PlayerHealth>().TakeDamage(damage * (affectRadius - horizontalDistance), false);
+				col.GetComponent<PlayerHealth>().TakeDamage(damage * (affectRadius - horizontalDistance), false, 
+				                                            ability.owner.GetComponent<PlayerAttack>().playerNum);
 			}
 		}
 
@@ -75,6 +78,7 @@ public class Cyclone_Object : MonoBehaviour {
 		meltReady = false;
 		meltTimer = 0;
 	}
+
 
 
 }

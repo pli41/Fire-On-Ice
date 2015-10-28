@@ -12,7 +12,7 @@ public class Smash_Object : MonoBehaviour {
 		//Debug.Log ("Boss hit");
 		if (other.tag == "Player") {
 			PlayerHealth healthP = other.GetComponent<PlayerHealth> ();
-			healthP.TakeDamage ((int)damage, true);
+			//healthP.TakeDamage ((int)damage, true);
 			Rigidbody rigidP = other.GetComponent<Rigidbody> ();
 			Vector3 forceDir = rigidP.transform.position - ability.owner.transform.position;
 			rigidP.AddForce(forceDir*forceMagnitude);

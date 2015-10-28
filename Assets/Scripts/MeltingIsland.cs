@@ -14,33 +14,34 @@ public class MeltingIsland : MonoBehaviour {
 	GameObject[] players;
 	float[] timers;
 	float[] meltTimes;
-	GameManager gm;
 	bool initialized;
+
+	private GameManager gm;
+
 	// Use this for initialization
 	void Start () {
+
 		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		mat = GetComponent<MeshRenderer> ().material;
-		active = true;
+
 		mr = GetComponent<MeshRenderer> ();
 		Initialize ();
 	}
 	
 	void Initialize(){
+
 		players = GameObject.FindGameObjectsWithTag ("Player");
 		timers = new float[players.Length];
 		meltTimes = new float[players.Length];
 		for (int i = 0; i < 0; i++){
 			meltTimes[i] = 2f;
 		}
+		initialized = true;
 	}
 
 	// Update is called once per frame
 	void Update () {
-
-		if(gm.enablePlayers && !initialized){
-			Initialize();
-			initialized = true;
-		}
+		active = gm.GameInProgress;
 	}
 
 	void OnTriggerStay(Collider col){
