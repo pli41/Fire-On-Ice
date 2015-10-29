@@ -466,7 +466,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!82 &8258510
 AudioSource:
   m_ObjectHideFlags: 1
@@ -716,6 +716,7 @@ MonoBehaviour:
   onFire: 0
   onFireTime: 3
   onFireEffect: {fileID: 118282}
+  damageSFXTime: 0
 --- !u!114 &11402990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -728,6 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystickNum: 2
+  playerNum: 0
   magicPoint: {fileID: 430634}
   abilities:
   - {fileID: 11466114, guid: 30881a1d28067014ea308b21e75947e4, type: 2}
@@ -735,6 +737,7 @@ MonoBehaviour:
   - {fileID: 11451950, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
   enchanting: 0
   enchantEffect: {fileID: 0}
+  damageDealt: 0
 --- !u!114 &11455356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11316,7 +11319,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 129102}

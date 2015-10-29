@@ -47,7 +47,7 @@ public class SelectionScreenManager : MonoBehaviour {
                     GameSettings.numPlayers = numPlayers;
                     GameSettings.playerAbilitites = playerAbilities;
                     GameSettings.playerController = playerControllers;
-                    Application.LoadLevel("level1");
+                    Application.LoadLevel("level3");
                 }
             }
         }

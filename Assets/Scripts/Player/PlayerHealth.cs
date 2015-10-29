@@ -33,11 +33,13 @@ public class PlayerHealth : MonoBehaviour
     bool damaged;
 	GameObject gameManager;
 	int joystickNum;
+	Rigidbody rigid;
 
 	private GameManager gm;
 
     void Awake ()
     {
+		rigid = GetComponent<Rigidbody> ();
 		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		joystickNum = GetComponent<PlayerAttack> ().joystickNum;
 		damageReduction = 1;
@@ -59,7 +61,9 @@ public class PlayerHealth : MonoBehaviour
 
     void Update ()
     {
-
+		if (rigid.IsSleeping()) {
+			rigid.WakeUp();
+		}
 //        if(damaged)
 //        {
 //            damageImage.color = flashColour;

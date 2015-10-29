@@ -45,6 +45,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MeltingIsland_New.cs" />
      <Compile Include="Assets\Scripts\Boss\BossAttack.cs" />
      <Compile Include="Assets\Scripts\Boss\BossHealth.cs" />
      <Compile Include="Assets\Scripts\Boss\BossMovement.cs" />
