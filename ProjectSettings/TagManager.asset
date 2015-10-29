@@ -12,6 +12,8 @@ TagManager:
   - Boss
   - Cooldown
   - GameManager
+  - Boundary
+  - Island_New
   layers:
   - Default
   - TransparentFX

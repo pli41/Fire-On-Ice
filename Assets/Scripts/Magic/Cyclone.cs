@@ -73,7 +73,6 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 
 		cyclone_object = ability_object.GetComponent<Cyclone_Object> ();
 		cyclone_object.ability = this;
-
 		ability_object.transform.position = ability_point.position;
 		ability_object.transform.rotation = owner.transform.rotation;
 		Instantiate (ability_object); 

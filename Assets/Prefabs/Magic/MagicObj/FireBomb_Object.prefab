@@ -230,8 +230,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110902}
-  m_LocalRotation: {x: 0, y: .941915095, z: 0, w: .335851073}
-  m_LocalPosition: {x: 4.19135523, y: 2.04023218, z: 14.910861}
+  m_LocalRotation: {x: 2.32830588e-10, y: .621679902, z: 0, w: .783271492}
+  m_LocalPosition: {x: -1.08084226, y: 2.44500327, z: 7.60171604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 441242}
@@ -412,9 +412,9 @@ MonoBehaviour:
   upForce: 2
   explosionTime: 4
   explosionRadius: 6
-  explosionDamage: 40
+  explosionDamage: 30
   explosionForce: 500
-  explosionFactor: 1.20000005
+  explosionFactor: 1
   boomAudio: {fileID: 11405784}
 --- !u!198 &19814984
 ParticleSystem:
@@ -9763,7 +9763,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: explosionDamage
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: explosionForce
@@ -9783,7 +9783,11 @@ Prefab:
       objectReference: {fileID: 11405784}
     - target: {fileID: 0}
       propertyPath: explosionFactor
-      value: 1.20000005
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ability
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

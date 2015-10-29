@@ -121,7 +121,11 @@ public class PlayerHealth : MonoBehaviour
 			healthSlider.value = currentHealth;
 
 			//handle damage record
-			gm.playerList[sourcePlayerNum-1].GetComponent<PlayerAttack>().damageDealt += finalDamage;
+			if(sourcePlayerNum > 0){
+				gm.playerList[sourcePlayerNum-1].GetComponent<PlayerAttack>().damageDealt += finalDamage;
+			}
+
+
 
 			//Audio
 			if (amount > 0f && damageSFXReady) {

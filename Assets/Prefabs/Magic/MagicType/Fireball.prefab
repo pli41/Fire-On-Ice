@@ -44,16 +44,18 @@ MonoBehaviour:
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
+  cooldown: 0
+  timeUntilReset: 0
   icon: {fileID: 21300000, guid: adfb16cdb2353684bbf44eb7e5b7128b, type: 3}
   name: Fireball
-  description: Fireball
+  description: Shoot a charged fireball of which the size and damage are based on
+    the charged time at the facing direction; hold the button for charging.
   abilityReady: 1
   cdTimer: 0
   enchantEffect: {fileID: 0}
   onFireEffect: {fileID: 0}
   maxChargeT: 3
   onFireTime_max: 0
-  cooldown: 0
   chargedSpeed: 2
 --- !u!1001 &100100000
 Prefab:
@@ -97,7 +99,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: description
-      value: Fireball
+      value: Shoot a charged fireball of which the size and damage are based on the
+        charged time at the facing direction; hold the button for charging.
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: abilityReady

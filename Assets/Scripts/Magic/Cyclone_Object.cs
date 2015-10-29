@@ -25,7 +25,7 @@ public class Cyclone_Object : MonoBehaviour {
 
 		col = GetComponent<CapsuleCollider> ();
 		col.radius = affectRadius;
-	
+
 	}
 
 
@@ -48,13 +48,15 @@ public class Cyclone_Object : MonoBehaviour {
 		else{
 			//Debug.Log("full speed");
 		}
-
 	}
 
 	void OnTriggerStay(Collider col){
 		if(meltReady){
 			if(col.tag == "Island"){
 				col.GetComponent<MeltingIsland>().meltByExplode(meltFactor);
+			}
+			else if(col.tag == "Island_New"){
+				col.GetComponent<MeltingIsland_New>().meltByExplode(meltFactor);
 			}
 			else if(col.tag == "Player"){
 				Vector3 cyclonePos = transform.position;
@@ -71,7 +73,13 @@ public class Cyclone_Object : MonoBehaviour {
 				                                            ability.owner.GetComponent<PlayerAttack>().playerNum);
 			}
 		}
+	}
 
+
+	void OnTriggerEnter(Collider col){
+		if(col.tag == "Boundary"){
+			Destroy(gameObject, 2f);
+		}
 	}
 
 	void ResetMeltTimer(){

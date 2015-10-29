@@ -45,7 +45,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\MeltingIsland_New.cs" />
+     <Compile Include="Assets\ItemSystem\Scripts\CdReduction.cs" />
+     <Compile Include="Assets\ItemSystem\Scripts\Chest.cs" />
+     <Compile Include="Assets\ItemSystem\Scripts\ChestController.cs" />
+     <Compile Include="Assets\ItemSystem\Scripts\Healing.cs" />
+     <Compile Include="Assets\ItemSystem\Scripts\Invincibility.cs" />
+     <Compile Include="Assets\ItemSystem\Scripts\Item.cs" />
+     <Compile Include="Assets\ItemSystem\Scripts\SpeedPotion.cs" />
      <Compile Include="Assets\Scripts\Boss\BossAttack.cs" />
      <Compile Include="Assets\Scripts\Boss\BossHealth.cs" />
      <Compile Include="Assets\Scripts\Boss\BossMovement.cs" />
@@ -55,17 +61,11 @@
      <Compile Include="Assets\Scripts\Boss\SnowStorm.cs" />
      <Compile Include="Assets\Scripts\Boss\SnowStorm_Object.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
-     <Compile Include="Assets\Scripts\Chest.cs" />
-     <Compile Include="Assets\Scripts\ChestController.cs" />
      <Compile Include="Assets\Scripts\ControllerInputWrapper.cs" />
      <Compile Include="Assets\Scripts\DieWater.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GameSettings.cs" />
      <Compile Include="Assets\Scripts\Island.cs" />
-     <Compile Include="Assets\Scripts\Item\CdReduction.cs" />
-     <Compile Include="Assets\Scripts\Item\Healing.cs" />
-     <Compile Include="Assets\Scripts\Item\Invincibility.cs" />
-     <Compile Include="Assets\Scripts\Item\SpeedPotion.cs" />
      <Compile Include="Assets\Scripts\Magic\Ability.cs" />
      <Compile Include="Assets\Scripts\Magic\Blink.cs" />
      <Compile Include="Assets\Scripts\Magic\CastDelay.cs" />
@@ -94,6 +94,7 @@
      <Compile Include="Assets\Scripts\Magic\Shootable.cs" />
      <Compile Include="Assets\Scripts\MagicChannel_Sound.cs" />
      <Compile Include="Assets\Scripts\MeltingIsland.cs" />
+     <Compile Include="Assets\Scripts\MeltingIsland_New.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack_Key.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
@@ -140,13 +141,20 @@
      <None Include="Assets\Standard Assets\Game Jam Menu Template\GameJamTemplateReadMe.txt" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Bump.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque Specular.shader" />
+     <None Include="Assets\PowerUps Vol 1 Free\Readme.txt" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque Specular.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface SFX Depth Write Only.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

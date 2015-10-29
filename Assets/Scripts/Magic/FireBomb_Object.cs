@@ -23,6 +23,8 @@ public class FireBomb_Object : MonoBehaviour {
 	private GameObject[] players;
 	private GameObject[] tiles;
 	private Collider[] colliders;
+	Collider[] hitColliders;
+
 
 	// Use this for initialization
 	void Start () {
@@ -60,9 +62,11 @@ public class FireBomb_Object : MonoBehaviour {
 		explosionEffect.SetActive (true);
 		Invoke ("DestroyObj", explosionEffect.GetComponent<ParticleSystem>().duration);
 
-		Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
+		hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
 		foreach(Collider col in hitColliders){
+
 			float distance = Vector3.Distance(col.transform.position, transform.position);
+
 			if(col.tag == "Player"){
 				if(pickedByPlayer){
 					col.gameObject.GetComponent<PlayerHealth>().TakeDamage(
@@ -79,6 +83,12 @@ public class FireBomb_Object : MonoBehaviour {
 			else if(col.tag == "Island"){
 				if(distance < explosionRadius){
 					col.gameObject.GetComponent<MeltingIsland>().meltByExplode((int)(explosionDamage * (explosionRadius - distance) / explosionRadius * explosionFactor));
+				}
+			}
+			else if(col.tag == "Island_New"){
+				distance = Vector3.Distance(col.bounds.center, transform.position);
+				if(distance < explosionRadius){
+					col.gameObject.GetComponent<MeltingIsland_New>().meltByExplode(explosionDamage * (explosionRadius - distance) / explosionRadius * explosionFactor);
 				}
 			}
 			else if(col.tag == "Obstacle"){

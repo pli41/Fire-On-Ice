@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class SelectionScreenManager : MonoBehaviour {
     public float timeDelay = .7f;
+    public Text readyTimer;
     public Ability[] allAbilities;
 
     public Transform[] enterPanel;
@@ -13,7 +14,8 @@ public class SelectionScreenManager : MonoBehaviour {
     public Image[] aAbility = new Image[4];
     public Image[] xAbility = new Image[4];
     public Image[] bAbility = new Image[4];
-
+    public Text[] readyText = new Text[4];
+    public float timer;
 
 
     int[] playerControllers = new int[4];
@@ -32,8 +34,61 @@ public class SelectionScreenManager : MonoBehaviour {
         checkSelectAbility();
         checkAbilityInput();
         checkPlayerAccept();
+        updateReady();
         updateImages();
         checkReadyStart();
+        beginMatchCountDown();
+    }
+
+    void beginMatchCountDown()
+    {
+        if (numPlayers < 1)
+        {
+            return;
+        }
+        for (int i = 0; i < numPlayers; i++)
+        {
+            if (!ready[i])
+            {
+                timer = 4;
+                readyTimer.enabled = false;
+                return;
+            }
+        }
+        timer -= Time.deltaTime;
+        int t = (int)timer;
+        readyTimer.enabled = true;
+        readyTimer.text = t.ToString();
+        if (timer < 1)
+        {
+			setGameSettings();
+            Application.LoadLevel("level3");
+        }
+
+    }
+
+	void setGameSettings() {
+		GameSettings.numPlayers = numPlayers;
+		GameSettings.playerAbilitites = playerAbilities;
+		GameSettings.playerController = playerControllers;
+	}
+
+    void updateReady()
+    {
+
+        for (int i = 0; i < numPlayers; i++)
+        {
+            if (ready[i])
+            {
+                selectAbility[i].gameObject.SetActive(false);
+                readyText[i].enabled = true;
+            }
+            else
+            {
+                selectAbility[i].gameObject.SetActive(true);
+                readyText[i].enabled = false;
+            }
+        }
     }
 
     void checkReadyStart()
@@ -41,16 +96,32 @@ public class SelectionScreenManager : MonoBehaviour {
         for (int i = 0; i < numPlayers; i++)
         {
             if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.Start, playerControllers[i], true))
+            //if (Input.GetKeyDown(KeyCode.KeypadEnter)) 
             {
-                if (checkAbilityFilled())
+                
+                if (ready[i])
                 {
-                    GameSettings.numPlayers = numPlayers;
-                    GameSettings.playerAbilitites = playerAbilities;
-                    GameSettings.playerController = playerControllers;
-                    Application.LoadLevel("level3");
+                    ready[i] = false;
+                }
+                else if (checkAbilityFilled(i))
+                {
+                    print("Hello");
+                    ready[i] = true;
                 }
             }
         }
+    }
+
+    bool checkAbilityFilled(int i)
+    {
+        for (int j = 0; j < playerAbilities.GetLength(1); j++)
+        {
+            if (playerAbilities[i, j] == null)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     bool checkAbilityFilled()
@@ -61,12 +132,9 @@ public class SelectionScreenManager : MonoBehaviour {
         }
         for (int i = 0; i < numPlayers; i++)
         {
-            for (int j = 0; j < playerAbilities.GetLength(1); j++)
+            if (!checkAbilityFilled(i))
             {
-                if (playerAbilities[i, j] == null)
-                {
-                    return false;
-                }
+                return false;
             }
         }
         return true;
@@ -133,7 +201,7 @@ public class SelectionScreenManager : MonoBehaviour {
                 currentAbilitySelected[i] = (++currentAbilitySelected[i]) % allAbilities.Length;
                 selectTimer[i] = timeDelay;
             }
-            else if (direct < .05f && direct > -.05f)
+            else if (Mathf.Abs(direct) < .05f)
             {
                selectTimer[i] = 0;
             }

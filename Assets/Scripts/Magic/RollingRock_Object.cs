@@ -9,7 +9,7 @@ public class RollingRock_Object : MonoBehaviour {
 	public float forceMagnitude;
 	public float explosionRadius;
 	public int rollingDamage;
-	public int rollingMeltFactor;
+	public float rollingMeltFactor;
 
 	public float maxSpeed; 
 	public float rollingTime;
@@ -25,14 +25,16 @@ public class RollingRock_Object : MonoBehaviour {
 	private Transform explosion;
 	private Transform fire;
 	private bool exploded;
+	private AudioSource audioS;
 
-	public GameObject[] players;
-	private List<GameObject> playerList = new List<GameObject>();
+	//public GameObject[] players;
+	//private List<GameObject> playerList = new List<GameObject>();
 
 	// Use this for initialization
 	void Start () {
-		players = GameObject.FindGameObjectsWithTag ("Player");
-		SetupPlayerList ();
+		audioS = GetComponent<AudioSource> ();
+		//players = GameObject.FindGameObjectsWithTag ("Player");
+		//SetupPlayerList ();
 		fire = transform.Find ("Fire");
 		explosion = transform.Find ("Explosion");
 		rend = GetComponent<MeshRenderer> ();
@@ -40,11 +42,11 @@ public class RollingRock_Object : MonoBehaviour {
 		boomAudio.damage = damage;
 	}
 
-	void SetupPlayerList(){
-		foreach(GameObject p in players){
-			playerList.Add(p);
-		}
-	}
+//	void SetupPlayerList(){
+//		foreach(GameObject p in players){
+//			playerList.Add(p);
+//		}
+//	}
 
 	// Update is called once per frame
 	void Update () {
@@ -68,6 +70,7 @@ public class RollingRock_Object : MonoBehaviour {
 
 	void Explode(){
 		Debug.Log ("EXPLODE");
+		audioS.Stop ();
 		rigid.velocity = Vector3.zero;
 		rend.enabled = false;
 		rigid.useGravity = false;
@@ -85,7 +88,13 @@ public class RollingRock_Object : MonoBehaviour {
 			}
 			else if(col.tag == "Island"){
 				if(distance < explosionRadius){
-					col.gameObject.GetComponent<MeltingIsland>().meltByExplode((int)(damage * (explosionRadius - distance) / explosionRadius));
+					col.gameObject.GetComponent<MeltingIsland>().meltByExplode((damage * (explosionRadius - distance) / explosionRadius));
+				}
+			}
+			else if(col.tag == "Island_New"){
+				distance = Vector3.Distance(col.bounds.center, transform.position);
+				if(distance < explosionRadius){
+					col.gameObject.GetComponent<MeltingIsland_New>().meltByExplode((damage * (explosionRadius - distance) / explosionRadius));
 				}
 			}
 			else if(col.tag == "Obstacle"){
@@ -103,17 +112,20 @@ public class RollingRock_Object : MonoBehaviour {
 		else if(col.gameObject.tag == "Island"){
 			col.gameObject.GetComponent<MeltingIsland>().meltByExplode(rollingDamage*rollingMeltFactor);
 		}
+		else if(col.gameObject.tag == "Island_New"){
+			col.gameObject.GetComponent<MeltingIsland_New>().meltByExplode(rollingDamage*rollingMeltFactor);
+		}
     }
 
-	void CheckPlayers(){
-		foreach(GameObject p in players){
-			if(Vector3.Distance(p.transform.position, transform.position) < explosionRadius){
-				Debug.Log("Explosion in range");
-				p.GetComponent<Rigidbody>().AddExplosionForce(forceMagnitude, transform.position, explosionRadius);
-				p.GetComponent<PlayerHealth>().TakeDamage(damage, true, ability.owner.GetComponent<PlayerAttack>().playerNum);
-			}
-		}
-	}
+//	void CheckPlayers(){
+//		foreach(GameObject p in players){
+//			if(Vector3.Distance(p.transform.position, transform.position) < explosionRadius){
+//				Debug.Log("Explosion in range");
+//				p.GetComponent<Rigidbody>().AddExplosionForce(forceMagnitude, transform.position, explosionRadius);
+//				p.GetComponent<PlayerHealth>().TakeDamage(damage, true, ability.owner.GetComponent<PlayerAttack>().playerNum);
+//			}
+//		}
+//	}
 
 	void DestroyRock(){
 		Destroy (explosion.gameObject);

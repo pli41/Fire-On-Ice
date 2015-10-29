@@ -63,7 +63,7 @@ public class UI_Manager : MonoBehaviour {
 		if(gm.GameInProgress){
 			for (int i = 0; i < playerList.Count; i++) {
 				for (int j = 0; j < 3; j++){
-					int playerNum = playerList[i].GetComponent<PlayerAttack>().joystickNum;
+					int playerNum = playerList[i].GetComponent<PlayerAttack>().playerNum;
 					
 					bool abilityReady = playerList[i].GetComponent<PlayerAttack>().abilities[j].abilityReady;
 					

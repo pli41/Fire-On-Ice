@@ -45,9 +45,11 @@ MonoBehaviour:
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
+  cooldown: 0
+  timeUntilReset: 0
   icon: {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
   name: Hook
-  description: Hook
+  description: Shoot a hook that grabs the opponent to you if hit.
   abilityReady: 1
   cdTimer: 0
   hookShootSpeed: 20
@@ -137,7 +139,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: description
-      value: Hook
+      value: Shoot a hook that grabs the opponent to you if hit.
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: abilityReady

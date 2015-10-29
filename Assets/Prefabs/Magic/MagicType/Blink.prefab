@@ -115,13 +115,14 @@ MonoBehaviour:
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
+  cooldown: 3
+  timeUntilReset: 0
   icon: {fileID: 21300000, guid: df5153fca31c9bf47b2d36359b5dd373, type: 3}
   name: Blink
-  description: Blink
+  description: Teleport forward instantly for a fixed distance
   abilityReady: 1
   cdTimer: 0
   flashDistance: 1.5
-  cooldown: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -164,7 +165,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: description
-      value: Blink
+      value: Teleport forward instantly for a fixed distance
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: abilityReady

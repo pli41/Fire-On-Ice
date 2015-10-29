@@ -44,14 +44,16 @@ MonoBehaviour:
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
+  cooldown: 5
+  timeUntilReset: 0
   icon: {fileID: 21300000, guid: 4867db53aa592a64a851c36645423699, type: 3}
   name: RollingRock
-  description: RollingRock
+  description: After seconds of casting, summon a rolling rock which rumbles in the
+    facing direction and explodes after a fixed amount of time.
   abilityReady: 1
   cdTimer: 0
   enchantEffect: {fileID: 0}
   castTime: 2
-  cooldown: 5
   delayBool: 1
 --- !u!1001 &100100000
 Prefab:
@@ -83,7 +85,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: description
-      value: RollingRock
+      value: After seconds of casting, summon a rolling rock which rumbles in the
+        facing direction and explodes after a fixed amount of time.
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: abilityReady

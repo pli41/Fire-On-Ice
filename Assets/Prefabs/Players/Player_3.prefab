@@ -768,7 +768,7 @@ MonoBehaviour:
   onFire: 0
   onFireTime: 3
   onFireEffect: {fileID: 138774}
-  damageSFXTime: 0
+  damageSFXTime: 1
 --- !u!114 &11464214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11322,6 +11322,10 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damageSFXTime
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
