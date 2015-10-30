@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour {
 		if(GameInProgress){
 			GameObject winner = CheckForWinnner ();
 			if(winner){
-				winnerNum = winner.GetComponent<PlayerAttack>().joystickNum;
+				winnerNum = winner.GetComponent<PlayerAttack>().playerNum;
 				GameInProgress = false;
 				UI_manager.ShowWinScreen(winnerNum, FindPlayerWithMostDamage());
 			}
