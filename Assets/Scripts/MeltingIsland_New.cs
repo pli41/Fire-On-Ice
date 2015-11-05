@@ -114,7 +114,7 @@ public class MeltingIsland_New : MonoBehaviour {
 		Vector3 scale = transform.localScale;
 		scale.z -= scaleChange;
 
-		if(scale.z <= 0f){
+		if(scale.z <= 5f){
 			Destroy(gameObject);
 		}
 
