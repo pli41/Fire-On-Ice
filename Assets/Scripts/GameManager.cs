@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
 	private GameObject[] activePlayers;
 
 	public int winnerNum;
+	public CameraMove cameraMove;
 
 	// Use this for initialization
 	void Awake () {
@@ -27,7 +28,8 @@ public class GameManager : MonoBehaviour {
 
 		SetupPlayers ();
 		SetupPlayerAbilities ();
-		CountDown ();
+		CameraStart ();
+
 	}
 
 	//Setup Players and playerlist
@@ -55,11 +57,11 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	void CountDown(){
-		Invoke ("StartGame", 3f);
+	void CameraStart(){
+		cameraMove.startMovement = true;
 	}
 
-	void StartGame(){
+	public void StartGame(){
 		GameInProgress = true;
 	}
 
@@ -81,6 +83,12 @@ public class GameManager : MonoBehaviour {
 				winnerNum = winner.GetComponent<PlayerAttack>().playerNum;
 				GameInProgress = false;
 				UI_manager.ShowWinScreen(winnerNum, FindPlayerWithMostDamage());
+			}
+		}
+		else{
+			if(cameraMove.endMovement){
+				UI_manager.ReadyTextEnable();
+				cameraMove.endMovement = false;
 			}
 		}
 	}

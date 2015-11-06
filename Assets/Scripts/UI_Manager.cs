@@ -15,6 +15,11 @@ public class UI_Manager : MonoBehaviour {
 
 	public GameObject WinUI;
 
+	public GameObject readyText;
+	public GameObject goText;
+	public float readyTextDuration;
+	public float goTextDuration;
+
 	private GameObject[] cooldownUIs;
 	
 	// Use this for initialization
@@ -23,6 +28,26 @@ public class UI_Manager : MonoBehaviour {
 		cooldownUIs = GameObject.FindGameObjectsWithTag ("Cooldown");
 		SetupAbilityPanels ();
 		SetupAbilityIcons ();
+	}
+
+	public void ReadyTextEnable(){
+		if(readyText){
+			readyText.SetActive (true);
+		}
+		Destroy (readyText, readyTextDuration);
+		Invoke ("GoTextEnable", readyTextDuration);
+	}
+
+	public void GoTextEnable(){
+		if(goText){
+			goText.SetActive (true);
+		}
+		Destroy (goText, goTextDuration);
+		Invoke ("UIReady", goTextDuration);
+	}
+
+	public void UIReady(){
+		gm.StartGame ();
 	}
 
 	void SetupAbilityPanels(){

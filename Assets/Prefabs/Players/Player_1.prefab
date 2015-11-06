@@ -709,7 +709,7 @@ MonoBehaviour:
   playerNum: 0
   magicPoint: {fileID: 498366}
   abilities:
-  - {fileID: 11407586, guid: 7f2c5e5bf94344c3c8eae5ad43b759eb, type: 2}
+  - {fileID: 11444994, guid: bb41434c6141647d0823fda8eca500b1, type: 2}
   - {fileID: 11413252, guid: fd26754aee4f4408aa0eedcc40417e97, type: 2}
   - {fileID: 11461332, guid: 8299e958997364a1fb4205d252e9d885, type: 2}
   enchanting: 0
@@ -11328,6 +11328,11 @@ Prefab:
       propertyPath: damageSFXTime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: abilities.Array.data[0]
+      value: 
+      objectReference: {fileID: 11444994, guid: bb41434c6141647d0823fda8eca500b1,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 169646}

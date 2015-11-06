@@ -3,10 +3,13 @@ using System.Collections;
 
 public class CameraMove : MonoBehaviour {
 
+	public GameManager gm;
 	public Transform startPoint;
 	public Transform endPoint;
-	private bool startMovement;
+	public bool startMovement;
 	public float speed;
+	public bool endMovement;
+
 	private float distance;
 	private float timer;
 	// Use this for initialization
@@ -23,8 +26,11 @@ public class CameraMove : MonoBehaviour {
 			//Debug.Log("Moving");
 		}
 
-		if(Input.GetKeyDown(KeyCode.Space)){
-			startMovement = true;
+		if(Vector3.Distance(transform.position, endPoint.position) < 1f){
+			endMovement = true;
+			startMovement = false;
+			Debug.Log("Camera Set");
 		}
+
 	}
 }
