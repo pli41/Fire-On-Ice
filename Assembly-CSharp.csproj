@@ -102,11 +102,11 @@
      <Compile Include="Assets\Scripts\Player\PlayerItem.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement_Key.cs" />
+     <Compile Include="Assets\Scripts\ScrollPanel.cs" />
      <Compile Include="Assets\Scripts\SelectActionManager.cs" />
      <Compile Include="Assets\Scripts\SelectionScreenManager.cs" />
      <Compile Include="Assets\Scripts\SetExplosion.cs" />
      <Compile Include="Assets\Scripts\UI_Manager.cs" />
-     <Compile Include="Assets\ScrollPanel.cs" />
      <None Include="Assets\Standard Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Specular.shader" />
      <None Include="Assets\Standard Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Bump.shader" />
      <None Include="Assets\Standard Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent.shader" />
