@@ -322,8 +322,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167916}
-  m_LocalRotation: {x: 1.82189961e-08, y: -.134558231, z: 0, w: .990905702}
-  m_LocalPosition: {x: -4.95618439, y: 2.36687899, z: -5.55005884}
+  m_LocalRotation: {x: -9.96840845e-06, y: .785187006, z: 7.24848178e-06, w: .619258761}
+  m_LocalPosition: {x: -9.41708374, y: 2.75506687, z: 5.23985863}
   m_LocalScale: {x: 2.17897463, y: 2.17897391, z: 2.17897391}
   m_Children:
   - {fileID: 426054}
@@ -376,7 +376,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0f5c692d8dbbc544586dfa2416053cb1, type: 2}
+  - {fileID: 2100000, guid: ff1c12e3281b947fda9b6360d9b0e1b7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -11947,6 +11947,10 @@ Prefab:
       propertyPath: explosionRadius
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ff1c12e3281b947fda9b6360d9b0e1b7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167916}

@@ -87,7 +87,7 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 				delaying = true;
 			}
 			else{
-				owner.GetComponent<PlayerMovement>().disabled = true;
+				owner.GetComponent<PlayerMovement>().canTurn = false;
 			}
 		}
 	}
@@ -95,7 +95,7 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 	public void CastDelayEnd(){
 		ResetCooldown();
 		owner.GetComponent<PlayerAttack>().enchanting = false;
-		owner.GetComponent<PlayerMovement>().disabled = false;
+		owner.GetComponent<PlayerMovement>().canTurn = true;
 		delaying = false;
 	}
 }

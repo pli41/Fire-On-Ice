@@ -40,11 +40,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  ability_object: {fileID: 116374, guid: db34c57d62f824a58b4836f0e5e04089, type: 2}
+  ability_object: {fileID: 131456, guid: 744fccac510b44681bc1922861467f43, type: 2}
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
-  cooldown: 0
+  cooldown: 1
   timeUntilReset: 0
   icon: {fileID: 21300000, guid: adfb16cdb2353684bbf44eb7e5b7128b, type: 3}
   name: Fireball
@@ -67,7 +67,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: ability_object
       value: 
-      objectReference: {fileID: 116374, guid: db34c57d62f824a58b4836f0e5e04089, type: 2}
+      objectReference: {fileID: 131456, guid: 744fccac510b44681bc1922861467f43, type: 2}
     - target: {fileID: 0}
       propertyPath: coolDown
       value: 3
@@ -104,6 +104,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: abilityReady
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cooldown
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

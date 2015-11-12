@@ -5,6 +5,8 @@ public class HookScript : MonoBehaviour {
     public Transform owner;
     public Hook hookAbility;
     public float maxLength;
+    public float damageGiven = 3;
+    public float timeDamageInterval = .5f;
 
     LineRenderer lineRender;
     Transform hookedPlayer;
@@ -13,6 +15,7 @@ public class HookScript : MonoBehaviour {
     bool isRetracting;
     bool isHooked;
 	bool isHookedObstacle;
+    float damageTimer;
 
     void Awake()
     {
@@ -58,6 +61,14 @@ public class HookScript : MonoBehaviour {
         currentLength -= Time.deltaTime * hookAbility.hookRetractSpeed;
         transform.position = owner.position + owner.forward.normalized * currentLength;
         hookedPlayer.position = transform.position;
+        damageTimer = Mathf.MoveTowards(damageTimer, 0, Time.deltaTime);
+        if (timeDamageInterval <= 0)
+        {
+            hookedPlayer.GetComponent<PlayerHealth>().TakeDamage(damageGiven, true, owner.GetComponent<PlayerAttack>().joystickNum);
+            damageGiven = timeDamageInterval;
+
+        }
+
 
     }
 
@@ -126,6 +137,12 @@ public class HookScript : MonoBehaviour {
 			isFiring = false;
 			isRetracting = false;
 			isHooked = false;
+		}
+		if (collider.tag == "Chest"){
+			hookedPlayer = collider.transform;
+			isHooked = true;
+			isFiring = false;
+			isRetracting = false;
 		}
     }
 

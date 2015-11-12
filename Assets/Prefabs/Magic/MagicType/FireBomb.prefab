@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  ability_object: {fileID: 110902, guid: 455543e6abb694a4482782ff3f25d0b6, type: 2}
+  ability_object: {fileID: 138210, guid: 555ad786ba09649f99d02a7f77586168, type: 2}
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
@@ -62,7 +62,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: ability_object
       value: 
-      objectReference: {fileID: 110902, guid: 455543e6abb694a4482782ff3f25d0b6, type: 2}
+      objectReference: {fileID: 138210, guid: 555ad786ba09649f99d02a7f77586168, type: 2}
     - target: {fileID: 0}
       propertyPath: bombSpeed
       value: 1e+07

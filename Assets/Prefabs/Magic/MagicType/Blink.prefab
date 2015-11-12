@@ -52,7 +52,7 @@ AudioSource:
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
-  BypassListenerEffects: 0
+  BypassListenerEffects: 1
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  ability_object: {fileID: 0}
+  ability_object: {fileID: 198078, guid: 9db72a44c0f8a4261aaa6128ad3d2ea7, type: 2}
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
@@ -122,7 +122,8 @@ MonoBehaviour:
   description: Teleport forward instantly for a fixed distance
   abilityReady: 1
   cdTimer: 0
-  flashDistance: 1.5
+  flashDistance: 13
+  characterSize: .200000003
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -136,7 +137,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: flashDistance
-      value: 1.5
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_PlayOnAwake
@@ -169,6 +170,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: abilityReady
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ability_object
+      value: 
+      objectReference: {fileID: 198078, guid: 9db72a44c0f8a4261aaa6128ad3d2ea7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: characterSize
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: BypassListenerEffects
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

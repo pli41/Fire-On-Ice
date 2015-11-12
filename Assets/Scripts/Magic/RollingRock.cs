@@ -91,7 +91,7 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 				delaying = true;
 			}
 			else{
-				owner.GetComponent<PlayerMovement>().disabled = true;
+				owner.GetComponent<PlayerMovement>().canTurn = false;
 			}
 		}
 	}
@@ -99,7 +99,7 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 	public void CastDelayEnd(){
 		ResetCooldown();
 		owner.GetComponent<PlayerAttack>().enchanting = false;
-		owner.GetComponent<PlayerMovement>().disabled = false;
+		owner.GetComponent<PlayerMovement>().canTurn = true;
 		delaying = false;
 	}
 }

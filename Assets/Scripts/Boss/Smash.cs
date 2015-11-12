@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class Smash : Ability, Cooldown{
-
-	public float cooldown;
+	
 
 	public Smash_Object smash_Object;
 

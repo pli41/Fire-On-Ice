@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Rage : Ability, CastDelay {
-
-	public float cooldown;
+	
 	public float castTime;
 
 	public int numberGenerated;

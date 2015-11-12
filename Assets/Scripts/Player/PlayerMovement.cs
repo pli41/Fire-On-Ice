@@ -103,14 +103,16 @@ public class PlayerMovement : MonoBehaviour
 	}
 	
 	void Turning(){
-		float hori = ControllerInputWrapper.GetAxisRaw(ControllerInputWrapper.Axis.RightStickX, joystickNum);
-		float vert = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.RightStickY, joystickNum);
+		float hori = ControllerInputWrapper.GetAxisRaw(ControllerInputWrapper.Axis.RightStickX, joystickNum, false);
+		float vert = ControllerInputWrapper.GetAxisRaw(ControllerInputWrapper.Axis.RightStickY, joystickNum, false);
 		
-		if(hori != 0 && vert != 0){
+		if(hori != 0 || vert != 0){
 			Vector3 direction = new Vector3 (hori, 0f, vert);
-			
-			Quaternion newRotation = Quaternion.LookRotation(direction);
-			playerRigidbody.MoveRotation(newRotation);
+			Debug.Log(direction);
+			Quaternion newRotation = Quaternion.LookRotation(direction, transform.up);
+			transform.rotation = Quaternion.Lerp (transform.rotation, newRotation, Time.deltaTime * 100);
+
+
 			//Debug.Log ("hori = " + hori);
 			//Debug.Log ("vert = " + vert);
 		}

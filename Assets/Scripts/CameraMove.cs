@@ -29,7 +29,7 @@ public class CameraMove : MonoBehaviour {
 		if(Vector3.Distance(transform.position, endPoint.position) < 1f){
 			endMovement = true;
 			startMovement = false;
-			Debug.Log("Camera Set");
+			//Debug.Log("Camera Set");
 		}
 
 	}

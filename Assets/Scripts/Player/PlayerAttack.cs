@@ -98,8 +98,6 @@ public class PlayerAttack : MonoBehaviour
 						StartCoroutine(EndAbility(1, 0.2f));
 					}
 				}
-				
-				
 			}
 			else if(casting2){
 				casting2 = false;

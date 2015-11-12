@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  ability_object: {fileID: 170514, guid: d001e3f94a0b1f84ca71733b85ced91f, type: 2}
+  ability_object: {fileID: 141888, guid: 3a431815b5f7449a8b84d90ec7b6a4f3, type: 2}
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
@@ -53,8 +53,8 @@ MonoBehaviour:
   abilityReady: 1
   cdTimer: 0
   newMass: 40
-  newSpeed: 2.5
-  damageReduction: .100000001
+  newSpeed: 4
+  damageReduction: .200000003
   duration: 5
 --- !u!1001 &100100000
 Prefab:
@@ -69,11 +69,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: newSpeed
-      value: 2.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: damageReduction
-      value: .100000001
+      value: .200000003
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: duration
@@ -101,6 +101,10 @@ Prefab:
       propertyPath: abilityReady
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ability_object
+      value: 
+      objectReference: {fileID: 141888, guid: 3a431815b5f7449a8b84d90ec7b6a4f3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 152916}

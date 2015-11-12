@@ -5,8 +5,7 @@ public class SnowStorm : Ability, Cooldown, CasterEffect{
 
 	public SnowStorm_Object snowstorm_Object;
 	public bool endCastHandled;
-
-	public float cooldown;
+	
 	public float duration;
 
 

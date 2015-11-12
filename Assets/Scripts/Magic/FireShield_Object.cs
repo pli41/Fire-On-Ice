@@ -3,8 +3,9 @@ using System.Collections;
 
 public class FireShield_Object : MonoBehaviour {
 	// Use this for initialization
+
 	void Start () {
-		//Destroy (gameObject, destroyTime);
+		transform.localPosition = new Vector3 (0.2f, 1f, 0f);
 	}
 
 

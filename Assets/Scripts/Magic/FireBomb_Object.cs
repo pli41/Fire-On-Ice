@@ -35,6 +35,7 @@ public class FireBomb_Object : MonoBehaviour {
 		explosionEffect = transform.Find ("Boom").gameObject;
 		explosionEffect.SetActive (false);
 		boomAudio.damage = explosionDamage;
+		Physics.IgnoreCollision (GetComponent<SphereCollider>(), ability.owner.GetComponent<Collider>());
 		//Initialize ();
 	}
 
@@ -77,7 +78,6 @@ public class FireBomb_Object : MonoBehaviour {
 						(int)(explosionDamage * (explosionRadius - distance) / explosionRadius)
 						, false, ability.owner.GetComponent<PlayerAttack>().playerNum);
 				}
-				
 				col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius);
 			}
 			else if(col.tag == "Island"){

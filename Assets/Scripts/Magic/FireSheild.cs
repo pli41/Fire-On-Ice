@@ -26,8 +26,8 @@ public class FireSheild : Ability,Cooldown, CasterEffect {
 	public override void Cast()
 	{
 		if (abilityReady) {
-			SetupObj();
 			shield = Instantiate(ability_object) as GameObject;
+			SetupObj();
 			shield.transform.parent = ability_point.parent;
 			CauseEffect();
 			ResetCooldown();
@@ -35,13 +35,13 @@ public class FireSheild : Ability,Cooldown, CasterEffect {
 	}
 	public override void SetupObj(){
 		//Debug.Log (ability_point);
-		ability_object.transform.position = ability_point.position;
-		ability_object.transform.rotation = owner.transform.rotation;
+		shield.transform.rotation = owner.transform.rotation;
 	}
 	
 	public  void SetupCooldown(){
 		cdTimer = 0;
 	}
+
 	public  void CooldownUpdate(){
 		if(cdTimer < cooldown){
 			cdTimer += Time.deltaTime;
@@ -50,6 +50,7 @@ public class FireSheild : Ability,Cooldown, CasterEffect {
 			abilityReady = true;
 		}
 	}
+
 	public  void ResetCooldown(){
 		cdTimer = 0f;
 		abilityReady = false;

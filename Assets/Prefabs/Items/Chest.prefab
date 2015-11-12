@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 493710}
   - 33: {fileID: 3333856}
   - 23: {fileID: 2367120}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,9 +29,9 @@ GameObject:
   - 65: {fileID: 6513608}
   - 65: {fileID: 6546040}
   - 114: {fileID: 11475500}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chest
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +47,7 @@ GameObject:
   - 33: {fileID: 3302294}
   - 23: {fileID: 2373458}
   - 95: {fileID: 9576562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chest_cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108548}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 96f3bded4a338413b818535861f25b47, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -309,6 +309,19 @@ Prefab:
       value: 
       objectReference: {fileID: 11418878, guid: a66c2578ed6ec1c40af05c084c6d6907,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 96f3bded4a338413b818535861f25b47,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Chest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 108548}
