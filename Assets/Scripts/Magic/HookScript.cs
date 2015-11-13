@@ -66,17 +66,15 @@ public class HookScript : MonoBehaviour
 		hookedPlayer.position = transform.position;
 		damageTimer = Mathf.MoveTowards(damageTimer, 0, Time.deltaTime);
 		PlayerHealth pHealth = hookedPlayer.GetComponent<PlayerHealth>();
-		if (pHealth == null)
-		{
-		currentLength -= Time.deltaTime * hookAbility.hookShootSpeed;
-			
-			
+		if (pHealth == null) {
+			currentLength -= Time.deltaTime * hookAbility.hookShootSpeed;
 			return;
+		} else {
+			currentLength -= Time.deltaTime * hookAbility.hookRetractSpeed;
 		}
 		if (damageTimer <= 0)
 		{
-			currentLength -= Time.deltaTime * hookAbility.hookRetractSpeed;
-			
+
 			pHealth.TakeDamage(damageGiven, true, owner.GetComponent<PlayerAttack>().joystickNum);
 			damageTimer = timeDamageInterval;
 			

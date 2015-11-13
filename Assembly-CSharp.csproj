@@ -118,6 +118,7 @@
      <Compile Include="Assets\Scripts\SetExplosion.cs" />
      <Compile Include="Assets\Scripts\UI_Manager.cs" />
      <Compile Include="Assets\UI\SelectionScreenManager.cs" />
+     <Compile Include="Assets\UI\floatingText\DeleteOverTime.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
      <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />

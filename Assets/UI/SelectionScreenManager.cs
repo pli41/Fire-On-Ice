@@ -20,15 +20,17 @@ public class SelectionScreenManager : MonoBehaviour {
 	public Text[] currentAbilityName = new Text[4];
 	public Text[] currentAbilityDescription = new Text[4];
 	public float timer;
-	
-	
-	int[] playerControllers = new int[4];
+    public Animator countDownAnim;
+
+
+    int[] playerControllers = new int[4];
 	int[] currentAbilitySelected = new int[4];
 	int numPlayers;
 	bool[] accepted = new bool[4];
 	bool[] ready = new bool[4];
 	float[] selectTimer = new float[4];
 	Ability[,] playerAbilities = new Ability[4, 3];
+    
 	
 	
 	
@@ -65,6 +67,20 @@ public class SelectionScreenManager : MonoBehaviour {
 			currentAbilityDescription[i].text = allAbilities[currentAbilitySelected[i]].description;
 		}
 	}
+
+    bool getAllPlayersReady()
+    {
+        for (int i = 0; i < numPlayers; i++)
+        {
+            if (!ready[i])
+            {
+                timer = 4;
+                readyTimer.enabled = false;
+                return false;
+            }
+        }
+        return true;
+    }
 	
 	void beginMatchCountDown()
 	{
@@ -72,20 +88,19 @@ public class SelectionScreenManager : MonoBehaviour {
 		{
 			return;
 		}
-		for (int i = 0; i < numPlayers; i++)
-		{
-			if (!ready[i])
-			{
-				timer = 4;
-				readyTimer.enabled = false;
-				return;
-			}
+		if (!getAllPlayersReady ()) {
+
+			countDownAnim.SetBool ("PlayerStart", false);
+
+			return;
+		} else {
+			countDownAnim.SetBool("PlayerStart", true);
 		}
 		timer -= Time.deltaTime;
 		int t = (int)timer;
-		readyTimer.enabled = true;
-		readyTimer.text = t.ToString();
-		if (timer < 1)
+		//readyTimer.enabled = true;
+		//readyTimer.text = t.ToString();
+		if (timer < 0)
 		{
 			setGameSettings();
 			Application.LoadLevel("level3");
@@ -128,12 +143,17 @@ public class SelectionScreenManager : MonoBehaviour {
 				if (ready[i])
 				{
 					ready[i] = false;
+                    //countDownAnim.SetTrigger("CancelCD");
 				}
 				else if (checkAbilityFilled(i))
 				{
-					print("Hello");
 					ready[i] = true;
-				}
+                    if (getAllPlayersReady())
+                    {
+                        //countDownAnim.SetTrigger("BeginCD");
+                    }
+                   
+                }
 			}
 		}
 	}

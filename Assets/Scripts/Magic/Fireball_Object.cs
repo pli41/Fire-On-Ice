@@ -66,8 +66,7 @@ public class Fireball_Object : MonoBehaviour {
 			
 			if(col.tag == "Player"){
 				col.gameObject.GetComponent<PlayerHealth>().TakeDamage(
-					(int)(explosionDamage * (explosionRadius - distance) / explosionRadius)
-					, false, ability.owner.GetComponent<PlayerAttack>().playerNum);
+					explosionDamage, false, ability.owner.GetComponent<PlayerAttack>().playerNum);
 				col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius);
 			}
 			else if(col.tag == "Island"){
@@ -99,6 +98,7 @@ public class Fireball_Object : MonoBehaviour {
 //			health.TakeDamage ((int)damage);
 //		}
 		Explode ();
+		GetComponent<Collider> ().enabled = false;
 		PlayExplosion ();
 		Destroy (gameObject, 2f);
 	}
