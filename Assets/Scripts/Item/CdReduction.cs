@@ -18,7 +18,7 @@ public class CdReduction : Item {
 	public override void deleteEffect(){
 		for (int i=0; i<cdOld.Length; i++) {
 			ability[i].cooldown = cdOld[i];
-			Debug.Log(cdOld[i]+"!!!!!!!");
+			//Debug.Log(cdOld[i]+"!!!!!!!");
 		}
 		base.deleteEffect ();
 

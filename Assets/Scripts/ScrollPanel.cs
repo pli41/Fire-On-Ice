@@ -27,13 +27,16 @@ public class ScrollPanel : MonoBehaviour {
 
 //				position.Set(rectTran.position.x, rectTran.position.y+scrollSpeed * Time.deltaTime
 //			                      , rectTran.position.z);
-			Debug.Log("Scrolling");
+			//Debug.Log("Scrolling");
 		}
 		else{
 			isPlaying = false;
 		}
 
-		if(Input.anyKeyDown){
+		if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 1, true)||
+		   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 2, true)||
+		   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 3, true)||
+		   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 4, true)){
 			isPlaying = false;
 			interrupted = true;
 			creditsPanel.SetActive(false);

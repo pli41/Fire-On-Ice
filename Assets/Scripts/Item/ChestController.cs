@@ -2,12 +2,24 @@
 using System.Collections;
 
 public class ChestController : MonoBehaviour {
-	public int chestNum = 10;
+
 	public GameObject chest;
 	private Vector3 position;
 	private	Quaternion rotation;
 	public float timer;
-	public float generateTime = 5;
+
+	//Settings for 2, 3 and 4 players
+	public float[] generateTimes = new float[3];
+	public int[] chestNums = new int[3];
+
+	private GameManager gm;
+	private float generateTime;
+	private int chestNum;
+	void Start (){
+		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
+		generateTime = generateTimes [gm.playerList.Count - 2];
+		chestNum = chestNums [gm.playerList.Count - 2];
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -16,10 +28,10 @@ public class ChestController : MonoBehaviour {
 			spawnChest ();
 			timer=0;
 		}
-	
 	}
 	void spawnChest(){
 		int spawned=0;
+
 		while(spawned<chestNum){
 			position = new Vector3(Random.Range (-100f,100f),10,Random.Range(-100f,100f));
 			//rotation = new Quaternion(0,Random.Range (0f,180f),0,0);

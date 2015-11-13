@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour {
 			if(winner){
 				winnerNum = winner.GetComponent<PlayerAttack>().playerNum;
 				GameInProgress = false;
-				UI_manager.ShowWinScreen(winnerNum, FindPlayerWithMostDamage());
+				UI_manager.ShowWinScreen(winnerNum, FindPlayerWithMostDamage(), FindPlayerOpenedMostChests());
 			}
 		}
 		else{
@@ -91,6 +91,20 @@ public class GameManager : MonoBehaviour {
 				cameraMove.endMovement = false;
 			}
 		}
+	}
+
+	int FindPlayerOpenedMostChests(){
+		int playerNum = 0;
+		float highestChestNum = 0;
+		
+		for(int i = 0; i < playerList.Count; i ++){
+			float playerChestNum = playerList[i].GetComponent<PlayerItem>().chestOpenedNum;
+			if(playerChestNum > highestChestNum){
+				highestChestNum = playerChestNum;
+				playerNum = playerList[i].GetComponent<PlayerAttack>().playerNum;
+			}
+		}
+		return playerNum;
 	}
 
 	int FindPlayerWithMostDamage(){

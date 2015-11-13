@@ -48,8 +48,12 @@ public class SelectActionManager : MonoBehaviour
             case ActionType.Play:
 
 				
-                if (ControllerInputWrapper.GetButtonAll(ControllerInputWrapper.Buttons.A, true))
-                {
+				if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 1, true)||
+				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 2, true)||
+				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 3, true)||
+				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 4, true)&&
+				    !scrollPanel.isPlaying)
+				{
                     Application.LoadLevel("SelectionScreen");
                 }
 				if (directX < -0.05f || directY < -0.05f && actionReady && !scrollPanel.isPlaying)
@@ -59,7 +63,11 @@ public class SelectActionManager : MonoBehaviour
 				}
                 break;
 			case ActionType.Credits:
-				if (ControllerInputWrapper.GetButtonAll(ControllerInputWrapper.Buttons.A, true) && !scrollPanel.isPlaying)
+				if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 1, true)||
+				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 2, true)||
+				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 3, true)||
+				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 4, true)&&
+				    !scrollPanel.isPlaying)
 				{
 					creditsPanel.SetActive(true);
 					scrollPanel.isPlaying = true;

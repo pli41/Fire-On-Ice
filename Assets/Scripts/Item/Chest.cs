@@ -7,6 +7,8 @@ public class Chest : MonoBehaviour {
 	int selection;
 	bool active;
 	GameObject player;
+	public GameObject indicator;
+	int playersAround;
 	void Awake () {
 
 		anim = transform.Find("Chest_cover").gameObject.GetComponent<Animator> ();
@@ -24,11 +26,26 @@ public class Chest : MonoBehaviour {
 			active = false;
 		}
 	}
+
+    void Update(){
+		if(playersAround > 0){
+			indicator.SetActive(true);
+		}
+		else{
+			indicator.SetActive(false);
+		}
+	}
+
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") {
-			other.GetComponent<PlayerItem>().chestAround = gameObject;
-			player = other.transform.gameObject;
+			if(active){
+				other.GetComponent<PlayerItem>().chestAround = gameObject;
+				player = other.transform.gameObject;
+
+				playersAround ++;
+
+			}
 		} 
 	}
 	
@@ -39,6 +56,8 @@ public class Chest : MonoBehaviour {
 				other.GetComponent<PlayerItem>().chestAround = null;
 				player = null;
 			}
+			playersAround--;
 		}
 	}
+	
 }

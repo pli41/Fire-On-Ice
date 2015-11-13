@@ -7,12 +7,12 @@ public class Invincibility : Item {
 	{
 		this.player = player;
 		deleteEffect ();
-		player.transform.GetComponent<PlayerHealth> ().damageReduction = 1f;
+		player.transform.GetComponent<PlayerHealth> ().damageReduction = 0f;
 		base.takeEffect (player);
 	}
 	public override void deleteEffect ()
 	{
-		player.transform.GetComponent<PlayerHealth> ().damageReduction = 0f;
+		player.transform.GetComponent<PlayerHealth> ().damageReduction = 1f;
 		base.deleteEffect ();
 
 	}

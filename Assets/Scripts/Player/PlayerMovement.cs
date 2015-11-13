@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 	private Rigidbody playerRigidbody;
 
 	public float maxSpeed;
-	private float oldMaxSpeed;
+	public float oldMaxSpeed;
 	private GameManager gm;
 
 	void Start(){

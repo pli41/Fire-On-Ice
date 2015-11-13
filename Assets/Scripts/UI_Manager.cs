@@ -13,13 +13,19 @@ public class UI_Manager : MonoBehaviour {
 
 	public List<GameObject> abilityUIs = new List<GameObject>();
 
-	public GameObject WinUI;
+	public GameObject winUI;
+	public Text survivorText;
+	public Text damageText;
+	public Text treasureText;
 
 	public GameObject readyText;
 	public GameObject goText;
 	public float readyTextDuration;
 	public float goTextDuration;
 
+	private bool inWinUI;
+	private string[] colorsForPlayerNum = {"<color=red>RED</color>", "<color=blue>BLUE</color>"
+		, "<color=green>GREEN/colors", "<color=yellow>YELLOW</color>"};
 	private GameObject[] cooldownUIs;
 	
 	// Use this for initialization
@@ -28,6 +34,23 @@ public class UI_Manager : MonoBehaviour {
 		cooldownUIs = GameObject.FindGameObjectsWithTag ("Cooldown");
 		SetupAbilityPanels ();
 		SetupAbilityIcons ();
+	}
+
+	public void Update(){
+		if(inWinUI){
+			if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 1) ||
+			   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 2) ||
+			   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 3) ||
+			   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 4)){
+				Application.LoadLevel("Level3");
+			}
+			else if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 1) ||
+			        ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 2) ||
+			        ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 3) ||
+			        ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 4)){
+				Application.LoadLevel("Main_Menu");
+			}
+		}
 	}
 
 	public void ReadyTextEnable(){
@@ -104,22 +127,28 @@ public class UI_Manager : MonoBehaviour {
 		}
 	}
 
-	public void ShowWinScreen(int winPlayerNum, int mostDamagePlayerNum){
-		Text resultText = WinUI.transform.Find ("GameResult").GetComponent<Text> ();
+	public void ShowWinScreen(int winPlayerNum, int mostDamagePlayerNum, int chestHunterNum){
+		survivorText.text = "Survivor: " + colorsForPlayerNum[winPlayerNum-1] + " Player!";
 
-		resultText.text = "Player " + winPlayerNum + " Wins!\n\n";
 		if(mostDamagePlayerNum == 0){
-			resultText.text += "WTH! You all did 0 damage!";
+			damageText.text = "WTH! You all did 0 damage!";
 		}
 		else{
-			resultText.text += "Player "+  mostDamagePlayerNum + " Dealt the most damage!";
+			damageText.text = "Damage Dealer: "+  colorsForPlayerNum[mostDamagePlayerNum-1] + " Player!";
 		}
-		WinUI.SetActive (true);
 
+		if(chestHunterNum == 0){
+			treasureText.text = "Well, what a bunch of fighting nerds!";
+		}
+		else{
+			treasureText.text = "Treasure Hunter: " + colorsForPlayerNum[chestHunterNum-1] + " Player!";
+		}
+		inWinUI = true;
+		winUI.SetActive (true);
 	}
 
 	public void Rematch(){
-		Application.LoadLevel ("SelectionScreen");
+		Application.LoadLevel ("Level3");
 	}
 
 	public void BackToMainMenu(){

@@ -7,7 +7,7 @@ public class PlayerItem : MonoBehaviour {
 
 	public GameObject chestAround;
 	public GameObject healingEffect;
-
+	public int chestOpenedNum;
 	private GameManager gm;
 
 	// Use this for initialization
@@ -22,7 +22,9 @@ public class PlayerItem : MonoBehaviour {
 			if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, joystickNum)){
 				if(chestAround){
 					//Debug.Log("Open chest");
+					chestOpenedNum++;
 					chestAround.GetComponent<Chest>().Open();
+					chestAround = null;
 				}
 				
 			}

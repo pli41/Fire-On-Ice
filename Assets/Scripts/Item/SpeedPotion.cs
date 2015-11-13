@@ -9,11 +9,14 @@ public class SpeedPotion : Item {
 
 		this.thisPlayer = player;
 		oldSpeed = player.GetComponent<PlayerMovement> ().maxSpeed;
+		thisPlayer.GetComponent<PlayerMovement> ().oldMaxSpeed = increasement;
 		thisPlayer.GetComponent<PlayerMovement> ().maxSpeed = increasement;
 		base.takeEffect (player);
 	}
+
 	public override void deleteEffect(){
-		thisPlayer.transform.GetComponent<PlayerMovement> ().maxSpeed = oldSpeed;
+		thisPlayer.transform.GetComponent<PlayerMovement> ().oldMaxSpeed = oldSpeed;
+		thisPlayer.GetComponent<PlayerMovement> ().maxSpeed = oldSpeed;
 		base.deleteEffect ();
 
 	}

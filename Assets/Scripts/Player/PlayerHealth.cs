@@ -116,7 +116,14 @@ public class PlayerHealth : MonoBehaviour
 		
 		
 		if (gm.GameInProgress) {
-			float finalDamage = amount * damageReduction;
+			float finalDamage;
+			if(amount > 0){
+				finalDamage = amount * damageReduction;
+			}
+			else{
+				finalDamage = amount;
+			}
+
 			
 			currentHealth -= finalDamage;
 			
@@ -127,9 +134,16 @@ public class PlayerHealth : MonoBehaviour
 				gm.playerList[sourcePlayerNum-1].GetComponent<PlayerAttack>().damageDealt += finalDamage;
 			}
 			
-			if (finalDamage > 0)
+			if (Mathf.Abs(finalDamage) > 0)
 			{
-				mesh.text = "-" + (int)(finalDamage+1);
+				if(finalDamage > 0){
+					mesh.text = "-" + (int)(finalDamage+1);
+					mesh.color = Color.red;
+				}
+				else{
+					mesh.text = "+" + (int)(-finalDamage);
+					mesh.color = Color.green;
+				}
 				GameObject textLabel =	(GameObject)Instantiate(mesh.gameObject);
 				textLabel.transform.parent = transform;
 				textLabel.transform.localPosition.Set(0, 2, 0);
