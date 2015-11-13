@@ -19,12 +19,14 @@ public class PlayerAttack : MonoBehaviour
 	private bool casting2;
 	private bool casting3;
 
+	private Animation anim;
 	private GameManager gm;
 
 	public float damageDealt;
 
 	void Start ()
 	{
+		anim = GetComponent<Animation> ();
 		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		enchantEffect = transform.Find ("enchantEffect").gameObject;
 		SetupAbilities ();
@@ -56,12 +58,7 @@ public class PlayerAttack : MonoBehaviour
 	{
 		if(gm.GameInProgress){
 			//Handle enchant Effect
-			if(enchanting){
-				enchantEffect.SetActive(true);
-			}
-			else{
-				enchantEffect.SetActive(false);
-			}
+
 			
 			//This part can be structrually changed too. Will do it after having a lot of abilities.
 			if(ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.RightTrigger, joystickNum) > 0)
@@ -70,7 +67,6 @@ public class PlayerAttack : MonoBehaviour
 				if(abilities[0].abilityReady){
 					casting1 = true;
 					abilities[0].Cast();
-					
 					if(abilities[0].triggerOnce){
 						casting1 = false;
 						StartCoroutine(EndAbility(0, 0.2f));
@@ -92,7 +88,6 @@ public class PlayerAttack : MonoBehaviour
 				if(abilities[1].abilityReady){
 					casting2 = true;
 					abilities[1].Cast();
-					
 					if(abilities[1].triggerOnce){
 						casting2 = false;
 						StartCoroutine(EndAbility(1, 0.2f));
@@ -126,6 +121,13 @@ public class PlayerAttack : MonoBehaviour
 				if(!abilities[2].handledEndCast){
 					abilities[2].EndCast();
 				}
+			}
+
+			if(enchanting){
+				enchantEffect.SetActive(true);
+			}
+			else{
+				enchantEffect.SetActive(false);
 			}
 		}
 

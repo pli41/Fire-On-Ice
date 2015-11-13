@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 447906}
   - 198: {fileID: 19809818}
   - 199: {fileID: 19960476}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 412684}
   - 198: {fileID: 19888540}
   - 199: {fileID: 19985084}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sparkles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - 199: {fileID: 19972180}
   - 114: {fileID: 11416932}
   - 82: {fileID: 8291928}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Flame_Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3246,6 +3246,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: InitialModule.startSpeed.scalar
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

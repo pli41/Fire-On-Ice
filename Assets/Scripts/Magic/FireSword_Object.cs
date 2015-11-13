@@ -82,4 +82,6 @@ public class FireSword_Object : MonoBehaviour {
 	void ResetSlash(){
 		slashed = false;
 	}
+
+
 }

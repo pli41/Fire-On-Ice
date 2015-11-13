@@ -90,8 +90,6 @@
      <Compile Include="Assets\Scripts\Magic\Cyclone_Object.cs" />
      <Compile Include="Assets\Scripts\Magic\FireBomb.cs" />
      <Compile Include="Assets\Scripts\Magic\FireBomb_Object.cs" />
-     <Compile Include="Assets\Scripts\Magic\FireMeteor.cs" />
-     <Compile Include="Assets\Scripts\Magic\FireMeteor_Object.cs" />
      <Compile Include="Assets\Scripts\Magic\FireSheild.cs" />
      <Compile Include="Assets\Scripts\Magic\FireShield_Object.cs" />
      <Compile Include="Assets\Scripts\Magic\FireSword.cs" />

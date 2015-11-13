@@ -53,7 +53,7 @@ MonoBehaviour:
   abilityReady: 1
   cdTimer: 0
   castTime: 2
-  duration: 5
+  duration: 8
   state: 0
   forceMagnitude: 15
   damage: 12
@@ -98,6 +98,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: abilityReady
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: duration
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

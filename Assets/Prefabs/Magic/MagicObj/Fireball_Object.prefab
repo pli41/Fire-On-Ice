@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 481020}
   - 198: {fileID: 19837474}
   - 199: {fileID: 19988436}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CFX3 Sparkles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 198: {fileID: 19859662}
   - 199: {fileID: 19997032}
   - 114: {fileID: 11455126}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CFX3 Sparkles Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - 4: {fileID: 411806}
   - 198: {fileID: 19817870}
   - 199: {fileID: 19912942}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CFX3 Sparkles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   - 82: {fileID: 8262472}
   - 114: {fileID: 11417414}
   - 135: {fileID: 13532720}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fireball_Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - 4: {fileID: 484180}
   - 198: {fileID: 19856672}
   - 199: {fileID: 19912144}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - 4: {fileID: 414170}
   - 198: {fileID: 19854172}
   - 199: {fileID: 19979818}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - 198: {fileID: 19879922}
   - 199: {fileID: 19900090}
   - 114: {fileID: 11409956}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CFX3 Fire Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - 4: {fileID: 410898}
   - 198: {fileID: 19822280}
   - 199: {fileID: 19978556}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CFX3 Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,8 +187,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131456}
-  m_LocalRotation: {x: -1.1233612e-05, y: .9514485, z: -3.63425306e-06, w: .307808161}
-  m_LocalPosition: {x: -4.02506399, y: 2.78515911, z: -9.01753235}
+  m_LocalRotation: {x: 0, y: .939856052, z: 0, w: .341570914}
+  m_LocalPosition: {x: -10.5969982, y: 3.38500118, z: 11.2924871}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 411806}
@@ -365,7 +365,7 @@ MonoBehaviour:
   explosionFactor: 1
   damage: 0
   speed: 25
-  size: 3.0045507
+  size: .0672219992
   force: 300
   forceR: 50
   explosion: {fileID: 8300000, guid: f05a59777830d4122aa49bef18094c01, type: 3}
@@ -8576,6 +8576,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: explosionFactor
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

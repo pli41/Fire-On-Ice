@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 458380}
   - 198: {fileID: 19825498}
   - 199: {fileID: 19950366}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CFX3 Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 481508}
   - 198: {fileID: 19811402}
   - 199: {fileID: 19997366}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ray1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - 114: {fileID: 11413604}
   - 135: {fileID: 13526442}
   - 54: {fileID: 5403666}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FireBomb_Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   - 4: {fileID: 409110}
   - 198: {fileID: 19875034}
   - 199: {fileID: 19982664}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sparkles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   - 4: {fileID: 403446}
   - 198: {fileID: 19865634}
   - 199: {fileID: 19909214}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CFX3 Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - 199: {fileID: 19985302}
   - 82: {fileID: 8262928}
   - 114: {fileID: 11449796}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Boom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - 4: {fileID: 453366}
   - 198: {fileID: 19874634}
   - 199: {fileID: 19948506}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ray2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - 4: {fileID: 464902}
   - 198: {fileID: 19879650}
   - 199: {fileID: 19922252}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - 4: {fileID: 427274}
   - 198: {fileID: 19813868}
   - 199: {fileID: 19988924}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Explode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,8 +206,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138210}
-  m_LocalRotation: {x: -.000464956451, y: -.454693228, z: .000910724397, w: .890647531}
-  m_LocalPosition: {x: -11.8695364, y: 2.6999321, z: -16.306675}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: -5.18108654, y: 3.38500047, z: 8.23771381}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 403446}
@@ -4667,7 +4667,7 @@ ParticleSystem:
         rgba: 2151459583
       maxColor:
         serializedVersion: 2
-        rgba: 1006669311
+        rgba: 4278213375
       minMaxState: 0
     startSize:
       scalar: 5
@@ -9883,7 +9883,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startColor.maxColor.rgba
+      value: 4278213375
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 138210}

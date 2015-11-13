@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 410004}
   - 198: {fileID: 19878530}
   - 199: {fileID: 19995466}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Flagments
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 440524}
   - 198: {fileID: 19897980}
   - 199: {fileID: 19932658}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sparkles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 437026}
   - 198: {fileID: 19857020}
   - 199: {fileID: 19962104}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - 4: {fileID: 459902}
   - 198: {fileID: 19800294}
   - 199: {fileID: 19977706}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - 4: {fileID: 493064}
   - 198: {fileID: 19813746}
   - 199: {fileID: 19930040}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sparkles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - 4: {fileID: 472924}
   - 198: {fileID: 19851448}
   - 199: {fileID: 19914190}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - 4: {fileID: 423590}
   - 198: {fileID: 19864270}
   - 199: {fileID: 19970712}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - 4: {fileID: 483986}
   - 198: {fileID: 19869866}
   - 199: {fileID: 19996598}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - 199: {fileID: 19921636}
   - 82: {fileID: 8213232}
   - 114: {fileID: 11402368}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - 4: {fileID: 416430}
   - 198: {fileID: 19802264}
   - 199: {fileID: 19989568}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   - 135: {fileID: 13570050}
   - 65: {fileID: 6520920}
   - 82: {fileID: 8225438}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RollingRock_Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   - 4: {fileID: 426054}
   - 198: {fileID: 19863310}
   - 199: {fileID: 19976030}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11951,6 +11951,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ff1c12e3281b947fda9b6360d9b0e1b7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167916}

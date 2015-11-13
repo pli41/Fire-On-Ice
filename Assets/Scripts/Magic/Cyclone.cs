@@ -10,8 +10,10 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 	private float delayTimer;
 	public bool delayBool = true;
 	private bool delaying;
-	
+	private Animation anim;
+
 	void Start (){
+		anim = owner.GetComponent<Animation> ();
 		handledEndCast = true;;
 		abilityReady = true;
 		SetupCooldown ();
@@ -59,13 +61,16 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 		//Debug.Log ("Endcast");
 		if(abilityReady){
 			CancelInvoke();
-			Shoot ();
-			CastDelayEnd();
+			owner.GetComponent<PlayerAttack>().enchanting = false;
+			anim.Play ("AttackCritical");
+			anim.CrossFadeQueued ("Idle", 0.25f);
+			Invoke("Shoot", anim.GetClip("AttackCritical").length/2f);
 		}
 	}
 	
 	public void Shoot(){
 		SetupObj ();
+		Invoke("CastDelayEnd", anim.GetClip("AttackCritical").length/2f);
 	}
 	
 	public override void SetupObj(){
@@ -82,20 +87,21 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 		if(delayBool){
 			if(!delaying){
 				//Debug.Log("Endcast will be called");
+				anim.CrossFade ("Cast", 0.1f);
+				anim.CrossFadeQueued ("Attack1", 0.1f);
 				owner.GetComponent<PlayerAttack>().enchanting = true;
 				Invoke("EndCast", castTime);
 				delaying = true;
 			}
 			else{
-				owner.GetComponent<PlayerMovement>().canTurn = false;
+				owner.GetComponent<PlayerMovement>().canMove = false;
 			}
 		}
 	}
 	
 	public void CastDelayEnd(){
 		ResetCooldown();
-		owner.GetComponent<PlayerAttack>().enchanting = false;
-		owner.GetComponent<PlayerMovement>().canTurn = true;
+		owner.GetComponent<PlayerMovement>().canMove = true;
 		delaying = false;
 	}
 }

@@ -47,7 +47,7 @@ public class Fireball_Object : MonoBehaviour {
 		rigid.velocity = transform.forward * speed;
 		Physics.IgnoreCollision (ability.owner.GetComponent<Collider> (), GetComponent<Collider> ());
 		disabled = false;
-		Destroy (gameObject, 5f);
+
 	}
 
 	void Explode(){
@@ -100,6 +100,7 @@ public class Fireball_Object : MonoBehaviour {
 //		}
 		Explode ();
 		PlayExplosion ();
+		Destroy (gameObject, 2f);
 	}
 
 	void PlayExplosion(){

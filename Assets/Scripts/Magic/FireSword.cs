@@ -14,7 +14,7 @@ public class FireSword : Ability, Cooldown, CastDelay {
 	public float castTime;
 	public float duration;
 	public STATE state;
-
+	private Animation anim;
 
 	private FireSword_Object firesword_Object;
 
@@ -30,6 +30,7 @@ public class FireSword : Ability, Cooldown, CastDelay {
 
 
 	void Start () {
+		anim = owner.GetComponent<Animation> ();
 		SetupAbility ();
 		state = STATE.NotSummoned;
 		handledEndCast = true;
@@ -66,6 +67,9 @@ public class FireSword : Ability, Cooldown, CastDelay {
 				CastDelayStart();
 			}
 			else if (state == STATE.Summoned){
+				DisableMove();
+				anim.CrossFade ("Attack2", 0.1f);
+				Invoke("EnableMove", anim.GetClip("Attack2").length);
 				ability_object.GetComponent<FireSword_Object>().Slash();
 			}
 		}
@@ -110,6 +114,8 @@ public class FireSword : Ability, Cooldown, CastDelay {
 			}
 			else{
 				state = STATE.Summoning;
+				anim.CrossFade ("Cast", 0.1f);
+				anim.CrossFadeQueued ("Idle", 0.25f);
 			}
 		}
 	}
@@ -129,4 +135,13 @@ public class FireSword : Ability, Cooldown, CastDelay {
 		ResetCooldown ();
 		state = STATE.NotSummoned;
 	}
+
+	public void DisableMove(){
+		owner.GetComponent<PlayerMovement> ().canMove = false;
+	}
+	
+	public void EnableMove(){
+		owner.GetComponent<PlayerMovement> ().canMove = true;
+	}
+
 }

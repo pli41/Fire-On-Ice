@@ -19,24 +19,40 @@ public class PlayerMovement : MonoBehaviour
 	private float dodgeInTimer;
 	private float dodgeTimer;
 	private Vector3 movement;
-	private Animator anim;
+	private Animation anim;
 	private Rigidbody playerRigidbody;
-	public float maxSpeed;
 
+	public float maxSpeed;
+	private float oldMaxSpeed;
 	private GameManager gm;
 
 	void Start(){
+		oldMaxSpeed = maxSpeed;
 		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		joystickNum = GetComponent<PlayerAttack>().joystickNum;
-		anim = GetComponent<Animator> ();
+		anim = GetComponent<Animation> ();
 		playerRigidbody = GetComponent<Rigidbody> ();
 		canMove = true;
 		canTurn = true;
+		SetupAnimations ();
+	}
+
+	void SetupAnimations(){
+		foreach(AnimationState animState in anim){
+			if(animState.clip.name == "Attack1"){
+				//animState.speed = 3f;
+			}
+			if(animState.clip.name == "Attack2"){
+				//animState.speed = 3f;
+			}
+		}
 	}
 
 	void FixedUpdate(){
 
 		if(gm.GameInProgress){
+
+
 			dodgeTimer += Time.deltaTime;
 			
 			float h = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickX, joystickNum, false);
@@ -46,13 +62,15 @@ public class PlayerMovement : MonoBehaviour
 			if(!disabled){
 				if(canMove || canTurn){
 					if(canMove){
+						maxSpeed = oldMaxSpeed;
 						Move (h, v);
-						
+					}
+					else{
+						maxSpeed = 0f;
 					}
 					if(canTurn){
 						Turning ();
 					}
-					
 				}
 			}
 			Animating (h, v);
@@ -65,11 +83,6 @@ public class PlayerMovement : MonoBehaviour
 	}
 	
 	void Move(float h, float v){
-		//movement.Set (h, 0f, v);
-		//movement = movement.normalized * speed * Time.deltaTime;
-		//playerRigidbody.MovePosition (transform.position + movement);
-
-		
 		movement.Set (h, 0f, v);
 		float acc = Mathf.Sqrt (h * h + v * v);
 
@@ -83,34 +96,39 @@ public class PlayerMovement : MonoBehaviour
 		}
 
 		movement = movement.normalized * speed * acc * accFactor;
-		//playerRigidbody.MovePosition (transform.position + movement);
-		//Debug.Log ("Magnitude = " + playerRigidbody.velocity.magnitude);
 		
 		if(h != 0 || v != 0){
-			//Debug.Log("Input received");
 			if(playerRigidbody.velocity.magnitude < maxSpeed){
-				//Debug.Log("Accelerating");
 				playerRigidbody.velocity += movement;
-				//+ new Vector3(0, playerRigidbody.velocity.y, 0);
-				//Debug.Log(playerRigidbody.velocity);
 			}
 			else{
 				playerRigidbody.velocity = playerRigidbody.velocity.normalized * maxSpeed;
-
-			}
-			
+			}	
 		}
+
+		//Handle turning while moving, Turning method has a higher priority
+		if(canTurn){
+			if(Mathf.Abs(h) > 0.01f || Mathf.Abs(v) > 0.01f){
+				Debug.Log ("Turning by left analog");
+				Vector3 direction = new Vector3 (h, 0f, v);
+				Quaternion newRotation = Quaternion.LookRotation(direction, transform.up);
+				transform.rotation = newRotation; 
+					//Quaternion.Lerp (transform.rotation, newRotation, Time.deltaTime * 100f);
+			}
+		}
+
 	}
 	
 	void Turning(){
 		float hori = ControllerInputWrapper.GetAxisRaw(ControllerInputWrapper.Axis.RightStickX, joystickNum, false);
 		float vert = ControllerInputWrapper.GetAxisRaw(ControllerInputWrapper.Axis.RightStickY, joystickNum, false);
 		
-		if(hori != 0 || vert != 0){
+		if(Mathf.Abs(hori) > 0.01f || Mathf.Abs(vert) > 0.01f){
+			Debug.Log ("Turning by right analog");
 			Vector3 direction = new Vector3 (hori, 0f, vert);
-			Debug.Log(direction);
 			Quaternion newRotation = Quaternion.LookRotation(direction, transform.up);
-			transform.rotation = Quaternion.Lerp (transform.rotation, newRotation, Time.deltaTime * 100);
+			transform.rotation = newRotation;
+				//Quaternion.Lerp (transform.rotation, newRotation, Time.deltaTime * 100f);
 
 
 			//Debug.Log ("hori = " + hori);
@@ -133,8 +151,21 @@ public class PlayerMovement : MonoBehaviour
 	}
 	
 	void Animating(float h, float v){
-		bool walking = (h != 0f || v != 0f) && canMove;
-		anim.SetBool ("IsWalking", walking);
+		bool moving = (h != 0f || v != 0f) && canMove && speed > 0.01f;
+		if(moving){
+			if(speed <= 3f){
+				anim.CrossFade("Walk");
+				Debug.Log("Walk");
+			}
+			else{
+				anim.CrossFade("Run", 0.1f);
+				Debug.Log("Run");
+			}
+		}
+		else{
+			Debug.Log(anim.clip.name);
+			anim.CrossFadeQueued("Idle", 0.1f);
+		}
 	}
 	
 	

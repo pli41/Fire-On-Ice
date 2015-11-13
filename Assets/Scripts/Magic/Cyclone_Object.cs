@@ -72,6 +72,9 @@ public class Cyclone_Object : MonoBehaviour {
 				col.GetComponent<PlayerHealth>().TakeDamage(damage * (affectRadius - horizontalDistance), false, 
 				                                            ability.owner.GetComponent<PlayerAttack>().playerNum);
 			}
+			else if(col.tag == "Boundary"){
+				Destroy(gameObject);
+			}
 		}
 	}
 

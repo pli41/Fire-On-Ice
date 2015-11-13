@@ -6,6 +6,7 @@ public class Blink : Ability, MovementEffect, Cooldown {
 	public float flashDistance;
 
 	private GameObject playerModel;
+	private GameObject playerStaff;
 	private Vector3 targetPos_final;
 	public float characterSize;
 	private int ignoreLayer;
@@ -16,7 +17,8 @@ public class Blink : Ability, MovementEffect, Cooldown {
 	void Start () {
 		audio = GetComponent<AudioSource> ();
 		handledEndCast = true;
-		playerModel = owner.transform.Find ("PlayerModel").gameObject;
+		playerModel = owner.transform.Find ("Magician_Body").gameObject;
+		playerStaff = owner.transform.Find ("Magician_Staff").gameObject;
 		ignoreLayer = LayerMask.NameToLayer ("Obstacles");
 		characterSize = 0.5f;
 		SetupCooldown ();
@@ -72,6 +74,7 @@ public class Blink : Ability, MovementEffect, Cooldown {
 				owner.transform.position = targetPos_final;
 				owner.GetComponent<Rigidbody>().useGravity = false;
 				playerModel.SetActive(false);
+				playerStaff.SetActive(false);
 				owner.GetComponent<Collider>().enabled = false;
 				Invoke("EndCast", 0.1f);
 
@@ -96,6 +99,7 @@ public class Blink : Ability, MovementEffect, Cooldown {
 	public override void EndCast(){
 		Debug.Log ("End-casting blink");
 		playerModel.SetActive(true);
+		playerStaff.SetActive(true);
 		createdBlinkObj = false;
 		foundFinalPos = false;
 		owner.GetComponent<Collider>().enabled = true;

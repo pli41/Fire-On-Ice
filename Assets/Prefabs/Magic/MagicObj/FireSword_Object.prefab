@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 463270}
   - 33: {fileID: 3364772}
   - 23: {fileID: 2321694}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Lp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   - 114: {fileID: 11411970}
   - 65: {fileID: 6563934}
   - 82: {fileID: 8278362}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FireSword_Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,6 +243,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Volume
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

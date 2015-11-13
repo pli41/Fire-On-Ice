@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FireBomb : Ability, Cooldown, Shootable {
+public class FireBomb : Ability, Cooldown, Shootable, CasterEffect {
 	
 	public float bombSpeed;
 
 	private FireBomb_Object fireBomb_object;
+	private Animation anim;
+
 
 	// Use this for initialization
 	void Start () {
+		anim = owner.GetComponent<Animation> ();
 		abilityReady = false;
 		SetupCooldown ();
 	}
@@ -42,7 +45,10 @@ public class FireBomb : Ability, Cooldown, Shootable {
 	public override void Cast(){
 		//Debug.Log ("Casting");
 		if(abilityReady){
-			Shoot();
+			CauseEffect();
+			anim.Play ("Attack2");
+			anim.CrossFadeQueued ("Idle", 0.25f);
+			Invoke("Shoot", anim.GetClip("Attack2").length/2f);
 			ResetCooldown();
 		}
 		else{
@@ -56,6 +62,7 @@ public class FireBomb : Ability, Cooldown, Shootable {
 	
 	public void Shoot(){
 		Debug.Log ("Shoot");
+		Invoke("EndEffect", anim.GetClip("Attack2").length/2f);
 		SetupObj ();
 		Instantiate (ability_object);
 	}
@@ -68,5 +75,11 @@ public class FireBomb : Ability, Cooldown, Shootable {
 		ability_object.transform.rotation = owner.transform.rotation;
 	}
 
-
+	public void CauseEffect(){
+		owner.GetComponent<PlayerMovement> ().canMove = false;
+	}
+	
+	public void EndEffect(){
+		owner.GetComponent<PlayerMovement> ().canMove = true;
+	}
 }

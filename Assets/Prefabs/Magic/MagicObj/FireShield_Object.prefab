@@ -11,7 +11,7 @@ GameObject:
   - 198: {fileID: 19865182}
   - 199: {fileID: 19905764}
   - 114: {fileID: 11420420}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FireShield_Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 4: {fileID: 407772}
   - 198: {fileID: 19887086}
   - 199: {fileID: 19916580}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CFX3 Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - 4: {fileID: 452228}
   - 198: {fileID: 19842854}
   - 199: {fileID: 19911586}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CFX3 Rays
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1261,7 +1261,7 @@ ParticleSystem:
         rgba: 2856027135
       minMaxState: 0
     startSize:
-      scalar: 8
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3209,7 +3209,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startSize.scalar
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 141888}

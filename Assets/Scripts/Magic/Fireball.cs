@@ -7,7 +7,6 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	public GameObject onFireEffect;
 	public float maxChargeT;
 	public float onFireTime_max;
-	public float chargedSpeed;
 
 	private Fireball_Object fireball_object;
 
@@ -16,8 +15,11 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	private float chargedTime;
 	private float chargeTimer;
 	private float onFireTimer;
+	private Animation anim;
+
 
 	void Start (){
+		anim = owner.GetComponent<Animation> ();
 		oldSpeed = owner.GetComponent<PlayerMovement> ().speed;
 		//enchantEffect = owner.transform.Find ("enchantEffect").gameObject;
 		onFireEffect = owner.transform.Find ("onFireEffect").gameObject;
@@ -67,14 +69,17 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 		//Debug.Log ("Endcast");
 		if(abilityReady){
 			chargedTime = EndCharge ();
-			Shoot ();
+			anim.Play ("Attack1");
+			anim.CrossFadeQueued ("Idle", 0.25f);
+			Invoke("Shoot", anim.GetClip("Attack1").length/2f);
 			ResetCooldown();
 		}
 	}
 
 	public void Shoot(){
-		Debug.Log ("Shoot");
+
 		SetupObj ();
+		Invoke ("EndEffect", anim.GetClip("Attack1").length/2f);
 		Instantiate (ability_object);
 	}
 
@@ -89,6 +94,8 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 
 	//Abilities with charging need to set triggerOnce to be false
 	public void Charge(){
+		anim.CrossFade ("Cast", 0.1f);
+		anim.CrossFadeQueued ("Attack1", 0.1f);
 		triggerOnce = false;
 		owner.GetComponent<PlayerAttack>().enchanting = true;
 		CauseEffect ();
@@ -98,21 +105,18 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	}
 
 	public float EndCharge(){
+		owner.GetComponent<PlayerAttack>().enchanting = false;
 		float result = chargeTimer;
 		chargeTimer = 0f;
-		EndEffect ();
-		owner.GetComponent<PlayerAttack>().enchanting = false;
 		return result;
 	}
 
 	public void CauseEffect(){
-		//Debug.Log ("Onfire");
-		owner.GetComponent<PlayerMovement> ().speed = chargedSpeed;
+		owner.GetComponent<PlayerMovement> ().canMove = false;
 	}
 
 	public void EndEffect(){
-		Debug.Log ("Ceasefire");
-		owner.GetComponent<PlayerMovement> ().speed = oldSpeed;
+		owner.GetComponent<PlayerMovement> ().canMove = true;
 	}
 
 }
