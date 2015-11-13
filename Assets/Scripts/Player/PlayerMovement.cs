@@ -66,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
 						Move (h, v);
 					}
 					else{
+						speed = 0f;
 						maxSpeed = 0f;
 					}
 					if(canTurn){
@@ -153,17 +154,17 @@ public class PlayerMovement : MonoBehaviour
 	void Animating(float h, float v){
 		bool moving = (h != 0f || v != 0f) && canMove && speed > 0.01f;
 		if(moving){
-			if(speed <= 3f){
+			if(speed <= 3f && speed > 0){
 				anim.CrossFade("Walk");
-				Debug.Log("Walk");
+				//Debug.Log("Walk");
 			}
 			else{
 				anim.CrossFade("Run", 0.1f);
-				Debug.Log("Run");
+				//Debug.Log("Run");
 			}
 		}
 		else{
-			Debug.Log(anim.clip.name);
+			//Debug.Log(anim.clip.name);
 			anim.CrossFadeQueued("Idle", 0.1f);
 		}
 	}

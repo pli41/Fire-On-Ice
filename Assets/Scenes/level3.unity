@@ -6418,7 +6418,7 @@ Transform:
   - {fileID: 582304771}
   - {fileID: 2134082989}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!1 &233695400
 GameObject:
   m_ObjectHideFlags: 0
@@ -9493,8 +9493,8 @@ MonoBehaviour:
   playerNum: 0
   magicPoint: {fileID: 1855220561}
   abilities:
-  - {fileID: 11461332, guid: 8299e958997364a1fb4205d252e9d885, type: 2}
-  - {fileID: 11466114, guid: 30881a1d28067014ea308b21e75947e4, type: 2}
+  - {fileID: 11435908, guid: 80dc8a6e49a9d4a59bc73e4c82878916, type: 2}
+  - {fileID: 11413252, guid: fd26754aee4f4408aa0eedcc40417e97, type: 2}
   - {fileID: 11444994, guid: bb41434c6141647d0823fda8eca500b1, type: 2}
   enchanting: 0
   enchantEffect: {fileID: 1860292961}

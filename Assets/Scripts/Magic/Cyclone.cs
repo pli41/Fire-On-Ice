@@ -87,13 +87,14 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 		if(delayBool){
 			if(!delaying){
 				//Debug.Log("Endcast will be called");
-				anim.CrossFade ("Cast", 0.1f);
-				anim.CrossFadeQueued ("Attack1", 0.1f);
+
+				//anim.CrossFadeQueued ("Attack1", 0.1f);
 				owner.GetComponent<PlayerAttack>().enchanting = true;
 				Invoke("EndCast", castTime);
 				delaying = true;
 			}
 			else{
+				anim.CrossFade ("Cast", 0.1f);
 				owner.GetComponent<PlayerMovement>().canMove = false;
 			}
 		}

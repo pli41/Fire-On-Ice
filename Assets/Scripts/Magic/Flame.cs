@@ -6,12 +6,12 @@ public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 
 	public GameObject onFireEffect;
 	private Flame_Object flame_object;
-
+	private Animation anim;
 
 	// Use this for initialization
 	void Start () {
+		anim = owner.GetComponent<Animation> ();
 		SetupAbility ();
-
 	}
 	
 	void Update (){
@@ -77,6 +77,8 @@ public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 		ability_object.transform.position = ability_point.position;
 		ability_object.transform.rotation = owner.transform.rotation;
 		ability_object.SetActive (true);
+		anim.CrossFade ("Cast", 0.1f);
+		anim.CrossFadeQueued ("Idle", 0.25f);
 		//ability_object.GetComponent<ParticleSystem> ().Play();
 		CauseEffect ();
 	}
@@ -84,6 +86,7 @@ public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 	public float EndCharge(){
 		//ability_object.GetComponent<ParticleSystem> ().Clear ();
 		ability_object.SetActive (false);
+		anim.CrossFade ("Idle", 0.25f);
 		EndEffect ();
 		return 0f;
 	}
