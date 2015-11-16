@@ -15,7 +15,7 @@ public class Ability : MonoBehaviour {
 	public int timeUntilReset;
 
 	public Sprite icon;
-	public string name;
+	//public string name;
 	public string description;
 	
 	//For changable cooldowns like fireballs, will be used in cooldown counter

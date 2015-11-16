@@ -12,7 +12,7 @@ public class BossHealth : MonoBehaviour {
 
 	public Slider healthSlider;
 
-	Collider col;
+	//Collider col;
 	Renderer rend;
 	bool damaged;
 	bool isDead;
@@ -53,7 +53,7 @@ public class BossHealth : MonoBehaviour {
 
 	void Death(){
 		Debug.Log ("Boss died");
-		col.enabled = false;
+		//col.enabled = false;
 		isDead = true;
 		gameObject.SetActive (false);
 	}

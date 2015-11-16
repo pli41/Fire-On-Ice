@@ -6,6 +6,8 @@ public class SelectionScreenManager : MonoBehaviour {
 	public float timeDelay = .7f;
 	public Text readyTimer;
 	public Ability[] allAbilities;
+
+    public Animator[] tvScreenAnimations;
 	
 	public Transform[] enterPanel;
 	public Transform[] selectAbility;
@@ -22,6 +24,14 @@ public class SelectionScreenManager : MonoBehaviour {
 	public float timer;
     public Animator countDownAnim;
 
+    public AudioSource scrollAbilitySounds;
+    public AudioSource selectAbilitySounds;
+    public AudioSource TVonSounds; 
+
+	public AudioClip TwoMenClip;
+	public AudioClip ThreeMenClip;
+	public AudioClip FourMenClip;
+	public AudioClip ReadyToGoClip;
 
     int[] playerControllers = new int[4];
 	int[] currentAbilitySelected = new int[4];
@@ -31,9 +41,10 @@ public class SelectionScreenManager : MonoBehaviour {
 	float[] selectTimer = new float[4];
 	Ability[,] playerAbilities = new Ability[4, 3];
     
-	
-	
-	
+	AudioSource audioS;
+	bool ReadyToGoClipPlayed;
+
+
 	void Update()
 	{
 		
@@ -45,8 +56,18 @@ public class SelectionScreenManager : MonoBehaviour {
 		checkBlockedImage ();
 		updateCurrentAbilityName();
 		checkReadyStart();
+        updateTVScreen();
 		beginMatchCountDown();
 	}
+
+    void updateTVScreen()
+    {
+        for (int i = 0; i < numPlayers; i++)
+        {
+            tvScreenAnimations[i].SetBool("PlayerReady", ready[i]);
+        }
+        
+    }
 
 	void checkBlockedImage() {
 		for (int i = 0; i < numPlayers; i++) {
@@ -97,15 +118,25 @@ public class SelectionScreenManager : MonoBehaviour {
 			countDownAnim.SetBool("PlayerStart", true);
 		}
 		timer -= Time.deltaTime;
-		int t = (int)timer;
+		//int t = (int)timer;
 		//readyTimer.enabled = true;
 		//readyTimer.text = t.ToString();
 		if (timer < 0)
 		{
+			Debug.Log("Play Audio");
 			setGameSettings();
-			Application.LoadLevel("level3");
+			if(!ReadyToGoClipPlayed){
+				audioS.Stop();
+				audioS.clip = ReadyToGoClip;
+				audioS.Play();
+				ReadyToGoClipPlayed = true;
+			}
+			Invoke("StartGame", 3f);
 		}
-		
+	}
+
+	void StartGame(){
+		Application.LoadLevel("level3");
 	}
 	
 	void setGameSettings() {
@@ -216,6 +247,8 @@ public class SelectionScreenManager : MonoBehaviour {
 					return;
 				}
 				playerAbilities[i, 0] = allAbilities[currentAbilitySelected[i]];
+                selectAbilitySounds.Stop();
+                selectAbilitySounds.Play();
 				//xAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
 			}
 			else if (ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i]) > .01f)
@@ -223,14 +256,18 @@ public class SelectionScreenManager : MonoBehaviour {
 				if (checkAbilitySelected(i)) {
 					return;
 				}
-				playerAbilities[i, 1] = allAbilities[currentAbilitySelected[i]];
+                selectAbilitySounds.Stop();
+                selectAbilitySounds.Play();
+                playerAbilities[i, 1] = allAbilities[currentAbilitySelected[i]];
 				//aAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
 			}else if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.RightBumper, playerControllers[i], true))
 			{
 				if (checkAbilitySelected(i)) {
 					return;
 				}
-				playerAbilities[i, 2] = allAbilities[currentAbilitySelected[i]];
+                selectAbilitySounds.Stop();
+                selectAbilitySounds.Play();
+                playerAbilities[i, 2] = allAbilities[currentAbilitySelected[i]];
 				//bAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
 			}
 		}
@@ -256,6 +293,8 @@ public class SelectionScreenManager : MonoBehaviour {
 			if (direct < -0.05f && selectTimer[i] <= 0)
 			{
 				currentAbilitySelected[i] = (--currentAbilitySelected[i]) % allAbilities.Length;
+                scrollAbilitySounds.Stop();
+                scrollAbilitySounds.Play();
 				if (currentAbilitySelected[i] < 0)
 				{
 					currentAbilitySelected[i] += allAbilities.Length;
@@ -264,7 +303,9 @@ public class SelectionScreenManager : MonoBehaviour {
 			} else if (direct > 0.05f && selectTimer[i] <= 0)
 			{
 				currentAbilitySelected[i] = (++currentAbilitySelected[i]) % allAbilities.Length;
-				selectTimer[i] = timeDelay;
+                scrollAbilitySounds.Stop();
+                scrollAbilitySounds.Play();
+                selectTimer[i] = timeDelay;
 			}
 			else if (Mathf.Abs(direct) < .05f)
 			{
@@ -276,6 +317,7 @@ public class SelectionScreenManager : MonoBehaviour {
 	
 	void Start()
 	{
+		audioS = GetComponent<AudioSource>();
 		ControllerInputWrapper.setControlTypes();
 		ControllerInputWrapper.setPlatform();
 	}
@@ -286,12 +328,37 @@ public class SelectionScreenManager : MonoBehaviour {
 		{
 			if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, i + 1, true) && !accepted[i])
 			{
+
+
+                TVonSounds.Stop();
+                TVonSounds.Play();
+
+                tvScreenAnimations[numPlayers].GetComponent<Image>().enabled = true;
+                tvScreenAnimations[numPlayers].SetTrigger("PlayerStart");
 				playerControllers[numPlayers] = i + 1;
 				accepted[i] = true;
                 panels[numPlayers].enabled = false;
 				enterPanel[numPlayers].gameObject.SetActive(false);
 				selectAbility[numPlayers].gameObject.SetActive(true);
 				numPlayers++;
+				if(numPlayers == 2){
+					//Debug.Log("2 men audio");
+					audioS.Stop();
+					audioS.clip = TwoMenClip;
+					audioS.Play();
+				}
+				else if (numPlayers == 3){
+					//Debug.Log("3 men audio");
+					audioS.Stop();
+					audioS.clip = ThreeMenClip;
+					audioS.Play();
+				}
+				else if (numPlayers == 4){
+					//Debug.Log("4 men audio");
+					audioS.Stop();
+					audioS.clip = FourMenClip;
+					audioS.Play();
+				}
 			}
 		}
 	}

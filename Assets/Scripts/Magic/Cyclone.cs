@@ -20,7 +20,7 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 	}
 	
 	public override void SetupAbility(){
-		triggerOnce = true;
+		//triggerOnce = true;
 	}
 	
 	public void SetupCooldown(){

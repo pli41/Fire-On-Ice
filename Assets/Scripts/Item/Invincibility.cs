@@ -14,6 +14,5 @@ public class Invincibility : Item {
 	{
 		player.transform.GetComponent<PlayerHealth> ().damageReduction = 1f;
 		base.deleteEffect ();
-
 	}
 }

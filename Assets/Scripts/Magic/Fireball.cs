@@ -11,7 +11,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	private Fireball_Object fireball_object;
 
 
-	private float oldSpeed;
+	//private float oldSpeed;
 	private float chargedTime;
 	private float chargeTimer;
 	private float onFireTimer;
@@ -20,7 +20,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 
 	void Start (){
 		anim = owner.GetComponent<Animation> ();
-		oldSpeed = owner.GetComponent<PlayerMovement> ().speed;
+		//oldSpeed = owner.GetComponent<PlayerMovement> ().speed;
 		//enchantEffect = owner.transform.Find ("enchantEffect").gameObject;
 		onFireEffect = owner.transform.Find ("onFireEffect").gameObject;
 		abilityReady = false;

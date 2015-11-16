@@ -14,11 +14,11 @@ public class Rage : Ability, CastDelay {
 	private Camera main;
 	private bool delaying;
 	private bool delayBool = true;
-	private List<GameObject> obstacles;
+	//private List<GameObject> obstacles;
 	// Use this for initialization
 	void Start () {
 		newObsPoint = owner.transform.Find ("NewObsZone");
-		obstacles = new List<GameObject> ();
+		//obstacles = new List<GameObject> ();
 	}
 	
 	public void ResetCooldown(){

@@ -18,8 +18,13 @@ public class GameManager : MonoBehaviour {
 	public int winnerNum;
 	public CameraMove cameraMove;
 
+	public AudioClip startClip;
+	public AudioSource audioS;
+
 	// Use this for initialization
 	void Awake () {
+		audioS = GetComponents<AudioSource> () [1];
+
 		ControllerInputWrapper.setPlatform ();
 		ControllerInputWrapper.setControlTypes ();
 
@@ -62,6 +67,10 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void StartGame(){
+		Debug.Log ("Start audio");
+		audioS.Stop ();
+		audioS.clip = startClip;
+		audioS.Play ();
 		GameInProgress = true;
 	}
 

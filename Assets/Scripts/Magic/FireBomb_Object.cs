@@ -20,7 +20,7 @@ public class FireBomb_Object : MonoBehaviour {
 	private bool initialized;
 	private bool attached;
 	private bool pickedByPlayer;
-	private GameObject[] players;
+	//private GameObject[] players;
 	private GameObject[] tiles;
 	private Collider[] colliders;
 	Collider[] hitColliders;
@@ -30,7 +30,7 @@ public class FireBomb_Object : MonoBehaviour {
 	void Start () {
 		colliders = GetComponents<Collider> ();
 		//Debug.Break ();
-		players = GameObject.FindGameObjectsWithTag ("Player");
+		//players = GameObject.FindGameObjectsWithTag ("Player");
 		fire = GetComponent<ParticleSystem>();
 		explosionEffect = transform.Find ("Boom").gameObject;
 		explosionEffect.SetActive (false);

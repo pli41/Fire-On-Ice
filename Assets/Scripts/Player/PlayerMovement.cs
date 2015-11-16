@@ -74,6 +74,11 @@ public class PlayerMovement : MonoBehaviour
 					}
 				}
 			}
+			else{
+				maxSpeed = 0;
+				speed = 0;
+				playerRigidbody.velocity = Vector3.zero;
+			}
 			Animating (h, v);
 			//		if((dodgeTimer >= timeBetDodge && Input.GetAxisRaw("PS4_L2_" + playerString) > 0 && dodgeInit == true) || dodgeInit == false){
 			//			Debug.Log("dodge start");

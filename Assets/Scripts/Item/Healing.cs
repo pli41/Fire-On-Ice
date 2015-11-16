@@ -6,6 +6,5 @@ public class Healing : Item {
 	public override void takeEffect(GameObject player){
 		player.transform.GetComponent<PlayerHealth>().TakeDamage(-healingAmount,false, 0);
 		base.takeEffect (player);
-
 	}
 }

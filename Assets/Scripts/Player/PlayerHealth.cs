@@ -12,7 +12,8 @@ public class PlayerHealth : MonoBehaviour
 	public AudioClip deathClip;
 	public float flashSpeed = 5f;
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
-	
+	public GameObject deathlight;
+
 	//1 means zero reduction, 0.5 means half reduction, 0 means invincible
 	public float damageReduction;
 	
@@ -27,28 +28,33 @@ public class PlayerHealth : MonoBehaviour
 	private bool damageSFXReady;
 	
 	GameObject[] allgrounds;
-	Animator anim;
+	Animation anim;
 	AudioSource playerAudio;
 	PlayerMovement playerMovement;
+	PlayerAttack playerAttack;
 	//PlayerShooting playerShooting;
 	bool isDead;
 	bool damaged;
 	GameObject gameManager;
 	int joystickNum;
 	Rigidbody rigid;
-	
+	AudioSource announcerAudio;
+	public AudioClip[] damageClips;
+
 	private GameManager gm;
 	
 	void Awake ()
 	{
+		announcerAudio = GetComponents<AudioSource> () [1];
 		rigid = GetComponent<Rigidbody> ();
 		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		joystickNum = GetComponent<PlayerAttack> ().joystickNum;
 		damageReduction = 1;
 		allgrounds = GameObject.FindGameObjectsWithTag("Island");
-		anim = GetComponent <Animator> ();
+		anim = GetComponent <Animation> ();
 		playerAudio = GetComponent <AudioSource> ();
 		playerMovement = GetComponent <PlayerMovement> ();
+		playerAttack = GetComponent<PlayerAttack> ();
 		//playerShooting = GetComponentInChildren <PlayerShooting> ();
 		currentHealth = startingHealth;
 		SetupHealthUI ();
@@ -126,7 +132,11 @@ public class PlayerHealth : MonoBehaviour
 
 			
 			currentHealth -= finalDamage;
-			
+
+			if(finalDamage > 20){
+				PlayRandomAudio(damageClips, announcerAudio);
+			}
+
 			healthSlider.value = currentHealth;
 			
 			//handle damage record
@@ -134,9 +144,10 @@ public class PlayerHealth : MonoBehaviour
 				gm.playerList[sourcePlayerNum-1].GetComponent<PlayerAttack>().damageDealt += finalDamage;
 			}
 			
-			if (Mathf.Abs(finalDamage) > 0)
+			if (Mathf.Abs(finalDamage) > 0.02f)
 			{
 				if(finalDamage > 0){
+					anim.CrossFade("TakeDamage2", 0.1f);
 					mesh.text = "-" + (int)(finalDamage+1);
 					mesh.color = Color.red;
 				}
@@ -144,9 +155,12 @@ public class PlayerHealth : MonoBehaviour
 					mesh.text = "+" + (int)(-finalDamage);
 					mesh.color = Color.green;
 				}
-				GameObject textLabel =	(GameObject)Instantiate(mesh.gameObject);
-				textLabel.transform.parent = transform;
-				textLabel.transform.localPosition.Set(0, 2, 0);
+
+				if(mesh.text != "+0" || mesh.text != "-0"){
+					GameObject textLabel =	(GameObject)Instantiate(mesh.gameObject);
+					textLabel.transform.parent = transform;
+					textLabel.transform.localPosition.Set(0, 2, 0);
+				}
 			}
 			
 			
@@ -197,7 +211,12 @@ public class PlayerHealth : MonoBehaviour
 			}
 		}
 	}
-	
+
+	void PlayRandomAudio(AudioClip[] clips, AudioSource audioS){
+		audioS.Stop ();
+		audioS.clip = clips [(int)(Random.Range (0, clips.Length) - 0.01f)];
+		audioS.Play ();
+	}
 	
 	void Death ()
 	{
@@ -206,12 +225,14 @@ public class PlayerHealth : MonoBehaviour
 		//playerShooting.DisableEffects ();
 		
 		//anim.SetTrigger ("Die");
-		
 		playerAudio.clip = deathClip;
 		playerAudio.Play ();
-		
-		playerMovement.enabled = false;
-		
+		rigid.useGravity = false;
+		GetComponent<Collider> ().enabled = false;
+		playerAttack.disabled = true;
+		playerMovement.disabled = true;
+		anim.CrossFade ("Death", 0.25f);
+		Instantiate (deathlight, transform.position, Quaternion.identity);
 		gameObject.SetActive (false);
 		//playerShooting.enabled = false;
 	}

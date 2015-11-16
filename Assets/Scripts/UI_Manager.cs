@@ -70,6 +70,7 @@ public class UI_Manager : MonoBehaviour {
 	}
 
 	public void UIReady(){
+		CancelInvoke ();
 		gm.StartGame ();
 	}
 

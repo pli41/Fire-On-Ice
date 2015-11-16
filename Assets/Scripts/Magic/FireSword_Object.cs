@@ -18,7 +18,7 @@ public class FireSword_Object : MonoBehaviour {
 	private bool slashed;
 	private AudioSource audioS;
 	private float timer;
-	private bool slashReady;
+	public bool slashReady;
 
 	// Use this for initialization
 	void Start () {
@@ -43,40 +43,42 @@ public class FireSword_Object : MonoBehaviour {
 
 	public void Slash(){
 		//Debug.Log ("Slash");
-		slashed = false;
-		GetComponent<Animator> ().SetTrigger ("slash");
-		if(audioS.clip.name == "swordSummoned"){
-			if(!audioS.isPlaying){
-				audioS.clip = slash;
+		if(slashReady){
+			slashReady = false;
+			slashed = false;
+			GetComponent<Animator> ().SetTrigger ("slash");
+			if(audioS.clip.name == "swordSummoned"){
+				if(!audioS.isPlaying){
+					audioS.clip = slash;
+				}
 			}
-		}
-		else if(audioS.clip.name == slash.name){
-			if(!audioS.isPlaying && slashReady){
-				audioS.Play();
+			else if(audioS.clip.name == slash.name){
+				if(!audioS.isPlaying && slashReady){
+					audioS.Stop();
+					audioS.Play();
+				}
 			}
+
 		}
 		//Invoke ("ResetSlash", slashTime);
 	}
 
 	void OnTriggerEnter(Collider col){
+		Debug.Log ("Sword Collides");
 		if(!slashed){
+			slashed = true;
 			if (col.gameObject.tag == "Player") {
 				PlayerHealth healthP = col.GetComponent<PlayerHealth> ();
 				healthP.TakeDamage (damage, true, ability.owner.GetComponent<PlayerAttack>().playerNum);
 				Rigidbody rigid = col.attachedRigidbody;
 				Vector3 direction = col.transform.position - ability.owner.transform.position;
 				rigid.AddForce(direction.normalized * forceMagnitude, ForceMode.Impulse);
-				slashed = true;
 			}
 			else if(col.gameObject.tag == "Boss"){
 				BossHealth health = col.GetComponent<BossHealth> ();
 				health.TakeDamage (damage);
-				slashed = true;
 			}
 		}
-
-
-
 	}
 
 	void ResetSlash(){

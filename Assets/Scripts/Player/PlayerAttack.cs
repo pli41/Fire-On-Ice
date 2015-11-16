@@ -23,6 +23,7 @@ public class PlayerAttack : MonoBehaviour
 	private GameManager gm;
 
 	public float damageDealt;
+	public bool disabled;
 
 	void Start ()
 	{
@@ -49,7 +50,6 @@ public class PlayerAttack : MonoBehaviour
 	IEnumerator EndAbility(int abilityNum, float delayTime)
 	{
 		yield return new WaitForSeconds(delayTime);
-
 		abilities[abilityNum].EndCast();
 	}
 
@@ -58,77 +58,83 @@ public class PlayerAttack : MonoBehaviour
 	{
 		if(gm.GameInProgress){
 			//Handle enchant Effect
+			if(!disabled){
+				//This part can be structrually changed too. Will do it after having a lot of abilities.
+				if(ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.RightTrigger, joystickNum) > 0
+				   && !casting2 && !casting3)
+				{	
+					//Debug.Log("Get PS4_R2_" + joystickNum);
+					if(abilities[0].abilityReady){
+						casting1 = true;
+						abilities[0].Cast();
+						if(abilities[0].triggerOnce){
+							casting1 = false;
+							StartCoroutine(EndAbility(0, 0.2f));
+						}
+					}
+				}
+				else if(casting1){
+					casting1 = false;
+					if(!abilities[0].handledEndCast){
+						abilities[0].EndCast();
+					}
+				}
+				
+				
+				
+				if(ControllerInputWrapper.GetTriggerRaw (ControllerInputWrapper.Triggers.LeftTrigger, joystickNum) > 0
+				   && !casting1 && !casting3)
+				{
+					//Debug.Log("Get PS4_L2_" + joystickNum);
+					if(abilities[1].abilityReady){
+						casting2 = true;
+						abilities[1].Cast();
+						if(abilities[1].triggerOnce){
+							casting2 = false;
+							StartCoroutine(EndAbility(1, 0.2f));
+						}
+					}
+				}
+				else if(casting2){
+					casting2 = false;
+					if(!abilities[1].handledEndCast){
+						abilities[1].EndCast();
+					}
+				}
+				
+				//Debug.Log (Input.GetAxisRaw ("PS4_R1_" + playerString));
+				
+				if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.RightBumper, joystickNum)
+				   && !casting1 && !casting2)
+				{
+					if(abilities[2].abilityReady){
+						//Debug.Log(joystickNum + " is casting");
+						casting3 = true;
+						abilities[2].Cast();
+						if(abilities[2].triggerOnce){
+							casting3 = false;
+							StartCoroutine(EndAbility(2, 0.2f));
+						}
+					}
+				}
+				else if(casting3){
+					//Debug.Log("End Cast 3rd ability");
+					casting3 = false;
+					if(!abilities[2].handledEndCast){
+						abilities[2].EndCast();
+					}
+				}
+				
+				if(enchanting){
+					enchantEffect.SetActive(true);
+				}
+				else{
+					enchantEffect.SetActive(false);
+				}
 
-			
-			//This part can be structrually changed too. Will do it after having a lot of abilities.
-			if(ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.RightTrigger, joystickNum) > 0)
-			{	
-				//Debug.Log("Get PS4_R2_" + joystickNum);
-				if(abilities[0].abilityReady){
-					casting1 = true;
-					abilities[0].Cast();
-					if(abilities[0].triggerOnce){
-						casting1 = false;
-						StartCoroutine(EndAbility(0, 0.2f));
-					}
-				}
-			}
-			else if(casting1){
-				casting1 = false;
-				if(!abilities[0].handledEndCast){
-					abilities[0].EndCast();
-				}
 			}
 			
-			
-			
-			if(ControllerInputWrapper.GetTriggerRaw (ControllerInputWrapper.Triggers.LeftTrigger, joystickNum) > 0)
-			{
-				//Debug.Log("Get PS4_L2_" + joystickNum);
-				if(abilities[1].abilityReady){
-					casting2 = true;
-					abilities[1].Cast();
-					if(abilities[1].triggerOnce){
-						casting2 = false;
-						StartCoroutine(EndAbility(1, 0.2f));
-					}
-				}
-			}
-			else if(casting2){
-				casting2 = false;
-				if(!abilities[1].handledEndCast){
-					abilities[1].EndCast();
-				}
-			}
-			
-			//Debug.Log (Input.GetAxisRaw ("PS4_R1_" + playerString));
-			
-			if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.RightBumper, joystickNum))
-			{
-				if(abilities[2].abilityReady && !casting1){
-					//Debug.Log(joystickNum + " is casting");
-					casting3 = true;
-					abilities[2].Cast();
-					if(abilities[2].triggerOnce){
-						casting3 = false;
-						StartCoroutine(EndAbility(2, 0.2f));
-					}
-				}
-			}
-			else if(casting3){
-				//Debug.Log("End Cast 3rd ability");
-				casting3 = false;
-				if(!abilities[2].handledEndCast){
-					abilities[2].EndCast();
-				}
-			}
 
-			if(enchanting){
-				enchantEffect.SetActive(true);
-			}
-			else{
-				enchantEffect.SetActive(false);
-			}
 		}
 
 

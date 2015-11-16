@@ -9,17 +9,17 @@ public class Blink : Ability, MovementEffect, Cooldown {
 	private GameObject playerStaff;
 	private Vector3 targetPos_final;
 	public float characterSize;
-	private int ignoreLayer;
-	private AudioSource audio;
+	//private int ignoreLayer;
+	private AudioSource audioS;
 	private bool createdBlinkObj;
 	private bool foundFinalPos;
 	// Use this for initialization
 	void Start () {
-		audio = GetComponent<AudioSource> ();
+		audioS = GetComponent<AudioSource> ();
 		handledEndCast = true;
 		playerModel = owner.transform.Find ("Magician_Body").gameObject;
 		playerStaff = owner.transform.Find ("Magician_Staff").gameObject;
-		ignoreLayer = LayerMask.NameToLayer ("Obstacles");
+		//ignoreLayer = LayerMask.NameToLayer ("Obstacles");
 		characterSize = 0.5f;
 		SetupCooldown ();
 	}
@@ -78,8 +78,8 @@ public class Blink : Ability, MovementEffect, Cooldown {
 				owner.GetComponent<Collider>().enabled = false;
 				Invoke("EndCast", 0.1f);
 
-				if(!audio.isPlaying){
-					audio.Play();
+				if(!audioS.isPlaying){
+					audioS.Play();
 				}
 
 			}

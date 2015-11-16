@@ -21,7 +21,7 @@ public class FireSword : Ability, Cooldown, CastDelay {
 
 	//For ability object
 	public float forceMagnitude;
-	public int damage;
+	//public int damage;
 
 	//For CastDelay
 	private float delayTimer;
@@ -67,10 +67,12 @@ public class FireSword : Ability, Cooldown, CastDelay {
 				CastDelayStart();
 			}
 			else if (state == STATE.Summoned){
-				DisableMove();
-				anim.CrossFade ("Attack2", 0.1f);
-				Invoke("EnableMove", anim.GetClip("Attack2").length);
-				ability_object.GetComponent<FireSword_Object>().Slash();
+				if(ability_object.GetComponent<FireSword_Object>().slashReady){
+					DisableMove();
+					anim.CrossFade ("Attack2", 0.1f);
+					Invoke("EnableMove", anim.GetClip("Attack2").length);
+					ability_object.GetComponent<FireSword_Object>().Slash();
+				}
 			}
 		}
 
@@ -97,7 +99,7 @@ public class FireSword : Ability, Cooldown, CastDelay {
 		ability_object = Instantiate(ability_object);
 		ability_object.transform.parent = owner.transform.Find("magicPoint");
 		firesword_Object = ability_object.GetComponent<FireSword_Object> ();
-		firesword_Object.damage = damage;
+		firesword_Object.damage = (int)damage;
 		firesword_Object.ability = this;
 		firesword_Object.forceMagnitude = forceMagnitude;
 		ability_object.SetActive (false);
