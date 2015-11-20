@@ -46,8 +46,7 @@ MonoBehaviour:
   triggerOnce: 0
   cooldown: 2
   timeUntilReset: 0
-  icon: {fileID: 21300000, guid: f485560d82f6f004a871dd2809e75063, type: 3}
-  name: FireBomb
+  icon: {fileID: 21300000, guid: 53edaab5c078e4c7189efab567a9e1e0, type: 3}
   description: Throw a bomb that will explode to deal area damage after a short delay.
   abilityReady: 1
   cdTimer: 0
@@ -78,7 +77,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 21300000, guid: f485560d82f6f004a871dd2809e75063,
+      objectReference: {fileID: 21300000, guid: 53edaab5c078e4c7189efab567a9e1e0,
         type: 3}
     - target: {fileID: 0}
       propertyPath: name

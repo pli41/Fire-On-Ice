@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
 		//Handle turning while moving, Turning method has a higher priority
 		if(canTurn){
 			if(Mathf.Abs(h) > 0.01f || Mathf.Abs(v) > 0.01f){
-				Debug.Log ("Turning by left analog");
+				//Debug.Log ("Turning by left analog");
 				Vector3 direction = new Vector3 (h, 0f, v);
 				Quaternion newRotation = Quaternion.LookRotation(direction, transform.up);
 				transform.rotation = newRotation; 
@@ -130,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
 		float vert = ControllerInputWrapper.GetAxisRaw(ControllerInputWrapper.Axis.RightStickY, joystickNum, false);
 		
 		if(Mathf.Abs(hori) > 0.01f || Mathf.Abs(vert) > 0.01f){
-			Debug.Log ("Turning by right analog");
+			//Debug.Log ("Turning by right analog");
 			Vector3 direction = new Vector3 (hori, 0f, vert);
 			Quaternion newRotation = Quaternion.LookRotation(direction, transform.up);
 			transform.rotation = newRotation;

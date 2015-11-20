@@ -13,7 +13,7 @@ public class FireBomb_Object : MonoBehaviour {
 	public float explosionForce;
 	public float explosionFactor;
 
-	public SetExplosion boomAudio;
+	//public SetExplosion boomAudio;
 
 	private ParticleSystem fire;
 	private GameObject explosionEffect;
@@ -34,7 +34,7 @@ public class FireBomb_Object : MonoBehaviour {
 		fire = GetComponent<ParticleSystem>();
 		explosionEffect = transform.Find ("Boom").gameObject;
 		explosionEffect.SetActive (false);
-		boomAudio.damage = explosionDamage;
+		//boomAudio.damage = explosionDamage;
 		Physics.IgnoreCollision (GetComponent<SphereCollider>(), ability.owner.GetComponent<Collider>());
 		//Initialize ();
 	}
@@ -71,14 +71,22 @@ public class FireBomb_Object : MonoBehaviour {
 			if(col.tag == "Player"){
 				if(pickedByPlayer){
 					col.gameObject.GetComponent<PlayerHealth>().TakeDamage(
-						(int)(explosionDamage), false, ability.owner.GetComponent<PlayerAttack>().playerNum);
+						(int)(explosionDamage), true, ability.owner.GetComponent<PlayerAttack>().playerNum);
 				}
 				else{
-					col.gameObject.GetComponent<PlayerHealth>().TakeDamage(
-						(int)(explosionDamage * (explosionRadius - distance) / explosionRadius)
-						, false, ability.owner.GetComponent<PlayerAttack>().playerNum);
+					if(distance < explosionRadius){
+						Debug.Log("Explosion Damage: " + explosionDamage);
+						Debug.Log("Explosion Radius: " + explosionRadius);
+						Debug.Log("Distance: " + distance);
+						col.gameObject.GetComponent<PlayerHealth>().TakeDamage(
+							(int)(explosionDamage * (explosionRadius - distance) / explosionRadius)
+							, true, ability.owner.GetComponent<PlayerAttack>().playerNum);
+						col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position
+						                                                           , explosionRadius);
+					}
+
 				}
-				col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius);
+
 			}
 			else if(col.tag == "Island"){
 				if(distance < explosionRadius){

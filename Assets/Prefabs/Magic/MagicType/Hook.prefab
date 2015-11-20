@@ -47,8 +47,7 @@ MonoBehaviour:
   triggerOnce: 0
   cooldown: 0
   timeUntilReset: 0
-  icon: {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
-  name: Hook
+  icon: {fileID: 21300000, guid: 2a16e8e2b040f4949b0fc5822ea5a6c4, type: 3}
   description: Shoot a hook that grabs the opponent to you if hit.
   abilityReady: 1
   cdTimer: 0
@@ -66,7 +65,7 @@ LineRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f5c692d8dbbc544586dfa2416053cb1, type: 2}
+  - {fileID: 2100000, guid: 4b75b9985c0a94b43a0719aba266c092, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -131,7 +130,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b,
+      objectReference: {fileID: 21300000, guid: 2a16e8e2b040f4949b0fc5822ea5a6c4,
         type: 3}
     - target: {fileID: 0}
       propertyPath: name
@@ -145,6 +144,10 @@ Prefab:
       propertyPath: abilityReady
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b75b9985c0a94b43a0719aba266c092, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 180480}

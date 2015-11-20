@@ -55,7 +55,7 @@ public class Blink : Ability, MovementEffect, Cooldown {
 			if(!foundFinalPos){
 				targetPos_final = Move();
 				foundFinalPos = true;
-				Gizmos.DrawSphere(targetPos_final, 2);
+				//Gizmos.DrawSphere(targetPos_final, 2);
 			}
 			Debug.Log ("Casting blink");
 

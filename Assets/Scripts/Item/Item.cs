@@ -4,6 +4,8 @@ using System.Collections;
 public class Item : MonoBehaviour {
 	public float duration;
 	public GameObject ItemEffect;
+    public string itemName;
+    public Color textColor = Color.white;
 	GameObject effect;
 	GameObject objectAppear;
 	//public GameObject speedingEffect;

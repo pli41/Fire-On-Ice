@@ -46,8 +46,7 @@ MonoBehaviour:
   triggerOnce: 0
   cooldown: 10
   timeUntilReset: 0
-  icon: {fileID: 21300000, guid: 9c2654c6e93b84e4391bd17cb4054e60, type: 3}
-  name: FireShield
+  icon: {fileID: 21300000, guid: 66390fe220bea49dbb80e1aedc4615b1, type: 3}
   description: Summon a shield to protect yourself from damages for a short period
     of time.
   abilityReady: 1
@@ -86,7 +85,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 21300000, guid: 9c2654c6e93b84e4391bd17cb4054e60,
+      objectReference: {fileID: 21300000, guid: 66390fe220bea49dbb80e1aedc4615b1,
         type: 3}
     - target: {fileID: 0}
       propertyPath: name

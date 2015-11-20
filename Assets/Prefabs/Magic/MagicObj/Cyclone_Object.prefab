@@ -136,8 +136,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158624}
-  m_LocalRotation: {x: 5.60181797e-06, y: .953992188, z: 1.76060337e-06, w: .299831539}
-  m_LocalPosition: {x: -13.6844234, y: 2.78349543, z: 3.3265121}
+  m_LocalRotation: {x: -2.3309276e-06, y: -.707106829, z: 2.3309276e-06, w: .707106829}
+  m_LocalPosition: {x: -5.73910904, y: 3.35012841, z: 8.60059547}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467412}
@@ -206,7 +206,8 @@ AudioSource:
   m_GameObject: {fileID: 158624}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: c6d85b88a8e2e48b8ac3046b023418a4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .200000003
@@ -285,7 +286,7 @@ MonoBehaviour:
   maxSpeed: 5
   damage: .0799999982
   affectRadius: 6
-  forceFactor: 50
+  forceFactor: 80
   meltFactor: .150000006
   meltTime: 1
 --- !u!136 &13612674
@@ -6561,6 +6562,15 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: forceFactor
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

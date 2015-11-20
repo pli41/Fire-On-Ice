@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Chest : MonoBehaviour {
+    public TextMesh floatingText;
 	Animator anim;	// Use this for initialization
 	public Item[] items;
 	int selection;
@@ -19,9 +20,15 @@ public class Chest : MonoBehaviour {
 	}
 	public void Open(){
 		if (active == true) {
+            GameObject obj = (GameObject)Instantiate(floatingText.gameObject, Vector3.zero, new Quaternion());
+            obj.GetComponent<TextMesh>().text = items[selection].itemName;
+            obj.GetComponent<TextMesh>().color = items[selection].textColor;
 			anim.SetBool ("Open", true);
 			Destroy (gameObject, 2f);
 			items[selection].takeEffect(player);
+            obj.transform.parent = player.transform;
+            obj.transform.localPosition = Vector3.zero;
+
 			Debug.Log (selection);
 			active = false;
 		}

@@ -18,8 +18,11 @@ public class GameManager : MonoBehaviour {
 	public int winnerNum;
 	public CameraMove cameraMove;
 
+
 	public AudioClip startClip;
 	public AudioSource audioS;
+
+	bool gameStarted;
 
 	// Use this for initialization
 	void Awake () {
@@ -30,7 +33,7 @@ public class GameManager : MonoBehaviour {
 
 		//players = GameObject.FindGameObjectsWithTag ("Player");
 		//boss = GameObject.FindGameObjectWithTag ("Boss");
-
+		gameStarted = false;
 		SetupPlayers ();
 		SetupPlayerAbilities ();
 		CameraStart ();
@@ -67,11 +70,12 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void StartGame(){
-		Debug.Log ("Start audio");
+		//Debug.Log ("Start audio");
 		audioS.Stop ();
 		audioS.clip = startClip;
 		audioS.Play ();
 		GameInProgress = true;
+		gameStarted = true;
 	}
 
 	GameObject CheckForWinnner(){
@@ -88,6 +92,7 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		if(GameInProgress){
 			GameObject winner = CheckForWinnner ();
+
 			if(winner){
 				winnerNum = winner.GetComponent<PlayerAttack>().playerNum;
 				GameInProgress = false;
@@ -95,7 +100,7 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 		else{
-			if(cameraMove.endMovement){
+			if(cameraMove.endMovement && !gameStarted){
 				UI_manager.ReadyTextEnable();
 				cameraMove.endMovement = false;
 			}

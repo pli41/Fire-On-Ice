@@ -3,13 +3,15 @@ using System.Collections;
 
 public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 
-
 	public GameObject onFireEffect;
 	private Flame_Object flame_object;
 	private Animation anim;
 
 	// Use this for initialization
 	void Start () {
+		onFireEffect = owner.transform.Find ("onFireEffect").gameObject;
+		triggerOnce = false;
+		handledEndCast = false;
 		anim = owner.GetComponent<Animation> ();
 		SetupAbility ();
 	}
@@ -51,25 +53,26 @@ public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 	
 	public override void SetupAbility(){
 		ability_object = Instantiate(ability_object);
-		ability_object.transform.parent = transform;
+		//ability_object.transform.parent = transform;
+		ability_object.transform.position = owner.transform.Find("magicPoint").position;
+		ability_object.transform.rotation = owner.transform.Find("magicPoint").rotation;
 		flame_object = ability_object.GetComponent<Flame_Object> ();
 		flame_object.ability = this;
 		ability_object.SetActive (false);
-		onFireEffect = owner.transform.Find ("onFireEffect").gameObject;
 	}
 
 	public void CauseEffect (){
-		//Debug.Log ("Onfire");
+		Debug.Log ("Onfire");
 		owner.GetComponent<PlayerHealth> ().onFire = true;
 		owner.GetComponent<PlayerMovement> ().canMove = false;
-		owner.GetComponent<PlayerMovement> ().canTurn = false;
+		//owner.GetComponent<PlayerMovement> ().canTurn = false;
 	}
 
 	public void EndEffect (){
-		//Debug.Log ("Ceasefire");
+		Debug.Log ("Ceasefire");
 		owner.GetComponent<PlayerHealth> ().onFire = false;
 		owner.GetComponent<PlayerMovement> ().canMove = true;
-		owner.GetComponent<PlayerMovement> ().canTurn = true;
+		//owner.GetComponent<PlayerMovement> ().canTurn = true;
 	}
 
 	public void Charge (){
@@ -79,12 +82,14 @@ public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 		ability_object.SetActive (true);
 		anim.CrossFade ("Cast", 0.1f);
 		anim.CrossFadeQueued ("Idle", 0.25f);
+		onFireEffect.SetActive (true);
 		//ability_object.GetComponent<ParticleSystem> ().Play();
 		CauseEffect ();
 	}
 	
 	public float EndCharge(){
 		//ability_object.GetComponent<ParticleSystem> ().Clear ();
+		onFireEffect.SetActive (false);
 		ability_object.SetActive (false);
 		anim.CrossFade ("Idle", 0.25f);
 		EndEffect ();

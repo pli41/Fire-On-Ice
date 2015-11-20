@@ -68,9 +68,14 @@ public class Cyclone_Object : MonoBehaviour {
 				Vector3 playerPos_hori = new Vector3(playerPos.x, 0, playerPos.z);
 				
 				float horizontalDistance = Vector3.Distance(cyclonePos_hori, playerPos_hori);
-				col.attachedRigidbody.AddForce(direction * (affectRadius - horizontalDistance) * forceFactor);
-				col.GetComponent<PlayerHealth>().TakeDamage(damage * (affectRadius - horizontalDistance), false, 
-				                                            ability.owner.GetComponent<PlayerAttack>().playerNum);
+
+				if(affectRadius > horizontalDistance){
+					col.attachedRigidbody.AddForce(direction * (affectRadius - horizontalDistance) * forceFactor);
+					col.GetComponent<PlayerHealth>().TakeDamage(damage * (affectRadius - horizontalDistance), true, 
+					                                            ability.owner.GetComponent<PlayerAttack>().playerNum);
+				}
+
+				//Debug.Log("Tornado damage: " + damage * (affectRadius - horizontalDistance));
 			}
 			else if(col.tag == "Boundary"){
 				Destroy(gameObject);

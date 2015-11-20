@@ -60,22 +60,30 @@ public class PlayerAttack : MonoBehaviour
 			//Handle enchant Effect
 			if(!disabled){
 				//This part can be structrually changed too. Will do it after having a lot of abilities.
-				if(ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.RightTrigger, joystickNum) > 0
-				   && !casting2 && !casting3)
+				if(ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.RightTrigger, joystickNum) > 0)
 				{	
-					//Debug.Log("Get PS4_R2_" + joystickNum);
-					if(abilities[0].abilityReady){
-						casting1 = true;
-						abilities[0].Cast();
-						if(abilities[0].triggerOnce){
-							casting1 = false;
-							StartCoroutine(EndAbility(0, 0.2f));
+					Debug.Log("Flame input received");
+					if(!casting2 && !casting3){
+						Debug.Log("No other abilities detected");
+						if(abilities[0].abilityReady){
+							Debug.Log("Ability ready");
+							casting1 = true;
+							abilities[0].Cast();
+							if(abilities[0].triggerOnce){
+								Debug.Log("Trigger once");
+								casting1 = false;
+								StartCoroutine(EndAbility(0, 0.2f));
+							}
 						}
 					}
+					//Debug.Log("Get PS4_R2_" + joystickNum);
+
 				}
 				else if(casting1){
+					Debug.Log("Button released");
 					casting1 = false;
 					if(!abilities[0].handledEndCast){
+						Debug.Log("Handled in player attack");
 						abilities[0].EndCast();
 					}
 				}

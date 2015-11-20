@@ -8,9 +8,7 @@ public class UI_Manager : MonoBehaviour {
 	public GameManager gm;
 
 	private List<GameObject> playerList;
-
 	public List<GameObject> playerUIs = new List<GameObject>();
-
 	public List<GameObject> abilityUIs = new List<GameObject>();
 
 	public GameObject winUI;
@@ -91,7 +89,7 @@ public class UI_Manager : MonoBehaviour {
 			for (int j = 0; j < 3; j++){
 				sprites.Add(playerList[i].GetComponent<PlayerAttack>().abilities[j].icon);
 			}
-			Debug.Log(sprites.Count);
+			//Debug.Log(sprites.Count);
 			//Assign sprites
 			//int playerNum = playerList[i].GetComponent<PlayerAttack>().joystickNum-1;
 
@@ -126,6 +124,11 @@ public class UI_Manager : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	public void SetPlayerDeathByNum(int playerNum){
+		playerUIs [playerNum-1].GetComponent<RectTransform>().Find ("Avatar").GetComponent<AnimateGif>().start = true;
+		//Debug.Break();
 	}
 
 	public void ShowWinScreen(int winPlayerNum, int mostDamagePlayerNum, int chestHunterNum){

@@ -7,6 +7,12 @@ public class Flame_Object : MonoBehaviour {
 	public float damage;
 	public float forceMagnitude;
 
+	void Update(){
+		transform.position = ability.owner.transform.Find ("magicPoint").position;
+		transform.rotation = ability.owner.transform.Find ("magicPoint").rotation;
+
+	}
+
 	void OnParticleCollision(GameObject other){
 		if (other.tag == "Player") {
 			PlayerHealth healthP = other.GetComponent<PlayerHealth> ();

@@ -46,8 +46,7 @@ MonoBehaviour:
   triggerOnce: 0
   cooldown: 10
   timeUntilReset: 0
-  icon: {fileID: 21300000, guid: 676104ad271b0c241bee12c8409a1304, type: 3}
-  name: Cyclone
+  icon: {fileID: 21300000, guid: bb8829d10d9e946519fd282abc148e45, type: 3}
   description: After seconds of casting, create a fire cyclone which moves in the
     facing direction, damages and sweeps nearby players.
   abilityReady: 1
@@ -68,7 +67,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 21300000, guid: 676104ad271b0c241bee12c8409a1304,
+      objectReference: {fileID: 21300000, guid: bb8829d10d9e946519fd282abc148e45,
         type: 3}
     - target: {fileID: 0}
       propertyPath: name

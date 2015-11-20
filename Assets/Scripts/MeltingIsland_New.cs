@@ -26,8 +26,8 @@ public class MeltingIsland_New : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("Local position " + transform.localPosition);
-		Debug.Log ("Position " + transform.position);
+		//Debug.Log ("Local position " + transform.localPosition);
+		//Debug.Log ("Position " + transform.position);
 		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		mat = GetComponent<MeshRenderer> ().material;
 		mr = GetComponent<MeshRenderer> ();

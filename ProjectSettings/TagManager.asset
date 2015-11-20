@@ -28,7 +28,7 @@ TagManager:
   - Shootable
   - Obstacles
   - Ability
-  - 
+  - Boundaries
   - 
   - 
   - 
@@ -51,4 +51,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ability
+    uniqueID: 1943086357
+    locked: 0
+  - name: Water
+    uniqueID: 3084582065
     locked: 0

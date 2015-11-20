@@ -109,7 +109,8 @@ AudioSource:
   m_GameObject: {fileID: 9538625}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 0d731025598336d4d986ced571c0627b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -431,7 +432,7 @@ RectTransform:
   m_Children:
   - {fileID: 1026031082}
   m_Father: {fileID: 1047315387}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -530, y: 170}
@@ -628,7 +629,8 @@ AudioSource:
   m_GameObject: {fileID: 191021301}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 698e749688c759d43aeaa929ee69eb59, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -793,7 +795,8 @@ AudioSource:
   m_GameObject: {fileID: 283961429}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 38ed1b23d5cf4294a98a7eedfeb2c8f7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -998,7 +1001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1006,7 +1009,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 46238fb1ad7a7a84ba8954c1c860994c, type: 3}
     m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 0
@@ -1332,8 +1335,8 @@ MonoBehaviour:
   - {fileID: 11413252, guid: fd26754aee4f4408aa0eedcc40417e97, type: 2}
   - {fileID: 11451950, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
   - {fileID: 11461332, guid: 8299e958997364a1fb4205d252e9d885, type: 2}
-  - {fileID: 11447328, guid: 941deae2654ef41f394fdcc2318350e4, type: 2}
   - {fileID: 11466114, guid: 30881a1d28067014ea308b21e75947e4, type: 2}
+  - {fileID: 11447328, guid: 941deae2654ef41f394fdcc2318350e4, type: 2}
   - {fileID: 11400964, guid: 059cf1ffdb23c3a4e9a334e681854c9f, type: 2}
   - {fileID: 11435908, guid: 80dc8a6e49a9d4a59bc73e4c82878916, type: 2}
   tvScreenAnimations:
@@ -1413,7 +1416,8 @@ AudioSource:
   m_GameObject: {fileID: 520656428}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24377824, guid: 0ac7fb39e445048d89688f69c2a1839a,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2130,10 +2134,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1111965078}
   - {fileID: 1001651806}
   - {fileID: 897265257}
   - {fileID: 2131665253}
+  - {fileID: 1111965078}
   - {fileID: 1424347709}
   m_Father: {fileID: 520656429}
   m_RootOrder: 11
@@ -2385,7 +2389,7 @@ RectTransform:
   m_Children:
   - {fileID: 1559662801}
   m_Father: {fileID: 840719950}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -579, y: 173}
@@ -2537,7 +2541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2545,7 +2549,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 46238fb1ad7a7a84ba8954c1c860994c, type: 3}
     m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 0
@@ -2798,7 +2802,7 @@ RectTransform:
   m_Children:
   - {fileID: 1910765507}
   m_Father: {fileID: 840719950}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -732, y: 173}
@@ -3073,7 +3077,7 @@ RectTransform:
   - {fileID: 1798784575}
   - {fileID: 939920429}
   m_Father: {fileID: 1047315387}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 4.40008545, y: -3.49995422}
@@ -3104,10 +3108,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1042784022}
   - {fileID: 60255162}
   - {fileID: 1335010048}
   - {fileID: 1126027876}
+  - {fileID: 1042784022}
   - {fileID: 1805991182}
   m_Father: {fileID: 520656429}
   m_RootOrder: 12
@@ -3214,7 +3218,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -384, y: 171.5}
+  m_AnchoredPosition: {x: -382, y: 170}
   m_SizeDelta: {x: 454, y: 147}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1057361759
@@ -3229,7 +3233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3237,7 +3241,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 46238fb1ad7a7a84ba8954c1c860994c, type: 3}
     m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 0
@@ -3418,7 +3422,7 @@ RectTransform:
   - {fileID: 796530012}
   - {fileID: 328241008}
   m_Father: {fileID: 840719950}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -1.04995728, y: -.750061035}
@@ -3521,7 +3525,7 @@ RectTransform:
   m_Children:
   - {fileID: 1917650256}
   m_Father: {fileID: 1047315387}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -227, y: 170}
@@ -3949,7 +3953,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -380, y: 172.050003}
+  m_AnchoredPosition: {x: -376, y: 168}
   m_SizeDelta: {x: 453, y: 146.899994}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1276167814
@@ -3964,7 +3968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: .843999982}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3972,7 +3976,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 46238fb1ad7a7a84ba8954c1c860994c, type: 3}
     m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 0
@@ -4086,7 +4090,7 @@ RectTransform:
   m_Children:
   - {fileID: 972244460}
   m_Father: {fileID: 1047315387}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -379, y: 170}
@@ -4632,7 +4636,7 @@ RectTransform:
   m_RootOrder: 17
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 480, y: -271.490051}
+  m_AnchoredPosition: {x: 485, y: -285}
   m_SizeDelta: {x: 960, y: 540.150024}
   m_Pivot: {x: .5, y: .5}
 --- !u!95 &1452344696
@@ -4709,10 +4713,11 @@ AudioSource:
   m_GameObject: {fileID: 1504151691}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24324684, guid: 0ac7fb39e445048d89688f69c2a1839a,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 5c544a7a61b2ec445a77e7d99c1a8a11, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .50999999
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5810,7 +5815,7 @@ RectTransform:
   m_Children:
   - {fileID: 1430231694}
   m_Father: {fileID: 840719950}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -430, y: 173}

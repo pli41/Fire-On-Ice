@@ -82,9 +82,11 @@ public class RollingRock_Object : MonoBehaviour {
 		foreach(Collider col in hitColliders){
 			float distance = Vector3.Distance(col.transform.position, transform.position);
 			if(col.tag == "Player"){
-				col.gameObject.GetComponent<PlayerHealth>().TakeDamage(
-					(int)(damage * (explosionRadius - distance) / explosionRadius), false, ability.owner.GetComponent<PlayerAttack>().playerNum);
-				col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(forceMagnitude, transform.position, explosionRadius);
+				if(distance < explosionRadius){
+					col.gameObject.GetComponent<PlayerHealth>().TakeDamage(
+						(int)(damage * (explosionRadius - distance) / explosionRadius), false, ability.owner.GetComponent<PlayerAttack>().playerNum);
+					col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(forceMagnitude, transform.position, explosionRadius);
+				}
 			}
 			else if(col.tag == "Island"){
 				if(distance < explosionRadius){

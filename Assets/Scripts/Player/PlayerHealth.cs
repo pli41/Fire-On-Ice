@@ -42,12 +42,16 @@ public class PlayerHealth : MonoBehaviour
 	public AudioClip[] damageClips;
 
 	private GameManager gm;
-	
+	private UI_Manager uim;
+
 	void Awake ()
 	{
+		onFire = false;
 		announcerAudio = GetComponents<AudioSource> () [1];
+
 		rigid = GetComponent<Rigidbody> ();
-		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
+		gm = GameObject.Find ("GameManager").GetComponent<GameManager> ();
+		uim = GameObject.Find ("GameManager").GetComponent<UI_Manager> ();
 		joystickNum = GetComponent<PlayerAttack> ().joystickNum;
 		damageReduction = 1;
 		allgrounds = GameObject.FindGameObjectsWithTag("Island");
@@ -86,7 +90,7 @@ public class PlayerHealth : MonoBehaviour
 		if(onFire && !onFireEffect.activeInHierarchy){
 			CauseOnFire();
 		}
-		
+
 		HandleHurtSFX ();
 		
 		
@@ -103,14 +107,14 @@ public class PlayerHealth : MonoBehaviour
 	}
 	
 	public void CauseOnFire(){
-		//Debug.Log ("On Fire");
+		Debug.Log ("On Fire in playerhealth" + " in player " + playerAttack.playerNum);
 		onFireEffect.SetActive (true);
 		Invoke ("CeaseFire", onFireTime);
 	}
 	
 	public void CeaseFire(){
-		//Debug.Log ("CeaseFire");
 		CancelInvoke ();
+		Debug.Log ("CeaseFire in playerhealth" + " in player " + playerAttack.playerNum);
 		onFireEffect.SetActive (false);
 		onFire = false;
 	}
@@ -118,9 +122,6 @@ public class PlayerHealth : MonoBehaviour
 	
 	public void TakeDamage (float amount, bool burn, int sourcePlayerNum)
 	{
-		
-		
-		
 		if (gm.GameInProgress) {
 			float finalDamage;
 			if(amount > 0){
@@ -133,7 +134,8 @@ public class PlayerHealth : MonoBehaviour
 			
 			currentHealth -= finalDamage;
 
-			if(finalDamage > 20){
+			if(finalDamage > 20f && sourcePlayerNum > 0){
+				Debug.Log("Big damage detected");
 				PlayRandomAudio(damageClips, announcerAudio);
 			}
 
@@ -144,7 +146,7 @@ public class PlayerHealth : MonoBehaviour
 				gm.playerList[sourcePlayerNum-1].GetComponent<PlayerAttack>().damageDealt += finalDamage;
 			}
 			
-			if (Mathf.Abs(finalDamage) > 0.02f)
+			if (Mathf.Abs(finalDamage) > 0.01f)
 			{
 				if(finalDamage > 0){
 					anim.CrossFade("TakeDamage2", 0.1f);
@@ -156,7 +158,7 @@ public class PlayerHealth : MonoBehaviour
 					mesh.color = Color.green;
 				}
 
-				if(mesh.text != "+0" || mesh.text != "-0"){
+				if(!(mesh.text.Equals("+0") && mesh.text.Equals ("-0"))){
 					GameObject textLabel =	(GameObject)Instantiate(mesh.gameObject);
 					textLabel.transform.parent = transform;
 					textLabel.transform.localPosition.Set(0, 2, 0);
@@ -174,7 +176,7 @@ public class PlayerHealth : MonoBehaviour
 			
 			
 			if (burn) {
-				burnGround (amount);
+				//burnGround (amount);
 				onFire = true;
 			}
 			
@@ -214,14 +216,16 @@ public class PlayerHealth : MonoBehaviour
 
 	void PlayRandomAudio(AudioClip[] clips, AudioSource audioS){
 		audioS.Stop ();
-		audioS.clip = clips [(int)(Random.Range (0, clips.Length) - 0.01f)];
+		int clipNum = Random.Range (0, clips.Length - 1);
+		audioS.clip = clips [clipNum];
+		Debug.Log ("Clip " + clipNum + " played");
 		audioS.Play ();
 	}
 	
 	void Death ()
 	{
 		isDead = true;
-		
+		uim.SetPlayerDeathByNum (playerAttack.playerNum);
 		//playerShooting.DisableEffects ();
 		
 		//anim.SetTrigger ("Die");

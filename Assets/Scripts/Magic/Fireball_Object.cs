@@ -33,6 +33,8 @@ public class Fireball_Object : MonoBehaviour {
 	void Start () {
 		audioS = GetComponent<AudioSource> ();
 
+
+
 		explosionRadius = size * 1.5f + 1f;
 		explosionForce = size * 500f + 300f;
 		explosionDamage = size * 8f + 10f;
@@ -66,7 +68,7 @@ public class Fireball_Object : MonoBehaviour {
 			
 			if(col.tag == "Player"){
 				col.gameObject.GetComponent<PlayerHealth>().TakeDamage(
-					explosionDamage, false, ability.owner.GetComponent<PlayerAttack>().playerNum);
+					explosionDamage, true, ability.owner.GetComponent<PlayerAttack>().playerNum);
 				col.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius);
 			}
 			else if(col.tag == "Island"){
@@ -112,6 +114,6 @@ public class Fireball_Object : MonoBehaviour {
 		audioS.pitch = calculatedPitch;
 		audioS.clip = explosion;
 		//Debug.Break ();
-		audioS.Play ();
+		//audioS.Play ();
 	}
 }

@@ -84,7 +84,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 	}
 
 	public override void SetupObj(){
-		Debug.Log (ability_point);
+		//Debug.Log (ability_point);
 		fireball_object = ability_object.GetComponent<Fireball_Object> ();
 		fireball_object.size = chargedTime;
 		fireball_object.ability = this;

@@ -37,10 +37,11 @@ AudioSource:
   m_GameObject: {fileID: 192396}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 61824b4a5df5641d0a17fb2794a878ba, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .5
+  m_Volume: 1
   m_Pitch: 3
   Loop: 0
   Mute: 0
@@ -117,8 +118,7 @@ MonoBehaviour:
   triggerOnce: 0
   cooldown: 3
   timeUntilReset: 0
-  icon: {fileID: 21300000, guid: df5153fca31c9bf47b2d36359b5dd373, type: 3}
-  name: Blink
+  icon: {fileID: 21300000, guid: 21066f52b7ca945ffa4bbe2ee4a65fe3, type: 3}
   description: Teleport forward instantly for a fixed distance
   abilityReady: 1
   cdTimer: 0
@@ -153,12 +153,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Volume
-      value: .5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 21300000, guid: df5153fca31c9bf47b2d36359b5dd373,
+      objectReference: {fileID: 21300000, guid: 21066f52b7ca945ffa4bbe2ee4a65fe3,
         type: 3}
     - target: {fileID: 0}
       propertyPath: name
@@ -184,6 +184,11 @@ Prefab:
       propertyPath: BypassListenerEffects
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 192396}

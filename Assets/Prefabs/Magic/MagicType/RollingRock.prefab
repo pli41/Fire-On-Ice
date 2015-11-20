@@ -46,8 +46,7 @@ MonoBehaviour:
   triggerOnce: 0
   cooldown: 5
   timeUntilReset: 0
-  icon: {fileID: 21300000, guid: 4867db53aa592a64a851c36645423699, type: 3}
-  name: RollingRock
+  icon: {fileID: 21300000, guid: 2f635759b413b42a4a1863f646025273, type: 3}
   description: After seconds of casting, summon a rolling rock which rumbles in the
     facing direction and explodes after a fixed amount of time.
   abilityReady: 1
@@ -77,7 +76,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 21300000, guid: 4867db53aa592a64a851c36645423699,
+      objectReference: {fileID: 21300000, guid: 2f635759b413b42a4a1863f646025273,
         type: 3}
     - target: {fileID: 0}
       propertyPath: name
