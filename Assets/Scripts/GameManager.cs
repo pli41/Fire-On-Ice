@@ -57,8 +57,8 @@ public class GameManager : MonoBehaviour {
 			playerList[i].GetComponent<PlayerAttack>().joystickNum = GameSettings.playerController[i];
 			
 			//Setup Abilities
-			Ability[] newAbilities = new Ability[3];
-			for(int j = 0; j < 3; j++){
+			Ability[] newAbilities = new Ability[4];
+			for(int j = 0; j < 4; j++){
 				newAbilities[j] = GameSettings.playerAbilitites[i, j];
 			}
 			playerList[i].GetComponent<PlayerAttack>().abilities = newAbilities;

@@ -10,7 +10,7 @@ public class PlayerAttack : MonoBehaviour
 
 	public Transform magicPoint;
 
-	public Ability[] abilities = new Ability[3];
+	public Ability[] abilities = new Ability[4];
 
 	public bool enchanting;
 	public GameObject enchantEffect;
@@ -18,6 +18,7 @@ public class PlayerAttack : MonoBehaviour
 	private bool casting1;
 	private bool casting2;
 	private bool casting3;
+	private bool casting4;
 
 	private Animation anim;
 	private GameManager gm;
@@ -56,95 +57,100 @@ public class PlayerAttack : MonoBehaviour
 
 	void Update ()
 	{
-		if(gm.GameInProgress){
+		if (gm.GameInProgress) {
 			//Handle enchant Effect
-			if(!disabled){
+			if (!disabled) {
 				//This part can be structrually changed too. Will do it after having a lot of abilities.
-				if(ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.RightTrigger, joystickNum) > 0)
-				{	
-					Debug.Log("Flame input received");
-					if(!casting2 && !casting3){
-						Debug.Log("No other abilities detected");
-						if(abilities[0].abilityReady){
-							Debug.Log("Ability ready");
+
+				if (ControllerInputWrapper.GetTriggerRaw (ControllerInputWrapper.Triggers.LeftTrigger, joystickNum) > 0) {	
+					if (!casting2 && !casting3 && !casting4) {
+						if (abilities [0].abilityReady) {
 							casting1 = true;
-							abilities[0].Cast();
-							if(abilities[0].triggerOnce){
-								Debug.Log("Trigger once");
+							abilities [0].Cast ();
+							if (abilities [0].triggerOnce) {
 								casting1 = false;
-								StartCoroutine(EndAbility(0, 0.2f));
+								StartCoroutine (EndAbility (0, 0.2f));
 							}
 						}
 					}
-					//Debug.Log("Get PS4_R2_" + joystickNum);
-
-				}
-				else if(casting1){
-					Debug.Log("Button released");
+				} else if (casting1) {
 					casting1 = false;
-					if(!abilities[0].handledEndCast){
-						Debug.Log("Handled in player attack");
-						abilities[0].EndCast();
+					if (!abilities [0].handledEndCast) {
+						abilities [0].EndCast ();
 					}
 				}
 				
 				
 				
-				if(ControllerInputWrapper.GetTriggerRaw (ControllerInputWrapper.Triggers.LeftTrigger, joystickNum) > 0
-				   && !casting1 && !casting3)
-				{
-					//Debug.Log("Get PS4_L2_" + joystickNum);
-					if(abilities[1].abilityReady){
-						casting2 = true;
-						abilities[1].Cast();
-						if(abilities[1].triggerOnce){
-							casting2 = false;
-							StartCoroutine(EndAbility(1, 0.2f));
+				if (ControllerInputWrapper.GetButton (ControllerInputWrapper.Buttons.LeftBumper, joystickNum)) {
+					if (!casting1 && !casting3 && !casting4) {
+						if (abilities [1].abilityReady) {
+							casting2 = true;
+							abilities [1].Cast ();
+							if (abilities [1].triggerOnce) {
+								casting2 = false;
+								StartCoroutine (EndAbility (1, 0.1f));
+							}
 						}
 					}
-				}
-				else if(casting2){
+				} else if (casting2) {
 					casting2 = false;
-					if(!abilities[1].handledEndCast){
-						abilities[1].EndCast();
+					if (!abilities [1].handledEndCast) {
+						abilities [1].EndCast ();
 					}
 				}
 				
 				//Debug.Log (Input.GetAxisRaw ("PS4_R1_" + playerString));
 				
-				if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.RightBumper, joystickNum)
-				   && !casting1 && !casting2)
-				{
-					if(abilities[2].abilityReady){
-						//Debug.Log(joystickNum + " is casting");
-						casting3 = true;
-						abilities[2].Cast();
-						if(abilities[2].triggerOnce){
-							casting3 = false;
-							StartCoroutine(EndAbility(2, 0.2f));
+				if (ControllerInputWrapper.GetButton (ControllerInputWrapper.Buttons.RightBumper, joystickNum)) {
+					if (!casting1 && !casting2 && !casting4) {
+						if (abilities [2].abilityReady) {
+							//Debug.Log(joystickNum + " is casting");
+							casting3 = true;
+							abilities [2].Cast ();
+							if (abilities [2].triggerOnce) {
+								casting3 = false;
+								StartCoroutine (EndAbility (2, 0.1f));
+							}
 						}
 					}
-				}
-				else if(casting3){
+				} else if (casting3) {
 					//Debug.Log("End Cast 3rd ability");
 					casting3 = false;
-					if(!abilities[2].handledEndCast){
-						abilities[2].EndCast();
+					if (!abilities [2].handledEndCast) {
+						abilities [2].EndCast ();
+					}
+				}
+
+				if (ControllerInputWrapper.GetTriggerRaw (ControllerInputWrapper.Triggers.RightTrigger, joystickNum) > 0) {
+					if (!casting1 && !casting2 && !casting3) {
+						if (abilities [3].abilityReady) {
+							//Debug.Log(joystickNum + " is casting");
+							casting4 = true;
+							abilities [3].Cast ();
+							if (abilities [3].triggerOnce) {
+								casting4 = false;
+								StartCoroutine (EndAbility (3, 0.1f));
+							}
+						}
+					}
+				} else if (casting4) {
+					//Debug.Log("End Cast 3rd ability");
+					casting4 = false;
+					if (!abilities [3].handledEndCast) {
+						abilities [3].EndCast ();
 					}
 				}
 				
-				if(enchanting){
-					enchantEffect.SetActive(true);
-				}
-				else{
-					enchantEffect.SetActive(false);
+				if (enchanting) {
+					enchantEffect.SetActive (true);
+				} else {
+					enchantEffect.SetActive (false);
 				}
 
 			}
 			
-
 		}
-
-
 	}
+
 }

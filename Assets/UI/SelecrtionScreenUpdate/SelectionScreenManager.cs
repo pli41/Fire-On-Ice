@@ -6,47 +6,50 @@ public class SelectionScreenManager : MonoBehaviour {
 	public float timeDelay = .7f;
 	public Text readyTimer;
 	public Ability[] allAbilities;
-
-    public Animator[] tvScreenAnimations;
+	public Ability mainAbility;
+	
+	public Animator[] tvScreenAnimations;
 	
 	public Transform[] enterPanel;
 	public Transform[] selectAbility;
-
-    public Image[] panels = new Image[4];	
+	
+	//public Image[] panels = new Image[4];	
 	public Image[] currentAbility = new Image[4];
 	public Image[] aAbility = new Image[4];
 	public Image[] xAbility = new Image[4];
 	public Image[] bAbility = new Image[4];
+	public Image[] yAbility = new Image[4];
 	public Image[] blockImage = new Image[4];
 	public Text[] readyText = new Text[4];
 	public Text[] currentAbilityName = new Text[4];
 	public Text[] currentAbilityDescription = new Text[4];
 	public float timer;
-    public Animator countDownAnim;
-
-    public AudioSource scrollAbilitySounds;
-    public AudioSource selectAbilitySounds;
-    public AudioSource TVonSounds; 
-
+	public Animator countDownAnim;
+	
+	public AudioSource scrollAbilitySounds;
+	public AudioSource selectAbilitySounds;
+	public AudioSource TVonSounds;
+	public AudioSource countDownSounds;
+	
 	public AudioClip TwoMenClip;
 	public AudioClip ThreeMenClip;
 	public AudioClip FourMenClip;
 	public AudioClip ReadyToGoClip;
-
-    int[] playerControllers = new int[4];
+	
+	int[] playerControllers = new int[4];
 	int[] currentAbilitySelected = new int[4];
 	int numPlayers;
 	bool[] accepted = new bool[4];
 	bool[] ready = new bool[4];
 	float[] selectTimer = new float[4];
-	Ability[,] playerAbilities = new Ability[4, 3];
-    
+	Ability[,] playerAbilities = new Ability[4, 4];
+	
 	AudioSource audioS;
 	bool ReadyToGoClipPlayed;
-
-
+	
+	
 	void Update()
-	{
+	{ 
 		
 		checkSelectAbility();
 		checkAbilityInput();
@@ -56,19 +59,19 @@ public class SelectionScreenManager : MonoBehaviour {
 		checkBlockedImage ();
 		updateCurrentAbilityName();
 		checkReadyStart();
-        updateTVScreen();
+		updateTVScreen();
 		beginMatchCountDown();
 	}
-
-    void updateTVScreen()
-    {
-        for (int i = 0; i < numPlayers; i++)
-        {
-            tvScreenAnimations[i].SetBool("PlayerReady", ready[i]);
-        }
-        
-    }
-
+	
+	void updateTVScreen()
+	{
+		for (int i = 0; i < numPlayers; i++)
+		{
+			tvScreenAnimations[i].SetBool("PlayerReady", ready[i]);
+		}
+		
+	}
+	
 	void checkBlockedImage() {
 		for (int i = 0; i < numPlayers; i++) {
 			if (checkAbilitySelected(i)) {
@@ -88,20 +91,20 @@ public class SelectionScreenManager : MonoBehaviour {
 			currentAbilityDescription[i].text = allAbilities[currentAbilitySelected[i]].description;
 		}
 	}
-
-    bool getAllPlayersReady()
-    {
-        for (int i = 0; i < numPlayers; i++)
-        {
-            if (!ready[i])
-            {
-                timer = 4;
-                readyTimer.enabled = false;
-                return false;
-            }
-        }
-        return true;
-    }
+	
+	bool getAllPlayersReady()
+	{
+		for (int i = 0; i < numPlayers; i++)
+		{
+			if (!ready[i])
+			{
+				timer = 4;
+				readyTimer.enabled = false;
+				return false;
+			}
+		}
+		return true;
+	}
 	
 	void beginMatchCountDown()
 	{
@@ -110,17 +113,14 @@ public class SelectionScreenManager : MonoBehaviour {
 			return;
 		}
 		if (!getAllPlayersReady ()) {
-
+			
 			countDownAnim.SetBool ("PlayerStart", false);
-
+			
 			return;
 		} else {
 			countDownAnim.SetBool("PlayerStart", true);
 		}
 		timer -= Time.deltaTime;
-		//int t = (int)timer;
-		//readyTimer.enabled = true;
-		//readyTimer.text = t.ToString();
 		if (timer < 0)
 		{
 			Debug.Log("Play Audio");
@@ -134,7 +134,7 @@ public class SelectionScreenManager : MonoBehaviour {
 			Invoke("StartGame", 3f);
 		}
 	}
-
+	
 	void StartGame(){
 		Application.LoadLevel("level3");
 	}
@@ -147,7 +147,6 @@ public class SelectionScreenManager : MonoBehaviour {
 	
 	void updateReady()
 	{
-		
 		for (int i = 0; i < numPlayers; i++)
 		{
 			if (ready[i])
@@ -171,24 +170,28 @@ public class SelectionScreenManager : MonoBehaviour {
 				//if (Input.GetKeyDown(KeyCode.KeypadEnter)) 
 			{
 				
-				if (ready[i])
+				if (ready[i] && timer > 0)
 				{
 					ready[i] = false;
-                    //countDownAnim.SetTrigger("CancelCD");
+					//countDownAnim.SetTrigger("CancelCD");
 				}
 				else if (checkAbilityFilled(i))
 				{
 					ready[i] = true;
-                    if (getAllPlayersReady())
-                    {
-                        //countDownAnim.SetTrigger("BeginCD");
-                    }
-                   
-                }
+					if (getAllPlayersReady())
+					{
+						//countDownAnim.SetTrigger("BeginCD");
+					}
+					
+				}
 			}
 		}
 	}
-	
+	/// <summary>
+	/// Checks the ability filled.
+	/// </summary>
+	/// <returns><c>true</c>, if ability filled was checked, <c>false</c> otherwise.</returns>
+	/// <param name="i">The index.</param>
 	bool checkAbilityFilled(int i)
 	{
 		for (int j = 0; j < playerAbilities.GetLength(1); j++)
@@ -224,15 +227,19 @@ public class SelectionScreenManager : MonoBehaviour {
 			currentAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
 			if (playerAbilities[i, 0] != null)
 			{
-				xAbility[i].sprite = playerAbilities[i, 0].icon;
+				aAbility[i].sprite = playerAbilities[i, 0].icon;
 			}
 			if (playerAbilities[i, 1] != null)
 			{
-				aAbility[i].sprite = playerAbilities[i, 1].icon;
+				xAbility[i].sprite = playerAbilities[i, 1].icon;
 			}
 			if (playerAbilities[i, 2] != null)
 			{
 				bAbility[i].sprite = playerAbilities[i, 2].icon;
+			}
+			if (playerAbilities[i, 3] != null)
+			{
+				yAbility[i].sprite = playerAbilities[i, 3].icon;
 			}
 		}
 	}
@@ -241,48 +248,55 @@ public class SelectionScreenManager : MonoBehaviour {
 	{
 		for (int i = 0; i < numPlayers; i++)
 		{
-			if  (ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.RightTrigger, playerControllers[i]) > 0.01f)
+			if (ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i]) > .01f)
 			{
 				if (checkAbilitySelected(i)) {
 					return;
 				}
+				selectAbilitySounds.Stop();
+				selectAbilitySounds.Play();
 				playerAbilities[i, 0] = allAbilities[currentAbilitySelected[i]];
-                selectAbilitySounds.Stop();
-                selectAbilitySounds.Play();
+				//aAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
+			}else if  (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.LeftBumper, playerControllers[i], true))
+			{
+				if (checkAbilitySelected(i)) {
+					return;
+				}
+				playerAbilities[i, 1] = allAbilities[currentAbilitySelected[i]];
+				selectAbilitySounds.Stop();
+				selectAbilitySounds.Play();
 				//xAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
 			}
-			else if (ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i]) > .01f)
+		else if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.RightBumper, playerControllers[i], true))
 			{
 				if (checkAbilitySelected(i)) {
 					return;
 				}
-                selectAbilitySounds.Stop();
-                selectAbilitySounds.Play();
-                playerAbilities[i, 1] = allAbilities[currentAbilitySelected[i]];
-				//aAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
-			}else if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.RightBumper, playerControllers[i], true))
-			{
-				if (checkAbilitySelected(i)) {
-					return;
-				}
-                selectAbilitySounds.Stop();
-                selectAbilitySounds.Play();
-                playerAbilities[i, 2] = allAbilities[currentAbilitySelected[i]];
+				selectAbilitySounds.Stop();
+				selectAbilitySounds.Play();
+				playerAbilities[i, 2] = allAbilities[currentAbilitySelected[i]];
 				//bAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
 			}
 		}
 	}
 
+	/// <summary>
+	/// Checks the ability selected.
+	/// </summary>
+	/// <returns><c>true</c>, if ability selected was checked, <c>false</c> otherwise.</returns>
+	/// <param name="i">The index.</param>
 	bool checkAbilitySelected(int i) {
 		for (int j = 0; j < 3; j++) {
 			if (playerAbilities[i, j] != null && playerAbilities[i, j].name == allAbilities[currentAbilitySelected[i]].name) {
 				return true;
 			}
 		}
-		
 		return false;
 	}
-	
+
+	/// <summary>
+	/// Checks the select ability.
+	/// </summary>
 	void checkSelectAbility()
 	{
 		for (int i = 0; i < numPlayers; i++)
@@ -293,8 +307,8 @@ public class SelectionScreenManager : MonoBehaviour {
 			if (direct < -0.05f && selectTimer[i] <= 0)
 			{
 				currentAbilitySelected[i] = (--currentAbilitySelected[i]) % allAbilities.Length;
-                scrollAbilitySounds.Stop();
-                scrollAbilitySounds.Play();
+				scrollAbilitySounds.Stop();
+				scrollAbilitySounds.Play();
 				if (currentAbilitySelected[i] < 0)
 				{
 					currentAbilitySelected[i] += allAbilities.Length;
@@ -303,15 +317,14 @@ public class SelectionScreenManager : MonoBehaviour {
 			} else if (direct > 0.05f && selectTimer[i] <= 0)
 			{
 				currentAbilitySelected[i] = (++currentAbilitySelected[i]) % allAbilities.Length;
-                scrollAbilitySounds.Stop();
-                scrollAbilitySounds.Play();
-                selectTimer[i] = timeDelay;
+				scrollAbilitySounds.Stop();
+				scrollAbilitySounds.Play();
+				selectTimer[i] = timeDelay;
 			}
 			else if (Mathf.Abs(direct) < .05f)
 			{
 				selectTimer[i] = 0;
 			}
-			
 		}
 	}
 	
@@ -321,23 +334,24 @@ public class SelectionScreenManager : MonoBehaviour {
 		ControllerInputWrapper.setControlTypes();
 		ControllerInputWrapper.setPlatform();
 	}
-	
+
+	/// <summary>
+	/// Checks the player accept.
+	/// </summary>
 	void checkPlayerAccept()
 	{
 		for (int i = 0; i < playerControllers.Length; i++)
 		{
 			if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, i + 1, true) && !accepted[i])
 			{
-
-
-                TVonSounds.Stop();
-                TVonSounds.Play();
-
-                tvScreenAnimations[numPlayers].GetComponent<Image>().enabled = true;
-                tvScreenAnimations[numPlayers].SetTrigger("PlayerStart");
+				TVonSounds.Stop();
+				TVonSounds.Play();
+				playerAbilities[numPlayers, 3] = mainAbility;
+				tvScreenAnimations[numPlayers].GetComponent<Image>().enabled = true;
+				tvScreenAnimations[numPlayers].SetTrigger("PlayerStart");
 				playerControllers[numPlayers] = i + 1;
 				accepted[i] = true;
-                panels[numPlayers].enabled = false;
+				//panels[numPlayers].enabled = false;
 				enterPanel[numPlayers].gameObject.SetActive(false);
 				selectAbility[numPlayers].gameObject.SetActive(true);
 				numPlayers++;
