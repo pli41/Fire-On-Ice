@@ -10,6 +10,10 @@ public class SelectActionManager : MonoBehaviour
 
 	public GameObject playBorder;
 	public GameObject creditsBorder;
+
+	public GameObject whiteCover;
+	public float whiteCoverAnimDuration;
+
 	public Button quitBtn;
 	public ScrollPanel scrollPanel;
 
@@ -54,7 +58,7 @@ public class SelectActionManager : MonoBehaviour
 				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 4, true)&&
 				    !scrollPanel.isPlaying)
 				{
-                    Application.LoadLevel("SelectionScreen");
+					WhiteOut();
                 }
 				if (directX < -0.05f || directY < -0.05f && actionReady && !scrollPanel.isPlaying)
 				{
@@ -97,6 +101,17 @@ public class SelectActionManager : MonoBehaviour
                 break;
         }
     }
+
+	void WhiteOut(){
+		Animator whiteCoverAnim = whiteCover.GetComponent<Animator> ();
+		whiteCoverAnim.SetBool ("whiteOutStart", true);
+		Invoke ("GoToSelectionScreen", whiteCoverAnimDuration);
+	}
+
+	void GoToSelectionScreen(){
+		CancelInvoke ();
+		Application.LoadLevel("SelectionScreen");
+	}
 
 	void CheckSelected(){
 		if(currentType != ActionType.Quit){

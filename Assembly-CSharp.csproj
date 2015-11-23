@@ -59,6 +59,7 @@
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_ShurikenThreadFix.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Spawn System\CFX_SpawnSystem.cs" />
+     <Compile Include="Assets\MagicWisdom_Object.cs" />
      <Compile Include="Assets\Scripts\AnimateGif.cs" />
      <Compile Include="Assets\Scripts\Boss\BossAttack.cs" />
      <Compile Include="Assets\Scripts\Boss\BossHealth.cs" />
@@ -102,6 +103,7 @@
      <Compile Include="Assets\Scripts\Magic\Flame_Object.cs" />
      <Compile Include="Assets\Scripts\Magic\Hook.cs" />
      <Compile Include="Assets\Scripts\Magic\HookScript.cs" />
+     <Compile Include="Assets\Scripts\Magic\MagicWisdom.cs" />
      <Compile Include="Assets\Scripts\Magic\MovementEffect.cs" />
      <Compile Include="Assets\Scripts\Magic\RollingRock.cs" />
      <Compile Include="Assets\Scripts\Magic\RollingRock_Object.cs" />
@@ -144,7 +146,7 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
      <None Include="Assets\Standard Assets\Game Jam Menu Template\GameJamTemplateReadMe.txt" />
      <None Include="Assets\Standard Assets\PowerUps Vol 1 Free\Readme.txt" />
-     <None Include="Assets\Fantasy Hero - Magician\Magician_Animation.txt" />
+     <None Include="Assets\Standard Assets\Fantasy Hero - Magician\Magician_Animation.txt" />
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
  </Reference>

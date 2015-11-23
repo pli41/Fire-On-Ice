@@ -86638,7 +86638,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 471160, guid: a8e4fcd2caf344eee9698d5b88cea8f6, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 136446, guid: a8e4fcd2caf344eee9698d5b88cea8f6, type: 2}
       propertyPath: m_IsActive
@@ -86653,6 +86653,11 @@ Prefab:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+        type: 2}
+    - target: {fileID: 11467118, guid: a8e4fcd2caf344eee9698d5b88cea8f6, type: 2}
+      propertyPath: abilities.Array.data[2]
+      value: 
+      objectReference: {fileID: 11470562, guid: c8d5a1e91b7b54b8e82264e7144b107c,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a8e4fcd2caf344eee9698d5b88cea8f6, type: 2}

@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &157402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 431688}
+  - 114: {fileID: 11470562}
+  m_Layer: 0
+  m_Name: MagicWisdom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &431688
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.53999996, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11470562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e9127f6b381146bd8245bbe531195bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  ability_object: {fileID: 128966, guid: 21e2bc05680c54aa088458a781ec95e6, type: 2}
+  handledEndCast: 0
+  ability_point: {fileID: 0}
+  triggerOnce: 0
+  cooldown: 20
+  timeUntilReset: 0
+  icon: {fileID: 21300000, guid: 96854931f06454ed8bc7bd380368a54b, type: 3}
+  description: Reset cooldowns of other abilities
+  abilityReady: 1
+  cdTimer: 0
+  magicWisdom_Object: {fileID: 128966, guid: 21e2bc05680c54aa088458a781ec95e6, type: 2}
+  effectLength: 1.5
+  YOffset: 2
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 96854931f06454ed8bc7bd380368a54b,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: description
+      value: Reset cooldowns of other abilities
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cdTimer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cooldown
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: abilityReady
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ability_object
+      value: 
+      objectReference: {fileID: 128966, guid: 21e2bc05680c54aa088458a781ec95e6, type: 2}
+    - target: {fileID: 0}
+      propertyPath: effectLength
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: magicWisdom_Object
+      value: 
+      objectReference: {fileID: 128966, guid: 21e2bc05680c54aa088458a781ec95e6, type: 2}
+    - target: {fileID: 0}
+      propertyPath: YOffset
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 157402}
+  m_IsPrefabParent: 1

@@ -630,7 +630,8 @@ AudioSource:
   m_GameObject: {fileID: 191021301}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 698e749688c759d43aeaa929ee69eb59, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1403,6 +1404,7 @@ MonoBehaviour:
   - {fileID: 11447328, guid: 941deae2654ef41f394fdcc2318350e4, type: 2}
   - {fileID: 11466114, guid: 30881a1d28067014ea308b21e75947e4, type: 2}
   - {fileID: 11400964, guid: 059cf1ffdb23c3a4e9a334e681854c9f, type: 2}
+  - {fileID: 11470562, guid: c8d5a1e91b7b54b8e82264e7144b107c, type: 2}
   mainAbility: {fileID: 11451950, guid: 6142b10408bce4cf2bf3514c4287e5fc, type: 2}
   tvScreenAnimations:
   - {fileID: 1215067777}
@@ -1482,7 +1484,8 @@ AudioSource:
   m_GameObject: {fileID: 520656428}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
