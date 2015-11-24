@@ -12,8 +12,10 @@ public class SelectionScreenManager : MonoBehaviour {
 	
 	public Transform[] enterPanel;
 	public Transform[] selectAbility;
-	
-	//public Image[] panels = new Image[4];	
+
+	private AsyncOperation async;
+	//public Image[] panels = new Image[4];
+	public Image[] arrows = new Image[8];
 	public Image[] currentAbility = new Image[4];
 	public Image[] aAbility = new Image[4];
 	public Image[] xAbility = new Image[4];
@@ -50,7 +52,10 @@ public class SelectionScreenManager : MonoBehaviour {
 	
 	void Update()
 	{ 
-		
+		if(async.isDone){
+			Debug.Log("Scene loaded");
+		}
+
 		checkSelectAbility();
 		checkAbilityInput();
 		checkPlayerAccept();
@@ -108,7 +113,7 @@ public class SelectionScreenManager : MonoBehaviour {
 	
 	void beginMatchCountDown()
 	{
-		if (numPlayers < 1)
+		if (numPlayers < 2)
 		{
 			return;
 		}
@@ -131,12 +136,12 @@ public class SelectionScreenManager : MonoBehaviour {
 				audioS.Play();
 				ReadyToGoClipPlayed = true;
 			}
-			Invoke("StartGame", 3f);
+			Invoke("StartGame", 2f);
 		}
 	}
 	
 	void StartGame(){
-		Application.LoadLevel("level3");
+		async.allowSceneActivation = true;
 	}
 	
 	void setGameSettings() {
@@ -309,6 +314,7 @@ public class SelectionScreenManager : MonoBehaviour {
 				currentAbilitySelected[i] = (--currentAbilitySelected[i]) % allAbilities.Length;
 				scrollAbilitySounds.Stop();
 				scrollAbilitySounds.Play();
+				arrows[i*2].GetComponent<Animator>().SetTrigger("arrowChange");
 				if (currentAbilitySelected[i] < 0)
 				{
 					currentAbilitySelected[i] += allAbilities.Length;
@@ -319,6 +325,7 @@ public class SelectionScreenManager : MonoBehaviour {
 				currentAbilitySelected[i] = (++currentAbilitySelected[i]) % allAbilities.Length;
 				scrollAbilitySounds.Stop();
 				scrollAbilitySounds.Play();
+				arrows[i*2+1].GetComponent<Animator>().SetTrigger("arrowChange");
 				selectTimer[i] = timeDelay;
 			}
 			else if (Mathf.Abs(direct) < .05f)
@@ -333,6 +340,8 @@ public class SelectionScreenManager : MonoBehaviour {
 		audioS = GetComponent<AudioSource>();
 		ControllerInputWrapper.setControlTypes();
 		ControllerInputWrapper.setPlatform();
+		async = Application.LoadLevelAsync ("level3");
+		async.allowSceneActivation = false;
 	}
 
 	/// <summary>
