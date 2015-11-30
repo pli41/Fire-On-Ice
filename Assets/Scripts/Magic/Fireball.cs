@@ -69,9 +69,18 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 		//Debug.Log ("Endcast");
 		if(abilityReady){
 			chargedTime = EndCharge ();
-			anim.Play ("Attack1");
-			anim.CrossFadeQueued ("Idle", 0.25f);
-			Invoke("Shoot", anim.GetClip("Attack1").length/2f);
+
+			if(chargedTime >= maxChargeT){
+				anim.Play ("Attack1");
+				anim.CrossFadeQueued ("Idle", 0.25f);
+				Invoke("Shoot", anim.GetClip("Attack1").length/2f);
+			}
+			else{
+				anim.Play ("AttackCritical");
+				anim.CrossFadeQueued ("Idle", 0.25f);
+				Invoke("Shoot", anim.GetClip("AttackCritical").length/2f);
+			}
+
 			ResetCooldown();
 		}
 	}
