@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 	public GameObject deathlight;
 
+
+
 	//1 means zero reduction, 0.5 means half reduction, 0 means invincible
 	public float damageReduction;
 	
@@ -26,7 +28,9 @@ public class PlayerHealth : MonoBehaviour
 	public float damageSFXTime;
 	private float damageSFXTimer;
 	private bool damageSFXReady;
-	
+
+	GameObject canvas;
+	InGameHealthUI inGameHealthUI;
 	GameObject[] allgrounds;
 	Animation anim;
 	AudioSource playerAudio;
@@ -43,22 +47,29 @@ public class PlayerHealth : MonoBehaviour
 
 	private GameManager gm;
 	private UI_Manager uim;
-
+	
 	void Awake ()
 	{
 		onFire = false;
 		announcerAudio = GetComponents<AudioSource> () [1];
+		playerAttack = GetComponent<PlayerAttack> ();
 
+		canvas = GameObject.Find ("HUDCanvas");
+		Debug.Log ("PlayerHealthUI_" + playerAttack.playerNum);
+
+		inGameHealthUI = canvas.GetComponent<RectTransform> ().Find ("PlayerHealthUI_" + playerAttack.playerNum)
+			.GetComponent<InGameHealthUI>();
+		inGameHealthUI.playerHealth = this;
 		rigid = GetComponent<Rigidbody> ();
 		gm = GameObject.Find ("GameManager").GetComponent<GameManager> ();
 		uim = GameObject.Find ("GameManager").GetComponent<UI_Manager> ();
-		joystickNum = GetComponent<PlayerAttack> ().joystickNum;
+		joystickNum = playerAttack.joystickNum;
 		damageReduction = 1;
 		allgrounds = GameObject.FindGameObjectsWithTag("Island");
 		anim = GetComponent <Animation> ();
 		playerAudio = GetComponent <AudioSource> ();
 		playerMovement = GetComponent <PlayerMovement> ();
-		playerAttack = GetComponent<PlayerAttack> ();
+
 		//playerShooting = GetComponentInChildren <PlayerShooting> ();
 		currentHealth = startingHealth;
 		SetupHealthUI ();
@@ -131,7 +142,7 @@ public class PlayerHealth : MonoBehaviour
 				finalDamage = amount;
 			}
 
-			
+			inGameHealthUI.ShowUI();
 			currentHealth -= finalDamage;
 
 			if(finalDamage > 20f && sourcePlayerNum > 0){

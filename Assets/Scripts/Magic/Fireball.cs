@@ -70,7 +70,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 		if(abilityReady){
 			chargedTime = EndCharge ();
 
-			if(chargedTime >= maxChargeT){
+			if(chargedTime < maxChargeT){
 				anim.Play ("Attack1");
 				anim.CrossFadeQueued ("Idle", 0.25f);
 				Invoke("Shoot", anim.GetClip("Attack1").length/2f);

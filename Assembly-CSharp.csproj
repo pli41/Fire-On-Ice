@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\DieWater.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GameSettings.cs" />
+     <Compile Include="Assets\Scripts\InGameHealthUI.cs" />
      <Compile Include="Assets\Scripts\Island.cs" />
      <Compile Include="Assets\Scripts\Item\CdReduction.cs" />
      <Compile Include="Assets\Scripts\Item\Chest.cs" />
