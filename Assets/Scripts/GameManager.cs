@@ -36,9 +36,11 @@ public class GameManager : MonoBehaviour {
 		gameStarted = false;
 		SetupPlayers ();
 		SetupPlayerAbilities ();
-		CameraStart ();
+		Invoke ("CameraStart", 2f);
 
 	}
+
+
 
 	//Setup Players and playerlist
 	void SetupPlayers(){
@@ -67,6 +69,7 @@ public class GameManager : MonoBehaviour {
 
 	void CameraStart(){
 		cameraMove.startMovement = true;
+		UI_manager.HideTutorial ();
 	}
 
 	public void StartGame(){

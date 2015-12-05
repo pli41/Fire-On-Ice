@@ -21,6 +21,9 @@ public class UI_Manager : MonoBehaviour {
 	public float readyTextDuration;
 	public float goTextDuration;
 
+	public Animator whiteCoverAnim;
+	public Animator tutorialAnim;
+
 	private bool inWinUI;
 	private string[] colorsForPlayerNum = {"<color=red>RED</color>", "<color=blue>BLUE</color>"
 		, "<color=green>GREEN/colors", "<color=yellow>YELLOW</color>"};
@@ -49,6 +52,11 @@ public class UI_Manager : MonoBehaviour {
 				Application.LoadLevel("Main_Menu");
 			}
 		}
+	}
+	
+	public void HideTutorial(){
+		whiteCoverAnim.SetTrigger ("transparencyInc");
+		tutorialAnim.SetTrigger ("transparencyInc");
 	}
 
 	public void ReadyTextEnable(){

@@ -27,7 +27,8 @@ public class SelectionScreenManager : MonoBehaviour {
 	public Text[] currentAbilityDescription = new Text[4];
 	public float timer;
 	public Animator countDownAnim;
-	
+	public Animator whiteCoverAnim;
+
 	public AudioSource scrollAbilitySounds;
 	public AudioSource selectAbilitySounds;
 	public AudioSource TVonSounds;
@@ -136,6 +137,7 @@ public class SelectionScreenManager : MonoBehaviour {
 				audioS.Play();
 				ReadyToGoClipPlayed = true;
 			}
+			whiteCoverAnim.SetTrigger("whiteOutStart");
 			Invoke("StartGame", 2f);
 		}
 	}
