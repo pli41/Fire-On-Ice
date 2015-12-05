@@ -10,6 +10,11 @@ public class MeltingIsland_New : MonoBehaviour {
 	public bool active;
 	public float meltTime;
 
+	public float overallMeltScale;
+	public float overallMeltInterval;
+	private float overallMeltTimer;
+
+
 	MeshRenderer mr;
 	
 	float timerKey;
@@ -32,6 +37,7 @@ public class MeltingIsland_New : MonoBehaviour {
 		mat = GetComponent<MeshRenderer> ().material;
 		mr = GetComponent<MeshRenderer> ();
 		currentMeltTime = meltTime;
+		overallMeltTimer = 0f;
 	}
 	
 //	void Initialize(){
@@ -60,6 +66,18 @@ public class MeltingIsland_New : MonoBehaviour {
 				timer += Time.deltaTime;
 			}
 		}
+
+		//handle general melting
+		if(overallMeltTimer < overallMeltInterval){
+			overallMeltTimer += Time.deltaTime;
+		}
+		else{
+			Debug.Log("Melt overall");
+			overallMeltTimer = 0f;
+			meltByExplode(overallMeltScale);
+		}
+
+
 	}
 
 	void OnCollisionEnter(Collision col){

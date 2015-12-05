@@ -55220,6 +55220,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265265
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55247,6 +55249,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265267
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55274,6 +55278,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265269
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55301,6 +55307,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265271
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55328,6 +55336,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265273
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55355,6 +55365,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265275
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55382,6 +55394,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265277
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55409,6 +55423,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265279
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55436,6 +55452,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265281
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55463,6 +55481,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265283
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55490,6 +55510,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265285
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55517,6 +55539,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265287
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55544,6 +55568,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265289
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55571,6 +55597,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265291
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55598,6 +55626,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265293
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55625,6 +55655,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265295
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55652,6 +55684,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265297
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55679,6 +55713,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265299
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55706,6 +55742,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265301
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55733,6 +55771,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265303
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55760,6 +55800,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265305
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55787,6 +55829,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265307
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55814,6 +55858,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265309
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55841,6 +55887,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265311
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55868,6 +55916,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265313
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55895,6 +55945,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265315
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55922,6 +55974,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265317
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55949,6 +56003,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265319
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55976,6 +56032,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265321
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56003,6 +56061,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265323
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56030,6 +56090,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265325
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56057,6 +56119,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265327
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56084,6 +56148,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265329
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56111,6 +56177,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265331
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56138,6 +56206,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265333
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56165,6 +56235,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265335
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56192,6 +56264,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265337
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56219,6 +56293,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265339
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56246,6 +56322,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265341
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56273,6 +56351,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265343
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56300,6 +56380,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265345
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56327,6 +56409,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265347
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56354,6 +56438,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265349
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56381,6 +56467,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265351
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56408,6 +56496,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265353
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56435,6 +56525,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265355
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56462,6 +56554,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265357
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56489,6 +56583,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265359
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56516,6 +56612,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265361
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56543,6 +56641,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265363
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56570,6 +56670,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265365
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56597,6 +56699,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265367
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56624,6 +56728,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265369
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56651,6 +56757,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265371
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56678,6 +56786,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265373
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56705,6 +56815,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265375
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56732,6 +56844,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265377
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56759,6 +56873,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265379
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56786,6 +56902,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265381
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56813,6 +56931,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265383
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56840,6 +56960,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265385
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56867,6 +56989,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265387
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56894,6 +57018,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265389
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56921,6 +57047,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265391
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56948,6 +57076,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265393
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56975,6 +57105,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265395
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57002,6 +57134,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265397
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57029,6 +57163,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265399
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57056,6 +57192,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265401
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57083,6 +57221,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265403
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57110,6 +57250,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265405
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57137,6 +57279,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265407
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57164,6 +57308,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265409
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57191,6 +57337,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265411
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57218,6 +57366,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265413
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57245,6 +57395,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265415
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57272,6 +57424,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265417
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57299,6 +57453,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265419
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57326,6 +57482,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265421
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57353,6 +57511,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265423
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57380,6 +57540,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265425
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57407,6 +57569,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265427
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57434,6 +57598,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265429
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57461,6 +57627,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265431
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57488,6 +57656,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265433
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57515,6 +57685,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265435
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57542,6 +57714,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265437
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57569,6 +57743,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265439
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57596,6 +57772,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265441
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57623,6 +57801,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265443
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57650,6 +57830,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265445
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57677,6 +57859,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265447
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57704,6 +57888,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265449
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57731,6 +57917,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265451
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57758,6 +57946,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265453
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57785,6 +57975,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265455
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57812,6 +58004,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265457
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57839,6 +58033,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265459
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57866,6 +58062,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265461
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57893,6 +58091,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265463
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57920,6 +58120,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265465
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57947,6 +58149,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265467
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57974,6 +58178,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265469
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58001,6 +58207,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265471
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58028,6 +58236,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265473
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58055,6 +58265,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265475
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58082,6 +58294,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265477
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58109,6 +58323,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265479
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58136,6 +58352,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265481
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58163,6 +58381,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265483
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58190,6 +58410,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265485
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58217,6 +58439,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265487
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58244,6 +58468,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265489
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58271,6 +58497,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265491
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58298,6 +58526,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265493
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58325,6 +58555,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265495
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58352,6 +58584,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265497
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58379,6 +58613,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265499
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58406,6 +58642,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265501
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58433,6 +58671,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265503
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58460,6 +58700,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265505
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58487,6 +58729,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265507
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58514,6 +58758,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265509
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58541,6 +58787,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265511
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58568,6 +58816,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265513
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58595,6 +58845,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265515
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58622,6 +58874,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265517
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58649,6 +58903,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265519
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58676,6 +58932,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265521
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58703,6 +58961,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265523
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58730,6 +58990,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265525
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58757,6 +59019,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265527
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58784,6 +59048,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265529
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58811,6 +59077,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265531
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58838,6 +59106,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265533
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58865,6 +59135,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265535
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58892,6 +59164,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265537
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58919,6 +59193,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265539
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58946,6 +59222,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265541
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58973,6 +59251,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265543
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59000,6 +59280,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265545
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59027,6 +59309,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265547
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59054,6 +59338,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265549
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59081,6 +59367,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265551
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59108,6 +59396,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265553
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59135,6 +59425,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265555
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59162,6 +59454,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265557
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59189,6 +59483,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265559
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59216,6 +59512,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265561
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59243,6 +59541,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265563
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59270,6 +59570,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265565
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59297,6 +59599,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265567
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59324,6 +59628,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265569
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59351,6 +59657,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265571
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59378,6 +59686,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265573
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59405,6 +59715,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265575
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59432,6 +59744,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265577
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59459,6 +59773,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265579
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59486,6 +59802,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265581
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59513,6 +59831,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265583
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59540,6 +59860,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265585
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59567,6 +59889,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265587
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59594,6 +59918,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265589
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59621,6 +59947,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265591
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59648,6 +59976,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265593
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59675,6 +60005,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265595
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59702,6 +60034,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265597
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59729,6 +60063,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265599
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59756,6 +60092,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265601
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59783,6 +60121,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265603
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59810,6 +60150,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265605
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59837,6 +60179,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265607
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59864,6 +60208,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265609
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59891,6 +60237,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265611
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59918,6 +60266,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265613
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59945,6 +60295,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265615
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59972,6 +60324,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265617
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59999,6 +60353,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265619
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60026,6 +60382,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265621
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60053,6 +60411,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265623
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60080,6 +60440,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265625
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60107,6 +60469,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265627
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60134,6 +60498,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265629
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60161,6 +60527,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265631
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60188,6 +60556,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265633
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60215,6 +60585,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265635
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60242,6 +60614,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265637
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60269,6 +60643,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265639
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60296,6 +60672,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265641
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60323,6 +60701,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265643
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60350,6 +60730,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265645
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60377,6 +60759,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265647
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60404,6 +60788,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265649
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60431,6 +60817,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265651
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60458,6 +60846,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265653
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60485,6 +60875,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265655
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60512,6 +60904,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265657
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60539,6 +60933,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265659
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60566,6 +60962,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265661
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60593,6 +60991,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265663
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60620,6 +61020,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265665
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60647,6 +61049,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265667
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60674,6 +61078,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265669
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60701,6 +61107,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265671
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60728,6 +61136,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265673
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60755,6 +61165,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265675
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60782,6 +61194,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265677
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60809,6 +61223,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265679
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60836,6 +61252,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265681
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60863,6 +61281,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265683
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60890,6 +61310,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265685
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60917,6 +61339,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265687
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60944,6 +61368,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265689
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60971,6 +61397,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265691
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60998,6 +61426,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265693
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61025,6 +61455,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265695
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61052,6 +61484,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265697
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61079,6 +61513,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265699
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61106,6 +61542,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265701
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61133,6 +61571,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265703
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61160,6 +61600,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265705
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61187,6 +61629,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265707
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61214,6 +61658,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265709
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61241,6 +61687,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265711
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61268,6 +61716,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265713
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61295,6 +61745,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265715
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61322,6 +61774,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265717
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61349,6 +61803,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265719
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61376,6 +61832,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265721
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61403,6 +61861,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265723
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61430,6 +61890,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265725
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61457,6 +61919,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265727
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61484,6 +61948,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265729
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61511,6 +61977,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265731
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61538,6 +62006,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265733
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61565,6 +62035,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265735
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61592,6 +62064,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265737
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61619,6 +62093,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265739
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61646,6 +62122,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265741
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61673,6 +62151,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265743
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61700,6 +62180,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265745
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61727,6 +62209,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265747
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61754,6 +62238,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265749
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61781,6 +62267,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265751
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61808,6 +62296,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265753
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61835,6 +62325,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265755
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61862,6 +62354,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265757
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61889,6 +62383,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265759
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61916,6 +62412,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265761
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61943,6 +62441,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265763
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61970,6 +62470,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265765
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61997,6 +62499,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265767
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62024,6 +62528,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265769
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62051,6 +62557,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265771
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62078,6 +62586,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265773
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62105,6 +62615,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265775
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62132,6 +62644,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265777
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62159,6 +62673,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265779
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62186,6 +62702,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265781
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62213,6 +62731,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265783
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62240,6 +62760,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265785
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62267,6 +62789,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265787
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62294,6 +62818,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265789
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62321,6 +62847,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265791
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62348,6 +62876,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265793
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62375,6 +62905,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265795
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62402,6 +62934,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265797
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62429,6 +62963,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265799
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62456,6 +62992,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265801
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62483,6 +63021,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265803
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62510,6 +63050,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265805
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62537,6 +63079,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265807
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62564,6 +63108,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265809
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62591,6 +63137,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265811
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62618,6 +63166,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265813
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62645,6 +63195,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265815
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62672,6 +63224,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265817
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62699,6 +63253,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265819
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62726,6 +63282,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265821
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62753,6 +63311,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265823
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62780,6 +63340,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265825
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62807,6 +63369,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265827
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62834,6 +63398,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265829
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62861,6 +63427,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265831
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62888,6 +63456,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265833
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62915,6 +63485,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265835
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62942,6 +63514,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265837
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62969,6 +63543,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265839
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62996,6 +63572,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265841
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63023,6 +63601,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265843
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63050,6 +63630,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265845
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63077,6 +63659,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265847
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63104,6 +63688,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265849
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63131,6 +63717,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265851
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63158,6 +63746,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265853
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63185,6 +63775,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265855
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63212,6 +63804,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265857
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63239,6 +63833,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265859
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63266,6 +63862,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265861
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63293,6 +63891,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265863
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63320,6 +63920,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265865
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63347,6 +63949,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265867
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63374,6 +63978,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265869
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63401,6 +64007,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265871
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63428,6 +64036,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265873
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63455,6 +64065,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265875
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63482,6 +64094,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265877
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63509,6 +64123,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265879
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63536,6 +64152,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265881
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63563,6 +64181,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265883
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63590,6 +64210,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265885
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63617,6 +64239,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265887
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63644,6 +64268,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265889
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63671,6 +64297,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265891
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63698,6 +64326,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265893
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63725,6 +64355,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265895
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63752,6 +64384,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265897
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63779,6 +64413,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265899
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63806,6 +64442,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265901
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63833,6 +64471,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265903
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63860,6 +64500,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265905
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63887,6 +64529,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265907
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63914,6 +64558,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265909
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63941,6 +64587,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265911
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63968,6 +64616,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265913
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63995,6 +64645,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265915
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64022,6 +64674,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265917
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64049,6 +64703,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265919
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64076,6 +64732,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265921
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64103,6 +64761,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265923
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64130,6 +64790,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265925
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64157,6 +64819,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265927
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64184,6 +64848,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265929
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64211,6 +64877,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265931
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64238,6 +64906,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265933
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64265,6 +64935,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265935
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64292,6 +64964,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265937
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64319,6 +64993,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265939
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64346,6 +65022,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265941
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64373,6 +65051,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265943
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64400,6 +65080,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265945
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64427,6 +65109,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265947
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64454,6 +65138,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265949
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64481,6 +65167,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265951
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64508,6 +65196,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265953
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64535,6 +65225,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265955
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64562,6 +65254,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265957
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64589,6 +65283,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265959
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64616,6 +65312,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265961
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64643,6 +65341,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265963
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64670,6 +65370,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265965
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64697,6 +65399,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265967
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64724,6 +65428,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265969
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64751,6 +65457,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265971
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64778,6 +65486,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265973
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64805,6 +65515,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265975
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64832,6 +65544,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265977
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64859,6 +65573,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265979
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64886,6 +65602,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265981
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64913,6 +65631,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265983
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64940,6 +65660,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265985
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64967,6 +65689,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265987
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64994,6 +65718,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265989
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65021,6 +65747,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265991
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65048,6 +65776,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265993
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65075,6 +65805,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265995
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65102,6 +65834,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265997
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65129,6 +65863,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214265999
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65156,6 +65892,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266001
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65183,6 +65921,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266003
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65210,6 +65950,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266005
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65237,6 +65979,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266007
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65264,6 +66008,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266009
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65291,6 +66037,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266011
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65318,6 +66066,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266013
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65345,6 +66095,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266015
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65372,6 +66124,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266017
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65399,6 +66153,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266019
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65426,6 +66182,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266021
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65453,6 +66211,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266023
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65480,6 +66240,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266025
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65507,6 +66269,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266027
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65534,6 +66298,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266029
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65561,6 +66327,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266031
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65588,6 +66356,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266033
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65615,6 +66385,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266035
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65642,6 +66414,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266037
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65669,6 +66443,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266039
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65696,6 +66472,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266041
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65723,6 +66501,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266043
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65750,6 +66530,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266045
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65777,6 +66559,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266047
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65804,6 +66588,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266049
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65831,6 +66617,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266051
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65858,6 +66646,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266053
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65885,6 +66675,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266055
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65912,6 +66704,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266057
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65939,6 +66733,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266059
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65966,6 +66762,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266061
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65993,6 +66791,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266063
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66020,6 +66820,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266065
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66047,6 +66849,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266067
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66074,6 +66878,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266069
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66101,6 +66907,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266071
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66128,6 +66936,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266073
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66155,6 +66965,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266075
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66182,6 +66994,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266077
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66209,6 +67023,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266079
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66236,6 +67052,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266081
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66263,6 +67081,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266083
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66290,6 +67110,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266085
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66317,6 +67139,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266087
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66344,6 +67168,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266089
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66371,6 +67197,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266091
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66398,6 +67226,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266093
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66425,6 +67255,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266095
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66452,6 +67284,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266097
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66479,6 +67313,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266099
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66506,6 +67342,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266101
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66533,6 +67371,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266103
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66560,6 +67400,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266105
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66587,6 +67429,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266107
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66614,6 +67458,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266109
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66641,6 +67487,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266111
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66668,6 +67516,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266113
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66695,6 +67545,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266115
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66722,6 +67574,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266117
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66749,6 +67603,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266119
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66776,6 +67632,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266121
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66803,6 +67661,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266123
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66830,6 +67690,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266125
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66857,6 +67719,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266127
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66884,6 +67748,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266129
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66911,6 +67777,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266131
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66938,6 +67806,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266133
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66965,6 +67835,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266135
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -66992,6 +67864,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266137
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67019,6 +67893,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266139
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67046,6 +67922,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266141
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67073,6 +67951,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266143
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67100,6 +67980,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266145
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67127,6 +68009,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266147
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67154,6 +68038,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266149
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67181,6 +68067,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266151
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67208,6 +68096,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266153
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67235,6 +68125,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266155
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67262,6 +68154,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266157
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67289,6 +68183,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266159
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67316,6 +68212,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266161
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67343,6 +68241,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266163
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67370,6 +68270,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266165
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67397,6 +68299,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266167
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67424,6 +68328,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266169
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67451,6 +68357,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266171
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67478,6 +68386,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266173
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67505,6 +68415,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266175
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67532,6 +68444,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266177
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67559,6 +68473,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266179
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67586,6 +68502,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266181
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67613,6 +68531,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266183
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67640,6 +68560,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266185
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67667,6 +68589,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266187
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67694,6 +68618,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266189
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67721,6 +68647,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266191
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67748,6 +68676,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266193
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67775,6 +68705,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266195
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67802,6 +68734,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266197
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67829,6 +68763,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266199
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67856,6 +68792,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266201
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67883,6 +68821,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266203
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67910,6 +68850,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266205
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67937,6 +68879,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266207
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67964,6 +68908,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266209
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67991,6 +68937,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266211
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68018,6 +68966,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266213
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68045,6 +68995,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266215
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68072,6 +69024,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266217
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68099,6 +69053,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266219
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68126,6 +69082,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266221
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68153,6 +69111,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266223
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68180,6 +69140,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266225
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68207,6 +69169,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266227
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68234,6 +69198,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266229
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68261,6 +69227,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266231
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68288,6 +69256,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266233
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68315,6 +69285,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266235
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68342,6 +69314,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266237
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68369,6 +69343,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266239
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68396,6 +69372,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266241
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68423,6 +69401,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266243
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68450,6 +69430,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266245
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68477,6 +69459,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266247
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68504,6 +69488,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266249
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68531,6 +69517,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266251
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68558,6 +69546,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266253
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68585,6 +69575,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266255
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68612,6 +69604,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266257
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68639,6 +69633,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266259
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68666,6 +69662,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266261
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68693,6 +69691,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266263
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68720,6 +69720,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266265
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68747,6 +69749,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266267
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68774,6 +69778,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266269
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68801,6 +69807,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266271
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68828,6 +69836,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266273
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68855,6 +69865,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266275
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68882,6 +69894,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266277
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68909,6 +69923,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266279
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68936,6 +69952,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266281
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68963,6 +69981,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266283
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -68990,6 +70010,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266285
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69017,6 +70039,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266287
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69044,6 +70068,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266289
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69071,6 +70097,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266291
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69098,6 +70126,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266293
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69125,6 +70155,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266295
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69152,6 +70184,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266297
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69179,6 +70213,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266299
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69206,6 +70242,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266301
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69233,6 +70271,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266303
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69260,6 +70300,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266305
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69287,6 +70329,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266307
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69314,6 +70358,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266309
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69341,6 +70387,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266311
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69368,6 +70416,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266313
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69395,6 +70445,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266315
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69422,6 +70474,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266317
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69449,6 +70503,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266319
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69476,6 +70532,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266321
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69503,6 +70561,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266323
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69530,6 +70590,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266325
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69557,6 +70619,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266327
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69584,6 +70648,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266329
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69611,6 +70677,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266331
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69638,6 +70706,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266333
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69665,6 +70735,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266335
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69692,6 +70764,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266337
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69719,6 +70793,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266339
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69746,6 +70822,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266341
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69773,6 +70851,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266343
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69800,6 +70880,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266345
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69827,6 +70909,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266347
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69854,6 +70938,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266349
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69881,6 +70967,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266351
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69908,6 +70996,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266353
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69935,6 +71025,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266355
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69962,6 +71054,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266357
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69989,6 +71083,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266359
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70016,6 +71112,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266361
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70043,6 +71141,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266363
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70070,6 +71170,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266365
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70097,6 +71199,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266367
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70124,6 +71228,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266369
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70151,6 +71257,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266371
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70178,6 +71286,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266373
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70205,6 +71315,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266375
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70232,6 +71344,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266377
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70259,6 +71373,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266379
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70286,6 +71402,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266381
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70313,6 +71431,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266383
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70340,6 +71460,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266385
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70367,6 +71489,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266387
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70394,6 +71518,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266389
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70421,6 +71547,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266391
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70448,6 +71576,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266393
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70475,6 +71605,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266395
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70502,6 +71634,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266397
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70529,6 +71663,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266399
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70556,6 +71692,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266401
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70583,6 +71721,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266403
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70610,6 +71750,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266405
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70637,6 +71779,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266407
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70664,6 +71808,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266409
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70691,6 +71837,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266411
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70718,6 +71866,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266413
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70745,6 +71895,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266415
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70772,6 +71924,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266417
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70799,6 +71953,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266419
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70826,6 +71982,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266421
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70853,6 +72011,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266423
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70880,6 +72040,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266425
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70907,6 +72069,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266427
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70934,6 +72098,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266429
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70961,6 +72127,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266431
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70988,6 +72156,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266433
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71015,6 +72185,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266435
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71042,6 +72214,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266437
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71069,6 +72243,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266439
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71096,6 +72272,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266441
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71123,6 +72301,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266443
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71150,6 +72330,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266445
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71177,6 +72359,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266447
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71204,6 +72388,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266449
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71231,6 +72417,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266451
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71258,6 +72446,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266453
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71285,6 +72475,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266455
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71312,6 +72504,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266457
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71339,6 +72533,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266459
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71366,6 +72562,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266461
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71393,6 +72591,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266463
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71420,6 +72620,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266465
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71447,6 +72649,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266467
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71474,6 +72678,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266469
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71501,6 +72707,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266471
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71528,6 +72736,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266473
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71555,6 +72765,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266475
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71582,6 +72794,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266477
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71609,6 +72823,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266479
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71636,6 +72852,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266481
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71663,6 +72881,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266483
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71690,6 +72910,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266485
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71717,6 +72939,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266487
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71744,6 +72968,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266489
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71771,6 +72997,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266491
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71798,6 +73026,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266493
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71825,6 +73055,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266495
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71852,6 +73084,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266497
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71879,6 +73113,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266499
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71906,6 +73142,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266501
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71933,6 +73171,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266503
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71960,6 +73200,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266505
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -71987,6 +73229,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266507
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72014,6 +73258,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266509
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72041,6 +73287,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266511
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72068,6 +73316,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266513
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72095,6 +73345,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266515
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72122,6 +73374,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266517
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72149,6 +73403,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266519
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72176,6 +73432,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266521
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72203,6 +73461,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266523
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72230,6 +73490,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266525
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72257,6 +73519,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266527
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72284,6 +73548,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266529
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72311,6 +73577,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266531
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72338,6 +73606,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266533
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72365,6 +73635,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266535
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72392,6 +73664,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266537
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72419,6 +73693,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266539
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72446,6 +73722,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266541
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72473,6 +73751,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266543
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72500,6 +73780,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266545
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72527,6 +73809,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266547
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72554,6 +73838,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266549
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72581,6 +73867,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266551
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72608,6 +73896,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266553
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72635,6 +73925,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266555
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72662,6 +73954,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266557
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72689,6 +73983,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266559
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72716,6 +74012,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266561
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72743,6 +74041,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266563
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72770,6 +74070,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266565
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72797,6 +74099,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266567
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72824,6 +74128,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266569
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72851,6 +74157,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266571
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72878,6 +74186,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266573
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72905,6 +74215,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266575
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72932,6 +74244,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266577
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72959,6 +74273,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266579
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72986,6 +74302,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266581
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73013,6 +74331,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266583
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73040,6 +74360,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266585
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73067,6 +74389,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266587
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73094,6 +74418,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266589
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73121,6 +74447,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266591
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73148,6 +74476,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266593
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73175,6 +74505,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266595
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73202,6 +74534,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266597
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73229,6 +74563,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266599
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73256,6 +74592,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266601
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73283,6 +74621,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266603
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73310,6 +74650,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266605
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73337,6 +74679,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266607
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73364,6 +74708,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266609
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73391,6 +74737,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266611
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73418,6 +74766,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266613
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73445,6 +74795,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266615
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73472,6 +74824,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266617
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73499,6 +74853,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266619
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73526,6 +74882,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266621
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73553,6 +74911,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266623
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73580,6 +74940,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266625
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73607,6 +74969,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266627
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73634,6 +74998,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266629
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73661,6 +75027,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266631
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73688,6 +75056,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266633
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73715,6 +75085,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266635
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73742,6 +75114,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266637
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73769,6 +75143,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266639
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73796,6 +75172,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266641
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73823,6 +75201,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266643
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73850,6 +75230,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266645
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73877,6 +75259,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266647
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73904,6 +75288,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266649
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73931,6 +75317,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266651
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73958,6 +75346,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266653
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73985,6 +75375,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266655
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74012,6 +75404,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266657
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74039,6 +75433,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266659
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74066,6 +75462,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266661
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74093,6 +75491,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266663
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74120,6 +75520,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266665
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74147,6 +75549,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266667
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74174,6 +75578,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266669
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74201,6 +75607,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266671
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74228,6 +75636,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266673
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74255,6 +75665,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266675
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74282,6 +75694,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266677
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74309,6 +75723,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266679
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74336,6 +75752,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266681
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74363,6 +75781,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266683
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74390,6 +75810,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266685
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74417,6 +75839,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266687
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74444,6 +75868,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266689
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74471,6 +75897,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266691
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74498,6 +75926,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266693
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74525,6 +75955,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266695
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74552,6 +75984,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266697
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74579,6 +76013,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266699
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74606,6 +76042,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266701
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74633,6 +76071,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266703
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74660,6 +76100,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266705
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74687,6 +76129,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266707
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74714,6 +76158,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266709
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74741,6 +76187,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266711
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74768,6 +76216,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266713
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74795,6 +76245,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266715
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74822,6 +76274,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266717
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74849,6 +76303,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266719
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74876,6 +76332,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266721
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74903,6 +76361,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266723
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74930,6 +76390,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266725
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74957,6 +76419,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266727
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74984,6 +76448,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266729
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75011,6 +76477,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266731
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75038,6 +76506,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266733
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75065,6 +76535,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266735
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75092,6 +76564,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266737
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75119,6 +76593,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266739
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75146,6 +76622,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266741
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75173,6 +76651,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266743
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75200,6 +76680,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266745
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75227,6 +76709,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266747
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75254,6 +76738,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266749
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75281,6 +76767,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266751
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75308,6 +76796,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266753
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75335,6 +76825,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266755
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75362,6 +76854,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266757
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75389,6 +76883,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266759
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75416,6 +76912,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266761
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75443,6 +76941,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266763
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75470,6 +76970,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266765
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75497,6 +76999,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266767
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75524,6 +77028,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266769
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75551,6 +77057,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266771
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75578,6 +77086,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266773
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75605,6 +77115,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266775
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75632,6 +77144,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266777
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75659,6 +77173,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266779
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75686,6 +77202,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266781
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75713,6 +77231,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266783
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75740,6 +77260,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266785
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75767,6 +77289,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266787
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75794,6 +77318,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266789
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75821,6 +77347,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266791
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75848,6 +77376,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266793
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75875,6 +77405,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266795
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75902,6 +77434,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266797
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75929,6 +77463,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266799
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75956,6 +77492,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266801
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75983,6 +77521,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266803
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76010,6 +77550,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266805
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76037,6 +77579,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266807
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76064,6 +77608,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266809
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76091,6 +77637,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266811
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76118,6 +77666,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266813
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76145,6 +77695,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266815
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76172,6 +77724,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266817
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76199,6 +77753,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266819
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76226,6 +77782,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266821
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76253,6 +77811,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266823
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76280,6 +77840,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266825
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76307,6 +77869,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266827
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76334,6 +77898,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266829
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76361,6 +77927,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266831
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76388,6 +77956,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266833
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76415,6 +77985,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266835
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76442,6 +78014,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266837
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76469,6 +78043,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266839
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76496,6 +78072,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266841
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76523,6 +78101,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266843
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76550,6 +78130,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266845
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76577,6 +78159,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266847
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76604,6 +78188,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266849
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76631,6 +78217,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266851
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76658,6 +78246,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266853
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76685,6 +78275,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266855
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76712,6 +78304,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266857
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76739,6 +78333,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266859
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76766,6 +78362,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266861
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76793,6 +78391,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266863
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76820,6 +78420,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266865
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76847,6 +78449,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266867
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76874,6 +78478,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266869
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76901,6 +78507,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266871
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76928,6 +78536,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266873
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76955,6 +78565,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266875
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76982,6 +78594,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266877
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77009,6 +78623,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266879
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77036,6 +78652,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266881
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77063,6 +78681,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266883
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77090,6 +78710,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266885
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77117,6 +78739,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266887
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77144,6 +78768,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266889
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77171,6 +78797,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266891
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77198,6 +78826,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266893
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77225,6 +78855,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266895
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77252,6 +78884,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266897
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77279,6 +78913,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266899
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77306,6 +78942,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266901
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77333,6 +78971,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266903
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77360,6 +79000,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266905
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77387,6 +79029,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266907
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77414,6 +79058,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266909
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77441,6 +79087,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266911
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77468,6 +79116,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266913
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77495,6 +79145,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266915
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77522,6 +79174,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266917
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77549,6 +79203,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266919
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77576,6 +79232,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266921
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77603,6 +79261,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266923
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77630,6 +79290,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266925
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77657,6 +79319,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266927
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77684,6 +79348,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266929
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77711,6 +79377,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266931
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77738,6 +79406,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266933
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77765,6 +79435,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266935
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77792,6 +79464,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266937
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77819,6 +79493,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266939
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77846,6 +79522,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266941
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77873,6 +79551,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266943
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77900,6 +79580,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266945
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77927,6 +79609,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266947
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77954,6 +79638,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266949
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77981,6 +79667,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266951
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78008,6 +79696,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266953
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78035,6 +79725,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266955
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78062,6 +79754,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266957
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78089,6 +79783,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266959
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78116,6 +79812,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266961
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78143,6 +79841,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266963
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78170,6 +79870,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266965
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78197,6 +79899,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266967
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78224,6 +79928,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266969
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78251,6 +79957,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266971
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78278,6 +79986,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266973
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78305,6 +80015,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266975
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78332,6 +80044,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266977
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78359,6 +80073,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266979
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78386,6 +80102,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266981
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78413,6 +80131,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266983
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78440,6 +80160,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266985
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78467,6 +80189,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266987
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78494,6 +80218,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266989
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78521,6 +80247,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266991
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78548,6 +80276,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266993
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78575,6 +80305,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266995
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78602,6 +80334,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266997
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78629,6 +80363,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214266999
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78656,6 +80392,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267001
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78683,6 +80421,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267003
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78710,6 +80450,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267005
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78737,6 +80479,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267007
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78764,6 +80508,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267009
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78791,6 +80537,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267011
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78818,6 +80566,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267013
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78845,6 +80595,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267015
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78872,6 +80624,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267017
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78899,6 +80653,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267019
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78926,6 +80682,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267021
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78953,6 +80711,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267023
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78980,6 +80740,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267025
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79007,6 +80769,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267027
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79034,6 +80798,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267029
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79061,6 +80827,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267031
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79088,6 +80856,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267033
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79115,6 +80885,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267035
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79142,6 +80914,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267037
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79169,6 +80943,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267039
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79196,6 +80972,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267041
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79223,6 +81001,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267043
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79250,6 +81030,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267045
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79277,6 +81059,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267047
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79304,6 +81088,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267049
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79331,6 +81117,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267051
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79358,6 +81146,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267053
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79385,6 +81175,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267055
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79412,6 +81204,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267057
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79439,6 +81233,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267059
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79466,6 +81262,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267061
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79493,6 +81291,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267063
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79520,6 +81320,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267065
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79547,6 +81349,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267067
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79574,6 +81378,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267069
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79601,6 +81407,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267071
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79628,6 +81436,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267073
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79655,6 +81465,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267075
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79682,6 +81494,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267077
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79709,6 +81523,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267079
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79736,6 +81552,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267081
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79763,6 +81581,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267083
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79790,6 +81610,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267085
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79817,6 +81639,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267087
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79844,6 +81668,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267089
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79871,6 +81697,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267091
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79898,6 +81726,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267093
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79925,6 +81755,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267095
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79952,6 +81784,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267097
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79979,6 +81813,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267099
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80006,6 +81842,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267101
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80033,6 +81871,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267103
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80060,6 +81900,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267105
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80087,6 +81929,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267107
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80114,6 +81958,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267109
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80141,6 +81987,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267111
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80168,6 +82016,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267113
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80195,6 +82045,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267115
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80222,6 +82074,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267117
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80249,6 +82103,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267119
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80276,6 +82132,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267121
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80303,6 +82161,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267123
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80330,6 +82190,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267125
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80357,6 +82219,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267127
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80384,6 +82248,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267129
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80411,6 +82277,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267131
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80438,6 +82306,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267133
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80465,6 +82335,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267135
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80492,6 +82364,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267137
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80519,6 +82393,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267139
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80546,6 +82422,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267141
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80573,6 +82451,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267143
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80600,6 +82480,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267145
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80627,6 +82509,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267147
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80654,6 +82538,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267149
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80681,6 +82567,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267151
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80708,6 +82596,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267153
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80735,6 +82625,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267155
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80762,6 +82654,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267157
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80789,6 +82683,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267159
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80816,6 +82712,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267161
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80843,6 +82741,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267163
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80870,6 +82770,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267165
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80897,6 +82799,8 @@ MonoBehaviour:
   scaleChange: 2.5
   active: 0
   meltTime: 1
+  overallMeltScale: 1.60000002
+  overallMeltInterval: 10
 --- !u!64 &1214267167
 MeshCollider:
   m_ObjectHideFlags: 0
