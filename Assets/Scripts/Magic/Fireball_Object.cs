@@ -111,9 +111,11 @@ public class Fireball_Object : MonoBehaviour {
 			calculatedPitch = 0.5f;
 		}
 
+		audioS.Stop ();
 		audioS.pitch = calculatedPitch;
 		audioS.clip = explosion;
 		//Debug.Break ();
-		//audioS.Play ();
+		audioS.Play ();
+		Debug.Log ("Pitch: " + calculatedPitch + " explosion played");
 	}
 }
