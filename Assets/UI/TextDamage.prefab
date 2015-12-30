@@ -25,9 +25,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106752}
-  m_LocalRotation: {x: .501054287, y: .0284271501, z: .0117383916, w: .864869177}
-  m_LocalPosition: {x: 0, y: .933333337, z: 0}
-  m_LocalScale: {x: .966133177, y: .966133177, z: .966133177}
+  m_LocalRotation: {x: 0.5010543, y: 0.02842715, z: 0.011738392, w: 0.8648692}
+  m_LocalPosition: {x: 0, y: 0.93333334, z: 0}
+  m_LocalScale: {x: 0.9661332, y: 0.9661332, z: 0.9661332}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,7 +52,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -81,7 +81,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106752}
-  m_Text: -12
+  m_Text: -21
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed75b0916753888488feb964eb817c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 1.29999995
+  time: 1.3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
