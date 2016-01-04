@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SelectionScreenManager : MonoBehaviour {
 	public float timeDelay = .7f;
@@ -342,7 +343,7 @@ public class SelectionScreenManager : MonoBehaviour {
 		audioS = GetComponent<AudioSource>();
 		ControllerInputWrapper.setControlTypes();
 		ControllerInputWrapper.setPlatform();
-		async = Application.LoadLevelAsync ("level3");
+		async = SceneManager.LoadSceneAsync ("level3");
 		async.allowSceneActivation = false;
 	}
 

@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour {
 		}
 		else{
 			if(cameraMove.endMovement && !gameStarted){
-				UI_manager.ReadyTextEnable();
+				UI_manager.ShowArrows();
 				cameraMove.endMovement = false;
 			}
 		}

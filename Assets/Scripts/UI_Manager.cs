@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class UI_Manager : MonoBehaviour {
 
@@ -24,6 +25,8 @@ public class UI_Manager : MonoBehaviour {
 	public Animator whiteCoverAnim;
 	public Animator tutorialAnim;
 
+    public List<GameObject> arrows = new List<GameObject>();
+
 	private bool inWinUI;
 	private string[] colorsForPlayerNum = {"<color=red>RED</color>", "<color=blue>BLUE</color>"
 		, "<color=green>GREEN/colors", "<color=yellow>YELLOW</color>"};
@@ -43,14 +46,14 @@ public class UI_Manager : MonoBehaviour {
 			   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 2) ||
 			   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 3) ||
 			   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 4)){
-				Application.LoadLevel("Level3");
-			}
+                SceneManager.LoadScene("Level3");
+            }
 			else if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 1) ||
 			        ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 2) ||
 			        ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 3) ||
 			        ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 4)){
-				Application.LoadLevel("Main_Menu");
-			}
+                SceneManager.LoadScene("Main_Menu");
+            }
 		}
 	}
 	
@@ -58,6 +61,24 @@ public class UI_Manager : MonoBehaviour {
 		whiteCoverAnim.SetTrigger ("transparencyInc");
 		tutorialAnim.SetTrigger ("transparencyInc");
 	}
+
+    public void ShowArrows()
+    {
+        for (int i = 0; i < playerList.Count; i++)
+        {
+            arrows[i].SetActive(true);
+        }
+        Invoke("HideArrows", 1.5f);
+    }
+
+    public void HideArrows()
+    {
+        for (int i = 0; i < arrows.Count; i++)
+        {
+            arrows[i].SetActive(false);
+        }
+        Invoke("ReadyTextEnable", 0.5f);
+    }
 
 	public void ReadyTextEnable(){
 		if(readyText){
@@ -160,11 +181,12 @@ public class UI_Manager : MonoBehaviour {
 	}
 
 	public void Rematch(){
-		Application.LoadLevel ("Level3");
-	}
+        SceneManager.LoadScene("Level3");
+
+    }
 
 	public void BackToMainMenu(){
-		Application.LoadLevel ("Main_Menu");
-	}
+        SceneManager.LoadScene("Main_Menu");
+    }
 
 }
