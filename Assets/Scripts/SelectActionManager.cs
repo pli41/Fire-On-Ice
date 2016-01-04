@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SelectActionManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class SelectActionManager : MonoBehaviour
 	public Button quitBtn;
 	public ScrollPanel scrollPanel;
 
+    public AudioSource scrollAS;
+    public AudioSource selectAS;
     enum ActionType { Play, Credits, Quit };
     ActionType currentType;
 	float timer;
@@ -58,10 +61,14 @@ public class SelectActionManager : MonoBehaviour
 				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 4, true)&&
 				    !scrollPanel.isPlaying)
 				{
+                    selectAS.Stop();
+                    selectAS.Play();
 					WhiteOut();
                 }
 				if (directX < -0.05f || directY < -0.05f && actionReady && !scrollPanel.isPlaying)
 				{
+                    scrollAS.Stop();
+                    scrollAS.Play();
 					currentType = ActionType.Credits;
 					actionReady = false;
 				}
@@ -73,17 +80,24 @@ public class SelectActionManager : MonoBehaviour
 				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 4, true)&&
 				    !scrollPanel.isPlaying)
 				{
-					creditsPanel.SetActive(true);
+
+                    selectAS.Stop();
+                    selectAS.Play();
+                    creditsPanel.SetActive(true);
 					scrollPanel.isPlaying = true;
 				}
 				if (directX > 0.05f || directY < -0.05f && actionReady && !scrollPanel.isPlaying)
 				{
-					currentType = ActionType.Quit;
+                    scrollAS.Stop();
+                    scrollAS.Play();
+                    currentType = ActionType.Quit;
 					actionReady = false;
 				}
 				if (directY > 0.05f && actionReady && !scrollPanel.isPlaying)
 				{
-					currentType = ActionType.Play;
+                    scrollAS.Stop();
+                    scrollAS.Play();
+                    currentType = ActionType.Play;
 					actionReady = false;
 				}
 				break;
@@ -91,11 +105,16 @@ public class SelectActionManager : MonoBehaviour
             case ActionType.Quit:
 				if (ControllerInputWrapper.GetButtonAll(ControllerInputWrapper.Buttons.A, true))
 				{
-					Application.Quit();
+
+                    selectAS.Stop();
+                    selectAS.Play();
+                    Application.Quit();
 				}
 				if (directX < -0.05f || directY > 0.05f && actionReady && !scrollPanel.isPlaying)
 				{
-					currentType = ActionType.Credits;
+                    scrollAS.Stop();
+                    scrollAS.Play();
+                    currentType = ActionType.Credits;
 					actionReady = false;
 				}
                 break;
@@ -110,7 +129,7 @@ public class SelectActionManager : MonoBehaviour
 
 	void GoToSelectionScreen(){
 		CancelInvoke ();
-		Application.LoadLevel("SelectionScreen");
+        SceneManager.LoadScene("SelectionScreen");
 	}
 
 	void CheckSelected(){

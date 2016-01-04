@@ -11,7 +11,9 @@ public class ScrollPanel : MonoBehaviour {
 	public bool interrupted;
 	public GameObject creditsPanel;
 
-	RectTransform rectTran;
+    public AudioSource selectAS;
+
+    RectTransform rectTran;
 
 	// Use this for initialization
 	void Start () {
@@ -37,7 +39,9 @@ public class ScrollPanel : MonoBehaviour {
 		   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 2, true)||
 		   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 3, true)||
 		   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 4, true)){
-			isPlaying = false;
+            selectAS.Stop();
+            selectAS.Play();
+            isPlaying = false;
 			interrupted = true;
 			creditsPanel.SetActive(false);
 			rectTran.position = startPos;
