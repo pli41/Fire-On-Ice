@@ -148,7 +148,10 @@ public class UI_Manager : MonoBehaviour {
 					cooldownUI.SetActive(!abilityReady);
 					if(!abilityReady){
 						Text text = cooldownUI.GetComponent<RectTransform>().Find("Text").GetComponent<Text>();
-						text.text = playerList[i].GetComponent<PlayerAttack>().abilities[j].timeUntilReset.ToString();
+                        Image image = cooldownUI.GetComponent<RectTransform>().Find("Image").GetComponent<Image>();
+                        float shadePercent = playerList[i].GetComponent<PlayerAttack>().abilities[j].timeUntilReset / playerList[i].GetComponent<PlayerAttack>().abilities[j].cooldown;
+                        text.text = playerList[i].GetComponent<PlayerAttack>().abilities[j].timeUntilReset.ToString();
+                        image.fillAmount = shadePercent;
 					}
 				}
 			}
