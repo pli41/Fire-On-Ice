@@ -42,16 +42,16 @@ public class UI_Manager : MonoBehaviour {
 
 	public void Update(){
 		if(inWinUI){
-			if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 1) ||
-			   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 2) ||
-			   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 3) ||
-			   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 4)){
+			if(ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, 1) ||
+			   ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, 2) ||
+			   ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, 3) ||
+			   ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, 4)){
                 SceneManager.LoadScene("Level3");
             }
-			else if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 1) ||
-			        ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 2) ||
-			        ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 3) ||
-			        ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 4)){
+			else if(ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 1) ||
+			        ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 2) ||
+			        ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 3) ||
+			        ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 4)){
                 SceneManager.LoadScene("Main_Menu");
             }
 		}

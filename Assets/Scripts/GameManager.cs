@@ -28,8 +28,8 @@ public class GameManager : MonoBehaviour {
 	void Awake () {
 		audioS = GetComponents<AudioSource> () [1];
 
-		ControllerInputWrapper.setPlatform ();
-		ControllerInputWrapper.setControlTypes ();
+		//ControllerInputWrapper.setPlatform ();
+		//ControllerInputWrapper.setControlTypes ();
 
 		//players = GameObject.FindGameObjectsWithTag ("Player");
 		//boss = GameObject.FindGameObjectWithTag ("Boss");

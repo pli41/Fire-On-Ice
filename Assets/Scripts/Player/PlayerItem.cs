@@ -19,7 +19,7 @@ public class PlayerItem : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (gm.GameInProgress) {
-			if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, joystickNum)){
+			if(ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, joystickNum)){
 				if(chestAround){
 					//Debug.Log("Open chest");
 					chestOpenedNum++;

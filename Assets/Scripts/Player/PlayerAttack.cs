@@ -62,7 +62,7 @@ public class PlayerAttack : MonoBehaviour
 			if (!disabled) {
 				//This part can be structrually changed too. Will do it after having a lot of abilities.
 
-				if (ControllerInputWrapper.GetTriggerRaw (ControllerInputWrapper.Triggers.LeftTrigger, joystickNum) > 0) {	
+				if (ControllerManager.GetTrigger (ControllerInputWrapper.Triggers.LeftTrigger, joystickNum, true) > 0) {	
 					if (!casting2 && !casting3 && !casting4) {
 						if (abilities [0].abilityReady) {
 							casting1 = true;
@@ -82,7 +82,7 @@ public class PlayerAttack : MonoBehaviour
 				
 				
 				
-				if (ControllerInputWrapper.GetButton (ControllerInputWrapper.Buttons.LeftBumper, joystickNum)) {
+				if (ControllerManager.GetButton (ControllerInputWrapper.Buttons.LeftBumper, joystickNum)) {
 					if (!casting1 && !casting3 && !casting4) {
 						if (abilities [1].abilityReady) {
 							casting2 = true;
@@ -102,7 +102,7 @@ public class PlayerAttack : MonoBehaviour
 				
 				//Debug.Log (Input.GetAxisRaw ("PS4_R1_" + playerString));
 				
-				if (ControllerInputWrapper.GetButton (ControllerInputWrapper.Buttons.RightBumper, joystickNum)) {
+				if (ControllerManager.GetButton (ControllerInputWrapper.Buttons.RightBumper, joystickNum)) {
 					if (!casting1 && !casting2 && !casting4) {
 						if (abilities [2].abilityReady) {
 							//Debug.Log(joystickNum + " is casting");
@@ -122,7 +122,7 @@ public class PlayerAttack : MonoBehaviour
 					}
 				}
 
-				if (ControllerInputWrapper.GetTriggerRaw (ControllerInputWrapper.Triggers.RightTrigger, joystickNum) > 0) {
+				if (ControllerManager.GetTrigger (ControllerInputWrapper.Triggers.RightTrigger, joystickNum, true) > 0) {
 					if (!casting1 && !casting2 && !casting3) {
 						if (abilities [3].abilityReady) {
 							//Debug.Log(joystickNum + " is casting");

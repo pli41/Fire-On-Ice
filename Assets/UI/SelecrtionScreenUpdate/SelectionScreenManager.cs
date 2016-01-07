@@ -174,7 +174,7 @@ public class SelectionScreenManager : MonoBehaviour {
 	{
 		for (int i = 0; i < numPlayers; i++)
 		{
-			if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.Start, playerControllers[i], true))
+			if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.Start, playerControllers[i], true))
 				//if (Input.GetKeyDown(KeyCode.KeypadEnter)) 
 			{
 				
@@ -256,7 +256,7 @@ public class SelectionScreenManager : MonoBehaviour {
 	{
 		for (int i = 0; i < numPlayers; i++)
 		{
-			if (ControllerInputWrapper.GetTriggerRaw(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i]) > .01f)
+			if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i], true) > .01f)
 			{
 				if (checkAbilitySelected(i)) {
 					return;
@@ -265,7 +265,7 @@ public class SelectionScreenManager : MonoBehaviour {
 				selectAbilitySounds.Play();
 				playerAbilities[i, 0] = allAbilities[currentAbilitySelected[i]];
 				//aAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
-			}else if  (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.LeftBumper, playerControllers[i], true))
+			}else if  (ControllerManager.GetButton(ControllerInputWrapper.Buttons.LeftBumper, playerControllers[i], true))
 			{
 				if (checkAbilitySelected(i)) {
 					return;
@@ -275,7 +275,7 @@ public class SelectionScreenManager : MonoBehaviour {
 				selectAbilitySounds.Play();
 				//xAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
 			}
-		else if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.RightBumper, playerControllers[i], true))
+		else if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.RightBumper, playerControllers[i], true))
 			{
 				if (checkAbilitySelected(i)) {
 					return;
@@ -309,7 +309,7 @@ public class SelectionScreenManager : MonoBehaviour {
 	{
 		for (int i = 0; i < numPlayers; i++)
 		{
-			float direct = ControllerInputWrapper.GetAxisRaw(ControllerInputWrapper.Axis.LeftStickX, playerControllers[i]);
+			float direct = ControllerManager.GetAxis(ControllerInputWrapper.Axis.LeftStickX, playerControllers[i], true);
 			selectTimer[i] -= Time.deltaTime;
 			//print(direct);
 			if (direct < -0.05f && selectTimer[i] <= 0)
@@ -341,8 +341,7 @@ public class SelectionScreenManager : MonoBehaviour {
 	void Start()
 	{
 		audioS = GetComponent<AudioSource>();
-		ControllerInputWrapper.setControlTypes();
-		ControllerInputWrapper.setPlatform();
+        ControllerManager.setUpControls();
 		async = SceneManager.LoadSceneAsync ("level3");
 		async.allowSceneActivation = false;
 	}
@@ -354,7 +353,7 @@ public class SelectionScreenManager : MonoBehaviour {
 	{
 		for (int i = 0; i < playerControllers.Length; i++)
 		{
-			if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, i + 1, true) && !accepted[i])
+			if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, i + 1, true) && !accepted[i])
 			{
 				TVonSounds.Stop();
 				TVonSounds.Play();

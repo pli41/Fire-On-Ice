@@ -27,8 +27,7 @@ public class SelectActionManager : MonoBehaviour
 
     void Start()
     {
-        ControllerInputWrapper.setControlTypes();
-        ControllerInputWrapper.setPlatform();
+        ControllerManager.setUpControls();
         currentType = ActionType.Play;
     }
 
@@ -48,17 +47,17 @@ public class SelectActionManager : MonoBehaviour
 			timer = 0f;
 		}
 
-		float directX = ControllerInputWrapper.GetAxisRaw(ControllerInputWrapper.Axis.LeftStickX, 1);
-		float directY = ControllerInputWrapper.GetAxisRaw(ControllerInputWrapper.Axis.LeftStickY, 1);
+		float directX = ControllerManager.GetAxis(ControllerInputWrapper.Axis.LeftStickX, 1, true);
+		float directY = ControllerManager.GetAxis(ControllerInputWrapper.Axis.LeftStickY, 1, true);
         switch (currentType)
         {
             case ActionType.Play:
 
 				
-				if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 1, true)||
-				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 2, true)||
-				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 3, true)||
-				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 4, true)&&
+				if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, 1, true)||
+				    ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, 2, true)||
+				    ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, 3, true)||
+				    ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, 4, true)&&
 				    !scrollPanel.isPlaying)
 				{
                     selectAS.Stop();
@@ -74,10 +73,10 @@ public class SelectActionManager : MonoBehaviour
 				}
                 break;
 			case ActionType.Credits:
-				if (ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 1, true)||
-				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 2, true)||
-				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 3, true)||
-				    ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.A, 4, true)&&
+				if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, 1, true)||
+				    ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, 2, true)||
+				    ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, 3, true)||
+				    ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, 4, true)&&
 				    !scrollPanel.isPlaying)
 				{
 
@@ -103,7 +102,7 @@ public class SelectActionManager : MonoBehaviour
 				break;
 
             case ActionType.Quit:
-				if (ControllerInputWrapper.GetButtonAll(ControllerInputWrapper.Buttons.A, true))
+                if (ControllerManager.GetButtonAll(ControllerInputWrapper.Buttons.A, true))
 				{
 
                     selectAS.Stop();

@@ -55,8 +55,8 @@ public class PlayerMovement : MonoBehaviour
 
 			dodgeTimer += Time.deltaTime;
 			
-			float h = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickX, joystickNum, false);
-			float v = ControllerInputWrapper.GetAxisRaw (ControllerInputWrapper.Axis.LeftStickY, joystickNum, false);
+			float h = ControllerManager.GetAxis (ControllerInputWrapper.Axis.LeftStickX, joystickNum, true);
+			float v = ControllerManager.GetAxis (ControllerInputWrapper.Axis.LeftStickY, joystickNum, true);
 			
 			//Debug.Log ("h = " + h + " v = " + v);
 			if(!disabled){
@@ -126,8 +126,8 @@ public class PlayerMovement : MonoBehaviour
 	}
 	
 	void Turning(){
-		float hori = ControllerInputWrapper.GetAxisRaw(ControllerInputWrapper.Axis.RightStickX, joystickNum, false);
-		float vert = ControllerInputWrapper.GetAxisRaw(ControllerInputWrapper.Axis.RightStickY, joystickNum, false);
+		float hori = ControllerManager.GetAxis(ControllerInputWrapper.Axis.RightStickX, joystickNum, true);
+		float vert = ControllerManager.GetAxis(ControllerInputWrapper.Axis.RightStickY, joystickNum, true);
 		
 		if(Mathf.Abs(hori) > 0.01f || Mathf.Abs(vert) > 0.01f){
 			//Debug.Log ("Turning by right analog");

@@ -35,10 +35,10 @@ public class ScrollPanel : MonoBehaviour {
 			isPlaying = false;
 		}
 
-		if(ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 1, true)||
-		   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 2, true)||
-		   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 3, true)||
-		   ControllerInputWrapper.GetButton(ControllerInputWrapper.Buttons.B, 4, true)){
+		if(ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 1, true)||
+		   ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 2, true)||
+		   ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 3, true)||
+		   ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 4, true)){
             selectAS.Stop();
             selectAS.Play();
             isPlaying = false;
