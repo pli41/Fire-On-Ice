@@ -34,8 +34,8 @@ public abstract class ControllerInputWrapper
     //    private static string DPAD_PS_STICK_X = "DpadPSStickX";
     //    private static string DPAD_PS_STICK_Y = "DpadPSStickY";
 
-    public enum Axis { LeftStickY, LeftStickX, RightStickY, RightStickX, DPadY, DPadX };
-    public enum Buttons { A, B, X, Y, RightBumper, LeftBumper, Back, Start, LeftStickClick, RightStickClick };
+    public enum Axis { LeftStickY, LeftStickX, RightStickY, RightStickX, DPadY, DPadX};
+    public enum Buttons { A, B, X, Y, RightBumper, LeftBumper, Back, Start, LeftStickClick, RightStickClick, Key_1, Key_2, Key_3, Key_4, Key_Fire, Key_Confirm};
     public enum Triggers { RightTrigger, LeftTrigger };
 
     public abstract bool GetButton(Buttons button, int joyNum, bool isDown = false);

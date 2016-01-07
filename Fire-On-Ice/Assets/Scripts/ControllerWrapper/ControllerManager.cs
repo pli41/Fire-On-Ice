@@ -7,6 +7,8 @@ public class ControllerManager  {
     public enum OperatingSystem { Win, OSX, Linux };
     public static OperatingSystem currentOS;
 
+    public static KeyboardWrapper keyboardWrapper = new KeyboardWrapper();
+
     static ControllerInputWrapper[] playerControls = new ControllerInputWrapper[4];
 
     public static void setUpControls()
@@ -44,7 +46,16 @@ public class ControllerManager  {
     public static float GetAxis(ControllerInputWrapper.Axis axis, int joyNum, bool isRaw = false)
     {
         joyNum--;//Off by one error
-        if (joyNum < 0 || playerControls[joyNum] == null)
+        if (joyNum < 0)
+        {
+            if (joyNum == -1)
+            {
+                return keyboardWrapper.GetAxis(axis, joyNum, isRaw);
+            }
+            return 0;
+            
+        }
+        if (playerControls[joyNum] == null)
         {
             return 0;
         }
@@ -54,7 +65,16 @@ public class ControllerManager  {
     public static float GetTrigger(ControllerInputWrapper.Triggers trigger, int joyNum, bool isRaw = false)
     {
         joyNum--;
-        if (joyNum < 0 || playerControls[joyNum] == null)
+
+        if (joyNum < 0)
+        {
+            if (joyNum == -1)
+            {
+                return keyboardWrapper.GetTrigger(trigger, joyNum, isRaw);
+            }
+            return 0;
+        }
+        if (playerControls[joyNum] == null)
         {
             return 0;
         }
@@ -64,7 +84,17 @@ public class ControllerManager  {
     public static bool GetButton(ControllerInputWrapper.Buttons button, int joyNum, bool isDown = false)
     {
         joyNum--;
-        if (joyNum < 0 || playerControls[joyNum] == null)
+        Debug.Log(joyNum);
+        if (joyNum < 0)
+        {
+            if (joyNum == -1)
+            {
+                return keyboardWrapper.GetButton(button, joyNum, isDown);
+            }
+            return false;
+            
+        }
+        if (playerControls[joyNum] == null)
         {
             return false;
         }

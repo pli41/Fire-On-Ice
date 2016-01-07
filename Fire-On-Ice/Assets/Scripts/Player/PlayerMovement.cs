@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 	}
 
-	void FixedUpdate(){
+	void Update(){
 
 		if(gm.GameInProgress){
 

@@ -43,7 +43,7 @@ public class SelectionScreenManager : MonoBehaviour {
 	int[] playerControllers = new int[4];
 	int[] currentAbilitySelected = new int[4];
 	int numPlayers;
-	bool[] accepted = new bool[4];
+	bool[] accepted = new bool[5];
 	bool[] ready = new bool[4];
 	float[] selectTimer = new float[4];
 	Ability[,] playerAbilities = new Ability[4, 4];
@@ -177,7 +177,7 @@ public class SelectionScreenManager : MonoBehaviour {
 			if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.Start, playerControllers[i], true))
 				//if (Input.GetKeyDown(KeyCode.KeypadEnter)) 
 			{
-				
+                
 				if (ready[i] && timer > 0)
 				{
 					ready[i] = false;
@@ -193,8 +193,13 @@ public class SelectionScreenManager : MonoBehaviour {
 					
 				}
 			}
-		}
+        }
+
+
+       
+
 	}
+
 	/// <summary>
 	/// Checks the ability filled.
 	/// </summary>
@@ -351,9 +356,9 @@ public class SelectionScreenManager : MonoBehaviour {
 	/// </summary>
 	void checkPlayerAccept()
 	{
-		for (int i = 0; i < playerControllers.Length; i++)
+		for (int i = -1; i < playerControllers.Length; i++)
 		{
-			if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, i + 1, true) && !accepted[i])
+			if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, i + 1, true) && !accepted[i+1])
 			{
 				TVonSounds.Stop();
 				TVonSounds.Play();
@@ -361,7 +366,7 @@ public class SelectionScreenManager : MonoBehaviour {
 				tvScreenAnimations[numPlayers].GetComponent<Image>().enabled = true;
 				tvScreenAnimations[numPlayers].SetTrigger("PlayerStart");
 				playerControllers[numPlayers] = i + 1;
-				accepted[i] = true;
+				accepted[i+1] = true;
 				//panels[numPlayers].enabled = false;
 				enterPanel[numPlayers].gameObject.SetActive(false);
 				selectAbility[numPlayers].gameObject.SetActive(true);
