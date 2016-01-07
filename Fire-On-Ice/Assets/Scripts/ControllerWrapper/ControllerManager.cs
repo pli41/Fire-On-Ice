@@ -16,7 +16,7 @@ public class ControllerManager  {
         setUpPlatform();
         string[] controllerNames = Input.GetJoystickNames();
         int i = 0;
-        Debug.Log(controllerNames.Length);
+        Debug.Log("Controllers connected: " + controllerNames.Length);
         foreach(string name in controllerNames)
         {
             if (name.Contains("Wireless"))
@@ -84,7 +84,7 @@ public class ControllerManager  {
     public static bool GetButton(ControllerInputWrapper.Buttons button, int joyNum, bool isDown = false)
     {
         joyNum--;
-        Debug.Log(joyNum);
+        //Debug.Log(joyNum);
         if (joyNum < 0)
         {
             if (joyNum == -1)

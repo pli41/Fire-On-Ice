@@ -360,6 +360,7 @@ public class SelectionScreenManager : MonoBehaviour {
 		{
 			if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, i + 1, true) && !accepted[i+1])
 			{
+                Debug.Log("i = " + i );
 				TVonSounds.Stop();
 				TVonSounds.Play();
 				playerAbilities[numPlayers, 3] = mainAbility;

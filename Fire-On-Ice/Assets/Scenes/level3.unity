@@ -1804,6 +1804,22 @@ Prefab:
       value: 
       objectReference: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
         type: 2}
+    - target: {fileID: 8250224, guid: 2bd5502dc6c8a4631bbfd5a8d4e6c5bd, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250224, guid: 2bd5502dc6c8a4631bbfd5a8d4e6c5bd, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268102, guid: 2bd5502dc6c8a4631bbfd5a8d4e6c5bd, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268102, guid: 2bd5502dc6c8a4631bbfd5a8d4e6c5bd, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2bd5502dc6c8a4631bbfd5a8d4e6c5bd, type: 2}
   m_IsPrefabParent: 0
