@@ -23,6 +23,10 @@ public class ControllerManager  {
             {
                 playerControls[i] = new PS4ControllerWrapper();
             }
+            else if (name.Contains("Logitech"))
+            {
+                playerControls[i] = new LogitechControllerWrapper();
+            }
             else
             {
                 playerControls[i] = new XboxControllerWrapper();

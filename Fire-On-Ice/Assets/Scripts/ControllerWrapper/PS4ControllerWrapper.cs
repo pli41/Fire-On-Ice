@@ -21,7 +21,8 @@ public class PS4ControllerWrapper : ControllerInputWrapper {
                 axisName = getAxisName(joyNum, "3", "3", "3");
                 break;
             case Axis.RightStickY:
-                axisName = getAxisName(joyNum, "4", "4", "4");
+                axisName = getAxisName(joyNum, "6", "4", "4");
+                scale = -1;
                 break;
         }
         Debug.Log(axisName);
@@ -70,10 +71,10 @@ public class PS4ControllerWrapper : ControllerInputWrapper {
                 buttonName = getButtonName(joyNum, "5", "5", "5");
                 break;
             case Buttons.LeftStickClick:
-                buttonName = getButtonName(joyNum, "0", "0", "0");
+                buttonName = getButtonName(joyNum, "10", "0", "0");
                 break;
             case Buttons.RightStickClick:
-                buttonName = getButtonName(joyNum, "0", "0", "0");
+                buttonName = getButtonName(joyNum, "11", "0", "0");
                 break;
             case Buttons.Start:
                 buttonName = getButtonName(joyNum, "12", "12", "12");
@@ -95,10 +96,10 @@ public class PS4ControllerWrapper : ControllerInputWrapper {
         switch (trigger)
         {
             case Triggers.LeftTrigger:
-                triggerName = getAxisName(joyNum, "5", "5", "5");
+                triggerName = getAxisName(joyNum, "4", "4", "4");
                 break;
             case Triggers.RightTrigger:
-                triggerName = getAxisName(joyNum, "6", "6", "6");
+                triggerName = getAxisName(joyNum, "5", "5", "5");
                 break;
         }
         Debug.Log(triggerName);
