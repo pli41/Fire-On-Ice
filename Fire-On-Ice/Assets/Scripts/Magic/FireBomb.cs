@@ -18,8 +18,8 @@ public class FireBomb : Ability, Cooldown, Shootable, CasterEffect {
 	
 	// Update is called once per frame
 	void Update () {
-		timeUntilReset = (int)(cooldown - cdTimer + 1f);
-		CooldownUpdate ();
+        timeUntilReset = cooldown - cdTimer;
+        CooldownUpdate ();
 	}
 
 	//Cooldown interface

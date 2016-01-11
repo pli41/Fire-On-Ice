@@ -7,20 +7,28 @@ public class KeyboardWrapper : ControllerInputWrapper {
     public override float GetAxis(Axis axis, int joyNum, bool isRaw = false)
     {
         string axisName = "";
+        float scale = 1;
         switch (axis)
         {
             case Axis.LeftStickX:
                 axisName = getAxisName(0, "Horizontal", "Horizontal", "Horizontal");
+                scale = 0.09f;
                 break;
             case Axis.LeftStickY:
                 axisName = getAxisName(0, "Vertical", "Vertical", "Vertical");
+                scale = 0.09f;
                 break;
+            case Axis.RightStickX:
+                return 0;
+            case Axis.RightStickY:
+                return 0;
         }
-        return Input.GetAxis(axisName);
+        return Input.GetAxis(axisName) * scale;
     }
 
     public override float GetTrigger(Triggers trigger, int joyNum, bool isRaw = false)
     {
+
         string triggerName = "";
         switch (trigger)
         {
@@ -60,7 +68,7 @@ public class KeyboardWrapper : ControllerInputWrapper {
                 buttonName = getButtonName(0, "Confirm", "Confirm", "Confirm");
                 break;
         }
-        Debug.Log(buttonName);
+        //Debug.Log(buttonName);
         return Input.GetButton(buttonName);
     }
 

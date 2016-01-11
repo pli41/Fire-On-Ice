@@ -33,7 +33,7 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 	}
 	
 	void Update (){
-		timeUntilReset = (int)(cooldown - cdTimer + 1f);
+		timeUntilReset = cooldown - cdTimer;
 		CooldownUpdate ();
 	}
 	

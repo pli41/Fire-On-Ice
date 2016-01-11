@@ -12,7 +12,7 @@ public class Ability : MonoBehaviour {
 	public bool triggerOnce;
 
 	public float cooldown;
-	public int timeUntilReset;
+	public float timeUntilReset;
 
 	public Sprite icon;
 	//public string name;

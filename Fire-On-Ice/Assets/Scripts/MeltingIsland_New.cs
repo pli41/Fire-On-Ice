@@ -72,7 +72,7 @@ public class MeltingIsland_New : MonoBehaviour {
 			overallMeltTimer += Time.deltaTime;
 		}
 		else{
-			Debug.Log("Melt overall");
+			//Debug.Log("Melt overall");
 			overallMeltTimer = 0f;
 			meltByExplode(overallMeltScale);
 		}

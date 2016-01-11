@@ -367,7 +367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &76619987
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3671,7 +3671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &592550930
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4401,6 +4401,10 @@ Prefab:
     - target: {fileID: 8271360, guid: f7c2c7613d08749ef82a1bbdcdf430ad, type: 2}
       propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478658, guid: f7c2c7613d08749ef82a1bbdcdf430ad, type: 2}
+      propertyPath: joystickNum
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7c2c7613d08749ef82a1bbdcdf430ad, type: 2}
@@ -6045,7 +6049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &993153396
 RectTransform:
   m_ObjectHideFlags: 0
@@ -64554,7 +64558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1499676113
 RectTransform:
   m_ObjectHideFlags: 0
@@ -65277,6 +65281,10 @@ Prefab:
       propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11467118, guid: a8e4fcd2caf344eee9698d5b88cea8f6, type: 2}
+      propertyPath: joystickNum
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a8e4fcd2caf344eee9698d5b88cea8f6, type: 2}
   m_IsPrefabParent: 0
@@ -65324,7 +65332,7 @@ MonoBehaviour:
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
-  m_CancelButton: Cancel
+  m_CancelButton: Submit
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
@@ -68291,7 +68299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1945818919
 RectTransform:
   m_ObjectHideFlags: 0

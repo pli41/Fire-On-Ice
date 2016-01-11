@@ -1789,12 +1789,12 @@ InputManager:
     positiveButton: d
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
+    gravity: 1000
     dead: 0.01
-    sensitivity: 0.1
+    sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
     joyNum: 0
   - serializedVersion: 3
@@ -1805,12 +1805,12 @@ InputManager:
     positiveButton: w
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
+    gravity: 1000
     dead: 0.01
-    sensitivity: 0.1
+    sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 1
     joyNum: 0
   - serializedVersion: 3
@@ -1821,9 +1821,9 @@ InputManager:
     positiveButton: 1
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
+    gravity: 1000
     dead: 0.01
-    sensitivity: 0.1
+    sensitivity: 1000
     snap: 0
     invert: 0
     type: 0
@@ -1837,9 +1837,9 @@ InputManager:
     positiveButton: 2
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
+    gravity: 1000
     dead: 0.01
-    sensitivity: 0.1
+    sensitivity: 1000
     snap: 0
     invert: 0
     type: 0
@@ -1853,9 +1853,9 @@ InputManager:
     positiveButton: 3
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
+    gravity: 1000
     dead: 0.01
-    sensitivity: 0.1
+    sensitivity: 1000
     snap: 0
     invert: 0
     type: 0
@@ -1869,9 +1869,9 @@ InputManager:
     positiveButton: 4
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
+    gravity: 1000
     dead: 0.01
-    sensitivity: 0.1
+    sensitivity: 1000
     snap: 0
     invert: 0
     type: 0
@@ -1885,9 +1885,9 @@ InputManager:
     positiveButton: mouse 0
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
+    gravity: 1000
     dead: 0.01
-    sensitivity: 0.1
+    sensitivity: 1000
     snap: 0
     invert: 0
     type: 0
@@ -1901,9 +1901,9 @@ InputManager:
     positiveButton: space
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
+    gravity: 1000
     dead: 0.01
-    sensitivity: 0.1
+    sensitivity: 1000
     snap: 0
     invert: 0
     type: 0

@@ -25,7 +25,7 @@ public class PS4ControllerWrapper : ControllerInputWrapper {
                 scale = -1;
                 break;
         }
-        Debug.Log(axisName);
+        //Debug.Log(axisName);
         if (isRaw)
         {
             return Input.GetAxisRaw(axisName) * scale;
@@ -39,7 +39,7 @@ public class PS4ControllerWrapper : ControllerInputWrapper {
     public override bool GetButton(Buttons button, int joyNum, bool isDown = false)
     {
         string buttonName = getButtonHelper(button, joyNum);
-        Debug.Log(buttonName);
+        //Debug.Log(buttonName);
         if (isDown)
         {
             return Input.GetButtonDown(buttonName);
@@ -77,7 +77,7 @@ public class PS4ControllerWrapper : ControllerInputWrapper {
                 buttonName = getButtonName(joyNum, "11", "0", "0");
                 break;
             case Buttons.Start:
-                buttonName = getButtonName(joyNum, "12", "12", "12");
+                buttonName = getButtonName(joyNum, "9", "9", "9");
                 break;
         }
         return buttonName;
@@ -102,7 +102,7 @@ public class PS4ControllerWrapper : ControllerInputWrapper {
                 triggerName = getAxisName(joyNum, "5", "5", "5");
                 break;
         }
-        Debug.Log(triggerName);
+        //Debug.Log(triggerName);
         if (isRaw)
         {
             return Input.GetAxisRaw(triggerName);

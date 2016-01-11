@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
 		if(speed > maxSpeed){
 			speed = maxSpeed;
 		}
-
+        //Debug.Log(acc);
 		movement = movement.normalized * speed * acc * accFactor;
 		
 		if(h != 0 || v != 0){

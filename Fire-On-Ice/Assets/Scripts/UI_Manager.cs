@@ -27,6 +27,7 @@ public class UI_Manager : MonoBehaviour {
 
     public List<GameObject> arrows = new List<GameObject>();
 
+    private bool arrowsShowed;
 	private bool inWinUI;
 	private string[] colorsForPlayerNum = {"<color=red>RED</color>", "<color=blue>BLUE</color>"
 		, "<color=green>GREEN/colors", "<color=yellow>YELLOW</color>"};
@@ -34,6 +35,7 @@ public class UI_Manager : MonoBehaviour {
 	
 	// Use this for initialization
 	public void Start () {
+        arrowsShowed = false;
 		playerList = gm.playerList;
 		cooldownUIs = GameObject.FindGameObjectsWithTag ("Cooldown");
 		SetupAbilityPanels ();
@@ -64,10 +66,15 @@ public class UI_Manager : MonoBehaviour {
 
     public void ShowArrows()
     {
-        for (int i = 0; i < playerList.Count; i++)
+        if (!arrowsShowed)
         {
-            arrows[i].SetActive(true);
+            for (int i = 0; i < playerList.Count; i++)
+            {
+                arrows[i].SetActive(true);
+            }
+            arrowsShowed = true;
         }
+        
         Invoke("HideArrows", 1.5f);
     }
 
@@ -150,7 +157,8 @@ public class UI_Manager : MonoBehaviour {
 						Text text = cooldownUI.GetComponent<RectTransform>().Find("Text").GetComponent<Text>();
                         Image image = cooldownUI.GetComponent<RectTransform>().Find("Image").GetComponent<Image>();
                         float shadePercent = playerList[i].GetComponent<PlayerAttack>().abilities[j].timeUntilReset / playerList[i].GetComponent<PlayerAttack>().abilities[j].cooldown;
-                        text.text = playerList[i].GetComponent<PlayerAttack>().abilities[j].timeUntilReset.ToString();
+                        text.text = ((int)playerList[i].GetComponent<PlayerAttack>().abilities[j].timeUntilReset).ToString();
+                        Debug.Log(shadePercent);
                         image.fillAmount = shadePercent;
 					}
 				}

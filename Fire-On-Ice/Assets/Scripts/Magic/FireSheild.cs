@@ -23,8 +23,8 @@ public class FireSheild : Ability, Cooldown, CasterEffect, Shootable {
 	
 	// Update is called once per frame
 	void Update () {
-		timeUntilReset = (int)(cooldown - cdTimer + 1f);
-		CooldownUpdate ();
+        timeUntilReset = cooldown - cdTimer;
+        CooldownUpdate ();
 	}
 
 	public void Shoot(){

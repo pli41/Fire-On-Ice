@@ -16,7 +16,7 @@ public class ControllerManager  {
         setUpPlatform();
         string[] controllerNames = Input.GetJoystickNames();
         int i = 0;
-        Debug.Log("Controllers connected: " + controllerNames.Length);
+        //Debug.Log("Controllers connected: " + controllerNames.Length);
         foreach(string name in controllerNames)
         {
             if (name.Contains("Wireless"))

@@ -35,8 +35,8 @@ public class MagicWisdom : Ability, Cooldown {
 	}
 	
 	void Update (){
-		timeUntilReset = (int)(cooldown - cdTimer + 1f);
-		CooldownUpdate ();
+        timeUntilReset = cooldown - cdTimer;
+        CooldownUpdate ();
 	}
 	
 	public void CooldownUpdate(){

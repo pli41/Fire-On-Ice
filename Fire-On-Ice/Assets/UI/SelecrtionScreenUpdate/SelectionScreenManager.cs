@@ -358,9 +358,9 @@ public class SelectionScreenManager : MonoBehaviour {
 	{
 		for (int i = -1; i < playerControllers.Length; i++)
 		{
-			if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, i + 1, true) && !accepted[i+1])
+			if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.Start, i + 1, true) && !accepted[i+1])
 			{
-                Debug.Log("i = " + i );
+                //Debug.Log("i = " + i );
 				TVonSounds.Stop();
 				TVonSounds.Play();
 				playerAbilities[numPlayers, 3] = mainAbility;
