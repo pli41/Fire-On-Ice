@@ -23,12 +23,15 @@ public class SelectionScreenManager : MonoBehaviour {
 	public Image[] bAbility = new Image[4];
 	public Image[] yAbility = new Image[4];
 	public Image[] blockImage = new Image[4];
-	public Text[] readyText = new Text[4];
+    public Sprite[] keyboardSprites = new Sprite[4];
+    public Sprite[] controllerSprites = new Sprite[4];
+    public Text[] readyText = new Text[4];
 	public Text[] currentAbilityName = new Text[4];
 	public Text[] currentAbilityDescription = new Text[4];
 	public float timer;
 	public Animator countDownAnim;
 	public Animator whiteCoverAnim;
+
 
 	public AudioSource scrollAbilitySounds;
 	public AudioSource selectAbilitySounds;
@@ -40,7 +43,7 @@ public class SelectionScreenManager : MonoBehaviour {
 	public AudioClip FourMenClip;
 	public AudioClip ReadyToGoClip;
 	
-	int[] playerControllers = new int[4];
+	int[] playerControllers = { -1, -1, -1, -1};
 	int[] currentAbilitySelected = new int[4];
 	int numPlayers;
 	bool[] accepted = new bool[5];
@@ -361,6 +364,12 @@ public class SelectionScreenManager : MonoBehaviour {
 			if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.Start, i + 1, true) && !accepted[i+1])
 			{
                 //Debug.Log("i = " + i );
+
+                //Set key icons
+
+                int targetPanelNum = FindSelectPanelNum(i);
+                ChangeButtonIcons(i==0, targetPanelNum);
+
 				TVonSounds.Stop();
 				TVonSounds.Play();
 				playerAbilities[numPlayers, 3] = mainAbility;
@@ -393,6 +402,53 @@ public class SelectionScreenManager : MonoBehaviour {
 			}
 		}
 	}
+
+    int FindSelectPanelNum(int target)
+    {
+        for (int i = 0; i < playerControllers.Length; i++)
+        {
+            if (playerControllers[i] == target)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    void ChangeButtonIcons(bool isController, int num)
+    {
+        if (isController)
+        {
+            Image button_1 = selectAbility[num].GetComponent<RectTransform>().Find("L2").GetComponent<RectTransform>().Find("Image").GetComponent<Image>();
+            button_1.sprite = controllerSprites[0];
+            button_1.GetComponent<RectTransform>().sizeDelta.Set(105f, 57f);
+            Image button_2 = selectAbility[num].GetComponent<RectTransform>().Find("L1").GetComponent<RectTransform>().Find("Image").GetComponent<Image>();
+            button_2.sprite = controllerSprites[1];
+            button_2.GetComponent<RectTransform>().sizeDelta.Set(105f, 57f);
+            Image button_3 = selectAbility[num].GetComponent<RectTransform>().Find("R1").GetComponent<RectTransform>().Find("Image").GetComponent<Image>();
+            button_3.sprite = controllerSprites[2];
+            button_3.GetComponent<RectTransform>().sizeDelta.Set(105f, 57f);
+            Image button_4 = selectAbility[num].GetComponent<RectTransform>().Find("R2").GetComponent<RectTransform>().Find("Image").GetComponent<Image>();
+            button_4.sprite = controllerSprites[3];
+            button_4.GetComponent<RectTransform>().sizeDelta.Set(105f, 57f);
+        }
+        else
+        {
+            Image button_1 = selectAbility[num].GetComponent<RectTransform>().Find("L2").GetComponent<RectTransform>().Find("Image").GetComponent<Image>();
+            button_1.sprite = keyboardSprites[3];
+            button_1.GetComponent<RectTransform>().sizeDelta = new Vector2(57f, 57f); button_1.GetComponent<RectTransform>().sizeDelta = new Vector2(57f, 57f);
+            Image button_2 = selectAbility[num].GetComponent<RectTransform>().Find("L1").GetComponent<RectTransform>().Find("Image").GetComponent<Image>();
+            button_2.sprite = keyboardSprites[2];
+            button_2.GetComponent<RectTransform>().sizeDelta = new Vector2(57f, 57f);
+            Image button_3 = selectAbility[num].GetComponent<RectTransform>().Find("R1").GetComponent<RectTransform>().Find("Image").GetComponent<Image>();
+            button_3.sprite = keyboardSprites[1];
+            button_3.GetComponent<RectTransform>().sizeDelta = new Vector2(57f, 57f);
+            Image button_4 = selectAbility[num].GetComponent<RectTransform>().Find("R2").GetComponent<RectTransform>().Find("Image").GetComponent<Image>();
+            button_4.sprite = keyboardSprites[0];
+            button_4.GetComponent<RectTransform>().sizeDelta = new Vector2(57f, 57f);
+        }
+        
+    }
 }
 
 
