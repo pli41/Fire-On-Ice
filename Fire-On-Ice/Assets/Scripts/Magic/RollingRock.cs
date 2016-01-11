@@ -79,7 +79,7 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 	}
 	
 	public override void SetupObj(){
-		Debug.Log (ability_point);
+		//Debug.Log (ability_point);
 		rollingRock_object = ability_object.GetComponent<RollingRock_Object> ();
 		rollingRock_object.ability = this;
 		ability_object.transform.position = ability_point.position + transform.forward * 1f;
@@ -89,7 +89,7 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 	public void CastDelayStart(){
 		if(delayBool){
 			if(!delaying){
-				Debug.Log("Endcast will be called");
+				//Debug.Log("Endcast will be called");
 
 				//anim.CrossFadeQueued ("AttackCritical", 0.1f);
 				owner.GetComponent<PlayerAttack>().enchanting = true;

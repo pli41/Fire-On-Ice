@@ -44,14 +44,14 @@ public class InGameHealthUI : MonoBehaviour {
 	}
 
 	public void ShowUI() {
-		Debug.Log ("Show Health");
+		//Debug.Log ("Show Health");
 		gameObject.SetActive (true);
 		CancelInvoke ();
 		Invoke ("HideUI", showDuration);
 	}
 
 	void HideUI(){
-		Debug.Log ("Hide Health");
+		//Debug.Log ("Hide Health");
 		gameObject.SetActive (false);
 	}
 }

@@ -133,7 +133,7 @@ public class SelectionScreenManager : MonoBehaviour {
 		timer -= Time.deltaTime;
 		if (timer < 0)
 		{
-			Debug.Log("Play Audio");
+			//Debug.Log("Play Audio");
 			setGameSettings();
 			if(!ReadyToGoClipPlayed){
 				audioS.Stop();
@@ -408,7 +408,7 @@ public class SelectionScreenManager : MonoBehaviour {
 
     int FindSelectPanelNum(int target)
     {
-        Debug.Log("target: " + target);
+        //Debug.Log("target: " + target);
         for (int i = 0; i < playerControllers.Length; i++)
         {
             if (playerControllers[i] == target)
@@ -421,8 +421,8 @@ public class SelectionScreenManager : MonoBehaviour {
 
     void ChangeButtonIcons(bool isController, int num)
     {
-        Debug.Log(num);
-        Debug.Log(isController);
+        //Debug.Log(num);
+        //Debug.Log(isController);
         if (isController)
         {
             Image button_1 = selectAbility[num].GetComponent<RectTransform>().Find("L2").GetComponent<RectTransform>().Find("Image").GetComponent<Image>();

@@ -14,7 +14,7 @@ public class Chest : MonoBehaviour {
 
 		anim = transform.Find("Chest_cover").gameObject.GetComponent<Animator> ();
 		//items = GameObject.FindGameObjectsWithTag ("Item");
-		Debug.Log (items.Length);
+		//Debug.Log (items.Length);
 		selection = Random.Range (0, items.Length);
 		active = true;
 	}

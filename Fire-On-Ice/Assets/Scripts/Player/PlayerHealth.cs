@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
 		playerAttack = GetComponent<PlayerAttack> ();
 
 		canvas = GameObject.Find ("HUDCanvas");
-		Debug.Log ("PlayerHealthUI_" + playerAttack.playerNum);
+		//Debug.Log ("PlayerHealthUI_" + playerAttack.playerNum);
 
 		inGameHealthUI = canvas.GetComponent<RectTransform> ().Find ("PlayerHealthUI_" + playerAttack.playerNum)
 			.GetComponent<InGameHealthUI>();
@@ -118,14 +118,14 @@ public class PlayerHealth : MonoBehaviour
 	}
 	
 	public void CauseOnFire(){
-		Debug.Log ("On Fire in playerhealth" + " in player " + playerAttack.playerNum);
+		//Debug.Log ("On Fire in playerhealth" + " in player " + playerAttack.playerNum);
 		onFireEffect.SetActive (true);
 		Invoke ("CeaseFire", onFireTime);
 	}
 	
 	public void CeaseFire(){
 		CancelInvoke ();
-		Debug.Log ("CeaseFire in playerhealth" + " in player " + playerAttack.playerNum);
+		//Debug.Log ("CeaseFire in playerhealth" + " in player " + playerAttack.playerNum);
 		onFireEffect.SetActive (false);
 		onFire = false;
 	}

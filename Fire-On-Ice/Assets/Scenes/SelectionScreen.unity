@@ -2004,10 +2004,10 @@ MonoBehaviour:
   - {fileID: 1424347710}
   - {fileID: 1805991183}
   keyboardSprites:
-  - {fileID: 21300000, guid: 34fdc876b552fed468b10ddd4b8689fe, type: 3}
-  - {fileID: 21300000, guid: 93f847deb11aa104b96b054163172eab, type: 3}
-  - {fileID: 21300000, guid: 09eb5292ed336544c85cd4a64b995763, type: 3}
   - {fileID: 21300000, guid: 0eff05ac3abd08345a0f6007c463ece8, type: 3}
+  - {fileID: 21300000, guid: 09eb5292ed336544c85cd4a64b995763, type: 3}
+  - {fileID: 21300000, guid: 93f847deb11aa104b96b054163172eab, type: 3}
+  - {fileID: 21300000, guid: 34fdc876b552fed468b10ddd4b8689fe, type: 3}
   controllerSprites:
   - {fileID: 21300026, guid: 09ed0788ecab70e459f6fd5bbb53de17, type: 3}
   - {fileID: 21300030, guid: 09ed0788ecab70e459f6fd5bbb53de17, type: 3}

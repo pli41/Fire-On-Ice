@@ -3,11 +3,19 @@ using System.Collections;
 using System;
 
 public class KeyboardWrapper : ControllerInputWrapper {
+    Camera mainCamera;
+    Transform currentPlayer;
+
+    public KeyboardWrapper()
+    {
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+    }
 
     public override float GetAxis(Axis axis, int joyNum, bool isRaw = false)
     {
         string axisName = "";
         float scale = 1;
+        Vector3 vec = Vector3.zero;
         switch (axis)
         {
             case Axis.LeftStickX:
@@ -19,11 +27,31 @@ public class KeyboardWrapper : ControllerInputWrapper {
                 scale = 0.09f;
                 break;
             case Axis.RightStickX:
-                return 0;
+                vec = retrieveMouseOffset();
+                vec -= Vector3.up * vec.y;
+                return vec.normalized.x;
+                
             case Axis.RightStickY:
-                return 0;
+                vec = retrieveMouseOffset();
+                vec -= Vector3.up * vec.y;
+                return vec.normalized.z;
         }
         return Input.GetAxis(axisName) * scale;
+    }
+
+    Vector3 retrieveMouseOffset()
+    {
+        if (currentPlayer == null || mainCamera == null)
+        {
+            return Vector3.zero;
+        }
+        Ray checkRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(checkRay, out hit, LayerMask.NameToLayer("Floor"), 50))
+        {
+            return hit.point - currentPlayer.position;
+        }
+        return (checkRay.origin + checkRay.direction * 50) - currentPlayer.position;
     }
 
     public override float GetTrigger(Triggers trigger, int joyNum, bool isRaw = false)
@@ -33,10 +61,10 @@ public class KeyboardWrapper : ControllerInputWrapper {
         switch (trigger)
         {
             case Triggers.RightTrigger:
-                triggerName = getButtonName(0, "1", "1", "1");
+                triggerName = getButtonName(0, "4", "4", "4");
                 break;
             case Triggers.LeftTrigger:
-                triggerName = getButtonName(0, "4", "4", "4");
+                triggerName = getButtonName(0, "1", "1", "1");
                 break;
         }
 
@@ -56,10 +84,10 @@ public class KeyboardWrapper : ControllerInputWrapper {
         switch (button)
         {
             case Buttons.RightBumper:
-                buttonName = getButtonName(0, "2", "2", "2");
+                buttonName = getButtonName(0, "3", "3", "3");
                 break;
             case Buttons.LeftBumper:
-                buttonName = getButtonName(0, "3", "3", "3");
+                buttonName = getButtonName(0, "2", "2", "2");
                 break;
             case Buttons.A:
                 buttonName = getButtonName(0, "Fire", "Fire", "Fire");
@@ -68,7 +96,10 @@ public class KeyboardWrapper : ControllerInputWrapper {
                 buttonName = getButtonName(0, "Confirm", "Confirm", "Confirm");
                 break;
         }
-        //Debug.Log(buttonName);
+        if (isDown)
+        {
+            return Input.GetButtonDown(buttonName);
+        }
         return Input.GetButton(buttonName);
     }
 
@@ -89,5 +120,11 @@ public class KeyboardWrapper : ControllerInputWrapper {
     {
         string buttonName = "k" + "_Button_" + winID;
         return buttonName;
+    }
+
+    public void setPlayer(Transform player)
+    {
+        this.currentPlayer = player;
+        this.mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 }

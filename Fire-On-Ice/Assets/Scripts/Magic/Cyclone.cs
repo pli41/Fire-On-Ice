@@ -74,7 +74,7 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 	}
 	
 	public override void SetupObj(){
-		Debug.Log (ability_point);
+		//Debug.Log (ability_point);
 
 		cyclone_object = ability_object.GetComponent<Cyclone_Object> ();
 		cyclone_object.ability = this;

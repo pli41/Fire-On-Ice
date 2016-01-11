@@ -25,6 +25,10 @@ public class UI_Manager : MonoBehaviour {
 	public Animator whiteCoverAnim;
 	public Animator tutorialAnim;
 
+    public Camera camera;
+
+    public Image Player_Keyboard_CurrentAbility;
+
     public List<GameObject> arrows = new List<GameObject>();
 
     private bool arrowsShowed;
@@ -158,13 +162,50 @@ public class UI_Manager : MonoBehaviour {
                         Image image = cooldownUI.GetComponent<RectTransform>().Find("Image").GetComponent<Image>();
                         float shadePercent = playerList[i].GetComponent<PlayerAttack>().abilities[j].timeUntilReset / playerList[i].GetComponent<PlayerAttack>().abilities[j].cooldown;
                         text.text = ((int)playerList[i].GetComponent<PlayerAttack>().abilities[j].timeUntilReset).ToString();
-                        Debug.Log(shadePercent);
+                        //Debug.Log(shadePercent);
                         image.fillAmount = shadePercent;
 					}
 				}
 			}
+
+            HandleKeyboardPlayerUI();
 		}
 	}
+
+    public void HandleKeyboardPlayerUI()
+    {
+        GameObject keyboardPlayer = FindKeyboardPlayer();
+        if (keyboardPlayer)
+        {
+            
+            Vector3 pos = keyboardPlayer.transform.position;
+            Vector2 ViewportPosition = camera.WorldToViewportPoint(pos);
+            //Debug.Log(ViewportPosition);
+            
+            Player_Keyboard_CurrentAbility.sprite = keyboardPlayer.GetComponent<PlayerAttack>().abilities[keyboardPlayer.GetComponent<PlayerAttack>().currentAbilityNum_Keyboard].icon;
+            Player_Keyboard_CurrentAbility.GetComponent<RectTransform>().anchoredPosition = new Vector2(ViewportPosition.x * Screen.width - Screen.width/2f , ViewportPosition.y * Screen.height - Screen.height /2f + 55f);
+            Player_Keyboard_CurrentAbility.GetComponent<RectTransform>().sizeDelta = new Vector2(25f, 25f);
+            Player_Keyboard_CurrentAbility.enabled = true;
+        }
+        else
+        {
+            Player_Keyboard_CurrentAbility.enabled = false;
+        }
+    }
+
+    public GameObject FindKeyboardPlayer()
+    {
+        foreach (GameObject player in playerList)
+        {
+            if (player.GetComponent<PlayerAttack>().joystickNum == 0)
+            {
+                return player;
+            }
+        }
+
+
+        return null;
+    }
 
 	public void SetPlayerDeathByNum(int playerNum){
 		playerUIs [playerNum-1].GetComponent<RectTransform>().Find ("Avatar").GetComponent<AnimateGif>().start = true;

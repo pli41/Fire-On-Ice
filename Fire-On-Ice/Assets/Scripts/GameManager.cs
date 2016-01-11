@@ -36,9 +36,28 @@ public class GameManager : MonoBehaviour {
 		gameStarted = false;
 		SetupPlayers ();
 		SetupPlayerAbilities ();
+        checkKeyboardController();
 		Invoke ("CameraStart", 2f);
 
 	}
+
+    void checkKeyboardController()
+    {
+        
+        int j = 0;
+        foreach (GameObject player in playerList)
+        {
+            //Debug.Break();
+            if (player.GetComponent<PlayerAttack>().joystickNum == 0)
+            {
+                //Debug.Log("Why is life so hard");
+                ControllerManager.keyboardWrapper.setPlayer(player.transform);
+                break;
+            }
+            //Debug.Log("Life is so easy");
+            j++;
+        }
+    }
 
 
 

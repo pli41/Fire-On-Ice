@@ -9,7 +9,7 @@ public class ControllerManager  {
 
     public static KeyboardWrapper keyboardWrapper = new KeyboardWrapper();
 
-    static ControllerInputWrapper[] playerControls = new ControllerInputWrapper[4];
+    public static ControllerInputWrapper[] playerControls = new ControllerInputWrapper[4];
 
     public static void setUpControls()
     {
