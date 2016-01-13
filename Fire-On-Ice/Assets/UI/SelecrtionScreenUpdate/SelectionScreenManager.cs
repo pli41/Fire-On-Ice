@@ -15,7 +15,8 @@ public class SelectionScreenManager : MonoBehaviour {
 	public Transform[] selectAbility;
 
 	private AsyncOperation async;
-	//public Image[] panels = new Image[4];
+    //public Image[] panels = new Image[4];
+    public Image[] readyImages = new Image[4];
 	public Image[] arrows = new Image[8];
 	public Image[] currentAbility = new Image[4];
 	public Image[] aAbility = new Image[4];
@@ -42,8 +43,12 @@ public class SelectionScreenManager : MonoBehaviour {
 	public AudioClip ThreeMenClip;
 	public AudioClip FourMenClip;
 	public AudioClip ReadyToGoClip;
-	
-	int[] playerControllers = { -1, -1, -1, -1};
+
+    public Sprite PS4ReadyImage;
+    public Sprite XBOXReadyImage;
+    public Sprite KeyboardReadyImage;
+
+    int[] playerControllers = { -1, -1, -1, -1};
 	int[] currentAbilitySelected = new int[4];
 	int numPlayers;
 	bool[] accepted = new bool[5];
@@ -352,6 +357,7 @@ public class SelectionScreenManager : MonoBehaviour {
         ControllerManager.setUpControls();
 		async = SceneManager.LoadSceneAsync ("level3");
 		async.allowSceneActivation = false;
+        timer = 4;
 	}
 
 	/// <summary>
@@ -454,6 +460,47 @@ public class SelectionScreenManager : MonoBehaviour {
             button_4.GetComponent<RectTransform>().sizeDelta = new Vector2(57f, 57f);
         }
         
+    }
+
+    void OnGUI()
+    {
+        //Handle ready icons
+        for (int i = 0; i < numPlayers; i++)
+        {
+            //Debug.Log(playerControllers[i]);
+            if (ControllerManager.getControllerType(playerControllers[i]) is XboxControllerWrapper)
+            {
+                readyImages[i].sprite = XBOXReadyImage;
+                //Debug.Log(ControllerManager.getControllerType(playerControllers[i]));
+                
+            }
+            else if (ControllerManager.getControllerType(playerControllers[i]) is PS4ControllerWrapper)
+            {
+                readyImages[i].sprite = PS4ReadyImage;
+                //Debug.Log(ControllerManager.getControllerType(playerControllers[i]));
+            }
+            else if (ControllerManager.getControllerType(playerControllers[i]) is KeyboardWrapper)
+            {
+                readyImages[i].sprite = KeyboardReadyImage;
+                //Debug.Log(ControllerManager.getControllerType(playerControllers[i]));
+            }
+            else
+            {
+                //Debug.Log(ControllerManager.getControllerType(playerControllers[i]));
+            }
+
+            if (checkAbilityFilled(i) && !ready[i])
+            {
+                readyImages[i].enabled = true;
+                readyImages[i].GetComponent<Animator>().SetBool("Ready", true);
+            }
+            else
+            {
+                readyImages[i].GetComponent<Animator>().SetBool("Ready", false);
+                readyImages[i].enabled = false;
+            }
+
+        }
     }
 }
 

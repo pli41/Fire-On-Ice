@@ -11,28 +11,53 @@ public class ControllerManager  {
 
     public static ControllerInputWrapper[] playerControls = new ControllerInputWrapper[4];
 
+    public ControllerManager()
+    {
+        setUpControls();
+    }
+
     public static void setUpControls()
     {
         setUpPlatform();
         string[] controllerNames = Input.GetJoystickNames();
-        int i = 0;
         //Debug.Log("Controllers connected: " + controllerNames.Length);
-        foreach(string name in controllerNames)
+        for (int i = 0; i < controllerNames.Length; i++)
         {
-            if (name.Contains("Wireless"))
-            {
-                playerControls[i] = new PS4ControllerWrapper();
-            }
-            else if (name.Contains("Logitech"))
-            {
-                playerControls[i] = new LogitechControllerWrapper();
-            }
-            else
-            {
-                playerControls[i] = new XboxControllerWrapper();
-            }
-            i++;
+            playerControls[i] = getControllerType(i + 1);
         }
+    }
+
+    public static ControllerInputWrapper getControllerType(int joyNum)
+    {
+        //Debug.Log(joyNum);
+        string[] controllerNames = Input.GetJoystickNames();
+        if (joyNum == 0)
+        {
+            return new KeyboardWrapper();
+        }
+        if (joyNum < 0 || joyNum > controllerNames.Length)
+        {
+            return null;
+        }
+        joyNum--;
+        string name = controllerNames[joyNum];
+
+        //Debug.Log("Controllers connected: " + controllerNames.Length);
+
+        if (name.Contains("Wireless"))
+        {
+            return new PS4ControllerWrapper();
+        }
+        else if (name.Contains("Logitech"))
+        {
+            return new LogitechControllerWrapper();
+        }
+        else
+        {
+            return new XboxControllerWrapper();
+        }
+           
+
     }
 
     static void setUpPlatform()
