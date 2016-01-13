@@ -28,6 +28,7 @@ GameObject:
   - 198: {fileID: 19859662}
   - 199: {fileID: 19997032}
   - 114: {fileID: 11455126}
+  - 114: {fileID: 11468250}
   m_Layer: 11
   m_Name: CFX3 Sparkles Trail
   m_TagString: Untagged
@@ -45,6 +46,7 @@ GameObject:
   - 4: {fileID: 411806}
   - 198: {fileID: 19817870}
   - 199: {fileID: 19912942}
+  - 114: {fileID: 11420018}
   m_Layer: 11
   m_Name: CFX3 Sparkles
   m_TagString: Untagged
@@ -66,6 +68,7 @@ GameObject:
   - 82: {fileID: 8262472}
   - 114: {fileID: 11417414}
   - 135: {fileID: 13532720}
+  - 114: {fileID: 11446246}
   m_Layer: 11
   m_Name: Fireball_Object
   m_TagString: Untagged
@@ -100,6 +103,7 @@ GameObject:
   - 4: {fileID: 414170}
   - 198: {fileID: 19854172}
   - 199: {fileID: 19979818}
+  - 114: {fileID: 11491454}
   m_Layer: 11
   m_Name: Explosion
   m_TagString: Untagged
@@ -118,6 +122,7 @@ GameObject:
   - 198: {fileID: 19879922}
   - 199: {fileID: 19900090}
   - 114: {fileID: 11409956}
+  - 114: {fileID: 11401722}
   m_Layer: 11
   m_Name: CFX3 Fire Trail
   m_TagString: Untagged
@@ -187,8 +192,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131456}
-  m_LocalRotation: {x: 0, y: 0.5012999, z: 0, w: 0.86527365}
-  m_LocalPosition: {x: -11.271235, y: 3.2992685, z: -0.99745584}
+  m_LocalRotation: {x: 0, y: 0.9133416, z: 0, w: 0.40719423}
+  m_LocalPosition: {x: -13.702499, y: 3.0150611, z: 17.448223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 411806}
@@ -312,7 +317,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -334,14 +339,25 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &11409956
+    m_RotationOrder: 0
+--- !u!114 &11401722
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159552}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780737ba4cd74cd429609fd9a42584ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11409956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159552}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 275fc5543f4e43c48a8b9ce3c3b559e0, type: 3}
   m_Name: 
@@ -370,11 +386,44 @@ MonoBehaviour:
   explosionFactor: 1
   damage: 0
   speed: 25
-  size: 0.032436416
+  size: 0.21646877
   force: 300
   forceR: 50
   explosion: {fileID: 8300000, guid: f05a59777830d4122aa49bef18094c01, type: 3}
+--- !u!114 &11420018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780737ba4cd74cd429609fd9a42584ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11446246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780737ba4cd74cd429609fd9a42584ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11455126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123394}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275fc5543f4e43c48a8b9ce3c3b559e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11468250
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -382,7 +431,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 123394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 275fc5543f4e43c48a8b9ce3c3b559e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 780737ba4cd74cd429609fd9a42584ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11491454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780737ba4cd74cd429609fd9a42584ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &13532720
@@ -445,7 +505,7 @@ ParticleSystem:
   looping: 1
   prewarm: 0
   playOnAwake: 1
-  moveWithTransform: 1
+  moveWithTransform: 0
   scalingMode: 2
   InitialModule:
     serializedVersion: 2
@@ -6111,7 +6171,7 @@ ParticleSystem:
     collidesWithDynamic: 1
     interiorCollisions: 1
   SubModule:
-    enabled: 1
+    enabled: 0
     subEmitterBirth: {fileID: 0}
     subEmitterBirth1: {fileID: 0}
     subEmitterCollision: {fileID: 0}
@@ -6166,7 +6226,7 @@ ParticleSystem:
   looping: 1
   prewarm: 0
   playOnAwake: 1
-  moveWithTransform: 1
+  moveWithTransform: 0
   scalingMode: 2
   InitialModule:
     serializedVersion: 2
@@ -12222,6 +12282,34 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Volume
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: EmissionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: SubModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: CollisionModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
