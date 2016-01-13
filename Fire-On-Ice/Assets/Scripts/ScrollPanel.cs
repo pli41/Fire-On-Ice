@@ -38,7 +38,8 @@ public class ScrollPanel : MonoBehaviour {
 		if(ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 1, true)||
 		   ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 2, true)||
 		   ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 3, true)||
-		   ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 4, true)){
+		   ControllerManager.GetButton(ControllerInputWrapper.Buttons.B, 4, true)||
+           Input.GetMouseButtonDown(0)){
             selectAS.Stop();
             selectAS.Play();
             isPlaying = false;

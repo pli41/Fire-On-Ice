@@ -9,8 +9,8 @@ public class SelectActionManager : MonoBehaviour
 
 	public GameObject creditsPanel;
 
-	public GameObject playBorder;
-	public GameObject creditsBorder;
+	public Image playBorder;
+	public Image creditsBorder;
 
 	public GameObject whiteCover;
 	public float whiteCoverAnimDuration;
@@ -46,6 +46,9 @@ public class SelectActionManager : MonoBehaviour
 		else{
 			timer = 0f;
 		}
+
+        //Mouse
+
 
 		float directX = ControllerManager.GetAxis(ControllerInputWrapper.Axis.LeftStickX, 1, true);
 		float directY = ControllerManager.GetAxis(ControllerInputWrapper.Axis.LeftStickY, 1, true);
@@ -137,21 +140,60 @@ public class SelectActionManager : MonoBehaviour
 			myEventSystem .GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
 		}
 
-		switch (currentType){
-			case ActionType.Play:
-				playBorder.SetActive(true);
-				creditsBorder.SetActive(false);
-				break;
-			case ActionType.Credits:
-				playBorder.SetActive(false);
-				creditsBorder.SetActive(true);
-				break;
+		//switch (currentType){
+		//	case ActionType.Play:
+		//		playBorder.enabled = true;
+		//		creditsBorder.enabled = false;
+		//		break;
+		//	case ActionType.Credits:
+		//		playBorder.enabled = false;
+		//		creditsBorder.enabled = true;
+		//		break;
 				
-			case ActionType.Quit:
-				playBorder.SetActive(false);
-				creditsBorder.SetActive(false);
-				quitBtn.Select();
-				break;
-		}
+		//	case ActionType.Quit:
+		//		playBorder.enabled = false;
+		//		creditsBorder.enabled = false;
+		//		quitBtn.Select();
+		//		break;
+		//}
 	}
+
+    public void HighlightPlayButton()
+    {
+        playBorder.enabled = true;
+        playBorder.GetComponent<RectTransform>().Find("Image").gameObject.SetActive(true);
+        playBorder.GetComponent<RectTransform>().Find("Text").gameObject.SetActive(true);
+        creditsBorder.enabled = false;
+        creditsBorder.GetComponent<RectTransform>().Find("Image").gameObject.SetActive(false);
+        Debug.Log("HighlightPlayButton");
+    }
+
+    public void HighlightCreditButton()
+    {
+        playBorder.enabled = false;
+        playBorder.GetComponent<RectTransform>().Find("Image").gameObject.SetActive(false);
+        playBorder.GetComponent<RectTransform>().Find("Text").gameObject.SetActive(false);
+        creditsBorder.enabled = true;
+        creditsBorder.GetComponent<RectTransform>().Find("Image").gameObject.SetActive(true);
+        Debug.Log("HighlightCreditButton");
+    }
+
+    public void SelectButton(string button)
+    {
+        if (button == "Play")
+        {
+            WhiteOut();
+        }
+        else if (button == "Credit")
+        {
+            creditsPanel.SetActive(true);
+            scrollPanel.isPlaying = true;
+        }
+        else if (button == "Quit")
+        {
+            Application.Quit();
+        }
+    }
+
+
 }
