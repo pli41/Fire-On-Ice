@@ -102,7 +102,7 @@ public class PS4ControllerWrapper : ControllerInputWrapper {
                 triggerName = getAxisName(joyNum, "5", "5", "6");
                 break;
         }
-        //Debug.Log(triggerName);
+        Debug.Log(triggerName);
         if (isRaw)
         {
             return Input.GetAxisRaw(triggerName);

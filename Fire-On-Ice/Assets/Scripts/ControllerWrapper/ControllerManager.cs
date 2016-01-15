@@ -62,7 +62,9 @@ public class ControllerManager  {
 
     static void setUpPlatform()
     {
-        if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXWebPlayer)
+		Debug.Log ("platform: " + Application.platform);
+		if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXWebPlayer 
+			|| Application.platform == RuntimePlatform.OSXEditor)
         {
             currentOS = OperatingSystem.OSX;
         }
@@ -107,6 +109,7 @@ public class ControllerManager  {
         {
             return 0;
         }
+		Debug.Log (trigger);
         return playerControls[joyNum].GetTrigger(trigger, joyNum + 1, isRaw);
     }
 
@@ -155,6 +158,7 @@ public class ControllerManager  {
 
     void setPlatform()
     {
+		
         if (Application.platform == RuntimePlatform.WindowsPlayer)
         {
             currentOS = OperatingSystem.Win;

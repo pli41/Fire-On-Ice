@@ -66,7 +66,7 @@ public abstract class ControllerInputWrapper
     protected virtual string getAxisName(int joyNum, string winID, string linID, string osxID)
     {
         string axisName = "j" + joyNum + "_Axis";
-
+		Debug.Log (ControllerManager.currentOS);
         switch (ControllerManager.currentOS)
         {
             case ControllerManager.OperatingSystem.Win:
