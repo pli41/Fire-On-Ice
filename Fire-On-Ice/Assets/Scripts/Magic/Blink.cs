@@ -57,7 +57,7 @@ public class Blink : Ability, MovementEffect, Cooldown {
 				foundFinalPos = true;
 				//Gizmos.DrawSphere(targetPos_final, 2);
 			}
-			Debug.Log ("Casting blink");
+			//Debug.Log ("Casting blink");
 
 			if(targetPos_final.magnitude > 0){
 				//create ability object
@@ -97,7 +97,7 @@ public class Blink : Ability, MovementEffect, Cooldown {
 	}
 	
 	public override void EndCast(){
-		Debug.Log ("End-casting blink");
+		//Debug.Log ("End-casting blink");
 		playerModel.SetActive(true);
 		playerStaff.SetActive(true);
 		createdBlinkObj = false;

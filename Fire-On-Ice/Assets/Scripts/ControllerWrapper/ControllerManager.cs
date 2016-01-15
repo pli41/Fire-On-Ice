@@ -109,7 +109,7 @@ public class ControllerManager  {
         {
             return 0;
         }
-		Debug.Log (trigger);
+		//Debug.Log (trigger);
         return playerControls[joyNum].GetTrigger(trigger, joyNum + 1, isRaw);
     }
 

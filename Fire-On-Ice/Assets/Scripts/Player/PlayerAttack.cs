@@ -15,11 +15,13 @@ public class PlayerAttack : MonoBehaviour
 	public bool enchanting;
 	public GameObject enchantEffect;
 
-	private bool casting1;
-	private bool casting2;
-	private bool casting3;
-	private bool casting4;
-    private bool casting_Key;
+    private bool[] castings = new bool[4];
+
+	//private bool casting1;
+	//private bool casting2;
+	//private bool casting3;
+	//private bool casting4;
+ //   private bool casting_Key;
 
 	private Animation anim;
 	private GameManager gm;
@@ -35,7 +37,6 @@ public class PlayerAttack : MonoBehaviour
 		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		enchantEffect = transform.Find ("enchantEffect").gameObject;
 		SetupAbilities ();
-		casting1 = false;
 	}
 
 	void SetupAbilities(){
@@ -77,23 +78,23 @@ public class PlayerAttack : MonoBehaviour
             //Controller
             if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, joystickNum, true) > 0)
             {
-                if (!casting2 && !casting3 && !casting4)
+                if (!castings[1] && !castings[2] && !castings[3])
                 {
                     if (abilities[0].abilityReady)
                     {
-                        casting1 = true;
+                        castings[0] = true;
                         abilities[0].Cast();
                         if (abilities[0].triggerOnce)
                         {
-                            casting1 = false;
+                            castings[0] = false;
                             StartCoroutine(EndAbility(0, 0.2f));
                         }
                     }
                 }
             }
-            else if (casting1)
+            else if (castings[0])
             {
-                casting1 = false;
+                castings[0] = false;
                 if (!abilities[0].handledEndCast)
                 {
                     abilities[0].EndCast();
@@ -104,23 +105,23 @@ public class PlayerAttack : MonoBehaviour
 
             if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.LeftBumper, joystickNum))
             {
-                if (!casting1 && !casting3 && !casting4)
+                if (!castings[0] && !castings[2] && !castings[3])
                 {
-                    if (abilities[1].abilityReady)
+                    if (abilities[0].abilityReady)
                     {
-                        casting2 = true;
+                        castings[1] = true;
                         abilities[1].Cast();
                         if (abilities[1].triggerOnce)
                         {
-                            casting2 = false;
+                            castings[1] = false;
                             StartCoroutine(EndAbility(1, 0.1f));
                         }
                     }
                 }
             }
-            else if (casting2)
+            else if (castings[1])
             {
-                casting2 = false;
+                castings[1] = false;
                 if (!abilities[1].handledEndCast)
                 {
                     abilities[1].EndCast();
@@ -131,25 +132,25 @@ public class PlayerAttack : MonoBehaviour
 
             if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.RightBumper, joystickNum))
             {
-                if (!casting1 && !casting2 && !casting4)
+                if (!castings[0] && !castings[1] && !castings[3])
                 {
                     if (abilities[2].abilityReady)
                     {
                         //Debug.Log(joystickNum + " is casting");
-                        casting3 = true;
+                        castings[2] = true;
                         abilities[2].Cast();
                         if (abilities[2].triggerOnce)
                         {
-                            casting3 = false;
+                            castings[2] = false;
                             StartCoroutine(EndAbility(2, 0.1f));
                         }
                     }
                 }
             }
-            else if (casting3)
+            else if (castings[2])
             {
                 //Debug.Log("End Cast 3rd ability");
-                casting3 = false;
+                castings[2] = false;
                 if (!abilities[2].handledEndCast)
                 {
                     abilities[2].EndCast();
@@ -158,25 +159,25 @@ public class PlayerAttack : MonoBehaviour
 
             if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.RightTrigger, joystickNum, true) > 0)
             {
-                if (!casting1 && !casting2 && !casting3)
+                if (!castings[0] && !castings[1] && !castings[2])
                 {
                     if (abilities[3].abilityReady)
                     {
                         //Debug.Log(joystickNum + " is casting");
-                        casting4 = true;
+                        castings[3] = true;
                         abilities[3].Cast();
                         if (abilities[3].triggerOnce)
                         {
-                            casting4 = false;
+                            castings[3] = false;
                             StartCoroutine(EndAbility(3, 0.1f));
                         }
                     }
                 }
             }
-            else if (casting4)
+            else if (castings[3])
             {
                 //Debug.Log("End Cast 3rd ability");
-                casting4 = false;
+                castings[3] = false;
                 if (!abilities[3].handledEndCast)
                 {
                     abilities[3].EndCast();
@@ -197,27 +198,27 @@ public class PlayerAttack : MonoBehaviour
             //Keyboard
 
             //Handle fire
-            if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, joystickNum, true))
+            if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, joystickNum, false))
             {
-                if (!casting_Key)
+                if (CkeckCasting_Key())
                 {
                     if (abilities[currentAbilityNum_Keyboard].abilityReady)
                     {
                         //Debug.Log(joystickNum + " is casting");
-                        casting_Key = true;
+                        //casting_Key = true;
                         abilities[currentAbilityNum_Keyboard].Cast();
                         if (abilities[currentAbilityNum_Keyboard].triggerOnce)
                         {
-                            casting_Key = false;
+                            castings[currentAbilityNum_Keyboard] = false;
                             StartCoroutine(EndAbility(currentAbilityNum_Keyboard, 0.1f));
                         }
                     }
                 }
             }
-            else if (casting_Key)
+            else if(castings[currentAbilityNum_Keyboard])
             {
                 //Debug.Log("End Cast 3rd ability");
-                casting_Key = false;
+                castings[currentAbilityNum_Keyboard] = false;
                 if (!abilities[currentAbilityNum_Keyboard].handledEndCast)
                 {
                     abilities[currentAbilityNum_Keyboard].EndCast();
@@ -251,6 +252,22 @@ public class PlayerAttack : MonoBehaviour
             }
 
         }
+    }
+
+    bool CkeckCasting_Key()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (i != currentAbilityNum_Keyboard)
+            {
+                if (castings[i])
+                {
+                    return false;
+                }
+            }
+
+        }
+        return true;
     }
 
 }
