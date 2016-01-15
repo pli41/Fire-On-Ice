@@ -14,9 +14,10 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 
 	void Start (){
 		anim = owner.GetComponent<Animation> ();
-		handledEndCast = true;;
+		handledEndCast = true;
 		abilityReady = true;
 		SetupCooldown ();
+		endCasted = false;
 	}
 	
 	public override void SetupAbility(){
@@ -61,6 +62,7 @@ public class Cyclone : Ability, Cooldown, CastDelay, Shootable {
 		//Debug.Log ("Endcast");
 		if(abilityReady){
 			CancelInvoke();
+			endCasted = true;
 			owner.GetComponent<PlayerAttack>().enchanting = false;
 			anim.Play ("AttackCritical");
 			anim.CrossFadeQueued ("Idle", 0.25f);

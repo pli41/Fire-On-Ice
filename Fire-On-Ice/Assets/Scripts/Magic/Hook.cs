@@ -46,6 +46,7 @@ public class Hook : Ability {
 
     public override void EndCast()
     {
+		endCasted = true;
 		anim.CrossFade ("Attack1", 0.1f);
 		Invoke ("EnableMove", anim.GetClip("Attack1").length);
 		Invoke ("Shoot", anim.GetClip("Attack1").length/2);

@@ -88,6 +88,7 @@ public class FireSheild : Ability, Cooldown, CasterEffect, Shootable {
 
 	public void EndEffect (){
 		created = false;
+		endCasted = true;
 		owner.GetComponent<Rigidbody> ().mass = oldMass;
 		owner.GetComponent<PlayerMovement> ().maxSpeed = oldSpeed;
 		owner.GetComponent<PlayerHealth> ().damageReduction = 1;

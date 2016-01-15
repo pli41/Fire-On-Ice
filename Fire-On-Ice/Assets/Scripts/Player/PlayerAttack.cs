@@ -23,6 +23,8 @@ public class PlayerAttack : MonoBehaviour
 	//private bool casting4;
  //   private bool casting_Key;
 
+
+
 	private Animation anim;
 	private GameManager gm;
 
@@ -94,7 +96,10 @@ public class PlayerAttack : MonoBehaviour
             }
             else if (castings[0])
             {
-                castings[0] = false;
+				if(abilities[0].endCasted){
+					castings [0] = false;
+					abilities [0].endCasted = false;
+				}
                 if (!abilities[0].handledEndCast)
                 {
                     abilities[0].EndCast();
@@ -107,7 +112,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 if (!castings[0] && !castings[2] && !castings[3])
                 {
-                    if (abilities[0].abilityReady)
+                    if (abilities[1].abilityReady)
                     {
                         castings[1] = true;
                         abilities[1].Cast();
@@ -121,7 +126,10 @@ public class PlayerAttack : MonoBehaviour
             }
             else if (castings[1])
             {
-                castings[1] = false;
+				if(abilities[1].endCasted){
+					castings [1] = false;
+					abilities [1].endCasted = false;
+				}
                 if (!abilities[1].handledEndCast)
                 {
                     abilities[1].EndCast();
@@ -149,8 +157,12 @@ public class PlayerAttack : MonoBehaviour
             }
             else if (castings[2])
             {
+				if(abilities[2].endCasted){
+					castings [2] = false;
+					abilities [2].endCasted = false;
+				}
                 //Debug.Log("End Cast 3rd ability");
-                castings[2] = false;
+                
                 if (!abilities[2].handledEndCast)
                 {
                     abilities[2].EndCast();
@@ -177,7 +189,10 @@ public class PlayerAttack : MonoBehaviour
             else if (castings[3])
             {
                 //Debug.Log("End Cast 3rd ability");
-                castings[3] = false;
+				if(abilities[3].endCasted){
+					castings [3] = false;
+					abilities [3].endCasted = false;
+				}
                 if (!abilities[3].handledEndCast)
                 {
                     abilities[3].EndCast();
@@ -205,7 +220,7 @@ public class PlayerAttack : MonoBehaviour
                     if (abilities[currentAbilityNum_Keyboard].abilityReady)
                     {
                         //Debug.Log(joystickNum + " is casting");
-                        //casting_Key = true;
+						castings[currentAbilityNum_Keyboard] = true;
                         abilities[currentAbilityNum_Keyboard].Cast();
                         if (abilities[currentAbilityNum_Keyboard].triggerOnce)
                         {
@@ -218,7 +233,10 @@ public class PlayerAttack : MonoBehaviour
             else if(castings[currentAbilityNum_Keyboard])
             {
                 //Debug.Log("End Cast 3rd ability");
-                castings[currentAbilityNum_Keyboard] = false;
+				if(abilities[currentAbilityNum_Keyboard].endCasted){
+					castings [currentAbilityNum_Keyboard] = true;
+					abilities [currentAbilityNum_Keyboard].endCasted = false;
+				}
                 if (!abilities[currentAbilityNum_Keyboard].handledEndCast)
                 {
                     abilities[currentAbilityNum_Keyboard].EndCast();

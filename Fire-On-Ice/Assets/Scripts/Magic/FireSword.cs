@@ -81,6 +81,7 @@ public class FireSword : Ability, Cooldown, CastDelay {
 	
 	public override void EndCast(){
 		Debug.Log ("End-Cast sword");
+		endCasted = true;
 		if(state == STATE.Summoning){
 			CastDelayEnd();
 		}

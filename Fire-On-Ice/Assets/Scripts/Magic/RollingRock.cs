@@ -17,6 +17,7 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 	private Animation anim;
 
 	void Start (){
+		endCasted = false;
 		anim = owner.GetComponent<Animation> ();
 		handledEndCast = true;
 		enchantEffect = owner.transform.Find ("enchantEffect").gameObject;
@@ -66,6 +67,7 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 		Debug.Log ("Endcast");
 		if(abilityReady){
 			CancelInvoke();
+			endCasted = true;
 			anim.Play ("AttackCritical");
 			anim.CrossFadeQueued ("Idle", 0.25f);
 			Invoke("Shoot", anim.GetClip("AttackCritical").length/2f);

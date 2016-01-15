@@ -46,6 +46,7 @@ public class Flame : Ability, Cooldown, CasterEffect, Chargable {
 	
 	public override void EndCast(){
 		//Debug.Log ("End-Cast flame");
+		endCasted = true;
 		EndCharge ();
 	}
 	

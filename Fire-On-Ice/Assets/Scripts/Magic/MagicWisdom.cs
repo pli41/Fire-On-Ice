@@ -74,6 +74,7 @@ public class MagicWisdom : Ability, Cooldown {
 	public override void EndCast(){
 		//Debug.Log ("Endcast");
 		if(abilityReady){
+			endCasted = true;
 			Invoke ("DisableEffect", effectLength);
 			ResetCooldown();
 		}

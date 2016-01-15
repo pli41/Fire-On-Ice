@@ -67,6 +67,7 @@ public class Fireball : Ability, Chargable, Shootable, CasterEffect {
 
 	public override void EndCast(){
 		//Debug.Log ("Endcast");
+		endCasted = true;
 		if(abilityReady){
 			chargedTime = EndCharge ();
 

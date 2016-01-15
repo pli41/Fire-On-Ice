@@ -58,6 +58,7 @@ public class FireBomb : Ability, Cooldown, Shootable, CasterEffect {
 
 	public override void EndCast(){
 		//Debug.Log ("Endcast");
+		endCasted = true;
 	}
 	
 	public void Shoot(){

@@ -11,6 +11,9 @@ public class Ability : MonoBehaviour {
 	public Transform ability_point;
 	public bool triggerOnce;
 
+
+	public bool endCasted;
+
 	public float cooldown;
 	public float timeUntilReset;
 

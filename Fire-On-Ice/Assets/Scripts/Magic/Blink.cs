@@ -98,6 +98,7 @@ public class Blink : Ability, MovementEffect, Cooldown {
 	
 	public override void EndCast(){
 		//Debug.Log ("End-casting blink");
+		endCasted = true;
 		playerModel.SetActive(true);
 		playerStaff.SetActive(true);
 		createdBlinkObj = false;
