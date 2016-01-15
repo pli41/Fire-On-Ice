@@ -234,7 +234,6 @@ public class UI_Manager : MonoBehaviour {
 
 	public void Rematch(){
         SceneManager.LoadScene("Level3");
-
     }
 
 	public void BackToMainMenu(){

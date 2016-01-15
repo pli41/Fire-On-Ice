@@ -96,10 +96,10 @@ public class PS4ControllerWrapper : ControllerInputWrapper {
         switch (trigger)
         {
             case Triggers.LeftTrigger:
-                triggerName = getAxisName(joyNum, "4", "4", "5");
+                triggerName = getAxisName(joyNum, "5", "5", "5");
                 break;
             case Triggers.RightTrigger:
-                triggerName = getAxisName(joyNum, "5", "5", "6");
+                triggerName = getAxisName(joyNum, "6", "6", "6");
                 break;
         }
         Debug.Log(triggerName);
