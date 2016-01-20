@@ -80,6 +80,7 @@ public class PlayerAttack : MonoBehaviour
             //Controller
             if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, joystickNum, true) > 0)
             {
+                Debug.Log("receiving trigger input");
                 if (!castings[1] && !castings[2] && !castings[3])
                 {
                     if (abilities[0].abilityReady)
@@ -96,14 +97,25 @@ public class PlayerAttack : MonoBehaviour
             }
             else if (castings[0])
             {
-				if(abilities[0].endCasted){
+                Debug.Log("casting 0 is true");
+                if (!abilities[0].handledEndCast)
+                {
+                    Debug.Log("Ability 0 endcasting");
+                    abilities[0].EndCast();
+                }
+
+                if (abilities[0].endCasted){
 					castings [0] = false;
 					abilities [0].endCasted = false;
 				}
-                if (!abilities[0].handledEndCast)
+                else
                 {
-                    abilities[0].EndCast();
+                    Debug.Log("Ability 0 not end casted");
                 }
+            }
+            else
+            {
+                Debug.Log("....");
             }
 
 
@@ -193,9 +205,14 @@ public class PlayerAttack : MonoBehaviour
 					castings [3] = false;
 					abilities [3].endCasted = false;
 				}
+                else
+                {
+                    Debug.Log("Ability 3 not end casted");
+                }
                 if (!abilities[3].handledEndCast)
                 {
                     abilities[3].EndCast();
+                    Debug.Log("Ability 3 endcasting");
                 }
             }
 
@@ -232,15 +249,16 @@ public class PlayerAttack : MonoBehaviour
             }
             else if(castings[currentAbilityNum_Keyboard])
             {
-                //Debug.Log("End Cast 3rd ability");
-				if(abilities[currentAbilityNum_Keyboard].endCasted){
-					castings [currentAbilityNum_Keyboard] = true;
-					abilities [currentAbilityNum_Keyboard].endCasted = false;
-				}
                 if (!abilities[currentAbilityNum_Keyboard].handledEndCast)
                 {
                     abilities[currentAbilityNum_Keyboard].EndCast();
                 }
+
+                //Debug.Log("End Cast 3rd ability");
+                if (abilities[currentAbilityNum_Keyboard].endCasted){
+					castings [currentAbilityNum_Keyboard] = false;
+					abilities [currentAbilityNum_Keyboard].endCasted = false;
+				}
             }
 
             if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, joystickNum, true) > 0)
