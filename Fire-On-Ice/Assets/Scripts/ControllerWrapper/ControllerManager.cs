@@ -62,7 +62,7 @@ public class ControllerManager  {
 
     static void setUpPlatform()
     {
-		Debug.Log ("platform: " + Application.platform);
+		//Debug.Log ("platform: " + Application.platform);
 		if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXWebPlayer 
 			|| Application.platform == RuntimePlatform.OSXEditor)
         {

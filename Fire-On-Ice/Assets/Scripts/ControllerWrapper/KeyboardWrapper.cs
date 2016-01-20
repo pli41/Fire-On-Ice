@@ -47,11 +47,15 @@ public class KeyboardWrapper : ControllerInputWrapper {
         }
         Ray checkRay = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(checkRay, out hit, LayerMask.NameToLayer("Floor"), 50))
+        if (Physics.Raycast(checkRay, out hit, 100))
         {
+            Debug.Log(hit.collider.name);
             return hit.point - currentPlayer.position;
         }
-        return (checkRay.origin + checkRay.direction * 50) - currentPlayer.position;
+
+        Debug.DrawLine(checkRay.origin, checkRay.origin + checkRay.direction * 100);
+        
+        return (checkRay.origin + checkRay.direction * 100) - currentPlayer.position;
     }
 
     public override float GetTrigger(Triggers trigger, int joyNum, bool isRaw = false)

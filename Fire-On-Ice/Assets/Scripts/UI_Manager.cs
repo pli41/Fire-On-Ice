@@ -148,6 +148,7 @@ public class UI_Manager : MonoBehaviour {
 		//update cooldown UI
 		//i is player number; j is ability number.
 		if(gm.GameInProgress){
+            //UnityEngine.Cursor.visible = false;
 			for (int i = 0; i < playerList.Count; i++) {
 				for (int j = 0; j < 3; j++){
 					int playerNum = playerList[i].GetComponent<PlayerAttack>().playerNum;
@@ -170,6 +171,10 @@ public class UI_Manager : MonoBehaviour {
 
             HandleKeyboardPlayerUI();
 		}
+        else
+        {
+            UnityEngine.Cursor.visible = true;
+        }
 	}
 
     public void HandleKeyboardPlayerUI()

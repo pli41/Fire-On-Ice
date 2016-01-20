@@ -1570,6 +1570,22 @@ MonoBehaviour:
   camera_OffsetUpward: 7
   rotateSpeed: 100
   translateSpeed: 100
+--- !u!1 &210354880 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 7e4e6df42c6f744979f4af8c79997fe1, type: 3}
+  m_PrefabInternal: {fileID: 1214264311}
+--- !u!65 &210354881
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 210354880}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 300, y: 0.16, z: 300}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &211286054
 GameObject:
   m_ObjectHideFlags: 0
@@ -30951,6 +30967,10 @@ Prefab:
     - target: {fileID: 100116, guid: 7e4e6df42c6f744979f4af8c79997fe1, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7e4e6df42c6f744979f4af8c79997fe1, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e4e6df42c6f744979f4af8c79997fe1, type: 3}
