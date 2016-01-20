@@ -38,7 +38,8 @@ public class SelectionScreenManager : MonoBehaviour {
 	public AudioSource selectAbilitySounds;
 	public AudioSource TVonSounds;
 	public AudioSource countDownSounds;
-	
+    public AudioSource errorSound;
+
 	public AudioClip TwoMenClip;
 	public AudioClip ThreeMenClip;
 	public AudioClip FourMenClip;
@@ -272,7 +273,9 @@ public class SelectionScreenManager : MonoBehaviour {
 			if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i], true) > .01f)
 			{
 				if (checkAbilitySelected(i)) {
-					return;
+                    errorSound.Stop();
+                    errorSound.Play();
+                    return;
 				}
 				selectAbilitySounds.Stop();
 				selectAbilitySounds.Play();
@@ -281,7 +284,9 @@ public class SelectionScreenManager : MonoBehaviour {
 			}else if  (ControllerManager.GetButton(ControllerInputWrapper.Buttons.LeftBumper, playerControllers[i], true))
 			{
 				if (checkAbilitySelected(i)) {
-					return;
+                    errorSound.Stop();
+                    errorSound.Play();
+                    return;
 				}
 				playerAbilities[i, 1] = allAbilities[currentAbilitySelected[i]];
 				selectAbilitySounds.Stop();
@@ -291,7 +296,9 @@ public class SelectionScreenManager : MonoBehaviour {
 		else if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.RightBumper, playerControllers[i], true))
 			{
 				if (checkAbilitySelected(i)) {
-					return;
+                    errorSound.Stop();
+                    errorSound.Play();
+                    return;
 				}
 				selectAbilitySounds.Stop();
 				selectAbilitySounds.Play();
