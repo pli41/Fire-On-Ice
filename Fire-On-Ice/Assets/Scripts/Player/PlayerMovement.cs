@@ -26,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
 	public float oldMaxSpeed;
 	private GameManager gm;
 
+
+
+    //for testing
+    public float testX;
+    public float testY;
+
 	void Start(){
 		oldMaxSpeed = maxSpeed;
 		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
@@ -57,7 +63,10 @@ public class PlayerMovement : MonoBehaviour
 			
 			float h = ControllerManager.GetAxis (ControllerInputWrapper.Axis.LeftStickX, joystickNum, true);
 			float v = ControllerManager.GetAxis (ControllerInputWrapper.Axis.LeftStickY, joystickNum, true);
-			
+
+            testX = h;
+            testY = v;
+
 			//Debug.Log ("h = " + h + " v = " + v);
 			if(!disabled){
 				if(canMove || canTurn){

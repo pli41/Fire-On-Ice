@@ -1847,7 +1847,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1869,7 +1869,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &8290642
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2026,6 +2026,8 @@ MonoBehaviour:
   disabled: 0
   maxSpeed: 6
   oldMaxSpeed: 0
+  testX: 0
+  testY: 0
 --- !u!114 &11456192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5406,7 +5408,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 3
     randomizeRotationDirection: 0
-    gravityModifier: 0
+    gravityModifier: 1
     maxNumParticles: 1000
     rotation3D: 0
   ShapeModule:
@@ -12559,6 +12561,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.gravityModifier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
