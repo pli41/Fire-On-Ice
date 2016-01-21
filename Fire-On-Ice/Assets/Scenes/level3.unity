@@ -7786,7 +7786,7 @@ MonoBehaviour:
   goTextDuration: 1
   whiteCoverAnim: {fileID: 76619990}
   tutorialAnim: {fileID: 592550933}
-  camera: {fileID: 207497761}
+  MainCam: {fileID: 207497761}
   Player_Keyboard_CurrentAbility: {fileID: 1592571787}
   arrows:
   - {fileID: 1129853310}
@@ -63532,8 +63532,7 @@ AudioSource:
   m_GameObject: {fileID: 1371845544}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24377824, guid: 0ac7fb39e445048d89688f69c2a1839a,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1

@@ -69,7 +69,7 @@ public class RollingRock_Object : MonoBehaviour {
 	}
 
 	void Explode(){
-		Debug.Log ("EXPLODE");
+		//Debug.Log ("EXPLODE");
 		audioS.Stop ();
 		rigid.velocity = Vector3.zero;
 		rend.enabled = false;

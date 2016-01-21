@@ -16,10 +16,10 @@ public class CameraFollow : MonoBehaviour {
 	//The translating speed of the camera
 	public float translateSpeed;
 	
-	private Camera cam;
+	//private Camera cam;
 	// Use this for initialization
 	void Start () {
-		cam = gameObject.GetComponent<Camera> ();
+		//cam = gameObject.GetComponent<Camera> ();
 	}
 	
 	// Update is called once per frame
@@ -43,7 +43,7 @@ public class CameraFollow : MonoBehaviour {
 	
 	
 	Vector3 FindTargetCameraPoint(Transform player){
-		Vector3 playerPos = player.position;
+		//Vector3 playerPos = player.position;
 		Vector3 targetPos = player.position - player.forward * camera_OffsetForward + player.up * camera_OffsetUpward;
 		return targetPos;
 	}

@@ -38,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
 	PlayerAttack playerAttack;
 	//PlayerShooting playerShooting;
 	bool isDead;
-	bool damaged;
+	//bool damaged;
 	GameObject gameManager;
 	int joystickNum;
 	Rigidbody rigid;
@@ -96,7 +96,7 @@ public class PlayerHealth : MonoBehaviour
 		//            damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
 		//        }
 		
-		damaged = false;
+		//damaged = false;
 		
 		if(onFire && !onFireEffect.activeInHierarchy){
 			CauseOnFire();
@@ -146,7 +146,7 @@ public class PlayerHealth : MonoBehaviour
 			currentHealth -= finalDamage;
 
 			if(finalDamage > 20f && sourcePlayerNum > 0){
-				Debug.Log("Big damage detected");
+				//Debug.Log("Big damage detected");
 				PlayRandomAudio(damageClips, announcerAudio);
 			}
 
@@ -180,7 +180,7 @@ public class PlayerHealth : MonoBehaviour
 			
 			//Audio
 			if (finalDamage > 0f && damageSFXReady) {
-				damaged = true;
+				//damaged = true;
 				playerAudio.Play ();
 				damageSFXReady = false;
 			}
@@ -229,7 +229,7 @@ public class PlayerHealth : MonoBehaviour
 		audioS.Stop ();
 		int clipNum = Random.Range (0, clips.Length - 1);
 		audioS.clip = clips [clipNum];
-		Debug.Log ("Clip " + clipNum + " played");
+		//Debug.Log ("Clip " + clipNum + " played");
 		audioS.Play ();
 	}
 	

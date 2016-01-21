@@ -7,14 +7,14 @@ public class MeltingIsland : MonoBehaviour {
 	public float scaleChange = 0.1f;
 	public bool active;
 
-	MeshRenderer mr;
+	//MeshRenderer mr;
 
 	float timerKey;
 	Material mat;
 	GameObject[] players;
 	float[] timers;
 	float[] meltTimes;
-	bool initialized;
+	//bool initialized;
 
 	private GameManager gm;
 
@@ -24,7 +24,7 @@ public class MeltingIsland : MonoBehaviour {
 		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		mat = GetComponent<MeshRenderer> ().material;
 
-		mr = GetComponent<MeshRenderer> ();
+		//mr = GetComponent<MeshRenderer> ();
 		Initialize ();
 	}
 	
@@ -36,7 +36,7 @@ public class MeltingIsland : MonoBehaviour {
 		for (int i = 0; i < 0; i++){
 			meltTimes[i] = 2f;
 		}
-		initialized = true;
+		//initialized = true;
 	}
 
 	// Update is called once per frame

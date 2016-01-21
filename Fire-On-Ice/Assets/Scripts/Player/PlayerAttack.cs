@@ -25,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
 
 
 
-	private Animation anim;
+	//private Animation anim;
 	private GameManager gm;
 
 	public float damageDealt;
@@ -35,7 +35,7 @@ public class PlayerAttack : MonoBehaviour
 
 	void Start ()
 	{
-		anim = GetComponent<Animation> ();
+		//anim = GetComponent<Animation> ();
 		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		enchantEffect = transform.Find ("enchantEffect").gameObject;
 		SetupAbilities ();

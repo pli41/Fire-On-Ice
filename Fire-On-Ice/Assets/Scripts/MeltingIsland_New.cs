@@ -15,7 +15,7 @@ public class MeltingIsland_New : MonoBehaviour {
 	private float overallMeltTimer;
 
 
-	MeshRenderer mr;
+	//MeshRenderer mr;
 	
 	float timerKey;
 	Material mat;
@@ -25,7 +25,7 @@ public class MeltingIsland_New : MonoBehaviour {
 	bool meltReady;
 	bool occupiedByPlayer;
 
-	bool initialized;
+	//bool initialized;
 	
 	GameManager gm;
 	
@@ -35,7 +35,7 @@ public class MeltingIsland_New : MonoBehaviour {
 		//Debug.Log ("Position " + transform.position);
 		gm = GameObject.Find ("GameManager").GetComponent<GameManager>();
 		mat = GetComponent<MeshRenderer> ().material;
-		mr = GetComponent<MeshRenderer> ();
+		//mr = GetComponent<MeshRenderer> ();
 		currentMeltTime = meltTime;
 		overallMeltTimer = 0f;
 	}

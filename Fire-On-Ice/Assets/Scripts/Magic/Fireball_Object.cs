@@ -24,7 +24,6 @@ public class Fireball_Object : MonoBehaviour {
 
 	public AudioClip explosion;
 
-	private bool disabled;
 	private Chargable chargeTimer;
 	private AudioSource audioS;
 	private Rigidbody rigid;
@@ -48,7 +47,6 @@ public class Fireball_Object : MonoBehaviour {
 		rigid = GetComponent<Rigidbody>();
 		rigid.velocity = transform.forward * speed;
 		Physics.IgnoreCollision (ability.owner.GetComponent<Collider> (), GetComponent<Collider> ());
-		disabled = false;
 
 	}
 

@@ -49,11 +49,11 @@ public class KeyboardWrapper : ControllerInputWrapper {
         RaycastHit hit;
         if (Physics.Raycast(checkRay, out hit, 100))
         {
-            Debug.Log(hit.collider.name);
+            //Debug.Log(hit.collider.name);
             return hit.point - currentPlayer.position;
         }
 
-        Debug.DrawLine(checkRay.origin, checkRay.origin + checkRay.direction * 100);
+        //Debug.DrawLine(checkRay.origin, checkRay.origin + checkRay.direction * 100);
         
         return (checkRay.origin + checkRay.direction * 100) - currentPlayer.position;
     }

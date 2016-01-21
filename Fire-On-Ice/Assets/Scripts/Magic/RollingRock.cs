@@ -58,13 +58,13 @@ public class RollingRock : Ability, Shootable, CastDelay, Cooldown {
 			CastDelayStart();
 		}
 		else{
-			Debug.Log("AbilityReady_cast: " + abilityReady);
-			Debug.Log("Ability not ready.");
+			//Debug.Log("AbilityReady_cast: " + abilityReady);
+			//Debug.Log("Ability not ready.");
 		}
 	}
 	
 	public override void EndCast(){
-		Debug.Log ("Endcast");
+		//Debug.Log ("Endcast");
 		if(abilityReady){
 			CancelInvoke();
 			endCasted = true;

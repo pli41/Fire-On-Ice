@@ -35,13 +35,13 @@ public class UI_Manager : MonoBehaviour {
 	private bool inWinUI;
 	private string[] colorsForPlayerNum = {"<color=red>RED</color>", "<color=blue>BLUE</color>"
 		, "<color=green>GREEN/colors", "<color=yellow>YELLOW</color>"};
-	private GameObject[] cooldownUIs;
+	//private GameObject[] cooldownUIs;
 	
 	// Use this for initialization
 	public void Start () {
         arrowsShowed = false;
 		playerList = gm.playerList;
-		cooldownUIs = GameObject.FindGameObjectsWithTag ("Cooldown");
+		//cooldownUIs = GameObject.FindGameObjectsWithTag ("Cooldown");
 		SetupAbilityPanels ();
 		SetupAbilityIcons ();
 	}

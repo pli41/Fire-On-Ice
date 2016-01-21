@@ -948,7 +948,9 @@ public class CFXEasyEditor : EditorWindow
 			dest.loop = source.loop;
 			dest.playOnAwake = source.playOnAwake;
 			dest.playbackSpeed = source.playbackSpeed;
-			dest.emissionRate = source.emissionRate;
+
+            var em = dest.emission;
+			em.rate = source.emission.rate;
 			dest.startSpeed = source.startSpeed;
 			dest.startSize = source.startSize;
 			dest.startColor = source.startColor;

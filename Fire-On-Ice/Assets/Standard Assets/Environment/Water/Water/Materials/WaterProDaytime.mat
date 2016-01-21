@@ -68,11 +68,11 @@ Material:
       data:
         first:
           name: _WaveScale
-        second: 0.02
+        second: 0.08
       data:
         first:
           name: _ReflDistort
-        second: 0
+        second: 0.88
       data:
         first:
           name: _RefrDistort
@@ -89,11 +89,11 @@ Material:
       data:
         first:
           name: WaveSpeed
-        second: {r: 40, g: 20, b: 10, a: 10}
+        second: {r: 97.98, g: 0, b: 0, a: 0}
       data:
         first:
           name: _RefrColor
-        second: {r: 0.090668246, g: 0.2137356, b: 0.28676468, a: 1}
+        second: {r: 0.21193773, g: 0.59576404, b: 0.8235294, a: 1}
       data:
         first:
           name: _Fresnel_ST
@@ -105,7 +105,7 @@ Material:
       data:
         first:
           name: _HorizonColor
-        second: {r: 0.23048227, g: 0.38452965, b: 0.6397059, a: 0}
+        second: {r: 0, g: 0.32661545, b: 0.86764705, a: 0.759}
       data:
         first:
           name: _ReflectionTex_ST
