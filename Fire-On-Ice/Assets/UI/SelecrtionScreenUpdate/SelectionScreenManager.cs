@@ -56,7 +56,9 @@ public class SelectionScreenManager : MonoBehaviour {
 	bool[] ready = new bool[4];
 	float[] selectTimer = new float[4];
 	Ability[,] playerAbilities = new Ability[4, 4];
-	
+
+    bool[] L2ErrorReady = new bool[4];
+
 	AudioSource audioS;
 	bool ReadyToGoClipPlayed;
 	
@@ -268,20 +270,32 @@ public class SelectionScreenManager : MonoBehaviour {
 	
 	void checkAbilityInput()
 	{
-		for (int i = 0; i < numPlayers; i++)
+        
+        for (int i = 0; i < numPlayers; i++)
 		{
-			if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i], true) > .01f)
+            if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i], true) <= 0f)
+            {
+                L2ErrorReady[i] = true;
+            }
+            if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i], true) > .01f)
 			{
+
 				if (checkAbilitySelected(i)) {
-                    errorSound.Stop();
-                    errorSound.Play();
+                    if (L2ErrorReady[i])
+                    {
+                        errorSound.Stop();
+                        errorSound.Play();
+                        L2ErrorReady[i] = false;
+                    }
+                    
                     return;
 				}
 				selectAbilitySounds.Stop();
 				selectAbilitySounds.Play();
 				playerAbilities[i, 0] = allAbilities[currentAbilitySelected[i]];
 				//aAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
-			}else if  (ControllerManager.GetButton(ControllerInputWrapper.Buttons.LeftBumper, playerControllers[i], true))
+			}
+            else if  (ControllerManager.GetButton(ControllerInputWrapper.Buttons.LeftBumper, playerControllers[i], true))
 			{
 				if (checkAbilitySelected(i)) {
                     errorSound.Stop();
@@ -293,7 +307,7 @@ public class SelectionScreenManager : MonoBehaviour {
 				selectAbilitySounds.Play();
 				//xAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
 			}
-		else if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.RightBumper, playerControllers[i], true))
+		    else if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.RightBumper, playerControllers[i], true))
 			{
 				if (checkAbilitySelected(i)) {
                     errorSound.Stop();
