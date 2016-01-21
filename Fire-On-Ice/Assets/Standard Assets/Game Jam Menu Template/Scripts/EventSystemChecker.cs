@@ -17,7 +17,7 @@ public class EventSystemChecker : MonoBehaviour
 			//And adds the required components
 			obj.AddComponent<EventSystem>();
 			obj.AddComponent<StandaloneInputModule>().forceModuleActive = true;
-			obj.AddComponent<TouchInputModule>();
+			//obj.AddComponent<TouchInputModule>();
 		}
 	}
 }

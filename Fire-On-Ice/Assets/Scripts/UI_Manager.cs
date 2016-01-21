@@ -25,7 +25,7 @@ public class UI_Manager : MonoBehaviour {
 	public Animator whiteCoverAnim;
 	public Animator tutorialAnim;
 
-    public Camera camera;
+    public Camera MainCam;
 
     public Image Player_Keyboard_CurrentAbility;
 
@@ -184,7 +184,7 @@ public class UI_Manager : MonoBehaviour {
         {
             
             Vector3 pos = keyboardPlayer.transform.position;
-            Vector2 ViewportPosition = camera.WorldToViewportPoint(pos);
+            Vector2 ViewportPosition = MainCam.WorldToViewportPoint(pos);
             //Debug.Log(ViewportPosition);
             
             Player_Keyboard_CurrentAbility.sprite = keyboardPlayer.GetComponent<PlayerAttack>().abilities[keyboardPlayer.GetComponent<PlayerAttack>().currentAbilityNum_Keyboard].icon;

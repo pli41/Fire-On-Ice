@@ -110,7 +110,7 @@ public class PlayerAttack : MonoBehaviour
 				}
                 else
                 {
-                    Debug.Log("Ability 0 not end casted");
+                    //Debug.Log("Ability 0 not end casted");
                 }
             }
 
