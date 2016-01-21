@@ -203,12 +203,12 @@ public class PlayerAttack : MonoBehaviour
 				}
                 else
                 {
-                    Debug.Log("Ability 3 not end casted");
+                    //Debug.Log("Ability 3 not end casted");
                 }
                 if (!abilities[3].handledEndCast)
                 {
                     abilities[3].EndCast();
-                    Debug.Log("Ability 3 endcasting");
+                    //Debug.Log("Ability 3 endcasting");
                 }
             }
 
