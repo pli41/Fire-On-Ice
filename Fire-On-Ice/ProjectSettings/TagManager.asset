@@ -7,7 +7,6 @@ TagManager:
   - Fireball
   - Obstacle
   - Island
-  - Player
   - Player_Key
   - Boss
   - Cooldown

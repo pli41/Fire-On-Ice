@@ -58,7 +58,6 @@ public class SelectionScreenManager : MonoBehaviour {
 	Ability[,] playerAbilities = new Ability[4, 4];
 
     bool[] L2ErrorReady = new bool[4];
-    bool[] L2ErrorStart = new bool[4];
 
     AudioSource audioS;
 	bool ReadyToGoClipPlayed;

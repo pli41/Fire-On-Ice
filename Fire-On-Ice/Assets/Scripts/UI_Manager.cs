@@ -180,7 +180,8 @@ public class UI_Manager : MonoBehaviour {
     public void HandleKeyboardPlayerUI()
     {
         GameObject keyboardPlayer = FindKeyboardPlayer();
-        if (keyboardPlayer)
+        PlayerHealth playerHealth_Key = keyboardPlayer.GetComponent<PlayerHealth>();
+        if (keyboardPlayer && playerHealth_Key.currentHealth >= 0f)
         {
             
             Vector3 pos = keyboardPlayer.transform.position;
