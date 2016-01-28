@@ -24,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .414115906, y: 2.60849905, z: -3.35122299}
+  m_LocalPosition: {x: 0.4141159, y: 2.608499, z: -3.351223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -37,7 +37,7 @@ AudioSource:
   m_GameObject: {fileID: 192396}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+  OutputAudioMixerGroup: {fileID: 24310564, guid: 144669ce60049c04da004bce286769a4,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 61824b4a5df5641d0a17fb2794a878ba, type: 3}
   m_PlayOnAwake: 0
@@ -70,6 +70,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -80,6 +81,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -90,6 +92,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -100,6 +103,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11407586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,6 +120,7 @@ MonoBehaviour:
   handledEndCast: 0
   ability_point: {fileID: 0}
   triggerOnce: 0
+  endCasted: 0
   cooldown: 3
   timeUntilReset: 0
   icon: {fileID: 21300000, guid: 21066f52b7ca945ffa4bbe2ee4a65fe3, type: 3}
@@ -123,7 +128,7 @@ MonoBehaviour:
   abilityReady: 1
   cdTimer: 0
   flashDistance: 13
-  characterSize: .200000003
+  characterSize: 0.2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -187,8 +192,16 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: OutputAudioMixerGroup
       value: 
-      objectReference: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+      objectReference: {fileID: 24310564, guid: 144669ce60049c04da004bce286769a4,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 192396}
