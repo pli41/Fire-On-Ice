@@ -44,7 +44,7 @@ public class FireBomb_Object : MonoBehaviour {
 
 		Vector3 objVelocity = transform.forward * forwardForce + Vector3.up * upForce;
 		GetComponent<Rigidbody> ().AddForce (objVelocity);
-		Debug.Log (objVelocity);
+		//Debug.Log (objVelocity);
 		initialized = true;
 		Invoke ("Explode", explosionTime);
 	}
@@ -75,9 +75,9 @@ public class FireBomb_Object : MonoBehaviour {
 				}
 				else{
 					if(distance < explosionRadius){
-						Debug.Log("Explosion Damage: " + explosionDamage);
-						Debug.Log("Explosion Radius: " + explosionRadius);
-						Debug.Log("Distance: " + distance);
+						//Debug.Log("Explosion Damage: " + explosionDamage);
+						//Debug.Log("Explosion Radius: " + explosionRadius);
+						//Debug.Log("Distance: " + distance);
 						col.gameObject.GetComponent<PlayerHealth>().TakeDamage(
 							(int)(explosionDamage * (explosionRadius - distance) / explosionRadius)
 							, true, ability.owner.GetComponent<PlayerAttack>().playerNum);
@@ -106,7 +106,7 @@ public class FireBomb_Object : MonoBehaviour {
 	}
 
 	void DestroyObj(){
-		Debug.Log ("obj destroyed");
+		//Debug.Log ("obj destroyed");
 		Destroy (gameObject);
 	}
 

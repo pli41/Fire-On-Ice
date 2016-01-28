@@ -58,8 +58,9 @@ public class SelectionScreenManager : MonoBehaviour {
 	Ability[,] playerAbilities = new Ability[4, 4];
 
     bool[] L2ErrorReady = new bool[4];
+    bool[] L2ErrorStart = new bool[4];
 
-	AudioSource audioS;
+    AudioSource audioS;
 	bool ReadyToGoClipPlayed;
 	
 	
@@ -273,52 +274,63 @@ public class SelectionScreenManager : MonoBehaviour {
         
         for (int i = 0; i < numPlayers; i++)
 		{
-            if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i], true) <= 0f)
+            if (!ready[i])
             {
-                L2ErrorReady[i] = true;
-            }
-            if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i], true) > .01f)
-			{
+                if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i], true) <= 0f)
+                {
+                    L2ErrorReady[i] = true;
+                }
 
-				if (checkAbilitySelected(i)) {
-                    if (L2ErrorReady[i])
+                if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, playerControllers[i], true) > .01f)
+                {
+                    if (checkAbilitySelected(i))
+                    {
+
+                        if (L2ErrorReady[i])
+                        {
+                            errorSound.Stop();
+                            errorSound.Play();
+                            L2ErrorReady[i] = false;
+                        }
+
+                        return;
+                    }
+                    selectAbilitySounds.Stop();
+                    selectAbilitySounds.Play();
+                    playerAbilities[i, 0] = allAbilities[currentAbilitySelected[i]];
+                    L2ErrorReady[i] = false;
+                    //aAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
+                }
+                else if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.LeftBumper, playerControllers[i], true))
+                {
+                    if (checkAbilitySelected(i))
                     {
                         errorSound.Stop();
                         errorSound.Play();
-                        L2ErrorReady[i] = false;
+                        return;
                     }
-                    
-                    return;
-				}
-				selectAbilitySounds.Stop();
-				selectAbilitySounds.Play();
-				playerAbilities[i, 0] = allAbilities[currentAbilitySelected[i]];
-				//aAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
-			}
-            else if  (ControllerManager.GetButton(ControllerInputWrapper.Buttons.LeftBumper, playerControllers[i], true))
-			{
-				if (checkAbilitySelected(i)) {
-                    errorSound.Stop();
-                    errorSound.Play();
-                    return;
-				}
-				playerAbilities[i, 1] = allAbilities[currentAbilitySelected[i]];
-				selectAbilitySounds.Stop();
-				selectAbilitySounds.Play();
-				//xAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
-			}
-		    else if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.RightBumper, playerControllers[i], true))
-			{
-				if (checkAbilitySelected(i)) {
-                    errorSound.Stop();
-                    errorSound.Play();
-                    return;
-				}
-				selectAbilitySounds.Stop();
-				selectAbilitySounds.Play();
-				playerAbilities[i, 2] = allAbilities[currentAbilitySelected[i]];
-				//bAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
-			}
+                    playerAbilities[i, 1] = allAbilities[currentAbilitySelected[i]];
+                    selectAbilitySounds.Stop();
+                    selectAbilitySounds.Play();
+                    //xAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
+                }
+                else if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.RightBumper, playerControllers[i], true))
+                {
+                    if (checkAbilitySelected(i))
+                    {
+                        errorSound.Stop();
+                        errorSound.Play();
+                        return;
+                    }
+                    selectAbilitySounds.Stop();
+                    selectAbilitySounds.Play();
+                    playerAbilities[i, 2] = allAbilities[currentAbilitySelected[i]];
+                    //bAbility[i].sprite = allAbilities[currentAbilitySelected[i]].icon;
+                }
+            }
+
+
+            
 		}
 	}
 
@@ -343,32 +355,37 @@ public class SelectionScreenManager : MonoBehaviour {
 	{
 		for (int i = 0; i < numPlayers; i++)
 		{
-			float direct = ControllerManager.GetAxis(ControllerInputWrapper.Axis.LeftStickX, playerControllers[i], true);
-			selectTimer[i] -= Time.deltaTime;
-			//print(direct);
-			if (direct < -0.05f && selectTimer[i] <= 0)
-			{
-				currentAbilitySelected[i] = (--currentAbilitySelected[i]) % allAbilities.Length;
-				scrollAbilitySounds.Stop();
-				scrollAbilitySounds.Play();
-				arrows[i*2].GetComponent<Animator>().SetTrigger("arrowChange");
-				if (currentAbilitySelected[i] < 0)
-				{
-					currentAbilitySelected[i] += allAbilities.Length;
-				}
-				selectTimer[i] = timeDelay;
-			} else if (direct > 0.05f && selectTimer[i] <= 0)
-			{
-				currentAbilitySelected[i] = (++currentAbilitySelected[i]) % allAbilities.Length;
-				scrollAbilitySounds.Stop();
-				scrollAbilitySounds.Play();
-				arrows[i*2+1].GetComponent<Animator>().SetTrigger("arrowChange");
-				selectTimer[i] = timeDelay;
-			}
-			else if (Mathf.Abs(direct) < .05f)
-			{
-				selectTimer[i] = 0;
-			}
+            if (!ready[i])
+            {
+                float direct = ControllerManager.GetAxis(ControllerInputWrapper.Axis.LeftStickX, playerControllers[i], true);
+                selectTimer[i] -= Time.deltaTime;
+                //print(direct);
+                if (direct < -0.05f && selectTimer[i] <= 0)
+                {
+                    currentAbilitySelected[i] = (--currentAbilitySelected[i]) % allAbilities.Length;
+                    scrollAbilitySounds.Stop();
+                    scrollAbilitySounds.Play();
+                    arrows[i * 2].GetComponent<Animator>().SetTrigger("arrowChange");
+                    if (currentAbilitySelected[i] < 0)
+                    {
+                        currentAbilitySelected[i] += allAbilities.Length;
+                    }
+                    selectTimer[i] = timeDelay;
+                }
+                else if (direct > 0.05f && selectTimer[i] <= 0)
+                {
+                    currentAbilitySelected[i] = (++currentAbilitySelected[i]) % allAbilities.Length;
+                    scrollAbilitySounds.Stop();
+                    scrollAbilitySounds.Play();
+                    arrows[i * 2 + 1].GetComponent<Animator>().SetTrigger("arrowChange");
+                    selectTimer[i] = timeDelay;
+                }
+                else if (Mathf.Abs(direct) < .05f)
+                {
+                    selectTimer[i] = 0;
+                }
+            }
+			
 		}
 	}
 	

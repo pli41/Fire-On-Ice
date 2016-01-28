@@ -62,14 +62,14 @@ public class FireBomb : Ability, Cooldown, Shootable, CasterEffect {
 	}
 	
 	public void Shoot(){
-		Debug.Log ("Shoot");
+		//Debug.Log ("Shoot");
 		Invoke("EndEffect", anim.GetClip("Attack2").length/2f);
 		SetupObj ();
 		Instantiate (ability_object);
 	}
 	
 	public override void SetupObj(){
-		Debug.Log (ability_point);
+		//Debug.Log (ability_point);
 		fireBomb_object = ability_object.GetComponent<FireBomb_Object> ();
 		fireBomb_object.ability = this;
 		ability_object.transform.position = ability_point.position;

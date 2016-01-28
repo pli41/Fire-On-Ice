@@ -7,28 +7,31 @@ public class XboxControllerWrapper : ControllerInputWrapper {
     public override float GetAxis(Axis axis, int joyNum, bool isRaw = false)
     {
         string axisName = "";
+        float scale = 1;
         switch (axis)
         {
             case Axis.LeftStickX:
                 axisName = getAxisName(joyNum, "X", "X", "X");
                 break;
             case Axis.LeftStickY:
+                scale = -1;
                 axisName = getAxisName(joyNum, "Y", "Y", "Y");
                 break;
             case Axis.RightStickX:
                 axisName = getAxisName(joyNum, "4", "4", "3");
                 break;
             case Axis.RightStickY:
+                scale = -1;
                 axisName = getAxisName(joyNum, "5", "5", "4");
                 break;
         }
         if (isRaw)
         {
-            return Input.GetAxisRaw(axisName);
+            return Input.GetAxisRaw(axisName) * scale;
         }
         else
         {
-            return Input.GetAxis(axisName);
+            return Input.GetAxis(axisName) * scale;
         }
     }
 

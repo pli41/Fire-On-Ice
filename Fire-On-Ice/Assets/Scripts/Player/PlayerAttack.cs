@@ -80,7 +80,7 @@ public class PlayerAttack : MonoBehaviour
             //Controller
             if (ControllerManager.GetTrigger(ControllerInputWrapper.Triggers.LeftTrigger, joystickNum, true) > 0)
             {
-                Debug.Log("receiving trigger input");
+                //Debug.Log("receiving trigger input");
                 if (!castings[1] && !castings[2] && !castings[3])
                 {
                     if (abilities[0].abilityReady)
@@ -97,7 +97,7 @@ public class PlayerAttack : MonoBehaviour
             }
             else if (castings[0])
             {
-                Debug.Log("casting 0 is true");
+                //Debug.Log("casting 0 is true");
                 if (!abilities[0].handledEndCast)
                 {
                     Debug.Log("Ability 0 endcasting");
@@ -212,14 +212,14 @@ public class PlayerAttack : MonoBehaviour
                 }
             }
 
-            if (enchanting)
-            {
-                enchantEffect.SetActive(true);
-            }
-            else
-            {
-                enchantEffect.SetActive(false);
-            }
+            //if (enchanting)
+            //{
+            //    enchantEffect.SetActive(true);
+            //}
+            //else
+            //{
+            //    enchantEffect.SetActive(false);
+            //}
         }
         else
         {
