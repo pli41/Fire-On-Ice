@@ -212,14 +212,14 @@ public class PlayerAttack : MonoBehaviour
                 }
             }
 
-            //if (enchanting)
-            //{
-            //    enchantEffect.SetActive(true);
-            //}
-            //else
-            //{
-            //    enchantEffect.SetActive(false);
-            //}
+            if (enchanting)
+            {
+                enchantEffect.SetActive(true);
+            }
+            else
+            {
+                enchantEffect.SetActive(false);
+            }
         }
         else
         {
