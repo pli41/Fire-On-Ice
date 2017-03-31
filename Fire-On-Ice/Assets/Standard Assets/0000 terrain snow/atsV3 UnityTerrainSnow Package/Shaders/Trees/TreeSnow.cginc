@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
 #ifndef TREE_CG_INCLUDED
 #define TREE_CG_INCLUDED
 
@@ -16,7 +18,7 @@ void TreeVertLeafSnow (inout appdata_full v)
 	v.tangent.xyz = normalize(v.tangent.xyz);
 	
 	// add worldnormal to color
-    v.color.g = normalize(mul((float3x3)_Object2World, v.normal)).y; // g - world up vector    
+    v.color.g = normalize(mul((float3x3)unity_ObjectToWorld, v.normal)).y; // g - world up vector    
 }
 
 void TreeVertBarkSnow (inout appdata_full v)
@@ -31,7 +33,7 @@ void TreeVertBarkSnow (inout appdata_full v)
 	v.tangent.xyz = normalize(v.tangent.xyz); 
 	
 	// add worldnormal to color
-    v.color.g = normalize(mul((float3x3)_Object2World, v.normal)).y; // g - world up vector
+    v.color.g = normalize(mul((float3x3)unity_ObjectToWorld, v.normal)).y; // g - world up vector
 }
 
 

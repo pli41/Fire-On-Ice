@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
 Shader "snowShader Bumped Diffuse" {
 Properties {
 	_Color ("Main Color", Color) = (1,1,1,1)
@@ -35,7 +37,7 @@ struct Input {
 
 
 void snow (inout appdata_full v, out Input o) {	
-    o.MyWorldNormal = normalize(mul((float3x3)_Object2World, v.normal));
+    o.MyWorldNormal = normalize(mul((float3x3)unity_ObjectToWorld, v.normal));
 }
 
 

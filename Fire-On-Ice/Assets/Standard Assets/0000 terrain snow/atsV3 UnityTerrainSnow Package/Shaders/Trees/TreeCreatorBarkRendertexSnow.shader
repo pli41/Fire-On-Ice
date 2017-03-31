@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
 Shader "Hidden/Nature/Tree Creator Bark Rendertex Snow" {
 Properties {
 	_MainTex ("Base (RGB) Alpha (A)", 2D) = "white" {}
@@ -48,7 +50,7 @@ v2f vert (appdata_full v) {
 	
 	o.color = v.color.a;
 	// add worldnormal to color
-	float3 worldNormal = normalize(mul((float3x3)_Object2World, v.normal));
+	float3 worldNormal = normalize(mul((float3x3)unity_ObjectToWorld, v.normal));
     o.mywn.rgb = worldNormal.xyz; // y - world up vector
 	return o;
 }

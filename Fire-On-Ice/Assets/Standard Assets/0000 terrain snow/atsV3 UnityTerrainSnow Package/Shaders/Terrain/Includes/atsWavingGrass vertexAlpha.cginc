@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+
 void AtsWavingGrassVert (inout appdata_full v) {
 ////////// start bending
 
@@ -31,7 +33,7 @@ void AtsWavingGrassVert (inout appdata_full v) {
 	float3 waveMove = float3 (0,0,0);
 	waveMove.x = dot (s, _waveXSizeMove);
 	waveMove.z = dot (s, _waveZSizeMove);
-	v.vertex.xz -= mul ((float3x3)_World2Object, waveMove).xz * 8;
+	v.vertex.xz -= mul ((float3x3)unity_WorldToObject, waveMove).xz * 8;
 			
 ////////// end bending
 }

@@ -1,3 +1,6 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+
 //Simple Physical Shader was written by Ryan Gatts 2014
 //Based on concepts pioneered by Double Fine, Disney, Unreal Engine, Jim Blinn, Sean Murphy, Josh Ols, and Nicholas Francis.
 
@@ -77,14 +80,14 @@ Shader "Custom/SimplePhysicalShader"
 				{
 					vertexOutput o;
 					
-					float4x4 modelMatrix 		= _Object2World;
-					float4x4 modelMatrixInverse = _World2Object;
+					float4x4 modelMatrix 		= unity_ObjectToWorld;
+					float4x4 modelMatrixInverse = unity_WorldToObject;
 					
-					o.normalWorld = normalize(mul(float4(v.normal, 0.0), _World2Object).xyz);
-					o.tangentWorld = normalize(mul(_Object2World, half4(half3(v.tangent.xyz), 0)));
+					o.normalWorld = normalize(mul(float4(v.normal, 0.0), unity_WorldToObject).xyz);
+					o.tangentWorld = normalize(mul(unity_ObjectToWorld, half4(half3(v.tangent.xyz), 0)));
 					o.binormalWorld = normalize(cross (o.normalWorld, o.tangentWorld) * v.tangent.w);
 					
-					o.posWorld = mul(_Object2World, v.vertex);
+					o.posWorld = mul(unity_ObjectToWorld, v.vertex);
 					o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 					o.tex = v.texcoord;
 					
@@ -235,14 +238,14 @@ Shader "Custom/SimplePhysicalShader"
 				{
 					vertexOutput o;
 					
-					float4x4 modelMatrix = _Object2World;
-					float4x4 modelMatrixInverse = _World2Object;
+					float4x4 modelMatrix = unity_ObjectToWorld;
+					float4x4 modelMatrixInverse = unity_WorldToObject;
 					
-					o.normalWorld = normalize( mul(float4(v.normal, 0.0), _World2Object).xyz);
-					o.tangentWorld = normalize(mul(_Object2World, half4(half3(v.tangent.xyz), 0)));
+					o.normalWorld = normalize( mul(float4(v.normal, 0.0), unity_WorldToObject).xyz);
+					o.tangentWorld = normalize(mul(unity_ObjectToWorld, half4(half3(v.tangent.xyz), 0)));
 					o.binormalWorld = normalize(cross (o.normalWorld, o.tangentWorld) * v.tangent.w);
 					
-					o.posWorld = mul(_Object2World, v.vertex);
+					o.posWorld = mul(unity_ObjectToWorld, v.vertex);
 					o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 					o.tex = v.texcoord;
 					
