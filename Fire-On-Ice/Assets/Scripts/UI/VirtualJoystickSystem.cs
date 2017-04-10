@@ -10,7 +10,7 @@ public class VirtualJoystickSystem : MonoBehaviour {
     /// <summary>
     /// if true, then the joystick will be hidden until pointer hits the joystick zone.
     /// </summary>
-    public bool pushToAppear;
+    public bool pushToEnable;
     /// <summary>
     /// joystick object
     /// </summary>
@@ -25,13 +25,8 @@ public class VirtualJoystickSystem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (!pushToAppear)
+        if (pushToEnable)
         {
-            spawn.gameObject.SetActive(false);
-        }
-        else
-        {
-            spawn.gameObject.SetActive(true);
             joystick.gameObject.SetActive(false);
         }
             
@@ -42,7 +37,7 @@ public class VirtualJoystickSystem : MonoBehaviour {
     /// </summary>
     public void ShowJoystick(PointerEventData ped)
     {
-        if (pushToAppear)
+        if (pushToEnable)
         {
             joystick.gameObject.SetActive(true);
             Debug.Log(ped.position);
@@ -58,9 +53,7 @@ public class VirtualJoystickSystem : MonoBehaviour {
     /// </summary>
     public void HideJoystick()
     {
-        if(pushToAppear)
+        if(pushToEnable)
             joystick.gameObject.SetActive(false);
-    }
-	
-    
+    }   
 }

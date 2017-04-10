@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// Handles spawnings of push-to-enable joysticks as well as their dragging info
+/// </summary>
 public class VirtualJoystick_Spawn : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     /// <summary>
@@ -22,7 +25,7 @@ public class VirtualJoystick_Spawn : MonoBehaviour, IPointerDownHandler, IDragHa
     public virtual void OnPointerDown(PointerEventData ped)
     {
         Debug.Log("On Pointer Down");
-        if (joystickSys.pushToAppear)
+        if (joystickSys.pushToEnable)
         {
             joystickSys.ShowJoystick(ped);
         }
@@ -37,6 +40,6 @@ public class VirtualJoystick_Spawn : MonoBehaviour, IPointerDownHandler, IDragHa
     {
         Debug.Log("On Pointer Up");
         joystickSys.HideJoystick();
-
+        joystick.Reset();
     }
 }
