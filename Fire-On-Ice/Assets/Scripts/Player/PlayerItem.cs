@@ -18,16 +18,19 @@ public class PlayerItem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (gm.GameInProgress) {
-			if(ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, joystickNum)){
-				if(chestAround){
-					//Debug.Log("Open chest");
-					chestOpenedNum++;
-					chestAround.GetComponent<Chest>().Open();
-					chestAround = null;
-				}
-				
-			}
-		}
-	}
+        //if (gm.GameInProgress)
+        //{
+        //    if (ControllerManager.GetButton(ControllerInputWrapper.Buttons.A, joystickNum))
+        //    {
+        //        if (chestAround)
+        //        {
+        //            //Debug.Log("Open chest");
+        //            chestOpenedNum++;
+        //            chestAround.GetComponent<Chest>().Open();
+        //            chestAround = null;
+        //        }
+
+        //    }
+        //}
+    }
 }
